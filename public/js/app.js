@@ -2164,7 +2164,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vuetify_lib__WEBPACK_IMPORTED_MODULE_1__["default"]);
-var opts = {};
+var opts = {
+  theme: {
+    themes: {
+      light: {
+        primary: '#00959B',
+        secondary: '#764191'
+      }
+    }
+  }
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vuetify_lib__WEBPACK_IMPORTED_MODULE_1__["default"](opts));
 
 /***/ }),
