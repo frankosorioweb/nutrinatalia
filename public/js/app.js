@@ -2074,7 +2074,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -39094,12 +39093,17 @@ var staticRenderFns = [
           "h1",
           {
             staticClass:
-              "main-title title-font font-weight-bold pt-5 mx-3 grey--text text--lighten-5"
+              "main-title title-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
           },
           [
-            _vm._v(
-              "\n    Soy Natalia y acompaño a las personas en su camino hacia un estilo de vida\n    saludable\n  "
-            )
+            _vm._v("\n    Soy Natalia y "),
+            _c("span", { staticClass: "grey--text text--darken-4" }, [
+              _vm._v("acompaño")
+            ]),
+            _vm._v(" a las personas en su camino hacia un estilo de "),
+            _c("span", { staticClass: "grey--text text--darken-4" }, [
+              _vm._v("vida saludable")
+            ])
           ]
         ),
         _vm._v(" "),
