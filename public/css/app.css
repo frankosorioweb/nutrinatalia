@@ -14,11 +14,19 @@ img {
   vertical-align: middle;
 }
 
+.primary-font {
+  font-family: "Montserrat", sans-serif;
+}
+
 .gradient-bg {
   background: #00959B;
   background: linear-gradient(180deg, #00959B 0%, #764191 100%);
 }
 
-.title-font {
-  font-family: "Montserrat", sans-serif;
+.primary-color {
+  color: #00959B;
+}
+
+.secondary-color {
+  color: #00959B;
 }
