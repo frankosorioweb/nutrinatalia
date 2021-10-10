@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,500&family=Open+Sans:wght@300;400;500;700&display=swap);
+.section-presentation {
+  margin-top: 3.5rem;
+}
 .section-presentation .main-title {
   font-size: 1.75rem;
 }
