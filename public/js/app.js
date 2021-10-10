@@ -39199,7 +39199,7 @@ var render = function() {
           _c(
             "v-list-item-group",
             {
-              attrs: { "active-class": "primary white--text" },
+              attrs: { "active-class": "deep-purple--text text--accent-4" },
               model: {
                 value: _vm.group,
                 callback: function($$v) {
