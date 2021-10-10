@@ -4,10 +4,20 @@
 
     <v-spacer></v-spacer>
 
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon @click="openDrawer()"></v-app-bar-nav-icon>
   </v-app-bar>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  methods: {
+    openDrawer() {
+      this.$store.commit('navigationDrawer/changeDrawerState', true)
+    }
+  },
+  computed: {
+    ...mapState('navigationDrawer', ['drawer'])
+  },
+};
 </script>
