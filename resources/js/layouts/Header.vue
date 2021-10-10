@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="app-header" color="grey lighten-5">
+  <v-app-bar class="app-header" color="grey lighten-5" app>
     <img class="logo" src="img/logo.svg" />
 
     <v-spacer></v-spacer>

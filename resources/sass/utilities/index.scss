@@ -1,0 +1,12 @@
+img {
+    vertical-align: middle;
+}
+
+.gradient-bg {
+    background: $primary-color;
+    background: linear-gradient(180deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.title-font {
+    font-family: 'Montserrat', sans-serif;
+}
