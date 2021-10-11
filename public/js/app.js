@@ -2095,6 +2095,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -39137,7 +39140,7 @@ var staticRenderFns = [
           "h1",
           {
             staticClass:
-              "main-title title-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
+              "primary-font title-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
           },
           [
             _vm._v("\n    Soy Natalia y "),
@@ -39181,9 +39184,40 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "text-center py-5 mx-3" }, [
+      _c("h2", { staticClass: "mb-3 primary-font font-weight-bold" }, [
+        _vm._v("Aprende "),
+        _c("span", { staticClass: "primary-color" }, [_vm._v("gratis")]),
+        _vm._v(" con mi comunidad")
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v("Aprende algo "),
+        _c("span", { staticClass: "secondary-color font-weight-bold" }, [
+          _vm._v("nuevo")
+        ]),
+        _vm._v(
+          " en mis redes sociales, \n    donde comparto mucho contenido, ¿que esperas para "
+        ),
+        _c("span", { staticClass: "secondary-color font-weight-bold" }, [
+          _vm._v("unirte")
+        ]),
+        _vm._v("? Aprovechalo, es \n    "),
+        _c("span", { staticClass: "secondary-color font-weight-bold" }, [
+          _vm._v("GRATIS")
+        ]),
+        _vm._v(".")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
