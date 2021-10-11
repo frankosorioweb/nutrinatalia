@@ -2189,6 +2189,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   computed: {
     drawer: {
@@ -39315,6 +39322,20 @@ var render = function() {
               }
             },
             [
+              _c(
+                "v-list-item",
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [_c("v-icon", [_vm._v("mdi-home")])],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Inicio")])
+                ],
+                1
+              ),
+              _vm._v(" "),
               _c(
                 "v-list-item",
                 [
