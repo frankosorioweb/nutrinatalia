@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer v-model="drawer" app temporary>
-    <v-list nav dense>
-      <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+    <v-list nav>
+      <v-list-item-group v-model="group" color="primary" mandatory>
         <v-list-item>
           <v-list-item-icon>
             <v-icon>mdi-school</v-icon>
@@ -23,26 +23,12 @@
           <v-list-item-title>Consultas</v-list-item-title>
         </v-list-item>
 
-        <v-list-group prepend-icon="mdi-face-agent" no-action>
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>Soporte</v-list-item-title>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>WhatsApp</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>Correo</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
-
+        <v-list-item>
+          <v-list-item-icon>
+            <v-icon>mdi-face-agent</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Soporte</v-list-item-title>
+        </v-list-item>
       </v-list-item-group>
     </v-list>
   </v-navigation-drawer>
@@ -56,17 +42,17 @@ export default {
         return this.$store.state.navigationDrawer.drawer;
       },
       set(value) {
-        this.$store.commit('navigationDrawer/changeDrawerState', value)
-      }
+        this.$store.commit("navigationDrawer/changeDrawerState", value);
+      },
     },
     group: {
       get() {
         return this.$store.state.navigationDrawer.group;
       },
       set(value) {
-        this.$store.commit('navigationDrawer/changeGroupState', value)
-      }
-    }
+        this.$store.commit("navigationDrawer/changeGroupState", value);
+      },
+    },
   },
 };
 </script>
