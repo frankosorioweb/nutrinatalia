@@ -39191,7 +39191,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "text-center py-5 mx-3" }, [
+    return _c("section", { staticClass: "text-center py-6 mx-3" }, [
       _c("h2", { staticClass: "mb-3 primary-font font-weight-bold" }, [
         _vm._v("Aprende "),
         _c("span", { staticClass: "primary-color" }, [_vm._v("gratis")]),
