@@ -39244,7 +39244,7 @@ var render = function() {
     "v-app-bar",
     {
       staticClass: "app-header",
-      attrs: { color: "grey lighten-5", fixed: "" }
+      attrs: { color: "grey lighten-5", fixed: "", height: "56" }
     },
     [
       _c("img", { staticClass: "logo", attrs: { src: "img/logo.svg" } }),
