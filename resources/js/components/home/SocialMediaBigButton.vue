@@ -1,15 +1,15 @@
 <template>
     <a class="social-media-button-container d-block rounded-pill grey--text text--lighten-5 py-2 px-6 facebook">
         <span class="follow-text d-block primary-font lh-1">seguime en</span>
-        <span class="social-media-text d-block primary-font font-weight-bold lh-1">Facebook</span>
+        <span class="social-media-text d-block primary-font font-weight-bold lh-1">{{ facebook ? 'Facebook' : 'Instagram' }}</span>
         <span class="icon-circle d-flex justify-center align-center grey lighten-5 rounded-circle">
-            <v-icon class="icon">mdi-facebook</v-icon>
+            <v-icon class="icon">{{ facebook ? 'mdi-facebook' : 'mdi-instagram' }}</v-icon>
         </span>
     </a>
 </template>
 
 <script>
 export default {
-    
+    props: ['facebook']
 }
 </script>

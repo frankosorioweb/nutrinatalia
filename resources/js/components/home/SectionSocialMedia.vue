@@ -4,7 +4,16 @@
         <p>Aprende algo <span class="secondary-color font-weight-bold">nuevo</span> en mis redes sociales, 
         donde comparto mucho contenido, ¿que esperas para <span class="secondary-color font-weight-bold">unirte</span>? Aprovechalo, es 
         <span class="secondary-color font-weight-bold">GRATIS</span>.</p>
-        <social-media-big-button></social-media-big-button>
+        <v-container>
+            <v-row no-gutters>
+                <v-col cols="12 mb-6">
+                    <social-media-big-button :facebook="true"></social-media-big-button>
+                </v-col>
+                <v-col cols="12 mt-3">
+                    <social-media-big-button :facebook="false"></social-media-big-button>
+                </v-col>
+            </v-row>
+        </v-container>
     </section>
 </template>
 
