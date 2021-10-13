@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import socialMediaBigButton from './SocialMediaButtons/SocialMediaBigButton.vue'
+import socialMediaBigButton from './SocialMediaBigButton.vue'
 export default {
     components: {
         socialMediaBigButton
