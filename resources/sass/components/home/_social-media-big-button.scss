@@ -2,7 +2,7 @@
     position: relative;
     .icon-circle.grey.lighten-5 {
         position: absolute;
-        $size: 5.5rem;
+        $size: 5rem;
         top: calc(50% - $size/2); left: calc(50% - 8rem);
         width: $size; height: $size;
 
@@ -10,15 +10,15 @@
 
         .icon {
             color: $facebook-color;
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
     background-color: $facebook-color;
     .follow-text {
-        margin-left: 2rem;
+        font-size: .875rem;
     }
     .social-media-text {
-        font-size: 1.7rem;
-        margin-left: 8rem;
+        font-size: 1.5rem;
+        margin-left: 7rem;
     }
 }
