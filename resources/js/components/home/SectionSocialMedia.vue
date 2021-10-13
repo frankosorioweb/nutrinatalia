@@ -4,11 +4,15 @@
         <p>Aprende algo <span class="secondary-color font-weight-bold">nuevo</span> en mis redes sociales, 
         donde comparto mucho contenido, ¿que esperas para <span class="secondary-color font-weight-bold">unirte</span>? Aprovechalo, es 
         <span class="secondary-color font-weight-bold">GRATIS</span>.</p>
+        <social-media-big-button></social-media-big-button>
     </section>
 </template>
 
 <script>
+import socialMediaBigButton from './SocialMediaButtons/SocialMediaBigButton.vue'
 export default {
-    
+    components: {
+        socialMediaBigButton
+    }
 }
 </script>
