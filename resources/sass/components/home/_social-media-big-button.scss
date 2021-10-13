@@ -1,0 +1,24 @@
+.social-media-button-container {
+    position: relative;
+    .icon-circle.grey.lighten-5 {
+        position: absolute;
+        $size: 5.5rem;
+        top: calc(50% - $size/2); left: calc(50% - 8rem);
+        width: $size; height: $size;
+
+        border-color: $facebook-color !important; border-width: 3px !important; border-style: solid !important;
+
+        .icon {
+            color: $facebook-color;
+            font-size: 4rem;
+        }
+    }
+    background-color: $facebook-color;
+    .follow-text {
+        margin-left: 2rem;
+    }
+    .social-media-text {
+        font-size: 1.7rem;
+        margin-left: 8rem;
+    }
+}

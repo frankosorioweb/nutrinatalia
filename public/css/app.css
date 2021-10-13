@@ -9,6 +9,32 @@
   max-height: 17, 1875rem;
 }
 
+.social-media-button-container {
+  position: relative;
+  background-color: #3B5998;
+}
+.social-media-button-container .icon-circle.grey.lighten-5 {
+  position: absolute;
+  top: calc(50% - 2.75rem);
+  left: calc(50% - 8rem);
+  width: 5.5rem;
+  height: 5.5rem;
+  border-color: #3B5998 !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+}
+.social-media-button-container .icon-circle.grey.lighten-5 .icon {
+  color: #3B5998;
+  font-size: 4rem;
+}
+.social-media-button-container .follow-text {
+  margin-left: 2rem;
+}
+.social-media-button-container .social-media-text {
+  font-size: 1.7rem;
+  margin-left: 8rem;
+}
+
 .app-header .logo {
   max-height: 34px;
 }
