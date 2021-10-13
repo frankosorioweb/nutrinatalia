@@ -11,7 +11,11 @@
 
 .social-media-button-container {
   position: relative;
-  background-color: #3B5998;
+  --sm-color: #3B5998;
+  background-color: var(--sm-color);
+}
+.social-media-button-container.instagram {
+  --sm-color: #CA2474;
 }
 .social-media-button-container .icon-circle.grey.lighten-5 {
   position: absolute;
@@ -19,12 +23,10 @@
   left: calc(50% - 8rem);
   width: 5rem;
   height: 5rem;
-  border-color: #3B5998 !important;
-  border-width: 3px !important;
-  border-style: solid !important;
+  border: 3px solid var(--sm-color) !important;
 }
 .social-media-button-container .icon-circle.grey.lighten-5 .icon {
-  color: #3B5998;
+  color: var(--sm-color);
   font-size: 3rem;
 }
 .social-media-button-container .follow-text {

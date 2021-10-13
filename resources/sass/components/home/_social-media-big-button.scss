@@ -1,19 +1,22 @@
 .social-media-button-container {
     position: relative;
+    --sm-color: #{$facebook-color};
+    &.instagram {
+        --sm-color: #{$instagram-color};
+    }
+    background-color: var(--sm-color);
     .icon-circle.grey.lighten-5 {
         position: absolute;
         $size: 5rem;
         top: calc(50% - $size/2); left: calc(50% - 8rem);
         width: $size; height: $size;
 
-        border-color: $facebook-color !important; border-width: 3px !important; border-style: solid !important;
-
+        border: 3px solid var(--sm-color) !important;
         .icon {
-            color: $facebook-color;
+            color: var(--sm-color);
             font-size: 3rem;
         }
     }
-    background-color: $facebook-color;
     .follow-text {
         font-size: .875rem;
     }

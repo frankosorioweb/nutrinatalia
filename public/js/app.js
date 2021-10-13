@@ -39389,7 +39389,8 @@ var render = function() {
     "a",
     {
       staticClass:
-        "social-media-button-container d-block rounded-pill grey--text text--lighten-5 py-2 px-6 facebook"
+        "social-media-button-container d-block rounded-pill grey--text text--lighten-5 py-2 px-6",
+      class: _vm.facebook ? "facebook" : "instagram"
     },
     [
       _c("span", { staticClass: "follow-text d-block primary-font lh-1" }, [
