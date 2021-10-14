@@ -14,12 +14,14 @@ import AppHeader from '../layouts/Header.vue'
 import AppNavigationDrawer from '../layouts/NavigationDrawer.vue'
 import SectionPresentation from '../components/home/SectionPresentation.vue'
 import SectionSocialMedia from '../components/home/SectionSocialMedia.vue';
+import SectionPresentationVideo from '../components/home/SectionPresentationVideo.vue';
 export default {
     components: {
         AppHeader,
         AppNavigationDrawer,
         SectionPresentation,
-        SectionSocialMedia
+        SectionSocialMedia,
+        SectionPresentationVideo
     }
 }
 </script>
