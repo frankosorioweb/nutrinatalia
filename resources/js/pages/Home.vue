@@ -5,6 +5,7 @@
         <v-main>
             <section-presentation></section-presentation>
             <section-social-media></section-social-media>
+            <section-presentation-video></section-presentation-video>
         </v-main>
     </div>
 </template>

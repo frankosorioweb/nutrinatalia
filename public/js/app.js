@@ -2322,6 +2322,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -39739,7 +39740,13 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-main",
-        [_c("section-presentation"), _vm._v(" "), _c("section-social-media")],
+        [
+          _c("section-presentation"),
+          _vm._v(" "),
+          _c("section-social-media"),
+          _vm._v(" "),
+          _c("section-presentation-video")
+        ],
         1
       )
     ],
