@@ -2103,6 +2103,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -39351,7 +39354,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("img", {
           staticClass: "frontal-img",
-          attrs: { src: "img/foto-frontal.png", alt: "Foto Frontal" }
+          attrs: { src: "storage/img/foto-frontal.png", alt: "Foto Frontal" }
         })
       ]
     )
@@ -39411,7 +39414,7 @@ var staticRenderFns = [
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "responsive-video mx-2" }, [
+        _c("div", { staticClass: "responsive-video mx-auto px-3" }, [
           _c(
             "video",
             {
@@ -39421,7 +39424,7 @@ var staticRenderFns = [
             [
               _c("source", {
                 attrs: {
-                  src: "/videos/PresentationVideo.mp4",
+                  src: "/storage/videos/presentation.mp4",
                   type: "video/mp4"
                 }
               })
@@ -39621,7 +39624,10 @@ var render = function() {
       attrs: { color: "grey lighten-5", fixed: "", height: "56" }
     },
     [
-      _c("img", { staticClass: "logo", attrs: { src: "img/logo.svg" } }),
+      _c("img", {
+        staticClass: "logo",
+        attrs: { src: "storage/img/logo.svg" }
+      }),
       _vm._v(" "),
       _c("v-spacer"),
       _vm._v(" "),

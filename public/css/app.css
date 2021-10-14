@@ -34,6 +34,13 @@
   margin-left: 7rem;
 }
 
+.section-presentation-video .responsive-video {
+  max-width: 48rem;
+}
+.section-presentation-video .responsive-video .presentation-video {
+  width: 100%;
+}
+
 .app-header .logo {
   max-height: 34px;
 }

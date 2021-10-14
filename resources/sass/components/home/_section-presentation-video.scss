@@ -1,3 +1,8 @@
 .section-presentation-video {
-    
+    .responsive-video {
+        max-width: 48rem;
+        .presentation-video {
+            width: 100%;
+        }
+    }
 }

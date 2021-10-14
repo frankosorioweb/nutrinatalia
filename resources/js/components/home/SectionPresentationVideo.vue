@@ -4,9 +4,12 @@
       Te cuento <span class="grey--text text--darken-4">más</span> sobre
       <span class="grey--text text--darken-4">mí</span>
     </h2>
-    <div class="responsive-video mx-2">
+    <div class="responsive-video mx-auto px-3">
       <video class="presentation-video rounded" controls>
-        <source src="/videos/PresentationVideo.mp4" type="video/mp4" />
+        <source
+          src="/storage/videos/presentation.mp4"
+          type="video/mp4"
+        />
       </video>
     </div>
   </section>
