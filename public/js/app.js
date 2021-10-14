@@ -39324,7 +39324,7 @@ var staticRenderFns = [
           "h1",
           {
             staticClass:
-              "primary-font title-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
+              "primary-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
           },
           [
             _vm._v("\n    Soy Natalia y "),
