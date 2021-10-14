@@ -2093,6 +2093,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -39369,9 +39373,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "gradient-bg text-center py-6 px-3" }, [
+      _c(
+        "h2",
+        {
+          staticClass:
+            "primary-font font-weight-bold mx-3 grey--text text--lighten-5"
+        },
+        [
+          _vm._v("\n    Te cuento "),
+          _c("span", { staticClass: "grey--text text--darken-4" }, [
+            _vm._v("más")
+          ]),
+          _vm._v(" sobre "),
+          _c("span", { staticClass: "grey--text text--darken-4" }, [
+            _vm._v("mí")
+          ])
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
