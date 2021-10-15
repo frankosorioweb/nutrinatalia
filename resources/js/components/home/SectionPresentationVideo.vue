@@ -7,7 +7,7 @@
     <div class="responsive-video mx-auto px-3">
       <video class="presentation-video rounded" controls>
         <source
-          src="/storage/videos/presentation.mp4"
+          src="/api/getPresentationVideo"
           type="video/mp4"
         />
       </video>

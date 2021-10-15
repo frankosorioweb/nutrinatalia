@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('{all}', function () {
+Route::get('{any}', function () {
     return view('app');
-})->where('all', '^(?!storage).*$');
+})->where('any', '.*');

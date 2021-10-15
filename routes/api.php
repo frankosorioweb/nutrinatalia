@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/getPresentationVideo', function() {
+    $response = response()->file(storage_path('app/public/'.'videos/presentation.mp4'),[
+        'Content-Type' => 'video/mp4'
+    ]);
+    
+    return $response;
+});

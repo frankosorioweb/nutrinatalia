@@ -39423,10 +39423,7 @@ var staticRenderFns = [
             },
             [
               _c("source", {
-                attrs: {
-                  src: "/storage/videos/presentation.mp4",
-                  type: "video/mp4"
-                }
+                attrs: { src: "/api/getPresentationVideo", type: "video/mp4" }
               })
             ]
           )
