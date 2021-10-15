@@ -5,16 +5,24 @@
       <span class="grey--text text--darken-4">mí</span>
     </h2>
     <div class="responsive-video mx-auto px-3">
-      <video class="presentation-video rounded" controls>
-        <source
-          src="/api/getPresentationVideo"
-          type="video/mp4"
-        />
+      <video
+        class="presentation-video rounded"
+        controls
+        controlsList="nodownload"
+        @contextmenu="onContextMenu($event)"
+      >
+        <source src="/api/getPresentationVideo" type="video/mp4" />
       </video>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    onContextMenu(e) {
+      e.preventDefault();
+    }
+  },
+};
 </script>
