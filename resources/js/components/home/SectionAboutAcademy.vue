@@ -7,10 +7,18 @@
     <v-container>
       <v-row>
         <v-col cols="12">
-          <product-card :type="getProductsTypes.WORKSHOP"></product-card>
+          <product-card
+            :title="getProductsTypes.WORKSHOP.name"
+            :poster="getProductsTypes.WORKSHOP.posterSrc"
+            :description="getProductsTypes.WORKSHOP.description"
+          ></product-card>
         </v-col>
         <v-col cols="12">
-          <product-card :type="getProductsTypes.EBOOK"></product-card>
+          <product-card
+            :title="getProductsTypes.EBOOK.name"
+            :poster="getProductsTypes.EBOOK.posterSrc"
+            :description="getProductsTypes.EBOOK.description"
+          ></product-card>
         </v-col>
       </v-row>
     </v-container>
