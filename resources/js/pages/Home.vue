@@ -7,6 +7,7 @@
             <section-social-media></section-social-media>
             <section-presentation-video></section-presentation-video>
             <section-about-academy></section-about-academy>
+            <section-testimonials></section-testimonials>
         </v-main>
     </div>
 </template>
@@ -18,6 +19,7 @@ import SectionPresentation from '../components/home/SectionPresentation.vue'
 import SectionSocialMedia from '../components/home/SectionSocialMedia.vue';
 import SectionPresentationVideo from '../components/home/SectionPresentationVideo.vue';
 import SectionAboutAcademy from '../components/home/SectionAboutAcademy.vue'
+import sectionTestimonials from '../components/home/SectionTestimonials.vue';
 export default {
     components: {
         AppHeader,
@@ -25,7 +27,8 @@ export default {
         SectionPresentation,
         SectionSocialMedia,
         SectionPresentationVideo,
-        SectionAboutAcademy
+        SectionAboutAcademy,
+        sectionTestimonials
     }
 }
 </script>
