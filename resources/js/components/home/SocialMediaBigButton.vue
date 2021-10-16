@@ -1,6 +1,6 @@
 <template>
     <a
-        class="social-media-button-container d-block rounded-pill grey--text text--lighten-5 py-2 px-6"
+        class="social-media-button-container elevation-5 d-block rounded-pill grey--text text--lighten-5 py-2 px-6"
         :class="facebook ? 'facebook': 'instagram'"
         :href="facebook ? links.socialMedia.facebook : links.socialMedia.instagram"
         target="_blank"

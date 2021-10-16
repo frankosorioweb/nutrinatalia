@@ -39925,7 +39925,7 @@ var render = function() {
     "a",
     {
       staticClass:
-        "social-media-button-container d-block rounded-pill grey--text text--lighten-5 py-2 px-6",
+        "social-media-button-container elevation-5 d-block rounded-pill grey--text text--lighten-5 py-2 px-6",
       class: _vm.facebook ? "facebook" : "instagram",
       attrs: {
         href: _vm.facebook
