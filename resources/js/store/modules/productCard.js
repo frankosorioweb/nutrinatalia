@@ -1,13 +1,19 @@
 const state = {
     types: {
-        WORKSHOP: 'Talleres',
-        EBOOK: 'Ebooks'
+        WORKSHOP: {
+            name: 'Talleres',
+            posterSrc: '/storage/img/WorkshopPoster.png'
+        },
+        EBOOK: {
+            name: 'Ebooks',
+            posterSrc: '/storage/img/EbookPoster.png'
+        }
     }
 };
 
 const getters = {
     getProductsTypes: (state) => state.types,
-    isWorkshop: (state) => (value) => state.types.WORKSHOP === value,
+    isWorkshop: (state) => (value) => state.types.WORKSHOP.name === value,
 };
 
 const mutations = {

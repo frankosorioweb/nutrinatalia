@@ -2707,8 +2707,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var state = {
   types: {
-    WORKSHOP: 'Talleres',
-    EBOOK: 'Ebooks'
+    WORKSHOP: {
+      name: 'Talleres',
+      posterSrc: '/storage/img/WorkshopPoster.png'
+    },
+    EBOOK: {
+      name: 'Ebooks',
+      posterSrc: '/storage/img/EbookPoster.png'
+    }
   }
 };
 var getters = {
@@ -2717,7 +2723,7 @@ var getters = {
   },
   isWorkshop: function isWorkshop(state) {
     return function (value) {
-      return state.types.WORKSHOP === value;
+      return state.types.WORKSHOP.name === value;
     };
   }
 };
@@ -40154,7 +40160,7 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto rounded-lg", attrs: { elevation: "5" } },
         [
-          _c("v-img", { attrs: { src: "/storage/img/WorkshopPoster.png" } }),
+          _c("v-img", { attrs: { src: this.type.posterSrc } }),
           _vm._v(" "),
           _c(
             "v-card-title",
@@ -40164,7 +40170,7 @@ var render = function() {
             },
             [
               _c("h3", { staticClass: "product-card-title" }, [
-                _vm._v(_vm._s(this.type))
+                _vm._v(_vm._s(this.type.name))
               ])
             ]
           ),
@@ -40182,7 +40188,7 @@ var render = function() {
             { staticClass: "mx-4 pb-4" },
             [
               _c("v-btn", { attrs: { color: "primary", block: "" } }, [
-                _vm._v("Ver todos los " + _vm._s(this.type))
+                _vm._v("Ver todos los " + _vm._s(this.type.name))
               ])
             ],
             1
