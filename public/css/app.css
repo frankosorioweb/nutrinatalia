@@ -45,6 +45,10 @@
   max-height: 34px;
 }
 
+.product-card .product-card-title {
+  font-size: 1.25rem;
+}
+
 img {
   vertical-align: middle;
 }
