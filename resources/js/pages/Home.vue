@@ -6,6 +6,7 @@
             <section-presentation></section-presentation>
             <section-social-media></section-social-media>
             <section-presentation-video></section-presentation-video>
+            <section-about-academy></section-about-academy>
         </v-main>
     </div>
 </template>
@@ -16,13 +17,15 @@ import AppNavigationDrawer from '../layouts/NavigationDrawer.vue'
 import SectionPresentation from '../components/home/SectionPresentation.vue'
 import SectionSocialMedia from '../components/home/SectionSocialMedia.vue';
 import SectionPresentationVideo from '../components/home/SectionPresentationVideo.vue';
+import SectionAboutAcademy from '../components/home/SectionAboutAcademy.vue'
 export default {
     components: {
         AppHeader,
         AppNavigationDrawer,
         SectionPresentation,
         SectionSocialMedia,
-        SectionPresentationVideo
+        SectionPresentationVideo,
+        SectionAboutAcademy
     }
 }
 </script>
