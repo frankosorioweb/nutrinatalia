@@ -2092,6 +2092,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2407,12 +2415,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['type'],
+  props: ['poster', 'title', 'description'],
   computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('productCard', ['getProductsTypes', 'getProductTypeText']))
 });
 
@@ -2709,11 +2714,13 @@ var state = {
   types: {
     WORKSHOP: {
       name: 'Talleres',
-      posterSrc: '/storage/img/WorkshopPoster.png'
+      posterSrc: '/storage/img/WorkshopPoster.png',
+      description: 'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.'
     },
     EBOOK: {
       name: 'Ebooks',
-      posterSrc: '/storage/img/EbookPoster.png'
+      posterSrc: '/storage/img/EbookPoster.png',
+      description: 'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.'
     }
   }
 };
@@ -39616,7 +39623,11 @@ var render = function() {
                 { attrs: { cols: "12" } },
                 [
                   _c("product-card", {
-                    attrs: { type: _vm.getProductsTypes.WORKSHOP }
+                    attrs: {
+                      title: _vm.getProductsTypes.WORKSHOP.name,
+                      poster: _vm.getProductsTypes.WORKSHOP.posterSrc,
+                      description: _vm.getProductsTypes.WORKSHOP.description
+                    }
                   })
                 ],
                 1
@@ -39627,7 +39638,11 @@ var render = function() {
                 { attrs: { cols: "12" } },
                 [
                   _c("product-card", {
-                    attrs: { type: _vm.getProductsTypes.EBOOK }
+                    attrs: {
+                      title: _vm.getProductsTypes.EBOOK.name,
+                      poster: _vm.getProductsTypes.EBOOK.posterSrc,
+                      description: _vm.getProductsTypes.EBOOK.description
+                    }
                   })
                 ],
                 1
@@ -40160,7 +40175,7 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto rounded-lg", attrs: { elevation: "5" } },
         [
-          _c("v-img", { attrs: { src: this.type.posterSrc } }),
+          _c("v-img", { attrs: { src: this.poster } }),
           _vm._v(" "),
           _c(
             "v-card-title",
@@ -40170,17 +40185,13 @@ var render = function() {
             },
             [
               _c("h3", { staticClass: "product-card-title" }, [
-                _vm._v(_vm._s(this.type.name))
+                _vm._v(_vm._s(this.title))
               ])
             ]
           ),
           _vm._v(" "),
           _c("v-card-text", { staticClass: "secondary-font pb-4" }, [
-            _c("p", { staticClass: "mb-0 font-weight-bold" }, [
-              _vm._v(
-                "\n        Son videos de aproximadamente 2 horas con el paso a paso de recetas\n        saludables, deliciosas y fáciles de ejecutar.\n      "
-              )
-            ])
+            _c("p", { staticClass: "mb-0" }, [_vm._v(_vm._s(this.description))])
           ]),
           _vm._v(" "),
           _c(
@@ -40188,7 +40199,7 @@ var render = function() {
             { staticClass: "mx-4 pb-4" },
             [
               _c("v-btn", { attrs: { color: "primary", block: "" } }, [
-                _vm._v("Ver todos los " + _vm._s(this.type.name))
+                _vm._v("Ver todos los " + _vm._s(this.title))
               ])
             ],
             1

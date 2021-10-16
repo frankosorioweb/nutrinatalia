@@ -2,11 +2,13 @@ const state = {
     types: {
         WORKSHOP: {
             name: 'Talleres',
-            posterSrc: '/storage/img/WorkshopPoster.png'
+            posterSrc: '/storage/img/WorkshopPoster.png',
+            description: 'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.'
         },
         EBOOK: {
             name: 'Ebooks',
-            posterSrc: '/storage/img/EbookPoster.png'
+            posterSrc: '/storage/img/EbookPoster.png',
+            description: 'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.'
         }
     }
 };
