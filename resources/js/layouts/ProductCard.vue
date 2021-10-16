@@ -10,7 +10,7 @@
           justify-center
           pb-2
         "
-        ><h3 class="product-card-title">{{ type ? 'Talleres' : 'Ebooks' }}</h3>
+        ><h3 class="product-card-title">{{ this.type }}</h3>
       </v-card-title>
       <v-card-text class="secondary-font pb-4">
         <p class="mb-0 font-weight-bold">
@@ -19,16 +19,18 @@
         </p>
       </v-card-text>
       <div class="mx-4 pb-4">
-        <v-btn color="primary" block>Ver todos los talleres</v-btn>
+        <v-btn color="primary" block>Ver todos los {{ this.type }}</v-btn>
       </div>
     </v-card>
   </article>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
-    props: {
-        type: Boolean
-    },
+    props: ['type'],
+    computed: {
+        ...mapGetters('productCard', ['getProductsTypes', 'getProductTypeText'])
+    }
 };
 </script>

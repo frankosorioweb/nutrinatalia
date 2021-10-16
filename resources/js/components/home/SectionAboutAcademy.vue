@@ -5,9 +5,12 @@
       <span class="primary-color">academia</span>?
     </h2>
     <v-container>
-      <v-row no-gutters>
+      <v-row>
         <v-col cols="12">
-          <product-card :type="true"></product-card>
+          <product-card :type="getProductsTypes.WORKSHOP"></product-card>
+        </v-col>
+        <v-col cols="12">
+          <product-card :type="getProductsTypes.EBOOK"></product-card>
         </v-col>
       </v-row>
     </v-container>
@@ -16,9 +19,13 @@
 
 <script>
 import productCard from "../../layouts/ProductCard.vue";
+import { mapGetters } from "vuex";
 export default {
   components: {
     productCard,
   },
+  computed: {
+    ...mapGetters('productCard', ['getProductsTypes'])
+  }
 };
 </script>

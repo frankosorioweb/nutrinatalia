@@ -1,11 +1,14 @@
 const state = {
-    
+    types: {
+        WORKSHOP: 'Talleres',
+        EBOOK: 'Ebooks'
+    }
 };
 
 const getters = {
-    
+    getProductsTypes: (state) => state.types,
+    isWorkshop: (state) => (value) => state.types.WORKSHOP === value,
 };
-
 
 const mutations = {
     

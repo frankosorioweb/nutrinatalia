@@ -2066,6 +2066,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _layouts_ProductCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../layouts/ProductCard.vue */ "./resources/js/layouts/ProductCard.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
 //
 //
 //
@@ -2083,10 +2093,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     productCard: _layouts_ProductCard_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
+  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)('productCard', ['getProductsTypes']))
 });
 
 /***/ }),
@@ -2364,6 +2376,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2391,10 +2410,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    type: Boolean
-  }
+  props: ['type'],
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('productCard', ['getProductsTypes', 'getProductTypeText']))
 });
 
 /***/ }),
@@ -2686,8 +2705,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var state = {};
-var getters = {};
+var state = {
+  types: {
+    WORKSHOP: 'Talleres',
+    EBOOK: 'Ebooks'
+  }
+};
+var getters = {
+  getProductsTypes: function getProductsTypes(state) {
+    return state.types;
+  },
+  isWorkshop: function isWorkshop(state) {
+    return function (value) {
+      return state.types.WORKSHOP === value;
+    };
+  }
+};
 var mutations = {};
 var actions = {};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -39571,12 +39604,26 @@ var render = function() {
         [
           _c(
             "v-row",
-            { attrs: { "no-gutters": "" } },
             [
               _c(
                 "v-col",
                 { attrs: { cols: "12" } },
-                [_c("product-card", { attrs: { type: true } })],
+                [
+                  _c("product-card", {
+                    attrs: { type: _vm.getProductsTypes.WORKSHOP }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c("product-card", {
+                    attrs: { type: _vm.getProductsTypes.EBOOK }
+                  })
+                ],
                 1
               )
             ],
@@ -40117,7 +40164,7 @@ var render = function() {
             },
             [
               _c("h3", { staticClass: "product-card-title" }, [
-                _vm._v(_vm._s(_vm.type ? "Talleres" : "Ebooks"))
+                _vm._v(_vm._s(this.type))
               ])
             ]
           ),
@@ -40135,7 +40182,7 @@ var render = function() {
             { staticClass: "mx-4 pb-4" },
             [
               _c("v-btn", { attrs: { color: "primary", block: "" } }, [
-                _vm._v("Ver todos los talleres")
+                _vm._v("Ver todos los " + _vm._s(this.type))
               ])
             ],
             1
