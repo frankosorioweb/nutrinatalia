@@ -2246,12 +2246,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2265,37 +2259,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/SocialMediaBigButton.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['facebook']
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/SocialMediaSmallButton.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/SocialMediaSmallButton.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2321,12 +2284,46 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['facebook'],
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)(['links']))
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/SocialMediaSmallButton.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/SocialMediaSmallButton.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
-    type: Boolean
-  },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)(["links"]))
+    type: Boolean,
+    link: String
+  }
 });
 
 /***/ }),
@@ -40235,13 +40232,7 @@ var render = function() {
           _c(
             "v-row",
             { staticClass: "flex-nowrap overflow-x-auto" },
-            [
-              _c("v-col", { attrs: { cols: "12" } }, [_c("testimony")], 1),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12" } }, [_c("testimony")], 1),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12" } }, [_c("testimony")], 1)
-            ],
+            [_c("v-col", { attrs: { cols: "12" } }, [_c("testimony")], 1)],
             1
           )
         ],
@@ -40297,7 +40288,12 @@ var render = function() {
       staticClass:
         "social-media-button-container elevation-5 d-block rounded-pill grey--text text--lighten-5 py-2 px-6",
       class: _vm.facebook ? "facebook" : "instagram",
-      attrs: { target: "_blank" }
+      attrs: {
+        href: _vm.facebook
+          ? _vm.links.socialMedia.facebook
+          : _vm.links.socialMedia.instagram,
+        target: "_blank"
+      }
     },
     [
       _c("span", { staticClass: "follow-text d-block primary-font lh-1" }, [
@@ -40358,12 +40354,7 @@ var render = function() {
       staticClass:
         "d-inline-flex justify-center align-center social-media-small-button rounded-circle pa-1",
       class: { facebook: _vm.type, instagram: _vm.type === false },
-      attrs: {
-        href: _vm.type
-          ? _vm.links.socialMedia.facebook
-          : _vm.links.socialMedia.instagram,
-        target: "_blank"
-      }
+      attrs: { href: _vm.link, target: "_blank" }
     },
     [
       _c("v-icon", { staticClass: "icon" }, [
