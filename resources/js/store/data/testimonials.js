@@ -1,6 +1,5 @@
 const avatarSource = '/img/avatars';
-
-export default [
+const testimonials = [
     {
         avatar: `${avatarSource}/1.png`,
         name: 'Will Smith',
@@ -10,4 +9,6 @@ export default [
             instagram: 'https://instagram.com'
         }
     }
-]
+];
+
+export default testimonials;

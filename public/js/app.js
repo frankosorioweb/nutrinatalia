@@ -2227,6 +2227,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Testimony_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Testimony.vue */ "./resources/js/components/home/Testimony.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2247,10 +2254,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     testimony: _Testimony_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
+  },
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['getTestimonials']))
 });
 
 /***/ }),
@@ -2802,7 +2811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var avatarSource = '/img/avatars';
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
+var testimonials = [{
   avatar: "".concat(avatarSource, "/1.png"),
   name: 'Will Smith',
   text: 'La mejor academia online de nutrición del planeta, mi calificación son cinco estrellas para la plataforma.',
@@ -2810,7 +2819,8 @@ var avatarSource = '/img/avatars';
     facebook: 'https://facebook.com',
     instagram: 'https://instagram.com'
   }
-}]);
+}];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (testimonials);
 
 /***/ }),
 
@@ -2836,16 +2846,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var store = new vuex__WEBPACK_IMPORTED_MODULE_4__["default"].Store({
-  state: {
-    testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_2__["default"],
-    links: {
-      socialMedia: {
-        facebook: 'https://www.facebook.com/nutrinataliach',
-        instagram: 'https://instagram.com/nutrinataliach'
-      }
+var state = {
+  testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_2__["default"],
+  links: {
+    socialMedia: {
+      facebook: 'https://www.facebook.com/nutrinataliach',
+      instagram: 'https://instagram.com/nutrinataliach'
     }
-  },
+  }
+};
+var getters = {
+  getTestimonials: function getTestimonials(state) {
+    return state.testimonials;
+  }
+};
+var store = new vuex__WEBPACK_IMPORTED_MODULE_4__["default"].Store({
+  state: state,
+  getters: getters,
   modules: {
     navigationDrawer: _modules_navigationDrawer__WEBPACK_IMPORTED_MODULE_0__["default"],
     productCard: _modules_productCard__WEBPACK_IMPORTED_MODULE_1__["default"]
