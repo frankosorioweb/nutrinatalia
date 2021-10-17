@@ -2253,6 +2253,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2411,12 +2416,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['avatar', 'name', 'text', 'socialMedia'],
   components: {
     socialMediaSmallButton: _SocialMediaSmallButton_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
@@ -40249,7 +40252,23 @@ var render = function() {
           _c(
             "v-row",
             { staticClass: "flex-nowrap overflow-x-auto" },
-            [_c("v-col", { attrs: { cols: "12" } }, [_c("testimony")], 1)],
+            _vm._l(_vm.getTestimonials, function(testimony, index) {
+              return _c(
+                "v-col",
+                { key: index, attrs: { cols: "12" } },
+                [
+                  _c("testimony", {
+                    attrs: {
+                      avatar: testimony.avatar,
+                      name: testimony.name,
+                      text: testimony.text,
+                      socialMedia: testimony.socialMedia
+                    }
+                  })
+                ],
+                1
+              )
+            }),
             1
           )
         ],
@@ -40418,7 +40437,7 @@ var render = function() {
             [
               _c("img", {
                 staticClass: "avatar-img rounded-circle",
-                attrs: { src: "/img/avatars/1.png", alt: "Avatar" }
+                attrs: { src: this.avatar, alt: "Avatar" }
               })
             ]
           ),
@@ -40473,14 +40492,12 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("v-card-title", { staticClass: "px-0 py-2" }, [
-                _c("h3", [_vm._v("Will Smith")])
+                _c("h3", [_vm._v(_vm._s(this.name))])
               ]),
               _vm._v(" "),
               _c("v-card-text", { staticClass: "px-0 pb-0" }, [
                 _c("p", { staticClass: "text-left mb-0" }, [
-                  _vm._v(
-                    "\n          La mejor academia online de nutrición del planeta, mi calificación\n          son cinco estrellas para la plataforma.\n        "
-                  )
+                  _vm._v(_vm._s(this.text))
                 ])
               ])
             ],
@@ -40491,9 +40508,13 @@ var render = function() {
             "div",
             { staticClass: "px-5 py-3 grey lighten-4 text-center" },
             [
-              _c("social-media-small-button", { attrs: { type: true } }),
+              _c("social-media-small-button", {
+                attrs: { link: _vm.socialMedia.facebook, type: true }
+              }),
               _vm._v(" "),
-              _c("social-media-small-button", { attrs: { type: false } })
+              _c("social-media-small-button", {
+                attrs: { link: _vm.socialMedia.instagram, type: false }
+              })
             ],
             1
           )

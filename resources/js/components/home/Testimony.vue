@@ -4,7 +4,7 @@
       <div class="avatar-wrapper rounded-circle elevation-5">
         <img
           class="avatar-img rounded-circle"
-          src="/img/avatars/1.png"
+          :src="this.avatar"
           alt="Avatar"
         />
       </div>
@@ -39,18 +39,15 @@
           </defs>
         </svg>
         <v-card-title class="px-0 py-2">
-          <h3>Will Smith</h3>
+          <h3>{{ this.name }}</h3>
         </v-card-title>
         <v-card-text class="px-0 pb-0">
-          <p class="text-left mb-0">
-            La mejor academia online de nutrición del planeta, mi calificación
-            son cinco estrellas para la plataforma.
-          </p>
+          <p class="text-left mb-0">{{ this.text }}</p>
         </v-card-text>
       </div>
       <div class="px-5 py-3 grey lighten-4 text-center">
-        <social-media-small-button :type="true" />
-        <social-media-small-button :type="false" />
+        <social-media-small-button :link="socialMedia.facebook" :type="true" />
+        <social-media-small-button :link="socialMedia.instagram" :type="false" />
       </div>
     </v-card>
   </article>
@@ -60,6 +57,7 @@
 import { mapState } from "vuex";
 import socialMediaSmallButton from './SocialMediaSmallButton.vue';
 export default {
+  props: ['avatar', 'name', 'text', 'socialMedia'],
   components: {
     socialMediaSmallButton
   },
