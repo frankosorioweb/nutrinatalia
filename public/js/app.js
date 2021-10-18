@@ -40429,7 +40429,10 @@ var render = function() {
     [
       _c(
         "v-card",
-        { staticClass: "rounded-lg text-left", attrs: { elevation: "5" } },
+        {
+          staticClass: "testimony-card d-flex flex-column rounded-lg text-left",
+          attrs: { elevation: "5" }
+        },
         [
           _c(
             "div",
@@ -40496,7 +40499,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("v-card-text", { staticClass: "px-0 pb-0" }, [
-                _c("p", { staticClass: "text-left mb-0" }, [
+                _c("p", { staticClass: "text-left text mb-0" }, [
                   _vm._v(_vm._s(this.text))
                 ])
               ])
@@ -40506,7 +40509,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "px-5 py-3 grey lighten-4 text-center" },
+            { staticClass: "px-5 py-3 mt-auto grey lighten-4 text-center" },
             [
               _c("social-media-small-button", {
                 attrs: { link: _vm.socialMedia.facebook, type: true }

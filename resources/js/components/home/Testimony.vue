@@ -1,6 +1,6 @@
 <template>
   <article class="testimony">
-    <v-card elevation="5" class="rounded-lg text-left">
+    <v-card elevation="5" class="testimony-card d-flex flex-column rounded-lg text-left">
       <div class="avatar-wrapper rounded-circle elevation-5">
         <img
           class="avatar-img rounded-circle"
@@ -42,10 +42,10 @@
           <h3>{{ this.name }}</h3>
         </v-card-title>
         <v-card-text class="px-0 pb-0">
-          <p class="text-left mb-0">{{ this.text }}</p>
+          <p class="text-left text mb-0">{{ this.text }}</p>
         </v-card-text>
       </div>
-      <div class="px-5 py-3 grey lighten-4 text-center">
+      <div class="px-5 py-3 mt-auto grey lighten-4 text-center">
         <social-media-small-button :link="socialMedia.facebook" :type="true" />
         <social-media-small-button :link="socialMedia.instagram" :type="false" />
       </div>

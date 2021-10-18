@@ -2,6 +2,10 @@
     $avatar-size: 8.125rem;
     position: relative;
     margin-top: $avatar-size/2;
+    height: calc(100% - $avatar-size/2);
+    .testimony-card {
+        height: 100%;
+    }
     .avatar-wrapper {
         position: absolute;
         width: $avatar-size; height: $avatar-size;

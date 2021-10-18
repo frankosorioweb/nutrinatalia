@@ -44,6 +44,10 @@
 .testimony {
   position: relative;
   margin-top: 4.0625rem;
+  height: calc(100% - 4.0625rem);
+}
+.testimony .testimony-card {
+  height: 100%;
 }
 .testimony .avatar-wrapper {
   position: absolute;
