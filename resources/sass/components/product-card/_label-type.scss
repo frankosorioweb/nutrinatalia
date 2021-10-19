@@ -1,0 +1,15 @@
+.product-card-label-type-container {
+    --color: #{$primary-color}; --bg-color: #{transparentize($color: $primary-color, $amount: .9)};
+    &.ebook {
+        --color: #{$secondary-color}; --bg-color: #{transparentize($color: $secondary-color, $amount: .9)};
+    }
+
+    background-color: var(--bg-color); color: var(--color);
+    
+    .label-type {
+        font-size: .875rem;
+    }
+    .icon {
+        color: var(--color) !important;
+    }
+}

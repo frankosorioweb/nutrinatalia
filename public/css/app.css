@@ -88,6 +88,23 @@
   color: #CA2474;
 }
 
+.product-card-label-type-container {
+  --color: #00959B;
+  --bg-color: rgba(0, 149, 155, 0.1);
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+.product-card-label-type-container.ebook {
+  --color: #764191;
+  --bg-color: rgba(118, 65, 145, 0.1);
+}
+.product-card-label-type-container .label-type {
+  font-size: 0.875rem;
+}
+.product-card-label-type-container .icon {
+  color: var(--color) !important;
+}
+
 .app-header .logo {
   max-height: 34px;
 }
