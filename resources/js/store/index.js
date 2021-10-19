@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 // Modules
 import navigationDrawer from './modules/navigationDrawer';
-import productCard from './modules/productCard';
+import productTypes from './modules/productTypes';
 
 // Data
 import testimonials from './data/testimonials';
@@ -25,7 +25,7 @@ const store = new Vuex.Store({
     getters,
     modules: {
         navigationDrawer,
-        productCard
+        productTypes
     }
 });
 
