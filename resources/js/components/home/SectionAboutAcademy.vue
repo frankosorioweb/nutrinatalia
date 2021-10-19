@@ -8,16 +8,16 @@
       <v-row>
         <v-col cols="12">
           <product-card
-            :title="getProductsTypes.WORKSHOP.name"
-            :poster="getProductsTypes.WORKSHOP.posterSrc"
-            :description="getProductsTypes.WORKSHOP.description"
+            title="Talleres"
+            poster="/img/posters/Workshops.png"
+            description="Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar."
           ></product-card>
         </v-col>
         <v-col cols="12">
           <product-card
-            :title="getProductsTypes.EBOOK.name"
-            :poster="getProductsTypes.EBOOK.posterSrc"
-            :description="getProductsTypes.EBOOK.description"
+            title="Ebooks"
+            poster="/img/posters/Ebooks.png"
+            description="Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más."
           ></product-card>
         </v-col>
       </v-row>
@@ -27,13 +27,9 @@
 
 <script>
 import productCard from "../../layouts/ProductCard.vue";
-import { mapGetters } from "vuex";
 export default {
   components: {
     productCard,
-  },
-  computed: {
-    ...mapGetters('productCard', ['getProductsTypes'])
   }
 };
 </script>
