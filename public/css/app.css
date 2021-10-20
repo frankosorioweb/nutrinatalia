@@ -105,12 +105,12 @@
   color: var(--color) !important;
 }
 
-.app-header .logo {
-  max-height: 34px;
-}
-
 .product-card .product-card-title {
   font-size: 1.25rem;
+}
+
+.app-header .logo {
+  max-height: 34px;
 }
 
 img {

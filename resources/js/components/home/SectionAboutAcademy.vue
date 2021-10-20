@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import productCard from "../../layouts/ProductCard.vue";
+import productCard from "../productCard";
 export default {
   components: {
     productCard,

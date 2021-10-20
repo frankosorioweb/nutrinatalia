@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import labelType from '../components/productCard/labelType.vue';
+import labelType from './labelType.vue';
 import { mapGetters } from "vuex";
 export default {
   props: ["poster", "title", "type", "description", "price"],

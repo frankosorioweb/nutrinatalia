@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import productCard from "../../layouts/ProductCard.vue";
+import productCard from "../productCard";
 import { mapGetters } from "vuex";
 export default {
   components: {
