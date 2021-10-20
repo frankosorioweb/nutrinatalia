@@ -2931,6 +2931,84 @@ var links = {
 
 /***/ }),
 
+/***/ "./resources/js/store/data/money.js":
+/*!******************************************!*\
+  !*** ./resources/js/store/data/money.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var money = {
+  symbols: {
+    dollar: 'USD',
+    guarani: 'GS'
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (money);
+
+/***/ }),
+
+/***/ "./resources/js/store/data/products.js":
+/*!*********************************************!*\
+  !*** ./resources/js/store/data/products.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _money__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./money */ "./resources/js/store/data/money.js");
+/* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/productTypes */ "./resources/js/store/modules/productTypes.js");
+
+
+var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["default"].state.types,
+    WORKSHOP = _productTypes$state$t.WORKSHOP,
+    EBOOK = _productTypes$state$t.EBOOK; // Aquí definimos los precios de los WORKSHOPS e EBOOKS
+
+var prices = {};
+prices[WORKSHOP] = {
+  "default": {
+    "default": true,
+    dollar: {
+      symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.dollar,
+      value: 36
+    },
+    guarani: {
+      symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.guarani,
+      value: 245000
+    }
+  }
+};
+prices[WORKSHOP].off60 = {
+  "default": false,
+  discount: 60,
+  dollar: {
+    symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.dollar,
+    value: 13.9,
+    old: prices[WORKSHOP]["default"].dollar.value
+  },
+  guarani: {
+    symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.guarani,
+    value: 95000,
+    old: prices[WORKSHOP]["default"].guarani.value
+  }
+};
+var products = [{
+  name: 'Dulces que nos hacen bien',
+  description: 'Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+  price: prices[WORKSHOP].off60,
+  type: WORKSHOP
+}];
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
+
+/***/ }),
+
 /***/ "./resources/js/store/data/testimonials.js":
 /*!*************************************************!*\
   !*** ./resources/js/store/data/testimonials.js ***!
@@ -2967,12 +3045,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _modules_navigationDrawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigationDrawer */ "./resources/js/store/modules/navigationDrawer.js");
 /* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/productTypes */ "./resources/js/store/modules/productTypes.js");
 /* harmony import */ var _data_testimonials__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data/testimonials */ "./resources/js/store/data/testimonials.js");
 /* harmony import */ var _data_links__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/links */ "./resources/js/store/data/links.js");
+/* harmony import */ var _data_products__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/products */ "./resources/js/store/data/products.js");
 
  // Modules
 
@@ -2981,17 +3060,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_4__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
+vue__WEBPACK_IMPORTED_MODULE_5__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_6__["default"]);
 var state = {
   testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_2__["default"],
-  links: _data_links__WEBPACK_IMPORTED_MODULE_3__["default"]
+  links: _data_links__WEBPACK_IMPORTED_MODULE_3__["default"],
+  products: _data_products__WEBPACK_IMPORTED_MODULE_4__["default"]
 };
 var getters = {
   getTestimonials: function getTestimonials(state) {
     return state.testimonials;
   }
 };
-var store = new vuex__WEBPACK_IMPORTED_MODULE_5__["default"].Store({
+var store = new vuex__WEBPACK_IMPORTED_MODULE_6__["default"].Store({
   state: state,
   getters: getters,
   modules: {

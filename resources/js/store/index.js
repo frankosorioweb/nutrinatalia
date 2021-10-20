@@ -8,12 +8,14 @@ import productTypes from './modules/productTypes';
 // Data
 import testimonials from './data/testimonials';
 import links from './data/links';
+import products from './data/products';
 
 Vue.use(Vuex);
 
 const state = {
     testimonials,
-    links
+    links,
+    products
 }
 
 const getters = {
