@@ -8,11 +8,7 @@
       <v-row>
         <v-col cols="12">
           <product-card
-            title="Dulces que nos hacen bien"
-            :type="getProductsTypes.WORKSHOP"
-            poster="/img/posters/Panes sin culpa.png"
-            description="Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos."
-            price="13.9 USD"
+            :data="this.getGift"
           ></product-card>
         </v-col>
       </v-row>
@@ -22,6 +18,7 @@
 
 <script>
 import productCard from "../productCard";
+import products from "../../store/data/products";
 import { mapGetters } from "vuex";
 export default {
   components: {
@@ -29,6 +26,9 @@ export default {
   },
   computed: {
     ...mapGetters("productTypes", ["getProductsTypes"]),
+    getGift() {
+      return products[0]  
+    }
   },
 };
 </script>
