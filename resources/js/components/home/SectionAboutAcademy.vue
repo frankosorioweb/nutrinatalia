@@ -8,16 +8,20 @@
       <v-row>
         <v-col cols="12">
           <product-card
-            title="Talleres"
-            poster="/img/posters/Workshops.png"
-            description="Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar."
+            :data="{
+              poster: '/img/posters/Workshops.png',
+              name: 'Talleres',
+              description: 'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.'
+            }"            
           ></product-card>
         </v-col>
         <v-col cols="12">
           <product-card
-            title="Ebooks"
-            poster="/img/posters/Ebooks.png"
-            description="Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más."
+            :data="{
+              poster: '/img/posters/Ebooks.png',
+              name: 'Ebooks',
+              description: 'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.'
+            }"
           ></product-card>
         </v-col>
       </v-row>
