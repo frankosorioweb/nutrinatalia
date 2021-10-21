@@ -105,8 +105,26 @@
   color: var(--color) !important;
 }
 
+.product-card {
+  position: relative;
+}
 .product-card .product-card-title {
   font-size: 1.25rem;
+}
+
+.discount-sticker-wrapper {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  z-index: 4;
+}
+.discount-sticker-wrapper .discount {
+  position: absolute;
+  display: block;
+  width: 100%;
+  right: 0;
+  top: 26%;
+  font-size: 1.125rem;
 }
 
 .app-header .logo {
