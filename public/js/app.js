@@ -2093,6 +2093,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2114,7 +2118,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _productCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../productCard */ "./resources/js/components/productCard/index.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_data_products__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store/data/products */ "./resources/js/store/data/products.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2139,17 +2144,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     productCard: _productCard__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"]))
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productTypes", ["getProductsTypes"])), {}, {
+    getGift: function getGift() {
+      return _store_data_products__WEBPACK_IMPORTED_MODULE_1__["default"][0];
+    }
+  })
 });
 
 /***/ }),
@@ -2471,6 +2477,109 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['discount']
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/index.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/index.vue?vue&type=script&lang=js& ***!
@@ -2483,7 +2592,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _labelType_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./labelType.vue */ "./resources/js/components/productCard/labelType.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _discountSticker_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./discountSticker.vue */ "./resources/js/components/productCard/discountSticker.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2526,17 +2636,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["poster", "title", "type", "description", "price"],
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productCard", ["getProductsTypes", "getProductTypeText"])), {}, {
+  props: ["data"],
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productCard", ["getProductsTypes", "getProductTypeText"])), {}, {
     hasPrice: function hasPrice() {
-      return !_.isUndefined(this.price);
+      return !_.isUndefined(this.data.price);
+    },
+    hasDiscount: function hasDiscount() {
+      return this.hasPrice && !_.isUndefined(this.data.price.discount);
     }
   }),
   components: {
-    labelType: _labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    labelType: _labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    discountSticker: _discountSticker_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {// console.log(this.data);
   }
 });
 
@@ -2952,6 +3080,52 @@ var money = {
 
 /***/ }),
 
+/***/ "./resources/js/store/data/prices.js":
+/*!*******************************************!*\
+  !*** ./resources/js/store/data/prices.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/productTypes */ "./resources/js/store/modules/productTypes.js");
+/* harmony import */ var _money__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./money */ "./resources/js/store/data/money.js");
+
+
+var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_0__["default"].state.types,
+    WORKSHOP = _productTypes$state$t.WORKSHOP,
+    EBOOK = _productTypes$state$t.EBOOK;
+var prices = {};
+prices[WORKSHOP] = {
+  original: {
+    "default": true,
+    dollar: {
+      value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
+    },
+    guarani: {
+      value: "245.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
+    }
+  }
+};
+prices[WORKSHOP].off60 = {
+  "default": false,
+  discount: 60,
+  dollar: {
+    value: "13.9 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar),
+    old: prices[WORKSHOP].original.dollar.value
+  },
+  guarani: {
+    value: "95.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani),
+    old: prices[WORKSHOP].original.guarani.value
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prices);
+
+/***/ }),
+
 /***/ "./resources/js/store/data/products.js":
 /*!*********************************************!*\
   !*** ./resources/js/store/data/products.js ***!
@@ -2963,46 +3137,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _money__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./money */ "./resources/js/store/data/money.js");
+/* harmony import */ var _prices__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./prices */ "./resources/js/store/data/prices.js");
 /* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/productTypes */ "./resources/js/store/modules/productTypes.js");
 
 
+var postersSrc = '/img/posters/';
 var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["default"].state.types,
     WORKSHOP = _productTypes$state$t.WORKSHOP,
     EBOOK = _productTypes$state$t.EBOOK; // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 
-var prices = {};
-prices[WORKSHOP] = {
-  "default": {
-    "default": true,
-    dollar: {
-      symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.dollar,
-      value: 36
-    },
-    guarani: {
-      symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.guarani,
-      value: 245000
-    }
-  }
-};
-prices[WORKSHOP].off60 = {
-  "default": false,
-  discount: 60,
-  dollar: {
-    symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.dollar,
-    value: 13.9,
-    old: prices[WORKSHOP]["default"].dollar.value
-  },
-  guarani: {
-    symbol: _money__WEBPACK_IMPORTED_MODULE_0__["default"].symbols.guarani,
-    value: 95000,
-    old: prices[WORKSHOP]["default"].guarani.value
-  }
-};
 var products = [{
+  id: 1,
+  poster: "".concat(postersSrc, "Panes sin culpa.png"),
   name: 'Dulces que nos hacen bien',
   description: 'Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
-  price: prices[WORKSHOP].off60,
+  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off60,
   type: WORKSHOP
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
@@ -39807,6 +39956,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_discountSticker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./discountSticker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_discountSticker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/productCard/index.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/components/productCard/index.vue?vue&type=script&lang=js& ***!
@@ -40057,6 +40222,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./discountSticker.vue?vue&type=template&id=891d035e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/productCard/index.vue?vue&type=template&id=bb1d38b2&":
 /*!**************************************************************************************!*\
   !*** ./resources/js/components/productCard/index.vue?vue&type=template&id=bb1d38b2& ***!
@@ -40201,10 +40383,12 @@ var render = function() {
                 [
                   _c("product-card", {
                     attrs: {
-                      title: "Talleres",
-                      poster: "/img/posters/Workshops.png",
-                      description:
-                        "Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar."
+                      data: {
+                        poster: "/img/posters/Workshops.png",
+                        name: "Talleres",
+                        description:
+                          "Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar."
+                      }
                     }
                   })
                 ],
@@ -40217,10 +40401,12 @@ var render = function() {
                 [
                   _c("product-card", {
                     attrs: {
-                      title: "Ebooks",
-                      poster: "/img/posters/Ebooks.png",
-                      description:
-                        "Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más."
+                      data: {
+                        poster: "/img/posters/Ebooks.png",
+                        name: "Ebooks",
+                        description:
+                          "Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más."
+                      }
                     }
                   })
                 ],
@@ -40287,18 +40473,7 @@ var render = function() {
               _c(
                 "v-col",
                 { attrs: { cols: "12" } },
-                [
-                  _c("product-card", {
-                    attrs: {
-                      title: "Dulces que nos hacen bien",
-                      type: _vm.getProductsTypes.WORKSHOP,
-                      poster: "/img/posters/Panes sin culpa.png",
-                      description:
-                        "Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.",
-                      price: "13.9 USD"
-                    }
-                  })
-                ],
+                [_c("product-card", { attrs: { data: this.getGift } })],
                 1
               )
             ],
@@ -40877,6 +41052,180 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "discount-sticker-wrapper" }, [
+    _c(
+      "span",
+      {
+        staticClass:
+          "discount mx-auto white--text primary-font font-weight-bold pl-4"
+      },
+      [_vm._v("-" + _vm._s(_vm.discount) + "%")]
+    ),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        attrs: {
+          width: "125",
+          height: "135",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg"
+        }
+      },
+      [
+        _c("path", {
+          attrs: {
+            d:
+              "m24.013 111.996 2.873-17.057-17.533 4.389L41.89 65.313l14.662 12.669-32.538 34.014z",
+            fill: "url(#a)",
+            stroke: "#726658",
+            "stroke-width": "1.119",
+            "stroke-miterlimit": "10",
+            "stroke-linejoin": "round"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "m46.602 123.423 13.258-11.804 5.981 16.283 11.447-44.683L58.05 78.74l-11.449 44.682z",
+            fill: "url(#b)",
+            stroke: "#726658",
+            "stroke-width": "1.119",
+            "stroke-miterlimit": "10",
+            "stroke-linejoin": "round"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M87.215 17.83c2.396-1.378 4.47-.329 4.61 2.33.139 2.66 2.484 4.34 5.211 3.735 2.728-.606 4.36 1 3.628 3.57-.732 2.569.953 4.855 3.745 5.08 2.792.226 3.823 2.232 2.291 4.46-1.532 2.226-.672 4.895 1.912 5.929 2.583 1.034 2.911 3.244.73 4.912-2.182 1.667-2.231 4.456-.109 6.198 2.121 1.741 1.715 3.939-.903 4.883-2.618.944-3.571 3.58-2.119 5.86 1.453 2.278.352 4.248-2.446 4.377-2.798.129-4.563 2.355-3.922 4.948.641 2.593-1.047 4.142-3.75 3.442-2.705-.7-5.108.9-5.341 3.552-.233 2.653-2.343 3.63-4.688 2.171-2.346-1.46-5.152-.645-6.237 1.808-1.084 2.454-3.409 2.763-5.166.687-1.758-2.076-4.693-2.127-6.522-.113-1.83 2.014-4.142 1.625-5.14-.865-.997-2.49-3.773-3.4-6.169-2.022-2.395 1.377-4.47.328-4.609-2.332-.14-2.66-2.485-4.34-5.212-3.734-2.727.605-4.36-1.001-3.627-3.57.732-2.569-.954-4.855-3.745-5.08-2.792-.226-3.823-2.233-2.291-4.46 1.531-2.227.671-4.895-1.912-5.93-2.583-1.033-2.912-3.243-.73-4.91 2.182-1.668 2.23-4.457.109-6.199-2.122-1.742-1.716-3.939.902-4.883s3.572-3.581 2.12-5.86c-1.453-2.279-.352-4.248 2.446-4.377 2.798-.129 4.563-2.355 3.921-4.948-.64-2.593 1.047-4.142 3.751-3.443 2.704.7 5.108-.898 5.34-3.552.233-2.653 2.343-3.63 4.689-2.17 2.346 1.459 5.152.645 6.236-1.809 1.084-2.453 3.41-2.762 5.167-.686 1.758 2.076 4.692 2.127 6.522.113s4.142-1.625 5.14.864c.996 2.49 3.772 3.4 6.168 2.023z",
+            fill: "#9B8579"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M87.215 17.83c2.396-1.378 4.47-.329 4.61 2.33.139 2.66 2.484 4.34 5.211 3.735 2.728-.606 4.36 1 3.628 3.57-.732 2.569.953 4.855 3.745 5.08 2.792.226 3.823 2.232 2.291 4.46-1.532 2.226-.672 4.895 1.912 5.929 2.583 1.034 2.911 3.244.73 4.912-2.182 1.667-2.231 4.456-.109 6.198 2.121 1.741 1.715 3.939-.903 4.883-2.618.944-3.571 3.58-2.119 5.86 1.453 2.278.352 4.248-2.446 4.377-2.798.129-4.563 2.355-3.922 4.948.641 2.593-1.047 4.142-3.75 3.442-2.705-.7-5.108.9-5.341 3.552-.233 2.653-2.343 3.63-4.688 2.171-2.346-1.46-5.152-.645-6.237 1.808-1.084 2.454-3.409 2.763-5.166.687-1.758-2.076-4.693-2.127-6.522-.113-1.83 2.014-4.142 1.625-5.14-.865-.997-2.49-3.773-3.4-6.169-2.022-2.395 1.377-4.47.328-4.609-2.332-.14-2.66-2.485-4.34-5.212-3.734-2.727.605-4.36-1.001-3.627-3.57.732-2.569-.954-4.855-3.745-5.08-2.792-.226-3.823-2.233-2.291-4.46 1.531-2.227.671-4.895-1.912-5.93-2.583-1.033-2.912-3.243-.73-4.91 2.182-1.668 2.23-4.457.109-6.199-2.122-1.742-1.716-3.939.902-4.883s3.572-3.581 2.12-5.86c-1.453-2.279-.352-4.248 2.446-4.377 2.798-.129 4.563-2.355 3.921-4.948-.64-2.593 1.047-4.142 3.751-3.443 2.704.7 5.108-.898 5.34-3.552.233-2.653 2.343-3.63 4.689-2.17 2.346 1.459 5.152.645 6.236-1.809 1.084-2.453 3.41-2.762 5.167-.686 1.758 2.076 4.692 2.127 6.522.113s4.142-1.625 5.14.864c.996 2.49 3.772 3.4 6.168 2.023z",
+            stroke: "#726658",
+            "stroke-width": "2.307",
+            "stroke-miterlimit": "10",
+            "stroke-linejoin": "round"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M53.975 77.772c-.127-2.425-2.265-3.956-4.75-3.404-2.486.552-3.974-.912-3.307-3.254.667-2.341-.869-4.425-3.414-4.63-2.544-.206-3.484-2.035-2.088-4.065 1.397-2.03.613-4.462-1.742-5.404-2.355-.943-2.654-2.957-.665-4.477 1.988-1.52 2.033-4.062.099-5.649-1.934-1.587-1.564-3.59.822-4.45 2.386-.861 3.256-3.265 1.932-5.342-1.325-2.077-.321-3.872 2.23-3.99 2.55-.117 4.158-2.146 3.574-4.509-.585-2.363.954-3.775 3.418-3.137 2.465.637 4.655-.82 4.868-3.238.212-2.418 2.135-3.308 4.273-1.979 2.138 1.33 4.696.589 5.684-1.648.988-2.236 3.108-2.517 4.71-.625 1.602 1.892 4.276 1.938 5.944.103 1.667-1.836 3.775-1.481 4.684.788.909 2.269 3.44 3.098 5.623 1.843 2.183-1.255 4.073-.299 4.2 2.125.128 2.424 2.265 3.956 4.751 3.404 2.486-.553 3.974.912 3.307 3.253-.667 2.342.869 4.426 3.413 4.631 2.545.206 3.485 2.034 2.088 4.064-1.396 2.03-.612 4.463 1.743 5.405 2.354.942 2.654 2.957.665 4.477-1.989 1.52-2.033 4.061-.1 5.649 1.934 1.587 1.564 3.59-.822 4.45-2.386.861-3.255 3.265-1.931 5.342 1.324 2.077.32 3.872-2.23 3.99-2.55.116-4.159 2.146-3.574 4.509.584 2.363-.954 3.775-3.42 3.137-2.464-.637-4.654.82-4.866 3.238-.212 2.418-2.135 3.308-4.273 1.978-2.139-1.33-4.696-.588-5.685 1.648-.988 2.237-3.107 2.518-4.709.626-1.602-1.892-4.277-1.938-5.944-.103-1.668 1.836-3.776 1.481-4.685-.788-.909-2.27-3.439-3.099-5.622-1.843-2.183 1.255-4.074.299-4.201-2.126z",
+            fill: "#9B8579"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M53.975 77.772c-.127-2.425-2.265-3.956-4.75-3.404-2.486.552-3.974-.912-3.307-3.254.667-2.341-.869-4.425-3.414-4.63-2.544-.206-3.484-2.035-2.088-4.065 1.397-2.03.613-4.462-1.742-5.404-2.355-.943-2.654-2.957-.665-4.477 1.988-1.52 2.033-4.062.099-5.649-1.934-1.587-1.564-3.59.822-4.45 2.386-.861 3.256-3.265 1.932-5.342-1.325-2.077-.321-3.872 2.23-3.99 2.55-.117 4.158-2.146 3.574-4.509-.585-2.363.954-3.775 3.418-3.137 2.465.637 4.655-.82 4.868-3.238.212-2.418 2.135-3.308 4.273-1.979 2.138 1.33 4.696.589 5.684-1.648.988-2.236 3.108-2.517 4.71-.625 1.602 1.892 4.276 1.938 5.944.103 1.667-1.836 3.775-1.481 4.684.788.909 2.269 3.44 3.098 5.623 1.843 2.183-1.255 4.073-.299 4.2 2.125.128 2.424 2.265 3.956 4.751 3.404 2.486-.553 3.974.912 3.307 3.253-.667 2.342.869 4.426 3.413 4.631 2.545.206 3.485 2.034 2.088 4.064-1.396 2.03-.612 4.463 1.743 5.405 2.354.942 2.654 2.957.665 4.477-1.989 1.52-2.033 4.061-.1 5.649 1.934 1.587 1.564 3.59-.822 4.45-2.386.861-3.255 3.265-1.931 5.342 1.324 2.077.32 3.872-2.23 3.99-2.55.116-4.159 2.146-3.574 4.509.584 2.363-.954 3.775-3.42 3.137-2.464-.637-4.654.82-4.866 3.238-.212 2.418-2.135 3.308-4.273 1.978-2.139-1.33-4.696-.588-5.685 1.648-.988 2.237-3.107 2.518-4.709.626-1.602-1.892-4.277-1.938-5.944-.103-1.668 1.836-3.776 1.481-4.685-.788-.909-2.27-3.439-3.099-5.622-1.843-2.183 1.255-4.074.299-4.201-2.126z",
+            stroke: "#726658",
+            "stroke-width": "2.307",
+            "stroke-miterlimit": "10",
+            "stroke-linejoin": "round"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M54.484 78.45c-.085-1.625-.807-3.422-1.605-3.994-.799-.571-2.815-.736-4.48-.366-1.667.37-2.664-.612-2.217-2.181.448-1.57.344-3.49-.23-4.268-.573-.778-2.437-1.527-4.143-1.665-1.706-.138-2.335-1.364-1.4-2.724.936-1.36 1.463-3.217 1.17-4.125-.293-.908-1.823-2.167-3.402-2.8-1.578-.631-1.779-1.981-.446-3 1.333-1.018 2.437-2.628 2.454-3.577.017-.95-1.03-2.596-2.326-3.66-1.297-1.064-1.049-2.407.55-2.984 1.6-.577 3.175-1.783 3.499-2.68.324-.897-.136-2.77-1.024-4.162-.887-1.392-.215-2.596 1.495-2.674 1.71-.079 3.6-.763 4.2-1.52.6-.758.77-2.674.379-4.258-.392-1.584.64-2.53 2.291-2.103 1.653.427 3.673.332 4.491-.212.818-.544 1.603-2.315 1.746-3.936.142-1.62 1.43-2.217 2.864-1.326 1.433.892 3.386 1.395 4.341 1.118.955-.277 2.278-1.73 2.94-3.229.663-1.5 2.084-1.688 3.157-.42 1.074 1.269 2.77 2.32 3.768 2.338.999.017 2.73-.976 3.848-2.206 1.118-1.23 2.53-.993 3.14.528.609 1.521 1.88 3.02 2.825 3.329.944.31 2.915-.126 4.378-.967s2.73-.2 2.816 1.424c.085 1.625.808 3.422 1.606 3.994.798.572 2.814.737 4.48.367 1.666-.37 2.663.611 2.216 2.181-.447 1.57-.344 3.49.23 4.268.573.778 2.438 1.527 4.144 1.665 1.705.137 2.335 1.363 1.399 2.724-.936 1.36-1.462 3.217-1.169 4.125.292.908 1.823 2.167 3.401 2.799 1.578.631 1.779 1.982.446 3-1.333 1.019-2.437 2.629-2.454 3.578-.016.949 1.031 2.596 2.327 3.66s1.048 2.406-.552 2.983c-1.599.577-3.173 1.783-3.498 2.68-.324.897.137 2.77 1.024 4.163.887 1.392.215 2.595-1.495 2.674-1.71.078-3.599.762-4.2 1.52-.6.757-.77 2.673-.379 4.257.392 1.584-.64 2.53-2.291 2.103-1.653-.427-3.673-.332-4.49.212-.818.544-1.604 2.315-1.746 3.936-.142 1.621-1.431 2.218-2.864 1.326-1.433-.891-3.387-1.394-4.342-1.117-.955.277-2.278 1.73-2.94 3.229-.662 1.5-2.083 1.688-3.157.42-1.073-1.269-2.769-2.32-3.767-2.338-1-.017-2.73.975-3.848 2.206-1.118 1.23-2.53.993-3.14-.528-.61-1.521-1.88-3.02-2.826-3.329-.944-.31-2.914.125-4.378.967-1.463.841-2.73.2-2.816-1.425z",
+            fill: "#9B8579"
+          }
+        }),
+        _vm._v(" "),
+        _c("path", {
+          attrs: {
+            d:
+              "M54.484 78.45c-.085-1.625-.807-3.422-1.605-3.994-.799-.571-2.815-.736-4.48-.366-1.667.37-2.664-.612-2.217-2.181.448-1.57.344-3.49-.23-4.268-.573-.778-2.437-1.527-4.143-1.665-1.706-.138-2.335-1.364-1.4-2.724.936-1.36 1.463-3.217 1.17-4.125-.293-.908-1.823-2.167-3.402-2.8-1.578-.631-1.779-1.981-.446-3 1.333-1.018 2.437-2.628 2.454-3.577.017-.95-1.03-2.596-2.326-3.66-1.297-1.064-1.049-2.407.55-2.984 1.6-.577 3.175-1.783 3.499-2.68.324-.897-.136-2.77-1.024-4.162-.887-1.392-.215-2.596 1.495-2.674 1.71-.079 3.6-.763 4.2-1.52.6-.758.77-2.674.379-4.258-.392-1.584.64-2.53 2.291-2.103 1.653.427 3.673.332 4.491-.212.818-.544 1.603-2.315 1.746-3.936.142-1.62 1.43-2.217 2.864-1.326 1.433.892 3.386 1.395 4.341 1.118.955-.277 2.278-1.73 2.94-3.229.663-1.5 2.084-1.688 3.157-.42 1.074 1.269 2.77 2.32 3.768 2.338.999.017 2.73-.976 3.848-2.206 1.118-1.23 2.53-.993 3.14.528.609 1.521 1.88 3.02 2.825 3.329.944.31 2.915-.126 4.378-.967s2.73-.2 2.816 1.424c.085 1.625.808 3.422 1.606 3.994.798.572 2.814.737 4.48.367 1.666-.37 2.663.611 2.216 2.181-.447 1.57-.344 3.49.23 4.268.573.778 2.438 1.527 4.144 1.665 1.705.137 2.335 1.363 1.399 2.724-.936 1.36-1.462 3.217-1.169 4.125.292.908 1.823 2.167 3.401 2.799 1.578.631 1.779 1.982.446 3-1.333 1.019-2.437 2.629-2.454 3.578-.016.949 1.031 2.596 2.327 3.66s1.048 2.406-.552 2.983c-1.599.577-3.173 1.783-3.498 2.68-.324.897.137 2.77 1.024 4.163.887 1.392.215 2.595-1.495 2.674-1.71.078-3.599.762-4.2 1.52-.6.757-.77 2.673-.379 4.257.392 1.584-.64 2.53-2.291 2.103-1.653-.427-3.673-.332-4.49.212-.818.544-1.604 2.315-1.746 3.936-.142 1.621-1.431 2.218-2.864 1.326-1.433-.891-3.387-1.394-4.342-1.117-.955.277-2.278 1.73-2.94 3.229-.662 1.5-2.083 1.688-3.157.42-1.073-1.269-2.769-2.32-3.767-2.338-1-.017-2.73.975-3.848 2.206-1.118 1.23-2.53.993-3.14-.528-.61-1.521-1.88-3.02-2.826-3.329-.944-.31-2.914.125-4.378.967-1.463.841-2.73.2-2.816-1.425z",
+            stroke: "#C2B59B",
+            "stroke-width": "2.307",
+            "stroke-miterlimit": "10",
+            "stroke-linejoin": "round"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "defs",
+          [
+            _c(
+              "linearGradient",
+              {
+                attrs: {
+                  id: "a",
+                  x1: "19.205",
+                  y1: "81.701",
+                  x2: "46.078",
+                  y2: "96.72",
+                  gradientUnits: "userSpaceOnUse"
+                }
+              },
+              [
+                _c("stop", { attrs: { "stop-color": "#9B8579" } }),
+                _vm._v(" "),
+                _c("stop", { attrs: { offset: "1", "stop-color": "#63554D" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "linearGradient",
+              {
+                attrs: {
+                  id: "b",
+                  x1: "75.693",
+                  y1: "110.275",
+                  x2: "48.821",
+                  y2: "95.256",
+                  gradientUnits: "userSpaceOnUse"
+                }
+              },
+              [
+                _c("stop", { attrs: { "stop-color": "#9B8579" } }),
+                _vm._v(" "),
+                _c("stop", { attrs: { offset: "1", "stop-color": "#63554D" } })
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/index.vue?vue&type=template&id=bb1d38b2&":
 /*!*****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/productCard/index.vue?vue&type=template&id=bb1d38b2& ***!
@@ -40897,11 +41246,17 @@ var render = function() {
     "article",
     { staticClass: "product-card" },
     [
+      this.hasDiscount
+        ? _c("discount-sticker", {
+            attrs: { discount: this.data.price.discount }
+          })
+        : _vm._e(),
+      _vm._v(" "),
       _c(
         "v-card",
         { staticClass: "mx-auto rounded-lg", attrs: { elevation: "5" } },
         [
-          _c("v-img", { attrs: { src: this.poster } }),
+          _c("v-img", { attrs: { src: this.data.poster } }),
           _vm._v(" "),
           _c(
             "v-card-title",
@@ -40911,13 +41266,15 @@ var render = function() {
             },
             [
               _c("h3", { staticClass: "product-card-title word-break" }, [
-                _vm._v(_vm._s(this.title))
+                _vm._v(_vm._s(this.data.name))
               ])
             ]
           ),
           _vm._v(" "),
           _c("v-card-text", { staticClass: "secondary-font" }, [
-            _c("p", { staticClass: "mb-0" }, [_vm._v(_vm._s(this.description))])
+            _c("p", { staticClass: "mb-0" }, [
+              _vm._v(_vm._s(this.data.description))
+            ])
           ]),
           _vm._v(" "),
           !this.hasPrice
@@ -40927,7 +41284,7 @@ var render = function() {
                   { staticClass: "px-4 pb-4" },
                   [
                     _c("v-btn", { attrs: { color: "primary", block: "" } }, [
-                      _vm._v("Ver todos los " + _vm._s(this.title))
+                      _vm._v("Ver todos los " + _vm._s(this.data.name))
                     ])
                   ],
                   1
@@ -40942,22 +41299,46 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "more-info d-flex justify-space-between mb-2"
+                          "more-info d-flex justify-space-between align-center mb-2"
                       },
                       [
-                        _c("label-type", { attrs: { type: _vm.type } }),
+                        _c("label-type", { attrs: { type: this.data.type } }),
                         _vm._v(" "),
-                        _c("p", { staticClass: "mb-0" }, [
-                          _c("span", [_vm._v("36")]),
-                          _vm._v(" 13.9 USD")
-                        ])
+                        _c(
+                          "p",
+                          {
+                            staticClass: "mb-0 font-weight-bold primary-color"
+                          },
+                          [
+                            this.data.price.discount
+                              ? _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "red--text text-decoration-line-through"
+                                  },
+                                  [_vm._v(_vm._s(this.data.price.dollar.old))]
+                                )
+                              : _vm._e(),
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(this.data.price.dollar.value) +
+                                "\n          "
+                            )
+                          ]
+                        )
                       ],
                       1
                     ),
                     _vm._v(" "),
-                    _c("v-btn", { attrs: { color: "error", block: "" } }, [
-                      _vm._v("Quiero el regalo")
-                    ])
+                    _c(
+                      "v-btn",
+                      {
+                        staticClass: "white--text",
+                        attrs: { color: "red", block: "" }
+                      },
+                      [_vm._v("Quiero el regalo")]
+                    )
                   ],
                   1
                 )
@@ -57823,6 +58204,45 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/home/Testimony.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/productCard/discountSticker.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/productCard/discountSticker.vue ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discountSticker.vue?vue&type=template&id=891d035e& */ "./resources/js/components/productCard/discountSticker.vue?vue&type=template&id=891d035e&");
+/* harmony import */ var _discountSticker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./discountSticker.vue?vue&type=script&lang=js& */ "./resources/js/components/productCard/discountSticker.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _discountSticker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _discountSticker_vue_vue_type_template_id_891d035e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/productCard/discountSticker.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),

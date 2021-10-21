@@ -1,7 +1,11 @@
 <template>
   <article class="product-card">
+    <discount-sticker
+      v-if="this.hasDiscount"
+      :discount="this.data.price.discount"
+    />
     <v-card elevation="5" class="mx-auto rounded-lg">
-      <v-img :src="this.poster"></v-img>
+      <v-img :src="this.data.poster"></v-img>
       <v-card-title
         class="
           primary-font
@@ -10,24 +14,31 @@
           justify-center
           pb-2
         "
-        ><h3 class="product-card-title word-break">{{ this.title }}</h3>
+        ><h3 class="product-card-title word-break">{{ this.data.name }}</h3>
       </v-card-title>
       <v-card-text class="secondary-font">
-        <p class="mb-0">{{ this.description }}</p>
+        <p class="mb-0">{{ this.data.description }}</p>
       </v-card-text>
+
       <!-- Footer -->
       <template v-if="!this.hasPrice">
         <div class="px-4 pb-4">
-          <v-btn color="primary" block>Ver todos los {{ this.title }}</v-btn>
+          <v-btn color="primary" block>Ver todos los {{ this.data.name }}</v-btn>
         </div>
       </template>
       <template v-else>
         <div class="px-4 py-4 grey lighten-4">
-          <div class="more-info d-flex justify-space-between mb-2">
-            <label-type :type="type" />
-            <p class="mb-0"><span>36</span> 13.9 USD</p>
+          <div class="more-info d-flex justify-space-between align-center mb-2">
+            <label-type :type="this.data.type" />
+            <p class="mb-0 font-weight-bold primary-color">
+              <span
+                v-if="this.data.price.discount"
+                class="red--text text-decoration-line-through"
+              >{{ this.data.price.dollar.old }}</span>
+              {{ this.data.price.dollar.value }}
+            </p>
           </div>
-          <v-btn color="error" block>Quiero el regalo</v-btn>
+          <v-btn color="red" class="white--text" block>Quiero el regalo</v-btn>
         </div>
       </template>
     </v-card>
@@ -36,17 +47,25 @@
 
 <script>
 import labelType from './labelType.vue';
+import discountSticker from './discountSticker.vue';
 import { mapGetters } from "vuex";
 export default {
-  props: ["poster", "title", "type", "description", "price"],
+  props: ["data"],
   computed: {
     ...mapGetters("productCard", ["getProductsTypes", "getProductTypeText"]),
     hasPrice() {
-      return !_.isUndefined(this.price);
+      return !_.isUndefined(this.data.price);
     },
+    hasDiscount() {
+      return this.hasPrice && !_.isUndefined(this.data.price.discount);
+    }
   },
   components: {
-    labelType
-  }
+    labelType,
+    discountSticker
+  },
+  mounted() {
+    // console.log(this.data);
+  },
 };
 </script>
