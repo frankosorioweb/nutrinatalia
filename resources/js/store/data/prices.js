@@ -9,7 +9,7 @@ const {
 let prices = {};
 
 prices[WORKSHOP] = {
-    default: {
+    original: {
         default: true,
         dollar: {
             value: `36 ${money.symbols.dollar}`
@@ -25,11 +25,11 @@ prices[WORKSHOP].off60 = {
     discount: 60,
     dollar: {
         value: `13.9 ${money.symbols.dollar}`,
-        old: prices[WORKSHOP].default.dollar.value
+        old: prices[WORKSHOP].original.dollar.value
     },
     guarani: {
         value: `95.000 ${money.symbols.guarani}`,
-        old: prices[WORKSHOP].default.guarani.value
+        old: prices[WORKSHOP].original.guarani.value
     }
 }
 
