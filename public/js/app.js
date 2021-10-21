@@ -40910,7 +40910,7 @@ var render = function() {
                 "\n        primary-font\n        font-weight-bold\n        secondary-color\n        justify-center\n        pb-2\n      "
             },
             [
-              _c("h3", { staticClass: "product-card-title" }, [
+              _c("h3", { staticClass: "product-card-title word-break" }, [
                 _vm._v(_vm._s(this.title))
               ])
             ]

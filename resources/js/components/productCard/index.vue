@@ -10,7 +10,7 @@
           justify-center
           pb-2
         "
-        ><h3 class="product-card-title">{{ this.title }}</h3>
+        ><h3 class="product-card-title word-break">{{ this.title }}</h3>
       </v-card-title>
       <v-card-text class="secondary-font">
         <p class="mb-0">{{ this.description }}</p>
