@@ -35,6 +35,10 @@
   border: 6px solid #764191;
 }
 
+.section-faq .faq-title {
+  font-size: 1rem;
+}
+
 .product-card-label-type-container {
   --color: #00959B;
   --bg-color: rgba(0, 149, 155, 0.1);

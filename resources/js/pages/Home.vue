@@ -23,7 +23,7 @@ import SectionPresentationVideo from "../components/home/SectionPresentationVide
 import SectionAboutAcademy from "../components/home/SectionAboutAcademy.vue";
 import sectionTestimonials from "../components/home/sectionTestimonials";
 import sectionGift from "../components/home/SectionGift.vue";
-import sectionFAQ from "../components/home/SectionFAQ.vue";
+import sectionFAQ from "../components/home/sectionFAQ";
 export default {
   components: {
     AppHeader,
