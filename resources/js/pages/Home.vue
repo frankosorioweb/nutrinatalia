@@ -18,10 +18,10 @@
 import AppHeader from "../layouts/Header.vue";
 import AppNavigationDrawer from "../layouts/NavigationDrawer.vue";
 import SectionPresentation from "../components/home/SectionPresentation.vue";
-import SectionSocialMedia from "../components/home/SectionSocialMedia.vue";
+import SectionSocialMedia from "../components/home/SectionSocialM.vue";
 import SectionPresentationVideo from "../components/home/SectionPresentationVideo.vue";
 import SectionAboutAcademy from "../components/home/SectionAboutAcademy.vue";
-import sectionTestimonials from "../components/home/SectionTestimonials.vue";
+import sectionTestimonials from "../components/home/sectionTestimonials";
 import sectionGift from "../components/home/SectionGift.vue";
 import sectionFAQ from "../components/home/SectionFAQ.vue";
 export default {

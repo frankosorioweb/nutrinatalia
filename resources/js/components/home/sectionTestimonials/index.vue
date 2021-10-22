@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import testimony from './Testimony.vue';
+import testimony from './testimonyCard.vue';
 import { mapGetters } from 'vuex';
 export default {
   components: {

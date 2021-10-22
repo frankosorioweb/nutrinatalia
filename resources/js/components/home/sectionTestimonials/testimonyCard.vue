@@ -55,7 +55,7 @@
 
 <script>
 import { mapState } from "vuex";
-import socialMediaSmallButton from './SocialMediaSmallButton.vue';
+import socialMediaSmallButton from '../../socialMediaButtons/smallButton.vue';
 export default {
   props: ['avatar', 'name', 'text', 'socialMedia'],
   components: {
