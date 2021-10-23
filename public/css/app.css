@@ -111,6 +111,10 @@
   max-height: 34px;
 }
 
+.footer .primary-title {
+  font-size: 0.875rem;
+}
+
 img {
   vertical-align: middle;
 }

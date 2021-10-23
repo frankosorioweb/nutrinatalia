@@ -1,6 +1,7 @@
 <template>
-  <v-footer padless>
+  <v-footer class="footer" padless>
     <v-card flat tile width="100%" class="dark-gray-bg text-center">
+      <v-card-title class="primary-title justify-center white--text primary-font pb-0">Seguime en:</v-card-title>
       <v-card-text>
         <v-btn v-for="smButton in this.getSmButtons" :key="smButton.name" color="white" :href="smButton.link" target="_blank" class="mx-1" icon>
           <v-icon :class="smButton.iconClass" large>
