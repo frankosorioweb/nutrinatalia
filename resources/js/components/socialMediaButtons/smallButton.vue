@@ -1,19 +1,24 @@
 <template>
-  <a
-    class="d-inline-flex justify-center align-center social-media-small-button rounded-circle pa-1"
-    :class="{'facebook': type, 'instagram': type === false}"
-    :href="link"
-    target="_blank"
-  >
-    <v-icon class="icon">mdi-{{ type ? 'facebook' : 'instagram' }}</v-icon>
-  </a>
+  <v-btn color="white" :href="link" target="_blank" class="mx-1" icon>
+    <v-icon
+      :class="{ 'fb-color': type === true, 'ig-color': type === false }"
+      large
+    >
+      mdi-{{ this.getSocialMediaName }}
+    </v-icon>
+  </v-btn>
 </template>
 
 <script>
 export default {
   props: {
     type: Boolean,
-    link: String
-  }
+    link: String,
+  },
+  computed: {
+    getSocialMediaName() {
+      return this.type ? "facebook" : "instagram";
+    },
+  },
 };
 </script>

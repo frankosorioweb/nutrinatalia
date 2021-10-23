@@ -23,6 +23,18 @@ a {
     color: $secondary-color;
 }
 
+.fb-color {
+    color: $facebook-color !important;
+}
+
+.ig-color {
+    color: $instagram-color !important;
+}
+
+.dark-gray-bg {
+    background-color: $dark-gray !important;
+}
+
 .lh-1 {
     line-height: 1;
 }
