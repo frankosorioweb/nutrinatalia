@@ -11,6 +11,7 @@
       <section-gift></section-gift>
       <section-FAQ />
     </v-main>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import SectionAboutAcademy from "../components/home/SectionAboutAcademy.vue";
 import sectionTestimonials from "../components/home/sectionTestimonials";
 import sectionGift from "../components/home/SectionGift.vue";
 import sectionFAQ from "../components/home/sectionFAQ";
+import appFooter from '../layouts/Footer.vue';
 export default {
   components: {
     AppHeader,
@@ -35,6 +37,7 @@ export default {
     sectionTestimonials,
     sectionGift,
     sectionFAQ,
+    appFooter
   },
 };
 </script>

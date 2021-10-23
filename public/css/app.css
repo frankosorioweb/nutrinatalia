@@ -107,31 +107,6 @@
   margin-left: 7rem;
 }
 
-.social-media-small-button {
-  border-width: 2px;
-  border-style: solid;
-  width: 2.25rem;
-  height: 2.25rem;
-}
-.social-media-small-button:first-child {
-  margin-right: 0.25rem;
-}
-.social-media-small-button .icon {
-  font-size: 1.6rem !important;
-}
-.social-media-small-button.facebook {
-  border-color: #3B5998;
-}
-.social-media-small-button.facebook .icon {
-  color: #3B5998;
-}
-.social-media-small-button.instagram {
-  border-color: #CA2474;
-}
-.social-media-small-button.instagram .icon {
-  color: #CA2474;
-}
-
 .app-header .logo {
   max-height: 34px;
 }
@@ -159,6 +134,18 @@ a {
 
 .secondary-color {
   color: #764191;
+}
+
+.fb-color {
+  color: #3B5998 !important;
+}
+
+.ig-color {
+  color: #CA2474 !important;
+}
+
+.dark-gray-bg {
+  background-color: #303033 !important;
 }
 
 .lh-1 {
