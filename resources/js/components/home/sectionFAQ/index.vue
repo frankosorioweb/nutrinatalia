@@ -24,7 +24,7 @@
         <faq-card title="¿Que necesito para ver el taller o recibir el ebook?">
           <p class="mb-0 text-left word-break">
             Para visualizar los talleres solamente necesitas una conexión wifi
-            estable y una cuenta google. <br />Los ebooks se envian por correo
+            estable y una cuenta de google. <br />Los ebooks se envian por correo
             electrónico y están en formato PDF.
           </p>
         </faq-card>

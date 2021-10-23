@@ -2290,6 +2290,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["title"]
 });
@@ -41076,22 +41083,18 @@ var render = function() {
           attrs: { elevation: "5" }
         },
         [
-          _c(
-            "v-card-title",
-            [
-              _c(
-                "h3",
-                {
-                  staticClass:
-                    "faq-title primary-font secondary-color word-break"
-                },
-                [_vm._v("\n        " + _vm._s(_vm.title) + "\n      ")]
-              ),
-              _vm._v(" "),
-              _c("v-card-text", { staticClass: "pb-0" }, [_vm._t("default")], 2)
-            ],
-            1
-          )
+          _c("v-card-title", { staticClass: "justify-center" }, [
+            _c(
+              "h3",
+              {
+                staticClass:
+                  "\n          faq-title\n          primary-font\n          secondary-color\n          word-break\n        "
+              },
+              [_vm._v("\n        " + _vm._s(_vm.title) + "\n      ")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("v-card-text", [_vm._t("default")], 2)
         ],
         1
       )
@@ -41180,7 +41183,7 @@ var render = function() {
                 [
                   _c("p", { staticClass: "mb-0 text-left word-break" }, [
                     _vm._v(
-                      "\n          Para visualizar los talleres solamente necesitas una conexión wifi\n          estable y una cuenta google. "
+                      "\n          Para visualizar los talleres solamente necesitas una conexión wifi\n          estable y una cuenta de google. "
                     ),
                     _c("br"),
                     _vm._v(
