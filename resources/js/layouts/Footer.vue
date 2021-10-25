@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer" padless>
+  <v-footer class="footer" padless absolute>
     <v-card flat tile width="100%" class="dark-gray-bg text-center">
       <v-card-title class="primary-title justify-center white--text primary-font pb-0">Seguime en:</v-card-title>
       <v-card-text>

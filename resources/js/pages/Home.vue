@@ -2,7 +2,7 @@
   <div>
     <app-header></app-header>
     <app-navigation-drawer></app-navigation-drawer>
-    <v-main>
+    <v-main class="mb-footer">
       <section-presentation></section-presentation>
       <section-social-media></section-social-media>
       <section-presentation-video></section-presentation-video>
