@@ -1,5 +1,5 @@
 import Home from '../pages/Home.vue';
-import Products from '../pages/Products/index.vue';
+import Products from '../pages/Products.vue';
 
 import productTypes from '../store/modules/productTypes';
 const { WORKSHOP, EBOOK } = productTypes.state.types;
