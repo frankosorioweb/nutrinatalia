@@ -1,23 +1,16 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-navigation-drawer></app-navigation-drawer>
-    <v-main class="mb-footer">
-      <section-presentation></section-presentation>
-      <section-social-media></section-social-media>
-      <section-presentation-video></section-presentation-video>
-      <section-about-academy></section-about-academy>
-      <section-testimonials></section-testimonials>
-      <section-gift></section-gift>
-      <section-FAQ />
-    </v-main>
-    <app-footer></app-footer>
+    <section-presentation></section-presentation>
+    <section-social-media></section-social-media>
+    <section-presentation-video></section-presentation-video>
+    <section-about-academy></section-about-academy>
+    <section-testimonials></section-testimonials>
+    <section-gift></section-gift>
+    <section-FAQ />
   </div>
 </template>
 
 <script>
-import AppHeader from "../layouts/Header.vue";
-import AppNavigationDrawer from "../layouts/NavigationDrawer.vue";
 import SectionPresentation from "../components/home/SectionPresentation.vue";
 import SectionSocialMedia from "../components/home/SectionSocialMedia.vue";
 import SectionPresentationVideo from "../components/home/SectionPresentationVideo.vue";
@@ -25,11 +18,8 @@ import SectionAboutAcademy from "../components/home/SectionAboutAcademy.vue";
 import sectionTestimonials from "../components/home/sectionTestimonials";
 import sectionGift from "../components/home/SectionGift.vue";
 import sectionFAQ from "../components/home/sectionFAQ";
-import appFooter from '../layouts/Footer.vue';
 export default {
   components: {
-    AppHeader,
-    AppNavigationDrawer,
     SectionPresentation,
     SectionSocialMedia,
     SectionPresentationVideo,
@@ -37,7 +27,6 @@ export default {
     sectionTestimonials,
     sectionGift,
     sectionFAQ,
-    appFooter
   },
 };
 </script>

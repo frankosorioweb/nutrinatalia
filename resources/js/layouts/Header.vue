@@ -1,6 +1,6 @@
 <template>
   <v-app-bar class="app-header" color="grey lighten-5" fixed height="56">
-    <img class="logo" src="img/logo.svg" />
+    <img @click="goToHome" class="logo" src="img/logo.svg" />
 
     <v-spacer></v-spacer>
 
@@ -14,6 +14,11 @@ export default {
   methods: {
     openDrawer() {
       this.$store.commit('navigationDrawer/changeDrawerState', !this.drawer)
+    },
+    goToHome() {
+      this.$router.push({
+        name: 'home'
+      });
     }
   },
   computed: {
