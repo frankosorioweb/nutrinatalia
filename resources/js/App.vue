@@ -12,13 +12,13 @@
 <script>
 import appHeader from "./layouts/Header.vue";
 import appNavigationDrawer from "./layouts/NavigationDrawer.vue";
-import appFooter from './layouts/Footer.vue';
+import appFooter from "./layouts/Footer.vue";
 
 export default {
   components: {
     appHeader,
     appNavigationDrawer,
-    appFooter
+    appFooter,
   },
 };
 </script>

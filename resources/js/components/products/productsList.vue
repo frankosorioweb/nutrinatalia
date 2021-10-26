@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="(product, index) in getProducts" :key="index" cols="12">
-        <product-card :data="product"></product-card>
+      <v-col v-for="product in getProducts" :key="product.name" cols="12">
+        <product-card :data="product" :removeCTA="true"></product-card>
       </v-col>
     </v-row>
   </v-container>

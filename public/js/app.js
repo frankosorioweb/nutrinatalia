@@ -2714,11 +2714,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["data"],
+  props: ["data", "removeCTA"],
   computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productCard", ["getProductsTypes", "getProductTypeText"])), {}, {
     hasPrice: function hasPrice() {
       return !_.isUndefined(this.data.price);
@@ -2730,8 +2744,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     labelType: _labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     discountSticker: _discountSticker_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
-  mounted: function mounted() {// console.log(this.data);
   }
 });
 
@@ -3538,15 +3550,15 @@ var products = [{
   type: WORKSHOP
 }, {
   id: 1,
-  poster: "".concat(postersSrc, "Panes sin culpa.png"),
-  name: 'Dulces que nos hacen bien',
+  poster: "".concat(postersSrc, "Spaghetti.jpg"),
+  name: 'Spaghetti',
   description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
   type: WORKSHOP
 }, {
   id: 1,
-  poster: "".concat(postersSrc, "Panes sin culpa.png"),
-  name: 'Dulces que nos hacen bien',
+  poster: "".concat(postersSrc, "Salad.jpg"),
+  name: 'Salad',
   description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
   type: EBOOK
@@ -8755,6 +8767,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-sheet {\n  background-color: #FFFFFF;\n  border-color: #FFFFFF;\n  color: rgba(0, 0, 0, 0.87);\n}\n.theme--light.v-sheet--outlined {\n  border: thin solid rgba(0, 0, 0, 0.12);\n}\n\n.theme--dark.v-sheet {\n  background-color: #1E1E1E;\n  border-color: #1E1E1E;\n  color: #FFFFFF;\n}\n.theme--dark.v-sheet--outlined {\n  border: thin solid rgba(255, 255, 255, 0.12);\n}\n\n.v-sheet {\n  border-radius: 0;\n}\n.v-sheet:not(.v-sheet--outlined) {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);\n}\n.v-sheet.v-sheet--shaped {\n  border-radius: 24px 0;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass ***!
+  \****************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-skeleton-loader .v-skeleton-loader__bone::after {\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));\n}\n.theme--light.v-skeleton-loader .v-skeleton-loader__avatar,\n.theme--light.v-skeleton-loader .v-skeleton-loader__button,\n.theme--light.v-skeleton-loader .v-skeleton-loader__chip,\n.theme--light.v-skeleton-loader .v-skeleton-loader__divider,\n.theme--light.v-skeleton-loader .v-skeleton-loader__heading,\n.theme--light.v-skeleton-loader .v-skeleton-loader__image,\n.theme--light.v-skeleton-loader .v-skeleton-loader__text {\n  background: rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-skeleton-loader .v-skeleton-loader__actions,\n.theme--light.v-skeleton-loader .v-skeleton-loader__article,\n.theme--light.v-skeleton-loader .v-skeleton-loader__card-heading,\n.theme--light.v-skeleton-loader .v-skeleton-loader__card-text,\n.theme--light.v-skeleton-loader .v-skeleton-loader__date-picker,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-text,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-two-line,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar-two-line,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-three-line,\n.theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar-three-line,\n.theme--light.v-skeleton-loader .v-skeleton-loader__table-heading,\n.theme--light.v-skeleton-loader .v-skeleton-loader__table-thead,\n.theme--light.v-skeleton-loader .v-skeleton-loader__table-tbody,\n.theme--light.v-skeleton-loader .v-skeleton-loader__table-tfoot {\n  background: #FFFFFF;\n}\n\n.theme--dark.v-skeleton-loader .v-skeleton-loader__bone::after {\n  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));\n}\n.theme--dark.v-skeleton-loader .v-skeleton-loader__avatar,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__button,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__chip,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__divider,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__heading,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__image,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__text {\n  background: rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-skeleton-loader .v-skeleton-loader__actions,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__article,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__card-heading,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__card-text,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__date-picker,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-avatar,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-text,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-two-line,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-avatar-two-line,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-three-line,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__list-item-avatar-three-line,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__table-heading,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__table-thead,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__table-tbody,\n.theme--dark.v-skeleton-loader .v-skeleton-loader__table-tfoot {\n  background: #1E1E1E;\n}\n\n.v-skeleton-loader {\n  border-radius: 4px;\n  position: relative;\n  vertical-align: top;\n}\n.v-skeleton-loader__actions {\n  padding: 16px 16px 8px;\n  text-align: right;\n}\n.v-skeleton-loader__actions .v-skeleton-loader__button {\n  display: inline-block;\n}\n.v-application--is-ltr .v-skeleton-loader__actions .v-skeleton-loader__button:first-child {\n  margin-right: 12px;\n}\n.v-application--is-rtl .v-skeleton-loader__actions .v-skeleton-loader__button:first-child {\n  margin-left: 12px;\n}\n.v-skeleton-loader .v-skeleton-loader__list-item,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar,\n.v-skeleton-loader .v-skeleton-loader__list-item-text,\n.v-skeleton-loader .v-skeleton-loader__list-item-two-line,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar-two-line,\n.v-skeleton-loader .v-skeleton-loader__list-item-three-line,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar-three-line {\n  border-radius: 4px;\n}\n.v-skeleton-loader .v-skeleton-loader__actions::after,\n.v-skeleton-loader .v-skeleton-loader__article::after,\n.v-skeleton-loader .v-skeleton-loader__card::after,\n.v-skeleton-loader .v-skeleton-loader__card-avatar::after,\n.v-skeleton-loader .v-skeleton-loader__card-heading::after,\n.v-skeleton-loader .v-skeleton-loader__card-text::after,\n.v-skeleton-loader .v-skeleton-loader__date-picker::after,\n.v-skeleton-loader .v-skeleton-loader__date-picker-options::after,\n.v-skeleton-loader .v-skeleton-loader__date-picker-days::after,\n.v-skeleton-loader .v-skeleton-loader__list-item::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-text::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-two-line::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar-two-line::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-three-line::after,\n.v-skeleton-loader .v-skeleton-loader__list-item-avatar-three-line::after,\n.v-skeleton-loader .v-skeleton-loader__paragraph::after,\n.v-skeleton-loader .v-skeleton-loader__sentences::after,\n.v-skeleton-loader .v-skeleton-loader__table::after,\n.v-skeleton-loader .v-skeleton-loader__table-cell::after,\n.v-skeleton-loader .v-skeleton-loader__table-heading::after,\n.v-skeleton-loader .v-skeleton-loader__table-thead::after,\n.v-skeleton-loader .v-skeleton-loader__table-tbody::after,\n.v-skeleton-loader .v-skeleton-loader__table-tfoot::after,\n.v-skeleton-loader .v-skeleton-loader__table-row::after,\n.v-skeleton-loader .v-skeleton-loader__table-row-divider::after {\n  display: none;\n}\n.v-application--is-ltr .v-skeleton-loader__article .v-skeleton-loader__heading {\n  margin: 16px 0 16px 16px;\n}\n.v-application--is-rtl .v-skeleton-loader__article .v-skeleton-loader__heading {\n  margin: 16px 16px 0 16px;\n}\n.v-skeleton-loader__article .v-skeleton-loader__paragraph {\n  padding: 16px;\n}\n.v-skeleton-loader__bone {\n  border-radius: inherit;\n  overflow: hidden;\n  position: relative;\n}\n.v-skeleton-loader__bone::after {\n  animation: loading 1.5s infinite;\n  content: \"\";\n  height: 100%;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  transform: translateX(-100%);\n  z-index: 1;\n}\n.v-skeleton-loader__avatar {\n  border-radius: 50%;\n  height: 48px;\n  width: 48px;\n}\n.v-skeleton-loader__button {\n  border-radius: 4px;\n  height: 36px;\n  width: 64px;\n}\n.v-skeleton-loader__card .v-skeleton-loader__image {\n  border-radius: 0;\n}\n.v-skeleton-loader__card-heading .v-skeleton-loader__heading {\n  margin: 16px;\n}\n.v-skeleton-loader__card-text {\n  padding: 16px;\n}\n.v-skeleton-loader__chip {\n  border-radius: 16px;\n  height: 32px;\n  width: 96px;\n}\n.v-skeleton-loader__date-picker {\n  border-radius: inherit;\n}\n.v-skeleton-loader__date-picker .v-skeleton-loader__list-item:first-child .v-skeleton-loader__text {\n  max-width: 88px;\n  width: 20%;\n}\n.v-skeleton-loader__date-picker .v-skeleton-loader__heading {\n  max-width: 256px;\n  width: 40%;\n}\n.v-skeleton-loader__date-picker-days {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 0 12px;\n  margin: 0 auto;\n}\n.v-skeleton-loader__date-picker-days .v-skeleton-loader__avatar {\n  border-radius: 4px;\n  flex: 1 1 auto;\n  margin: 4px;\n  height: 40px;\n  width: 40px;\n}\n.v-skeleton-loader__date-picker-options {\n  align-items: center;\n  display: flex;\n  padding: 16px;\n}\n.v-skeleton-loader__date-picker-options .v-skeleton-loader__avatar {\n  height: 40px;\n  width: 40px;\n}\n.v-skeleton-loader__date-picker-options .v-skeleton-loader__avatar:nth-child(2) {\n  margin-left: auto;\n}\n.v-application--is-ltr .v-skeleton-loader__date-picker-options .v-skeleton-loader__avatar:nth-child(2) {\n  margin-right: 8px;\n}\n.v-application--is-rtl .v-skeleton-loader__date-picker-options .v-skeleton-loader__avatar:nth-child(2) {\n  margin-left: 8px;\n}\n.v-skeleton-loader__date-picker-options .v-skeleton-loader__text.v-skeleton-loader__bone:first-child {\n  margin-bottom: 0px;\n  max-width: 50%;\n  width: 456px;\n}\n.v-skeleton-loader__divider {\n  border-radius: 1px;\n  height: 2px;\n}\n.v-skeleton-loader__heading {\n  border-radius: 12px;\n  height: 24px;\n  width: 45%;\n}\n.v-skeleton-loader__image {\n  height: 200px;\n  border-radius: 0;\n}\n.v-skeleton-loader__image ~ .v-skeleton-loader__card-heading {\n  border-radius: 0;\n}\n.v-skeleton-loader__image::first-child, .v-skeleton-loader__image::last-child {\n  border-radius: inherit;\n}\n.v-skeleton-loader__list-item {\n  height: 48px;\n}\n.v-skeleton-loader__list-item-three-line {\n  flex-wrap: wrap;\n}\n.v-skeleton-loader__list-item-three-line > * {\n  flex: 1 0 100%;\n  width: 100%;\n}\n.v-skeleton-loader__list-item-avatar .v-skeleton-loader__avatar, .v-skeleton-loader__list-item-avatar-two-line .v-skeleton-loader__avatar, .v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__avatar {\n  height: 40px;\n  width: 40px;\n}\n.v-skeleton-loader__list-item-avatar {\n  height: 48px;\n}\n.v-skeleton-loader__list-item-two-line, .v-skeleton-loader__list-item-avatar-two-line {\n  height: 72px;\n}\n.v-skeleton-loader__list-item-three-line, .v-skeleton-loader__list-item-avatar-three-line {\n  height: 88px;\n}\n.v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__avatar {\n  align-self: flex-start;\n}\n.v-skeleton-loader__list-item, .v-skeleton-loader__list-item-avatar, .v-skeleton-loader__list-item-two-line, .v-skeleton-loader__list-item-three-line, .v-skeleton-loader__list-item-avatar-two-line, .v-skeleton-loader__list-item-avatar-three-line {\n  align-content: center;\n  align-items: center;\n  display: flex;\n  flex-wrap: wrap;\n  padding: 0 16px;\n}\n.v-application--is-ltr .v-skeleton-loader__list-item .v-skeleton-loader__avatar, .v-application--is-ltr .v-skeleton-loader__list-item-avatar .v-skeleton-loader__avatar, .v-application--is-ltr .v-skeleton-loader__list-item-two-line .v-skeleton-loader__avatar, .v-application--is-ltr .v-skeleton-loader__list-item-three-line .v-skeleton-loader__avatar, .v-application--is-ltr .v-skeleton-loader__list-item-avatar-two-line .v-skeleton-loader__avatar, .v-application--is-ltr .v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__avatar {\n  margin-right: 16px;\n}\n.v-application--is-rtl .v-skeleton-loader__list-item .v-skeleton-loader__avatar, .v-application--is-rtl .v-skeleton-loader__list-item-avatar .v-skeleton-loader__avatar, .v-application--is-rtl .v-skeleton-loader__list-item-two-line .v-skeleton-loader__avatar, .v-application--is-rtl .v-skeleton-loader__list-item-three-line .v-skeleton-loader__avatar, .v-application--is-rtl .v-skeleton-loader__list-item-avatar-two-line .v-skeleton-loader__avatar, .v-application--is-rtl .v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__avatar {\n  margin-left: 16px;\n}\n.v-skeleton-loader__list-item .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item .v-skeleton-loader__text:only-child, .v-skeleton-loader__list-item-avatar .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item-avatar .v-skeleton-loader__text:only-child, .v-skeleton-loader__list-item-two-line .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item-two-line .v-skeleton-loader__text:only-child, .v-skeleton-loader__list-item-three-line .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item-three-line .v-skeleton-loader__text:only-child, .v-skeleton-loader__list-item-avatar-two-line .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item-avatar-two-line .v-skeleton-loader__text:only-child, .v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__text:last-child,\n.v-skeleton-loader__list-item-avatar-three-line .v-skeleton-loader__text:only-child {\n  margin-bottom: 0;\n}\n.v-skeleton-loader__paragraph, .v-skeleton-loader__sentences {\n  flex: 1 0 auto;\n}\n.v-skeleton-loader__paragraph:not(:last-child) {\n  margin-bottom: 6px;\n}\n.v-skeleton-loader__paragraph .v-skeleton-loader__text:nth-child(1) {\n  max-width: 100%;\n}\n.v-skeleton-loader__paragraph .v-skeleton-loader__text:nth-child(2) {\n  max-width: 50%;\n}\n.v-skeleton-loader__paragraph .v-skeleton-loader__text:nth-child(3) {\n  max-width: 70%;\n}\n.v-skeleton-loader__sentences .v-skeleton-loader__text:nth-child(2) {\n  max-width: 70%;\n}\n.v-skeleton-loader__sentences:not(:last-child) {\n  margin-bottom: 6px;\n}\n.v-skeleton-loader__table-heading {\n  align-items: center;\n  display: flex;\n  justify-content: space-between;\n  padding: 16px;\n}\n.v-skeleton-loader__table-heading .v-skeleton-loader__heading {\n  max-width: 15%;\n}\n.v-skeleton-loader__table-heading .v-skeleton-loader__text {\n  max-width: 40%;\n}\n.v-skeleton-loader__table-thead {\n  display: flex;\n  justify-content: space-between;\n  padding: 16px;\n}\n.v-skeleton-loader__table-thead .v-skeleton-loader__heading {\n  max-width: 5%;\n}\n.v-skeleton-loader__table-tbody {\n  padding: 16px 16px 0;\n}\n.v-skeleton-loader__table-tfoot {\n  align-items: center;\n  display: flex;\n  justify-content: flex-end;\n  padding: 16px;\n}\n.v-application--is-ltr .v-skeleton-loader__table-tfoot > * {\n  margin-left: 8px;\n}\n.v-application--is-rtl .v-skeleton-loader__table-tfoot > * {\n  margin-right: 8px;\n}\n.v-skeleton-loader__table-tfoot .v-skeleton-loader__avatar {\n  height: 40px;\n  width: 40px;\n}\n.v-skeleton-loader__table-tfoot .v-skeleton-loader__text {\n  margin-bottom: 0;\n}\n.v-skeleton-loader__table-tfoot .v-skeleton-loader__text:nth-child(1) {\n  max-width: 128px;\n}\n.v-skeleton-loader__table-tfoot .v-skeleton-loader__text:nth-child(2) {\n  max-width: 64px;\n}\n.v-skeleton-loader__table-row {\n  display: flex;\n  justify-content: space-between;\n}\n.v-skeleton-loader__table-cell {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  width: 88px;\n}\n.v-skeleton-loader__table-cell .v-skeleton-loader__text {\n  margin-bottom: 0;\n}\n.v-skeleton-loader__text {\n  border-radius: 6px;\n  flex: 1 0 auto;\n  height: 12px;\n  margin-bottom: 6px;\n}\n.v-skeleton-loader--boilerplate .v-skeleton-loader__bone:after {\n  display: none;\n}\n.v-skeleton-loader--is-loading {\n  overflow: hidden;\n}\n.v-skeleton-loader--tile {\n  border-radius: 0;\n}\n.v-skeleton-loader--tile .v-skeleton-loader__bone {\n  border-radius: 0;\n}\n\n@keyframes loading {\n  100% {\n    transform: translateX(100%);\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42075,7 +42111,24 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto rounded-lg", attrs: { elevation: "5" } },
         [
-          _c("v-img", { attrs: { src: this.data.poster } }),
+          _c("v-img", {
+            attrs: { "aspect-ratio": 16 / 9, src: this.data.poster },
+            scopedSlots: _vm._u([
+              {
+                key: "placeholder",
+                fn: function() {
+                  return [
+                    _c(
+                      "v-sheet",
+                      [_c("v-skeleton-loader", { attrs: { type: "image" } })],
+                      1
+                    )
+                  ]
+                },
+                proxy: true
+              }
+            ])
+          }),
           _vm._v(" "),
           _c(
             "v-card-title",
@@ -42118,7 +42171,8 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "more-info d-flex justify-space-between align-center mb-2"
+                          "more-info d-flex justify-space-between align-center",
+                        class: { "mb-2": !_vm.removeCTA }
                       },
                       [
                         _c("label-type", { attrs: { type: this.data.type } }),
@@ -42126,7 +42180,8 @@ var render = function() {
                         _c(
                           "p",
                           {
-                            staticClass: "mb-0 font-weight-bold primary-color"
+                            staticClass:
+                              "mb-0 font-weight-bold primary-font primary-color"
                           },
                           [
                             this.data.price.discount
@@ -42150,14 +42205,16 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c(
-                      "v-btn",
-                      {
-                        staticClass: "white--text",
-                        attrs: { color: "red", block: "" }
-                      },
-                      [_vm._v("Quiero el regalo")]
-                    )
+                    !_vm.removeCTA
+                      ? _c(
+                          "v-btn",
+                          {
+                            staticClass: "white--text",
+                            attrs: { color: "red", block: "" }
+                          },
+                          [_vm._v("Quiero el regalo")]
+                        )
+                      : _vm._e()
                   ],
                   1
                 )
@@ -42346,11 +42403,11 @@ var render = function() {
     [
       _c(
         "v-row",
-        _vm._l(_vm.getProducts, function(product, index) {
+        _vm._l(_vm.getProducts, function(product) {
           return _c(
             "v-col",
-            { key: index, attrs: { cols: "12" } },
-            [_c("product-card", { attrs: { data: product } })],
+            { key: product.name, attrs: { cols: "12" } },
+            [_c("product-card", { attrs: { data: product, removeCTA: true } })],
             1
           )
         }),
@@ -46591,6 +46648,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
 var update = add("6cdf8c50", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./VSkeletonLoader.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
+var update = add("5668f4db", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -59532,6 +59610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/VCard.js");
 /* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
 /* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/VImg.js");
+/* harmony import */ var vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VSheet */ "./node_modules/vuetify/lib/components/VSheet/VSheet.js");
+/* harmony import */ var vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VSkeletonLoader */ "./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js");
 
 
 
@@ -59557,7 +59637,9 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["default"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardText,VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardTitle,VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_7__["default"]})
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["default"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardText,VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardTitle,VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_7__["default"],VSheet: vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_8__["default"],VSkeletonLoader: vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_9__["default"]})
 
 
 /* hot reload */
@@ -64490,6 +64572,215 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_VSheet__WEBPACK_IMPORTED_MODULE_0__["default"]);
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _src_components_VSkeletonLoader_VSkeletonLoader_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VSkeletonLoader/VSkeletonLoader.sass */ "./node_modules/vuetify/src/components/VSkeletonLoader/VSkeletonLoader.sass");
+/* harmony import */ var _src_components_VSkeletonLoader_VSkeletonLoader_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VSkeletonLoader_VSkeletonLoader_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_elevatable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/elevatable */ "./node_modules/vuetify/lib/mixins/elevatable/index.js");
+/* harmony import */ var _mixins_measurable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/measurable */ "./node_modules/vuetify/lib/mixins/measurable/index.js");
+/* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/themeable */ "./node_modules/vuetify/lib/mixins/themeable/index.js");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+// Styles
+ // Mixins
+
+
+
+ // Utilities
+
+
+
+/* @vue/component */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__["default"])(_mixins_elevatable__WEBPACK_IMPORTED_MODULE_2__["default"], _mixins_measurable__WEBPACK_IMPORTED_MODULE_3__["default"], _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__["default"]).extend({
+  name: 'VSkeletonLoader',
+  props: {
+    boilerplate: Boolean,
+    loading: Boolean,
+    tile: Boolean,
+    transition: String,
+    type: String,
+    types: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  computed: {
+    attrs() {
+      if (!this.isLoading) return this.$attrs;
+      return !this.boilerplate ? {
+        'aria-busy': true,
+        'aria-live': 'polite',
+        role: 'alert',
+        ...this.$attrs
+      } : {};
+    },
+
+    classes() {
+      return {
+        'v-skeleton-loader--boilerplate': this.boilerplate,
+        'v-skeleton-loader--is-loading': this.isLoading,
+        'v-skeleton-loader--tile': this.tile,
+        ...this.themeClasses,
+        ...this.elevationClasses
+      };
+    },
+
+    isLoading() {
+      return !('default' in this.$scopedSlots) || this.loading;
+    },
+
+    rootTypes() {
+      return {
+        actions: 'button@2',
+        article: 'heading, paragraph',
+        avatar: 'avatar',
+        button: 'button',
+        card: 'image, card-heading',
+        'card-avatar': 'image, list-item-avatar',
+        'card-heading': 'heading',
+        chip: 'chip',
+        'date-picker': 'list-item, card-heading, divider, date-picker-options, date-picker-days, actions',
+        'date-picker-options': 'text, avatar@2',
+        'date-picker-days': 'avatar@28',
+        heading: 'heading',
+        image: 'image',
+        'list-item': 'text',
+        'list-item-avatar': 'avatar, text',
+        'list-item-two-line': 'sentences',
+        'list-item-avatar-two-line': 'avatar, sentences',
+        'list-item-three-line': 'paragraph',
+        'list-item-avatar-three-line': 'avatar, paragraph',
+        paragraph: 'text@3',
+        sentences: 'text@2',
+        table: 'table-heading, table-thead, table-tbody, table-tfoot',
+        'table-heading': 'heading, text',
+        'table-thead': 'heading@6',
+        'table-tbody': 'table-row-divider@6',
+        'table-row-divider': 'table-row, divider',
+        'table-row': 'table-cell@6',
+        'table-cell': 'text',
+        'table-tfoot': 'text@2, avatar@2',
+        text: 'text',
+        ...this.types
+      };
+    }
+
+  },
+  methods: {
+    genBone(text, children) {
+      return this.$createElement('div', {
+        staticClass: `v-skeleton-loader__${text} v-skeleton-loader__bone`
+      }, children);
+    },
+
+    genBones(bone) {
+      // e.g. 'text@3'
+      const [type, length] = bone.split('@');
+
+      const generator = () => this.genStructure(type); // Generate a length array based upon
+      // value after @ in the bone string
+
+
+      return Array.from({
+        length
+      }).map(generator);
+    },
+
+    // Fix type when this is merged
+    // https://github.com/microsoft/TypeScript/pull/33050
+    genStructure(type) {
+      let children = [];
+      type = type || this.type || '';
+      const bone = this.rootTypes[type] || ''; // End of recursion, do nothing
+
+      /* eslint-disable-next-line no-empty, brace-style */
+
+      if (type === bone) {} // Array of values - e.g. 'heading, paragraph, text@2'
+      else if (type.indexOf(',') > -1) return this.mapBones(type); // Array of values - e.g. 'paragraph@4'
+        else if (type.indexOf('@') > -1) return this.genBones(type); // Array of values - e.g. 'card@2'
+          else if (bone.indexOf(',') > -1) children = this.mapBones(bone); // Array of values - e.g. 'list-item@2'
+            else if (bone.indexOf('@') > -1) children = this.genBones(bone); // Single value - e.g. 'card-heading'
+              else if (bone) children.push(this.genStructure(bone));
+
+      return [this.genBone(type, children)];
+    },
+
+    genSkeleton() {
+      const children = [];
+      if (!this.isLoading) children.push((0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.getSlot)(this));else children.push(this.genStructure());
+      /* istanbul ignore else */
+
+      if (!this.transition) return children;
+      /* istanbul ignore next */
+
+      return this.$createElement('transition', {
+        props: {
+          name: this.transition
+        },
+        // Only show transition when
+        // content has been loaded
+        on: {
+          afterEnter: this.resetStyles,
+          beforeEnter: this.onBeforeEnter,
+          beforeLeave: this.onBeforeLeave,
+          leaveCancelled: this.resetStyles
+        }
+      }, children);
+    },
+
+    mapBones(bones) {
+      // Remove spaces and return array of structures
+      return bones.replace(/\s/g, '').split(',').map(this.genStructure);
+    },
+
+    onBeforeEnter(el) {
+      this.resetStyles(el);
+      if (!this.isLoading) return;
+      el._initialStyle = {
+        display: el.style.display,
+        transition: el.style.transition
+      };
+      el.style.setProperty('transition', 'none', 'important');
+    },
+
+    onBeforeLeave(el) {
+      el.style.setProperty('display', 'none', 'important');
+    },
+
+    resetStyles(el) {
+      if (!el._initialStyle) return;
+      el.style.display = el._initialStyle.display || '';
+      el.style.transition = el._initialStyle.transition;
+      delete el._initialStyle;
+    }
+
+  },
+
+  render(h) {
+    return h('div', {
+      staticClass: 'v-skeleton-loader',
+      attrs: this.attrs,
+      on: this.$listeners,
+      class: this.classes,
+      style: this.isLoading ? this.measurableStyles : undefined
+    }, [this.genSkeleton()]);
+  }
+
+}));
+//# sourceMappingURL=VSkeletonLoader.js.map
 
 /***/ }),
 
