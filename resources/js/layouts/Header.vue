@@ -13,7 +13,7 @@ import { mapState } from "vuex";
 export default {
   methods: {
     openDrawer() {
-      this.$store.commit('navigationDrawer/changeDrawerState', true)
+      this.$store.commit('navigationDrawer/changeDrawerState', !this.drawer)
     }
   },
   computed: {

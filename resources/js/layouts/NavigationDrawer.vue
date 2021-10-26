@@ -1,22 +1,22 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app temporary>
+  <v-navigation-drawer v-model="drawer" app>
     <v-list nav>
-      <v-list-item-group v-model="group" color="primary" mandatory>
-        <v-list-item>
+      <v-list-item-group color="primary" mandatory>
+        <v-list-item :to="{name: 'home'}" exact>
           <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Inicio</v-list-item-title>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item :to="{name: this.types.WORKSHOP}" exact>
           <v-list-item-icon>
             <v-icon>mdi-school</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Talleres</v-list-item-title>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item :to="{name: this.types.EBOOK}" exact>
           <v-list-item-icon>
             <v-icon>mdi-bookshelf</v-icon>
           </v-list-item-icon>
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   computed: {
     drawer: {
@@ -60,6 +61,7 @@ export default {
         this.$store.commit("navigationDrawer/changeGroupState", value);
       },
     },
+    ...mapState('productTypes', ['types'])
   },
 };
 </script>

@@ -1,0 +1,27 @@
+#btn-toggle-product-type {
+  .btn-primary-toggle {
+    &::before {
+      background-color: $primary-color !important;
+    }
+    &.active {
+      background-color: transparentize($color: $primary-color, $amount: 0.88) !important;
+      color: $primary-color !important;
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  .btn-secondary-toggle {
+    &::before {
+      background-color: $secondary-color !important;
+    }
+    &.active {
+      background-color: transparentize($color: $secondary-color, $amount: 0.88) !important;
+      color: $secondary-color !important;
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+  }
+}

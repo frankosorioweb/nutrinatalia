@@ -11,7 +11,7 @@ const routes = [
         component: Home,
     },
     {
-        name: 'workshops',
+        name: WORKSHOP,
         path: '/talleres',
         component: Products,
         props: {
@@ -19,7 +19,7 @@ const routes = [
         }
     },
     {
-        name: 'ebooks',
+        name: EBOOK,
         path: '/ebooks',
         component: Products,
         props: {
