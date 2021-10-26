@@ -8,14 +8,13 @@ import productTypes from './modules/productTypes';
 // Data
 import testimonials from './data/testimonials';
 import links from './data/links';
-import products from './data/products';
+import products from './modules/products';
 
 Vue.use(Vuex);
 
 const state = {
     testimonials,
-    links,
-    products
+    links
 }
 
 const getters = {
@@ -27,7 +26,8 @@ const store = new Vuex.Store({
     getters,
     modules: {
         navigationDrawer,
-        productTypes
+        productTypes,
+        products
     }
 });
 
