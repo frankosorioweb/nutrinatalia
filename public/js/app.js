@@ -2847,7 +2847,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _productCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../productCard */ "./resources/js/components/productCard/index.vue");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2859,10 +2866,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     productCard: _productCard__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
+  },
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getCustomProducts"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])), {}, {
+    getProducts: function getProducts() {
+      return this.getCustomProducts(this.$route.name);
+    }
+  })
 });
 
 /***/ }),
@@ -3514,9 +3527,23 @@ var products = [{
   id: 1,
   poster: "".concat(postersSrc, "Panes sin culpa.png"),
   name: 'Dulces que nos hacen bien',
-  description: 'Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+  description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off60,
   type: WORKSHOP
+}, {
+  id: 1,
+  poster: "".concat(postersSrc, "Panes sin culpa.png"),
+  name: 'Dulces que nos hacen bien',
+  description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
+  type: WORKSHOP
+}, {
+  id: 1,
+  poster: "".concat(postersSrc, "Panes sin culpa.png"),
+  name: 'Dulces que nos hacen bien',
+  description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
+  type: EBOOK
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
 
@@ -3564,7 +3591,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/productTypes */ "./resources/js/store/modules/productTypes.js");
 /* harmony import */ var _data_testimonials__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data/testimonials */ "./resources/js/store/data/testimonials.js");
 /* harmony import */ var _data_links__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/links */ "./resources/js/store/data/links.js");
-/* harmony import */ var _data_products__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/products */ "./resources/js/store/data/products.js");
+/* harmony import */ var _modules_products__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/products */ "./resources/js/store/modules/products.js");
 
  // Modules
 
@@ -3577,8 +3604,7 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_5__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_6__["default"]);
 var state = {
   testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_2__["default"],
-  links: _data_links__WEBPACK_IMPORTED_MODULE_3__["default"],
-  products: _data_products__WEBPACK_IMPORTED_MODULE_4__["default"]
+  links: _data_links__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
 var getters = {
   getTestimonials: function getTestimonials(state) {
@@ -3590,7 +3616,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_6__["default"].Store({
   getters: getters,
   modules: {
     navigationDrawer: _modules_navigationDrawer__WEBPACK_IMPORTED_MODULE_0__["default"],
-    productTypes: _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["default"]
+    productTypes: _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["default"],
+    products: _modules_products__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
@@ -3656,6 +3683,46 @@ var getters = {
   isWorkshop: function isWorkshop(state) {
     return function (value) {
       return state.types.WORKSHOP === value;
+    };
+  }
+};
+var mutations = {};
+var actions = {};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  namespaced: true,
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/products.js":
+/*!************************************************!*\
+  !*** ./resources/js/store/modules/products.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _data_products__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/products */ "./resources/js/store/data/products.js");
+
+var state = {
+  products: _data_products__WEBPACK_IMPORTED_MODULE_0__["default"]
+};
+var getters = {
+  getProducts: function getProducts(state) {
+    return state.products;
+  },
+  getCustomProducts: function getCustomProducts(state) {
+    return function (type) {
+      return state.products.filter(function (item) {
+        return item.type === type;
+      });
     };
   }
 };
@@ -41819,7 +41886,7 @@ var render = function() {
       "span",
       {
         staticClass:
-          "discount mx-auto white--text primary-font font-weight-bold pl-4"
+          "discount mx-auto white--text primary-font font-weight-bold pl-6"
       },
       [_vm._v("-" + _vm._s(_vm.discount) + "%")]
     ),
@@ -41828,7 +41895,7 @@ var render = function() {
       "svg",
       {
         attrs: {
-          width: "125",
+          width: "120",
           height: "135",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg"
@@ -42165,6 +42232,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
+    { staticClass: "px-1" },
     [
       _c(
         "v-row",
@@ -42269,7 +42337,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    [_c("v-row", [_c("v-col", { attrs: { cols: "12" } })], 1)],
+    [
+      _c(
+        "v-row",
+        _vm._l(_vm.getProducts, function(product, index) {
+          return _c(
+            "v-col",
+            { key: index, attrs: { cols: "12" } },
+            [_c("product-card", { attrs: { data: product } })],
+            1
+          )
+        }),
+        1
+      )
+    ],
     1
   )
 }
@@ -42721,6 +42802,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "pa-3 text-center" },
     [_c("product-type-select"), _vm._v(" "), _c("products-list")],
     1
   )

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="px-1">
     <v-row no-gutters>
       <v-col cols="12">
         <v-btn-toggle v-model="btnToggle" id="btn-toggle-product-type" mandatory tile group>

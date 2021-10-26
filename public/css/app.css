@@ -64,7 +64,7 @@
 .discount-sticker-wrapper {
   position: absolute;
   top: -25px;
-  right: -25px;
+  right: -20px;
   z-index: 4;
 }
 .discount-sticker-wrapper .discount {

@@ -6,6 +6,7 @@ const state = {
 
 const getters = {
     getProducts: (state) => state.products,
+    getCustomProducts: (state) => (type) => state.products.filter( item => item.type === type)
 };
 
 const mutations = {

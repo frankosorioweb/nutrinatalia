@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pa-3 text-center">
     <product-type-select></product-type-select>
     <products-list></products-list>
   </div>

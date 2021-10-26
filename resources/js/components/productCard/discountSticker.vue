@@ -1,8 +1,8 @@
 <template>
   <div class="discount-sticker-wrapper">
-    <span class="discount mx-auto white--text primary-font font-weight-bold pl-4">-{{ discount }}%</span>
+    <span class="discount mx-auto white--text primary-font font-weight-bold pl-6">-{{ discount }}%</span>
     <svg
-      width="125"
+      width="120"
       height="135"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
