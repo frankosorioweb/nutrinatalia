@@ -29,7 +29,7 @@
       <!-- Footer -->
       <template v-if="!this.hasPrice">
         <div class="px-4 pb-4">
-          <v-btn color="primary" block
+          <v-btn :to="buttonTo" color="primary" block
             >Ver todos los {{ this.data.name }}</v-btn
           >
         </div>
@@ -50,7 +50,7 @@
               {{ this.data.price.dollar.value }}
             </p>
           </div>
-          <v-btn v-if="!removeCTA" color="red" class="white--text" block
+          <v-btn :to="buttonTo" v-if="!removeCTA" color="red" class="white--text" block
             >Quiero el regalo</v-btn
           >
         </div>
@@ -64,7 +64,7 @@ import labelType from "./labelType.vue";
 import discountSticker from "./discountSticker.vue";
 import { mapGetters } from "vuex";
 export default {
-  props: ["data", "removeCTA"],
+  props: ["data", "removeCTA", "buttonTo"],
   computed: {
     ...mapGetters("productCard", ["getProductsTypes", "getProductTypeText"]),
     hasPrice() {

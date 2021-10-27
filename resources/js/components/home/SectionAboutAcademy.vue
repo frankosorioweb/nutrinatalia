@@ -8,19 +8,23 @@
       <v-row>
         <v-col cols="12">
           <product-card
+            :buttonTo="{name: getProductsTypes.WORKSHOP}"
             :data="{
-              poster: '/img/posters/Workshops.png',
+              poster: '/img/posters/Workshops.jpg',
               name: 'Talleres',
-              description: 'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.'
-            }"            
+              description:
+                'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.',
+            }"
           ></product-card>
         </v-col>
         <v-col cols="12">
           <product-card
+            :buttonTo="{name: getProductsTypes.EBOOK}"
             :data="{
-              poster: '/img/posters/Ebooks.png',
+              poster: '/img/posters/Ebooks.jpg',
               name: 'Ebooks',
-              description: 'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.'
+              description:
+                'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.',
             }"
           ></product-card>
         </v-col>
@@ -30,10 +34,14 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import productCard from "../productCard";
 export default {
   components: {
     productCard,
+  },
+  computed: {
+    ...mapGetters("productTypes", ["getProductsTypes"])
   }
 };
 </script>
