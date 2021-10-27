@@ -1,5 +1,9 @@
-<template></template>
+<template>
+  <p>{{ type }} - {{ $route.params.shortName }}</p>
+</template>
 
 <script>
-export default {}
+export default {
+  props: ['type']
+};
 </script>
