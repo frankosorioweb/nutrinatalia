@@ -42572,12 +42572,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-footer",
-    { staticClass: "footer", attrs: { padless: "", absolute: "", app: "" } },
+    {
+      staticClass: "footer dark-gray-bg",
+      attrs: { padless: "", absolute: "", app: "" }
+    },
     [
       _c(
         "v-card",
         {
-          staticClass: "dark-gray-bg text-center",
+          staticClass: "card text-center",
           attrs: { flat: "", tile: "", width: "100%" }
         },
         [

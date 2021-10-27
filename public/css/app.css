@@ -129,6 +129,12 @@
   max-height: 34px;
 }
 
+.footer {
+  border-top: 5px solid #00959B !important;
+}
+.footer .card {
+  background-color: transparent !important;
+}
 .footer .primary-title {
   font-size: 0.875rem;
 }

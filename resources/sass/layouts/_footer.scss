@@ -1,5 +1,9 @@
 .footer {
+    .card {
+        background-color: transparent !important;
+    }
     .primary-title {
         font-size: .875rem;
     }
+    border-top: 5px solid $primary-color !important;
 }

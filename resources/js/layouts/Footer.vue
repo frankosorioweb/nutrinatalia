@@ -1,6 +1,6 @@
 <template>
-  <v-footer class="footer" padless absolute app>
-    <v-card flat tile width="100%" class="dark-gray-bg text-center">
+  <v-footer class="footer dark-gray-bg" padless absolute app>
+    <v-card flat tile width="100%" class="card text-center">
       <v-card-title
         class="primary-title justify-center white--text primary-font pb-0"
         >Seguime en:</v-card-title
