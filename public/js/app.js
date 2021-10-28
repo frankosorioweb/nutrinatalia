@@ -3330,83 +3330,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["type"],
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])),
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getProductFromShortName"])), {}, {
+    product: function product() {
+      var shortName = this.$route.params.shortName;
+      return this.getProductFromShortName(this.type, shortName);
+    },
+    featuresDetails: function featuresDetails() {
+      return this.product.features.slice(1);
+    }
+  }),
   components: {
     labelType: _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -3801,26 +3737,74 @@ var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["
     EBOOK = _productTypes$state$t.EBOOK; // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 
 var products = [{
-  id: 1,
   poster: "".concat(postersSrc, "Panes sin culpa.png"),
   name: 'Dulces que nos hacen bien',
+  shortName: 'dulces-saludables',
+  duration: '+2 horas',
   description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off60,
-  type: WORKSHOP
+  type: WORKSHOP,
+  features: [{
+    title: 'Acerca del taller',
+    info: ['Las preparaciones de este taller se caracterizan por ser bajas en carbohidratos, lo que permite disfrutar de un delicioso postre sin elevar los niveles de azúcar en sangre, controlando la ansiedad con saciedad, ya que son ricas en grasas saludables.', 'Mis recetas se caracterizan por utilizar ingredientes sencillos y pasos fáciles de ejecutar.', '¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces que nos hacen bien.']
+  }, {
+    list: true,
+    title: 'Lo que aprenderas',
+    info: ['Que los dulces también son saludables, con los ingredientes correctos.', 'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.', 'Que la preparación de dulces es más sencilla de lo que te imaginas, apenas necesitarás entre 5 a 20 minutos.']
+  }, {
+    list: true,
+    title: 'Lo que necesitas para el taller',
+    info: ['Una cuenta de Google, ya que los videos están almacenados en Google Drive.', 'Un celular o una computadora con conexión wifi estable, ya que los videos están en alta resolución.']
+  }, {
+    list: false,
+    title: '¿A quién va dirigido el taller?',
+    info: ['Este taller es ideal para aquellos que necesiten controlar la glicemia como personas con diabetes, resistencia a la insulina, con sobre peso y obesidad. Ya que utilizamos harinas alternativas, las preparacion es son sin gluten, siendo aptas para celiacos e intolerantes al gluten, y todos los interesados en llevar dietas saludables.']
+  }]
 }, {
-  id: 1,
   poster: "".concat(postersSrc, "Spaghetti.jpg"),
   name: 'Spaghetti',
+  shortName: 'spaghetti',
+  duration: '+2 horas',
   description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
-  type: WORKSHOP
+  type: WORKSHOP,
+  features: [{
+    list: false,
+    title: 'Acerca del taller',
+    info: ['Las preparaciones de este taller se caracterizan por ser bajas en carbohidratos, lo que permite disfrutar de un delicioso postre sin elevar los niveles de azúcar en sangre, controlando la ansiedad con saciedad, ya que son ricas en grasas saludables.', 'Mis recetas se caracterizan por utilizar ingredientes sencillos y pasos fáciles de ejecutar.', '¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces que nos hacen bien.']
+  }, {
+    list: true,
+    title: 'Lo que aprenderas',
+    info: ['Que los dulces también son saludables, con los ingredientes correctos.', 'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.', 'Que la preparación de dulces es más sencilla de lo que te imaginas, apenas necesitarás entre 5 a 20 minutos.']
+  }, {
+    list: true,
+    title: 'Lo que necesitas para el taller',
+    info: ['Una cuenta de Google, ya que los videos están almacenados en Google Drive.', 'Un celular o una computadora con conexión wifi estable, ya que los videos están en alta resolución.']
+  }, {
+    list: false,
+    title: '¿A quién va dirigido el taller?',
+    info: ['Este taller es ideal para aquellos que necesiten controlar la glicemia como personas con diabetes, resistencia a la insulina, con sobre peso y obesidad. Ya que utilizamos harinas alternativas, las preparaciones son sin gluten, siendo aptas para celiacos e intolerantes al gluten, y todos los interesados en llevar dietas saludables.']
+  }]
 }, {
-  id: 1,
   poster: "".concat(postersSrc, "Salad.jpg"),
   name: 'Salad',
+  shortName: 'salad',
   description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
-  type: EBOOK
+  type: EBOOK,
+  features: [{
+    list: false,
+    title: 'Acerca del ebook',
+    info: ['Las preparaciones de este taller se caracterizan por ser bajas en carbohidratos, lo que permite disfrutar de un delicioso postre sin elevar los niveles de azúcar en sangre, controlando la ansiedad con saciedad, ya que son ricas en grasas saludables.', 'Mis recetas se caracterizan por utilizar ingredientes sencillos y pasos fáciles de ejecutar.', '¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces que nos hacen bien.']
+  }, {
+    list: true,
+    title: 'Lo que aprenderas',
+    info: ['Que los dulces también son saludables, con los ingredientes correctos.', 'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.', 'Que la preparación de dulces es más sencilla de lo que te imaginas, apenas necesitarás entre 5 a 20 minutos.']
+  }, {
+    list: false,
+    title: '¿A quién va dirigido el ebook?',
+    info: ['Este taller es ideal para aquellos que necesiten controlar la glicemia como personas con diabetes, resistencia a la insulina, con sobre peso y obesidad. Ya que utilizamos harinas alternativas, las preparaciones son sin gluten, siendo aptas para celiacos e intolerantes al gluten, y todos los interesados en llevar dietas saludables.']
+  }]
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
 
@@ -3999,6 +3983,13 @@ var getters = {
     return function (type) {
       return state.products.filter(function (item) {
         return item.type === type;
+      });
+    };
+  },
+  getProductFromShortName: function getProductFromShortName(state) {
+    return function (type, shortName) {
+      return state.products.find(function (item) {
+        return item.type === type && item.shortName === shortName;
       });
     };
   }
@@ -43197,10 +43188,7 @@ var render = function() {
         { staticClass: "banner" },
         [
           _c("v-img", {
-            attrs: {
-              "aspect-ratio": 16 / 9,
-              src: "/img/posters/Panes sin culpa.png"
-            },
+            attrs: { "aspect-ratio": 16 / 9, src: _vm.product.poster },
             scopedSlots: _vm._u([
               {
                 key: "placeholder",
@@ -43229,11 +43217,7 @@ var render = function() {
                   _c(
                     "v-col",
                     { attrs: { cols: "auto" } },
-                    [
-                      _c("label-type", {
-                        attrs: { type: _vm.getProductsTypes.WORKSHOP }
-                      })
-                    ],
+                    [_c("label-type", { attrs: { type: _vm.product.type } })],
                     1
                   ),
                   _vm._v(" "),
@@ -43246,7 +43230,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n            Dulces que nos hacen bien\n          "
+                          "\n            " +
+                            _vm._s(_vm.product.name) +
+                            "\n          "
                         )
                       ]
                     )
@@ -43258,36 +43244,42 @@ var render = function() {
                       { staticClass: "mb-0 description text--secondary" },
                       [
                         _vm._v(
-                          "\n            Aprende a ejecutar recetas de postres dulces saludables, sin\n            azúcar y sin harinas, con pocos pasos, ingredientes sencillos y\n            súper deliciosos.\n          "
+                          "\n            " +
+                            _vm._s(_vm.product.description) +
+                            "\n          "
                         )
                       ]
                     )
                   ]),
                   _vm._v(" "),
-                  _c("v-col", { attrs: { cols: "12 my-3" } }, [
-                    _c("div", { staticClass: "details" }, [
-                      _c(
-                        "div",
-                        { staticClass: "item d-flex align-center" },
-                        [
-                          _c("v-icon", { attrs: { color: "secondary" } }, [
-                            _vm._v("mdi-clock-time-eight-outline")
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "ml-1" }, [
-                            _c("span", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Duración:")
-                            ]),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "text--secondary" }, [
-                              _vm._v("+2 horas")
-                            ])
-                          ])
-                        ],
-                        1
-                      )
-                    ])
-                  ]),
+                  _vm.product.duration
+                    ? _c("v-col", { attrs: { cols: "12 my-3" } }, [
+                        _c("div", { staticClass: "details" }, [
+                          _c(
+                            "div",
+                            { staticClass: "item d-flex align-center" },
+                            [
+                              _c("v-icon", { attrs: { color: "secondary" } }, [
+                                _vm._v("mdi-clock-time-eight-outline")
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "ml-1" }, [
+                                _c(
+                                  "span",
+                                  { staticClass: "font-weight-bold" },
+                                  [_vm._v("Duración:")]
+                                ),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "text--secondary" }, [
+                                  _vm._v(_vm._s(_vm.product.duration))
+                                ])
+                              ])
+                            ],
+                            1
+                          )
+                        ])
+                      ])
+                    : _vm._e(),
                   _vm._v(" "),
                   _c(
                     "v-col",
@@ -43301,15 +43293,21 @@ var render = function() {
                             _vm._v("mdi-cart")
                           ]),
                           _vm._v("\n            Comprar por\n            "),
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "\n                ml-1\n                secondary-color\n                font-weight-bold\n                text-decoration-line-through\n              "
-                            },
-                            [_vm._v("36")]
-                          ),
-                          _vm._v("\n            13.9 USD\n          ")
+                          _vm.product.price.discount
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "\n                ml-1\n                secondary-color\n                font-weight-bold\n                text-decoration-line-through\n              "
+                                },
+                                [_vm._v(_vm._s(_vm.product.price.dollar.old))]
+                              )
+                            : _vm._e(),
+                          _vm._v(
+                            "\n            " +
+                              _vm._s(_vm.product.price.dollar.value) +
+                              "\n          "
+                          )
                         ],
                         1
                       )
@@ -43336,34 +43334,35 @@ var render = function() {
               attrs: { "no-gutters": "" }
             },
             [
-              _c("v-col", { attrs: { cols: "12" } }, [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
-                  },
-                  [_vm._v("\n          Acerca del taller\n        ")]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-3" }, [
-                  _vm._v(
-                    "\n          Las preparaciones de este taller se caracterizan por ser bajas en\n          carbohidratos, lo que permite disfrutar de un delicioso postre sin\n          elevar los niveles de azúcar en sangre, controlando la ansiedad con\n          saciedad, ya que son ricas en grasas saludables.\n        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-3" }, [
-                  _vm._v(
-                    "\n          Mis recetas se caracterizan por utilizar ingredientes sencillos y\n          pasos fáciles de ejecutar.\n        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-3" }, [
-                  _vm._v(
-                    "\n          ¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces\n          que nos hacen bien.\n        "
-                  )
-                ])
-              ]),
+              _c(
+                "v-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
+                    "h2",
+                    {
+                      staticClass:
+                        "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                    },
+                    [
+                      _vm._v(
+                        "\n          " +
+                          _vm._s(_vm.product.features[0].title) +
+                          "\n        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._l(_vm.product.features[0].info, function(description) {
+                    return _c("p", { key: description, staticClass: "mb-3" }, [
+                      _vm._v(
+                        "\n          " + _vm._s(description) + "\n        "
+                      )
+                    ])
+                  })
+                ],
+                2
+              ),
               _vm._v(" "),
               _c(
                 "v-col",
@@ -43372,213 +43371,83 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
-                  },
-                  [_vm._v("\n          Lo que aprenderas\n        ")]
-                ),
-                _vm._v(" "),
-                _c("ul", { staticClass: "list pl-0" }, [
-                  _c(
-                    "li",
-                    { staticClass: "py-1" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "" } },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-col", [
-                            _vm._v(
-                              "\n                Que los dulces también son saludables, con los ingredientes\n                correctos.\n              "
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "py-1" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "" } },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-col", [
-                            _vm._v(
-                              "\n                A disfrutar y sorprender a tus seres queridos con postres que\n                nos hacen bien, sin necesidad salir de tu dieta o afectando tu\n                salud.\n              "
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "py-1" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "" } },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-col", [
-                            _vm._v(
-                              "\n                Que la preparación de dulces es más sencilla de lo que te\n                imaginas, apenas necesitarás entre 5 a 20 minutos.\n              "
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
-                  },
+              _vm._l(_vm.featuresDetails, function(feature) {
+                return _c(
+                  "v-col",
+                  { key: feature.title, attrs: { cols: "12 pt-2" } },
                   [
-                    _vm._v(
-                      "\n          Lo que necesitas para el taller\n        "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("ul", { staticClass: "list pl-0" }, [
-                  _c(
-                    "li",
-                    { staticClass: "py-1" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "" } },
-                        [
+                    _c(
+                      "h2",
+                      {
+                        staticClass:
+                          "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                      },
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(feature.title) + "\n        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    feature.list === true
+                      ? [
                           _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-col", [
+                            "ul",
+                            { staticClass: "list pl-0" },
+                            _vm._l(feature.info, function(featureInfo, index) {
+                              return _c(
+                                "li",
+                                { key: index, staticClass: "py-1" },
+                                [
+                                  _c(
+                                    "v-row",
+                                    { attrs: { "no-gutters": "" } },
+                                    [
+                                      _c(
+                                        "v-col",
+                                        { attrs: { cols: "auto mr-2" } },
+                                        [
+                                          _c(
+                                            "v-icon",
+                                            { attrs: { color: "primary" } },
+                                            [_vm._v("mdi-check-circle-outline")]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-col", [
+                                        _vm._v(
+                                          "\n                  " +
+                                            _vm._s(featureInfo) +
+                                            "\n                "
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            }),
+                            0
+                          )
+                        ]
+                      : _vm._l(feature.info, function(featureInfo, index) {
+                          return _c("p", { key: index, staticClass: "mb-3" }, [
                             _vm._v(
-                              "\n                Una cuenta de Google, ya que los videos están almacenados en\n                Google Drive.\n              "
+                              "\n            " +
+                                _vm._s(featureInfo) +
+                                "\n          "
                             )
                           ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "py-1" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "" } },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c("v-col", [
-                            _vm._v(
-                              "\n                Un celular o una computadora con conexión wifi estable, ya que\n                los videos están en alta resolución.\n              "
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
-                _c(
-                  "h2",
-                  {
-                    staticClass:
-                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
-                  },
-                  [
-                    _vm._v(
-                      "\n          ¿A quién va dirigido el taller?\n        "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-3" }, [
-                  _vm._v(
-                    "\n          Este taller es ideal para aquellos que necesiten controlar la\n          glicemia como personas con diabetes, resistencia a la insulina, con\n          sobre peso y obesidad. Ya que utilizamos harinas alternativas, las\n          preparaciones son sin gluten, siendo aptas para celiacos e\n          intolerantes al gluten, y todos los interesados en llevar dietas\n          saludables.\n        "
-                  )
-                ])
-              ])
+                        })
+                  ],
+                  2
+                )
+              })
             ],
-            1
+            2
           )
         ],
         1
