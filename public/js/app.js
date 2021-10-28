@@ -2077,8 +2077,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -3201,6 +3199,150 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -9003,7 +9145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main-title[data-v-f8dfcc6e] {\n  font-size: 1.5rem !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main-title[data-v-f8dfcc6e] {\n  font-size: 1.5rem !important;\n}\n.card-features[data-v-f8dfcc6e] {\n  border: 1px solid rgba(0, 0, 0, 0.12) !important;\n  border-top: 5px solid #00959b !important;\n  font-size: 13px !important;\n}\n.card-features .feature-title[data-v-f8dfcc6e] {\n  font-size: 1rem;\n}\n.list[data-v-f8dfcc6e] {\n  list-style-type: none;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41324,7 +41466,7 @@ var render = function() {
       _vm._v(" "),
       _c("app-navigation-drawer"),
       _vm._v(" "),
-      _c("v-main", { staticClass: "mt-14" }, [_c("router-view")], 1),
+      _c("router-view"),
       _vm._v(" "),
       _c("app-footer")
     ],
@@ -43048,119 +43190,393 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "mt-14 mb-6 grey lighten-5" },
     [
-      _c("v-img", {
-        attrs: {
-          "aspect-ratio": 16 / 9,
-          src: "/img/posters/Panes sin culpa.png"
-        },
-        scopedSlots: _vm._u([
-          {
-            key: "placeholder",
-            fn: function() {
-              return [
-                _c(
-                  "v-sheet",
-                  [_c("v-skeleton-loader", { attrs: { type: "image" } })],
-                  1
-                )
-              ]
-            },
-            proxy: true
-          }
-        ])
-      }),
-      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "main-info px-3 py-5" },
+        { staticClass: "banner" },
         [
+          _c("v-img", {
+            attrs: {
+              "aspect-ratio": 16 / 9,
+              src: "/img/posters/Panes sin culpa.png"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "placeholder",
+                fn: function() {
+                  return [
+                    _c(
+                      "v-sheet",
+                      [_c("v-skeleton-loader", { attrs: { type: "image" } })],
+                      1
+                    )
+                  ]
+                },
+                proxy: true
+              }
+            ])
+          }),
+          _vm._v(" "),
           _c(
-            "v-row",
-            { attrs: { "no-gutters": "" } },
+            "div",
+            { staticClass: "main-info px-3 py-5" },
             [
               _c(
-                "v-col",
-                { attrs: { cols: "auto" } },
+                "v-row",
+                { attrs: { "no-gutters": "" } },
                 [
-                  _c("label-type", {
-                    attrs: { type: _vm.getProductsTypes.WORKSHOP }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12" } }, [
-                _c(
-                  "h1",
-                  {
-                    staticClass:
-                      "my-3 main-title primary-font font-weight-bold lh-1"
-                  },
-                  [_vm._v("\n          Dulces que nos hacen bien\n        ")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12" } }, [
-                _c("p", { staticClass: "mb-0 description text--secondary" }, [
-                  _vm._v(
-                    "\n          Aprende a ejecutar recetas de postres dulces saludables, sin azúcar\n          y sin harinas, con pocos pasos, ingredientes sencillos y súper\n          deliciosos.\n        "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("v-col", { attrs: { cols: "12 my-3" } }, [
-                _c("div", { staticClass: "details" }, [
                   _c(
-                    "div",
-                    { staticClass: "item d-flex align-center" },
+                    "v-col",
+                    { attrs: { cols: "auto" } },
                     [
-                      _c("v-icon", { attrs: { color: "secondary" } }, [
-                        _vm._v("mdi-clock-time-eight-outline")
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "ml-1" }, [
-                        _c("span", { staticClass: "font-weight-bold" }, [
-                          _vm._v("Duración:")
-                        ]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text--secondary" }, [
-                          _vm._v("+2 horas")
-                        ])
-                      ])
+                      _c("label-type", {
+                        attrs: { type: _vm.getProductsTypes.WORKSHOP }
+                      })
                     ],
                     1
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "v-col",
-                { attrs: { cols: "12" } },
-                [
-                  _c(
-                    "v-btn",
-                    { attrs: { color: "primary", block: "" } },
-                    [
-                      _c("v-icon", { staticClass: "mr-1" }, [
-                        _vm._v("mdi-cart")
-                      ]),
-                      _vm._v("\n          Comprar por\n          "),
+                  ),
+                  _vm._v(" "),
+                  _c("v-col", { attrs: { cols: "12" } }, [
+                    _c(
+                      "h1",
+                      {
+                        staticClass:
+                          "my-3 main-title primary-font font-weight-bold lh-1"
+                      },
+                      [
+                        _vm._v(
+                          "\n            Dulces que nos hacen bien\n          "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-col", { attrs: { cols: "12" } }, [
+                    _c(
+                      "p",
+                      { staticClass: "mb-0 description text--secondary" },
+                      [
+                        _vm._v(
+                          "\n            Aprende a ejecutar recetas de postres dulces saludables, sin\n            azúcar y sin harinas, con pocos pasos, ingredientes sencillos y\n            súper deliciosos.\n          "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("v-col", { attrs: { cols: "12 my-3" } }, [
+                    _c("div", { staticClass: "details" }, [
                       _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n              ml-1\n              secondary-color\n              font-weight-bold\n              text-decoration-line-through\n            "
-                        },
-                        [_vm._v("36")]
-                      ),
-                      _vm._v("\n          13.9 USD\n        ")
+                        "div",
+                        { staticClass: "item d-flex align-center" },
+                        [
+                          _c("v-icon", { attrs: { color: "secondary" } }, [
+                            _vm._v("mdi-clock-time-eight-outline")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "ml-1" }, [
+                            _c("span", { staticClass: "font-weight-bold" }, [
+                              _vm._v("Duración:")
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "text--secondary" }, [
+                              _vm._v("+2 horas")
+                            ])
+                          ])
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    { attrs: { cols: "12" } },
+                    [
+                      _c(
+                        "v-btn",
+                        { attrs: { color: "primary", block: "" } },
+                        [
+                          _c("v-icon", { staticClass: "mr-1" }, [
+                            _vm._v("mdi-cart")
+                          ]),
+                          _vm._v("\n            Comprar por\n            "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "\n                ml-1\n                secondary-color\n                font-weight-bold\n                text-decoration-line-through\n              "
+                            },
+                            [_vm._v("36")]
+                          ),
+                          _vm._v("\n            13.9 USD\n          ")
+                        ],
+                        1
+                      )
                     ],
                     1
                   )
                 ],
                 1
               )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-main",
+        [
+          _c(
+            "v-row",
+            {
+              staticClass: "card-features rounded-lg white mx-3 pa-3",
+              attrs: { "no-gutters": "" }
+            },
+            [
+              _c("v-col", { attrs: { cols: "12" } }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                  },
+                  [_vm._v("\n          Acerca del taller\n        ")]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-3" }, [
+                  _vm._v(
+                    "\n          Las preparaciones de este taller se caracterizan por ser bajas en\n          carbohidratos, lo que permite disfrutar de un delicioso postre sin\n          elevar los niveles de azúcar en sangre, controlando la ansiedad con\n          saciedad, ya que son ricas en grasas saludables.\n        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-3" }, [
+                  _vm._v(
+                    "\n          Mis recetas se caracterizan por utilizar ingredientes sencillos y\n          pasos fáciles de ejecutar.\n        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-3" }, [
+                  _vm._v(
+                    "\n          ¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces\n          que nos hacen bien.\n        "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { cols: "12 mt-3" } },
+                [_c("v-divider", { staticClass: "mb-3" })],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                  },
+                  [_vm._v("\n          Lo que aprenderas\n        ")]
+                ),
+                _vm._v(" "),
+                _c("ul", { staticClass: "list pl-0" }, [
+                  _c(
+                    "li",
+                    { staticClass: "py-1" },
+                    [
+                      _c(
+                        "v-row",
+                        { attrs: { "no-gutters": "" } },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "auto mr-2" } },
+                            [
+                              _c("v-icon", { attrs: { color: "primary" } }, [
+                                _vm._v("mdi-check-circle-outline")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _vm._v(
+                              "\n                Que los dulces también son saludables, con los ingredientes\n                correctos.\n              "
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "py-1" },
+                    [
+                      _c(
+                        "v-row",
+                        { attrs: { "no-gutters": "" } },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "auto mr-2" } },
+                            [
+                              _c("v-icon", { attrs: { color: "primary" } }, [
+                                _vm._v("mdi-check-circle-outline")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _vm._v(
+                              "\n                A disfrutar y sorprender a tus seres queridos con postres que\n                nos hacen bien, sin necesidad salir de tu dieta o afectando tu\n                salud.\n              "
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "py-1" },
+                    [
+                      _c(
+                        "v-row",
+                        { attrs: { "no-gutters": "" } },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "auto mr-2" } },
+                            [
+                              _c("v-icon", { attrs: { color: "primary" } }, [
+                                _vm._v("mdi-check-circle-outline")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _vm._v(
+                              "\n                Que la preparación de dulces es más sencilla de lo que te\n                imaginas, apenas necesitarás entre 5 a 20 minutos.\n              "
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                  },
+                  [
+                    _vm._v(
+                      "\n          Lo que necesitas para el taller\n        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", { staticClass: "list pl-0" }, [
+                  _c(
+                    "li",
+                    { staticClass: "py-1" },
+                    [
+                      _c(
+                        "v-row",
+                        { attrs: { "no-gutters": "" } },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "auto mr-2" } },
+                            [
+                              _c("v-icon", { attrs: { color: "primary" } }, [
+                                _vm._v("mdi-check-circle-outline")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _vm._v(
+                              "\n                Una cuenta de Google, ya que los videos están almacenados en\n                Google Drive.\n              "
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "py-1" },
+                    [
+                      _c(
+                        "v-row",
+                        { attrs: { "no-gutters": "" } },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "auto mr-2" } },
+                            [
+                              _c("v-icon", { attrs: { color: "primary" } }, [
+                                _vm._v("mdi-check-circle-outline")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("v-col", [
+                            _vm._v(
+                              "\n                Un celular o una computadora con conexión wifi estable, ya que\n                los videos están en alta resolución.\n              "
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("v-col", { attrs: { cols: "12 pt-2" } }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "\n            feature-title\n            primary-font\n            font-weight-bold\n            secondary-color\n            mb-2\n          "
+                  },
+                  [
+                    _vm._v(
+                      "\n          ¿A quién va dirigido el taller?\n        "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-3" }, [
+                  _vm._v(
+                    "\n          Este taller es ideal para aquellos que necesiten controlar la\n          glicemia como personas con diabetes, resistencia a la insulina, con\n          sobre peso y obesidad. Ya que utilizamos harinas alternativas, las\n          preparaciones son sin gluten, siendo aptas para celiacos e\n          intolerantes al gluten, y todos los interesados en llevar dietas\n          saludables.\n        "
+                  )
+                ])
+              ])
             ],
             1
           )
@@ -43195,7 +43611,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "v-main",
+    { staticClass: "mt-14" },
     [
       _c("section-presentation"),
       _vm._v(" "),
@@ -43238,8 +43655,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "pa-3 text-center" },
+    "v-main",
+    { staticClass: "mt-14 pt-3 px-3 mb-6 text-center" },
     [_c("product-type-select"), _vm._v(" "), _c("products-list")],
     1
   )
@@ -59452,7 +59869,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VApp */ "./node_modules/vuetify/lib/components/VApp/VApp.js");
-/* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/VMain.js");
 
 
 
@@ -59474,8 +59890,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* vuetify-loader */
 ;
 
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["default"],VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_5__["default"]})
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["default"]})
 
 
 /* hot reload */
@@ -60469,11 +60884,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
 /* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
-/* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/VImg.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-/* harmony import */ var vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VSheet */ "./node_modules/vuetify/lib/components/VSheet/VSheet.js");
-/* harmony import */ var vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VSkeletonLoader */ "./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js");
+/* harmony import */ var vuetify_lib_components_VDivider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VDivider */ "./node_modules/vuetify/lib/components/VDivider/VDivider.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
+/* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/VImg.js");
+/* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/VMain.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
+/* harmony import */ var vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuetify/lib/components/VSheet */ "./node_modules/vuetify/lib/components/VSheet/VSheet.js");
+/* harmony import */ var vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuetify/lib/components/VSkeletonLoader */ "./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js");
 
 
 
@@ -60502,7 +60919,9 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["default"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__["default"],VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_8__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_9__["default"],VSheet: vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_10__["default"],VSkeletonLoader: vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_11__["default"]})
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_4___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["default"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"],VDivider: vuetify_lib_components_VDivider__WEBPACK_IMPORTED_MODULE_7__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__["default"],VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_9__["default"],VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_10__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_11__["default"],VSheet: vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_12__["default"],VSkeletonLoader: vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_13__["default"]})
 
 
 /* hot reload */
@@ -60526,6 +60945,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=b3c5cf30& */ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&");
 /* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/pages/Home.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/VMain.js");
 
 
 
@@ -60543,6 +60965,12 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null
   
 )
+
+/* vuetify-loader */
+;
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__["default"]})
+
 
 /* hot reload */
 if (false) { var api; }
@@ -60565,6 +60993,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Products_vue_vue_type_template_id_4cceec26___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Products.vue?vue&type=template&id=4cceec26& */ "./resources/js/pages/Products.vue?vue&type=template&id=4cceec26&");
 /* harmony import */ var _Products_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Products.vue?vue&type=script&lang=js& */ "./resources/js/pages/Products.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/VMain.js");
 
 
 
@@ -60582,6 +61013,12 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null
   
 )
+
+/* vuetify-loader */
+;
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__["default"]})
+
 
 /* hot reload */
 if (false) { var api; }

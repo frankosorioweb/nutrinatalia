@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-main class="mt-14">
     <section-presentation></section-presentation>
     <section-social-media></section-social-media>
     <section-presentation-video></section-presentation-video>
@@ -7,7 +7,7 @@
     <section-testimonials></section-testimonials>
     <section-gift></section-gift>
     <section-FAQ />
-  </div>
+  </v-main>
 </template>
 
 <script>

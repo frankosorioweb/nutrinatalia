@@ -2,9 +2,7 @@
   <v-app app>
     <app-header></app-header>
     <app-navigation-drawer></app-navigation-drawer>
-    <v-main class="mt-14">
-      <router-view></router-view>
-    </v-main>
+    <router-view></router-view>
     <app-footer></app-footer>
   </v-app>
 </template>

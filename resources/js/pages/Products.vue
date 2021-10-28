@@ -1,8 +1,8 @@
 <template>
-  <div class="pa-3 text-center">
-    <product-type-select></product-type-select>
-    <products-list></products-list>
-  </div>
+  <v-main class="mt-14 pt-3 px-3 mb-6 text-center">
+    <product-type-select />
+    <products-list />
+  </v-main>
 </template>
 
 <script>
