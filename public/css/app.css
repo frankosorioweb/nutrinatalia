@@ -105,7 +105,7 @@
 }
 
 #btn-toggle-product-type .btn-primary-toggle::before {
-  background-color: #00959B !important;
+  background-color: unset !important;
 }
 #btn-toggle-product-type .btn-primary-toggle.active {
   background-color: rgba(0, 149, 155, 0.12) !important;
@@ -115,7 +115,7 @@
   background-color: transparent !important;
 }
 #btn-toggle-product-type .btn-secondary-toggle::before {
-  background-color: #764191 !important;
+  background-color: unset !important;
 }
 #btn-toggle-product-type .btn-secondary-toggle.active {
   background-color: rgba(118, 65, 145, 0.12) !important;

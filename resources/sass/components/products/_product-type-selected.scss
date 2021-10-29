@@ -1,7 +1,7 @@
 #btn-toggle-product-type {
   .btn-primary-toggle {
     &::before {
-      background-color: $primary-color !important;
+      background-color: unset !important;
     }
     &.active {
       background-color: transparentize($color: $primary-color, $amount: 0.88) !important;
@@ -14,7 +14,7 @@
 
   .btn-secondary-toggle {
     &::before {
-      background-color: $secondary-color !important;
+      background-color: unset !important;
     }
     &.active {
       background-color: transparentize($color: $secondary-color, $amount: 0.88) !important;
