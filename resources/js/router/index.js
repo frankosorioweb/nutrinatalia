@@ -9,6 +9,10 @@ export default new VueRouter({
   mode: 'history',
   routes,
   scrollBehavior(to, from, savedPosition) {
-    return {x: 0, y: 0}
+    if(savedPosition === null) {
+      savedPosition = {x:0, y:0}
+    }
+
+    return savedPosition
   }
 });

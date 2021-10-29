@@ -3568,10 +3568,14 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
   mode: 'history',
   routes: _routes__WEBPACK_IMPORTED_MODULE_0__["default"],
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
-    return {
-      x: 0,
-      y: 0
-    };
+    if (savedPosition === null) {
+      savedPosition = {
+        x: 0,
+        y: 0
+      };
+    }
+
+    return savedPosition;
   }
 }));
 
