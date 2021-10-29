@@ -41506,13 +41506,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", { staticClass: "mb-3 primary-font font-weight-bold" }, [
-      _vm._v("\n    ¿Qué hay para "),
-      _c("span", { staticClass: "primary-color" }, [_vm._v("ti")]),
-      _vm._v(" en esta\n    "),
-      _c("span", { staticClass: "primary-color" }, [_vm._v("academia")]),
-      _vm._v("?\n  ")
-    ])
+    return _c(
+      "h2",
+      { staticClass: "mb-3 mx-2 primary-font font-weight-bold" },
+      [
+        _vm._v("\n    ¿Qué hay para "),
+        _c("span", { staticClass: "primary-color" }, [_vm._v("ti")]),
+        _vm._v(" en esta\n    "),
+        _c("span", { staticClass: "primary-color" }, [_vm._v("academia")]),
+        _vm._v("?\n  ")
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -41577,12 +41581,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", { staticClass: "mb-3 primary-font font-weight-bold" }, [
-      _vm._v("\n    ¿Eres "),
-      _c("span", { staticClass: "primary-color" }, [_vm._v("nuevo")]),
-      _vm._v(" en la academia?, de ser\n    así, aquí te dejo un "),
-      _c("span", { staticClass: "primary-color" }, [_vm._v("regalo")])
-    ])
+    return _c(
+      "h2",
+      { staticClass: "mb-3 mx-2 primary-font font-weight-bold" },
+      [
+        _vm._v("\n    ¿Eres "),
+        _c("span", { staticClass: "primary-color" }, [_vm._v("nuevo")]),
+        _vm._v(" en la academia?, de ser\n    así, aquí te dejo un "),
+        _c("span", { staticClass: "primary-color" }, [_vm._v("regalo")])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -41622,7 +41630,7 @@ var staticRenderFns = [
           "h1",
           {
             staticClass:
-              "primary-font font-weight-bold py-5 mx-3 grey--text text--lighten-5"
+              "primary-font font-weight-bold pa-5 grey--text text--lighten-5"
           },
           [
             _vm._v("\n    Soy Natalia y "),
@@ -41706,7 +41714,7 @@ var staticRenderFns = [
       "h2",
       {
         staticClass:
-          "primary-font font-weight-bold mb-3 grey--text text--lighten-5"
+          "primary-font font-weight-bold mb-3 mx-2 grey--text text--lighten-5"
       },
       [
         _vm._v("\n    Te cuento "),
@@ -41743,7 +41751,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "text-center py-6 mx-3" },
+    { staticClass: "text-center py-6 mx-5" },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -41751,6 +41759,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-container",
+        { staticClass: "px-0" },
         [
           _c(
             "v-row",
@@ -41990,7 +41999,7 @@ var staticRenderFns = [
       "h2",
       {
         staticClass:
-          "primary-font font-weight-bold mb-3 grey--text text--lighten-5"
+          "primary-font font-weight-bold mb-3 mx-2 grey--text text--lighten-5"
       },
       [
         _vm._v("\n    Preguntas "),

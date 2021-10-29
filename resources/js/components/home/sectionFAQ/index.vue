@@ -1,6 +1,6 @@
 <template>
   <section class="section-faq gradient-bg text-center py-6 px-3">
-    <h2 class="primary-font font-weight-bold mb-3 grey--text text--lighten-5">
+    <h2 class="primary-font font-weight-bold mb-3 mx-2 grey--text text--lighten-5">
       Preguntas <span class="grey--text text--darken-4">frecuentes</span>
     </h2>
     <v-container>
