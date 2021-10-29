@@ -8,7 +8,8 @@
       <v-row>
         <v-col cols="12">
           <product-card
-            :data="this.getGift"
+            :buttonTo="getDetailsTo(getGift)"
+            :data="getGift"
           ></product-card>
         </v-col>
       </v-row>
@@ -26,6 +27,7 @@ export default {
   },
   computed: {
     ...mapGetters("productTypes", ["getProductsTypes"]),
+    ...mapGetters("products", ["getDetailsTo"]),
     getGift() {
       return products[0]  
     }

@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col v-for="product in getProducts" :key="product.name" cols="12">
-        <product-card :data="product" :removeCTA="true"></product-card>
+        <product-card :cardTo="getDetailsTo(product)" :data="product" :removeCTA="true"></product-card>
       </v-col>
     </v-row>
   </v-container>
@@ -16,7 +16,7 @@ export default {
     productCard,
   },
   computed: {
-    ...mapGetters("products", ["getCustomProducts"]),
+    ...mapGetters("products", ["getCustomProducts", "getDetailsTo"]),
     ...mapGetters("productTypes", ["getProductsTypes"]),
     getProducts() {
       return this.getCustomProducts(this.$route.name);

@@ -19,12 +19,12 @@
               {{ product.name }}
             </h1>
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12 mb-3">
             <p class="mb-0 description text--secondary">
               {{ product.description }}
             </p>
           </v-col>
-          <v-col cols="12 my-3" v-if="product.duration">
+          <v-col cols="12 mb-3" v-if="product.duration">
             <div class="details">
               <div class="item d-flex align-center">
                 <v-icon color="secondary">mdi-clock-time-eight-outline</v-icon>

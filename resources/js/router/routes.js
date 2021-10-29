@@ -31,6 +31,7 @@ const routes = [
         }
     },
     {
+        name: `${WORKSHOP}-details`,
         path: '/talleres/:shortName',
         component: Details,
         props: {
@@ -38,6 +39,7 @@ const routes = [
         }
     },
     {
+        name: `${EBOOK}-details`,
         path: '/ebooks/:shortName',
         component: Details,
         props: {

@@ -13,16 +13,14 @@ import { mapState } from "vuex";
 export default {
   methods: {
     openDrawer() {
-      this.$store.commit('navigationDrawer/changeDrawerState', !this.drawer)
+      this.$store.commit("navigationDrawer/changeDrawerState", !this.drawer);
     },
     goToHome() {
-      this.$router.push({
-        name: 'home'
-      });
-    }
+      if (this.$route.name !== "home") this.$router.push({ name: "home" });
+    },
   },
   computed: {
-    ...mapState('navigationDrawer', ['drawer'])
+    ...mapState("navigationDrawer", ["drawer"]),
   },
 };
 </script>

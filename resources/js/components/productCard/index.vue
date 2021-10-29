@@ -4,7 +4,7 @@
       v-if="this.hasDiscount"
       :discount="this.data.price.discount"
     />
-    <v-card elevation="5" class="mx-auto rounded-lg">
+    <v-card :to="cardTo" elevation="5" class="mx-auto rounded-lg">
       <v-img :aspect-ratio="16/9" :src="this.data.poster">
         <template v-slot:placeholder>
           <v-sheet>
@@ -64,7 +64,7 @@ import labelType from "./labelType.vue";
 import discountSticker from "./discountSticker.vue";
 import { mapGetters } from "vuex";
 export default {
-  props: ["data", "removeCTA", "buttonTo"],
+  props: ["data", "removeCTA", "buttonTo", "cardTo"],
   computed: {
     ...mapGetters("productCard", ["getProductsTypes", "getProductTypeText"]),
     hasPrice() {

@@ -2193,6 +2193,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2200,7 +2201,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     productCard: _productCard__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productTypes", ["getProductsTypes"])), {}, {
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productTypes", ["getProductsTypes"])), (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("products", ["getDetailsTo"])), {}, {
     getGift: function getGift() {
       return _store_data_products__WEBPACK_IMPORTED_MODULE_1__["default"][0];
     }
@@ -2743,7 +2744,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["data", "removeCTA", "buttonTo"],
+  props: ["data", "removeCTA", "buttonTo", "cardTo"],
   computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productCard", ["getProductsTypes", "getProductTypeText"])), {}, {
     hasPrice: function hasPrice() {
       return !_.isUndefined(this.data.price);
@@ -2894,7 +2895,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     productCard: _productCard__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getCustomProducts"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])), {}, {
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getCustomProducts", "getDetailsTo"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])), {}, {
     getProducts: function getProducts() {
       return this.getCustomProducts(this.$route.name);
     }
@@ -3082,15 +3083,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
     openDrawer: function openDrawer() {
-      this.$store.commit('navigationDrawer/changeDrawerState', !this.drawer);
+      this.$store.commit("navigationDrawer/changeDrawerState", !this.drawer);
     },
     goToHome: function goToHome() {
-      this.$router.push({
-        name: 'home'
+      if (this.$route.name !== "home") this.$router.push({
+        name: "home"
       });
     }
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)('navigationDrawer', ['drawer']))
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapState)("navigationDrawer", ["drawer"]))
 });
 
 /***/ }),
@@ -3612,12 +3613,14 @@ var routes = [{
     type: EBOOK
   }
 }, {
+  name: "".concat(WORKSHOP, "-details"),
   path: '/talleres/:shortName',
   component: _pages_Details_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   props: {
     type: WORKSHOP
   }
 }, {
+  name: "".concat(EBOOK, "-details"),
   path: '/ebooks/:shortName',
   component: _pages_Details_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   props: {
@@ -3991,6 +3994,18 @@ var getters = {
       return state.products.find(function (item) {
         return item.type === type && item.shortName === shortName;
       });
+    };
+  },
+  getDetailsTo: function getDetailsTo(state) {
+    return function (_ref) {
+      var type = _ref.type,
+          shortName = _ref.shortName;
+      return {
+        name: "".concat(type, "-details"),
+        params: {
+          shortName: shortName
+        }
+      };
     };
   }
 };
@@ -41597,7 +41612,14 @@ var render = function() {
               _c(
                 "v-col",
                 { attrs: { cols: "12" } },
-                [_c("product-card", { attrs: { data: this.getGift } })],
+                [
+                  _c("product-card", {
+                    attrs: {
+                      buttonTo: _vm.getDetailsTo(_vm.getGift),
+                      data: _vm.getGift
+                    }
+                  })
+                ],
                 1
               )
             ],
@@ -42461,7 +42483,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-card",
-        { staticClass: "mx-auto rounded-lg", attrs: { elevation: "5" } },
+        {
+          staticClass: "mx-auto rounded-lg",
+          attrs: { to: _vm.cardTo, elevation: "5" }
+        },
         [
           _c("v-img", {
             attrs: { "aspect-ratio": 16 / 9, src: this.data.poster },
@@ -42763,7 +42788,15 @@ var render = function() {
           return _c(
             "v-col",
             { key: product.name, attrs: { cols: "12" } },
-            [_c("product-card", { attrs: { data: product, removeCTA: true } })],
+            [
+              _c("product-card", {
+                attrs: {
+                  cardTo: _vm.getDetailsTo(product),
+                  data: product,
+                  removeCTA: true
+                }
+              })
+            ],
             1
           )
         }),
@@ -43238,7 +43271,7 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("v-col", { attrs: { cols: "12" } }, [
+                  _c("v-col", { attrs: { cols: "12 mb-3" } }, [
                     _c(
                       "p",
                       { staticClass: "mb-0 description text--secondary" },
@@ -43253,7 +43286,7 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _vm.product.duration
-                    ? _c("v-col", { attrs: { cols: "12 my-3" } }, [
+                    ? _c("v-col", { attrs: { cols: "12 mb-3" } }, [
                         _c("div", { staticClass: "details" }, [
                           _c(
                             "div",
