@@ -7,8 +7,8 @@
     <v-card :to="cardTo" elevation="5" class="mx-auto rounded-lg">
       <v-img :aspect-ratio="16/9" :src="this.data.poster">
         <template v-slot:placeholder>
-          <v-sheet>
-            <v-skeleton-loader type="image" />
+          <v-sheet class="skeleton-loader-sheet">
+            <v-skeleton-loader class="skeleton-loader" type="image" />
           </v-sheet>
         </template>
       </v-img>
@@ -50,7 +50,12 @@
               {{ this.data.price.dollar.value }}
             </p>
           </div>
-          <v-btn :to="buttonTo" v-if="!removeCTA" color="red" class="white--text" block
+          <v-btn
+            :to="buttonTo"
+            v-if="!removeCTA"
+            color="red"
+            class="white--text"
+            block
             >Quiero el regalo</v-btn
           >
         </div>

@@ -1,21 +1,21 @@
 <template>
-  <div class="mt-14 mb-6 grey lighten-5">
+  <div class="mt-14 mb-7 grey lighten-5 details-page">
     <div class="banner">
-      <v-img :aspect-ratio="16 / 9" :src="product.poster">
+      <v-img :aspect-ratio="16/9" :src="product.poster">
         <template v-slot:placeholder>
-          <v-sheet>
-            <v-skeleton-loader type="image" />
+          <v-sheet class="skeleton-loader-sheet">
+            <v-skeleton-loader class="skeleton-loader" type="image" />
           </v-sheet>
         </template>
       </v-img>
 
-      <div class="main-info px-3 py-5">
+      <div class="main-info pa-5">
         <v-row no-gutters>
           <v-col cols="auto">
             <label-type :type="product.type"></label-type>
           </v-col>
           <v-col cols="12">
-            <h1 class="my-3 main-title primary-font font-weight-bold lh-1">
+            <h1 class="mt-3 mb-1 main-title primary-font font-weight-bold lh-1">
               {{ product.name }}
             </h1>
           </v-col>
@@ -56,7 +56,7 @@
       </div>
     </div>
     <v-main>
-      <v-row no-gutters class="card-features rounded-lg white mx-3 pa-3">
+      <v-row no-gutters class="card-features elevation-1 rounded-lg white mx-5 pa-4 pb-1">
         <v-col cols="12">
           <h2
             class="
@@ -150,24 +150,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.main-title {
-  font-size: 1.5rem !important;
-}
-.card-features {
-  $dark-gray: #303033;
-  $primary-color: #00959b;
-  border: 1px solid rgba($color: #000000, $alpha: 0.12) !important;
-
-  border-top: 5px solid $primary-color !important;
-  font-size: 13px !important;
-
-  .feature-title {
-    font-size: 1rem;
-  }
-}
-.list {
-  list-style-type: none;
-}
-</style>

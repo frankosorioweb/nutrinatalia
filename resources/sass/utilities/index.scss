@@ -50,3 +50,11 @@ a {
 .word-break {
     word-break: break-word;
 }
+
+.skeleton-loader-sheet {
+    height: 100%;
+
+    .skeleton-loader {
+        height: 100%;
+    }
+}

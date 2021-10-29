@@ -191,3 +191,27 @@ a {
 .word-break {
   word-break: break-word;
 }
+
+.skeleton-loader-sheet {
+  height: 100%;
+}
+.skeleton-loader-sheet .skeleton-loader {
+  height: 100%;
+}
+
+.details-page .main-title {
+  font-size: 1.5rem !important;
+}
+.details-page .card-features {
+  font-size: 13px !important;
+}
+.details-page .card-features.white {
+  border: unset;
+  border-top: 5px solid #00959B !important;
+}
+.details-page .card-features .feature-title {
+  font-size: 1rem;
+}
+.details-page .list {
+  list-style-type: none;
+}
