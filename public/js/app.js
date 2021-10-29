@@ -3701,10 +3701,12 @@ prices[WORKSHOP] = {
   original: {
     "default": true,
     dollar: {
-      value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
+      value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar),
+      amount: '36'
     },
     guarani: {
-      value: "245.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
+      value: "245.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani),
+      amount: '245.000'
     }
   }
 };
@@ -3713,11 +3715,11 @@ prices[WORKSHOP].off60 = {
   discount: 60,
   dollar: {
     value: "13.9 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar),
-    old: prices[WORKSHOP].original.dollar.value
+    old: prices[WORKSHOP].original.dollar.amount
   },
   guarani: {
     value: "95.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani),
-    old: prices[WORKSHOP].original.guarani.value
+    old: prices[WORKSHOP].original.guarani.amount
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prices);
