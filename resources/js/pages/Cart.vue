@@ -1,6 +1,6 @@
 <template>
-  <v-main class="mt-14">
-    <v-container>
+  <v-main class="mt-14 cart-page">
+    <v-container class="pa-5">
       <stepper />
     </v-container>
   </v-main>

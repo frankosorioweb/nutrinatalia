@@ -125,6 +125,10 @@
   background-color: transparent !important;
 }
 
+.cart-page .stepper .main-title {
+  font-size: 1.5rem;
+}
+
 .app-header .logo {
   max-height: 34px;
 }
