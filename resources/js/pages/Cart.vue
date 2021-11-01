@@ -1,11 +1,16 @@
 <template>
-    <v-main class="mt-14">
-        <h1>Cart</h1>
-    </v-main>
+  <v-main class="mt-14">
+    <v-container>
+      <stepper />
+    </v-container>
+  </v-main>
 </template>
 
 <script>
+import stepper from "../components/cart/Stepper.vue";
 export default {
-    
-}
-</script>
+  components: {
+    stepper,
+  },
+};
+</script>SteppeStepperr
