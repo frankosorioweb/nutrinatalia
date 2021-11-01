@@ -1,6 +1,7 @@
 import Home from '../pages/Home.vue';
 import Products from '../pages/Products.vue';
 import Details from '../pages/Details.vue';
+import Cart from '../pages/Cart.vue';
 
 import productTypes from '../store/modules/productTypes';
 const {
@@ -46,6 +47,11 @@ const routes = [
             type: EBOOK
         }
     },
+    {
+        name: 'buy',
+        path: '/comprar',
+        component: Cart
+    }
 ]
 
 export default routes;
