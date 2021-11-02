@@ -1,0 +1,11 @@
+.payment-card {
+    .header {
+        border-bottom: 1px solid transparentize($color: #000000, $amount: .9);
+    }
+    .money-type {
+        width: 4.0625rem;
+    }
+    .list {
+        list-style-type: none;
+    }
+}
