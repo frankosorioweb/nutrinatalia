@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import stepper from "../components/cart/Stepper.vue";
-import payment from "../components/cart/Payment.vue";
+import stepper from "../components/cart/Payment/Stepper.vue";
+import payment from "../components/cart/Payment/";
 export default {
   components: {
     stepper,

@@ -1,6 +1,6 @@
 <template>
   <div class="stepper">
-    <v-stepper class="rounded-lg" elevation="5">
+    <v-stepper class="rounded-lg" elevation="5" v-model="step">
       <v-stepper-header>
         <v-stepper-step step="1"></v-stepper-step>
 
@@ -16,3 +16,15 @@
     <h1 class="main-title primary-font text-center lh-1 my-6">Elegi tu método de pago</h1>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    step: {
+      get() {
+        return this.$store.state.stepper.step;
+      }
+    }
+  },
+}
+</script>
