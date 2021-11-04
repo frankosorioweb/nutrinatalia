@@ -1,6 +1,6 @@
 <template>
   <div class="stepper">
-    <v-stepper class="rounded-lg">
+    <v-stepper class="rounded-lg" elevation="5">
       <v-stepper-header>
         <v-stepper-step step="1"></v-stepper-step>
 

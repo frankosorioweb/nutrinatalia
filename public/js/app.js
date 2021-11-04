@@ -42092,7 +42092,7 @@ var render = function() {
     [
       _c(
         "v-stepper",
-        { staticClass: "rounded-lg" },
+        { staticClass: "rounded-lg", attrs: { elevation: "5" } },
         [
           _c(
             "v-stepper-header",
