@@ -42030,7 +42030,7 @@ var render = function() {
               "li",
               {
                 key: payment.name,
-                staticClass: "pa-4 grey lighten-4 rounded mb-4"
+                staticClass: "pa-4 grey lighten-4 rounded mb-4 c-pointer"
               },
               [
                 _c(

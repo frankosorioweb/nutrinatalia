@@ -32,7 +32,7 @@
     </header>
     <div class="payment-body pa-4">
       <ul class="list pl-0">
-        <li v-for="payment in payments[moneyType]" :key="payment.name" class="pa-4 grey lighten-4 rounded mb-4">
+        <li v-for="payment in payments[moneyType]" :key="payment.name" class="pa-4 grey lighten-4 rounded mb-4 c-pointer">
           <v-row align="center">
             <v-col>
               <span class="grey--text text--darken-1">{{ payment.name }}</span>
