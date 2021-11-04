@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 // Modules
 import navigationDrawer from './modules/navigationDrawer';
 import productTypes from './modules/productTypes';
+import stepper from './modules/stepper';
 
 // Data
 import testimonials from './data/testimonials';
@@ -27,7 +28,8 @@ const store = new Vuex.Store({
     modules: {
         navigationDrawer,
         productTypes,
-        products
+        products,
+        stepper
     }
 });
 
