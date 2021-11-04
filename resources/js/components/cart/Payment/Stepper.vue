@@ -13,7 +13,7 @@
         <v-stepper-step step="3"></v-stepper-step>
       </v-stepper-header>
     </v-stepper>
-    <h1 class="main-title primary-font text-center lh-1 my-6">Elegi tu método de pago</h1>
+    <h1 class="main-title primary-font text-center lh-1 my-6">Elegí tu método de pago</h1>
   </div>
 </template>
 
