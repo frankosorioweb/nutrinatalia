@@ -1,16 +1,18 @@
 const state = {
-    step: 1
+    step: 1,
+    payment: null
 };
 
 const getters = {
-    getStep: (state) => state.step
+    getStep: (state) => state.step,
+    getPayment: (state) => state.payment
 };
 
 const mutations = {
-    setStep: (state) => (value) => state.step = value,
     nextStep: (state) => {
         if (state.step < 3) state.step++
-    }
+    },
+    setPayment: (state) => (payment) => state.payment = payment
 };
 
 const actions = {

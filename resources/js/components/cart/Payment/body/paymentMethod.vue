@@ -1,0 +1,71 @@
+<template>
+  <ul class="list pl-0">
+    <li
+      v-for="payment in payments[moneyType]"
+      :key="payment.name"
+      class="pa-4 grey lighten-4 rounded mb-4 c-pointer"
+      @click="onSelectPaymentMethod(payment)"
+    >
+      <v-row align="center">
+        <v-col>
+          <span class="grey--text text--darken-1">{{ payment.name }}</span>
+        </v-col>
+        <v-col cols="auto">
+          <img
+            class="payment-logo ml-auto d-inline-block rounded"
+            :src="payment.logo"
+            :alt="payment.name"
+          />
+        </v-col>
+      </v-row>
+    </li>
+  </ul>
+</template>
+
+<script>
+export default {
+  props: ['moneyType'],
+  data() {
+    return {
+      payments: {
+        USD: [
+          {
+            name: "Western Union",
+            logo: "/img/payments/Western-Union.png",
+          },
+        ],
+        GS: [
+          {
+            name: "Depósito bancario",
+            logo: "/img/payments/Itau.png",
+            transferData: [
+              {
+                field: "Número de cuenta",
+                value: "12345678",
+              },
+              {
+                field: "Cédula de identidad",
+                value: "1.234.567",
+              },
+              {
+                field: "Nombres y Apellidos",
+                value: "Juan Pérez",
+              },
+            ],
+          },
+          {
+            name: "Giros Claro",
+            logo: "/img/payments/Claro.svg",
+          },
+        ],
+      },
+    };
+  },
+  methods: {
+    onSelectPaymentMethod(payment) {
+      this.$store.commit('stepper/setPayment', payment);
+      this.$store.commit('stepper/nextStep');
+    }
+  },
+};
+</script>
