@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   props: ['moneyType'],
   data() {
@@ -32,6 +33,20 @@ export default {
           {
             name: "Western Union",
             logo: "/img/payments/Western-Union.png",
+            transferData: [
+              {
+                field: "Número de cuenta",
+                value: "12345678",
+              },
+              {
+                field: "Cédula de identidad",
+                value: "1.234.567",
+              },
+              {
+                field: "Nombres y Apellidos",
+                value: "Juan Pérez",
+              },
+            ],
           },
         ],
         GS: [
@@ -56,10 +71,27 @@ export default {
           {
             name: "Giros Claro",
             logo: "/img/payments/Claro.svg",
+            transferData: [
+              {
+                field: "Número de cuenta",
+                value: "12345678",
+              },
+              {
+                field: "Cédula de identidad",
+                value: "1.234.567",
+              },
+              {
+                field: "Nombres y Apellidos",
+                value: "Juan Pérez",
+              },
+            ],
           },
         ],
       },
     };
+  },
+  computed: {
+    ...mapGetters('stepper', ['getPayment'])
   },
   methods: {
     onSelectPaymentMethod(payment) {

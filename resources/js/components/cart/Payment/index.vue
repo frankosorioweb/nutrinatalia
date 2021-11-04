@@ -12,6 +12,8 @@
 <script>
 import headerPaymentMethod from "./header/paymentMethod.vue";
 import bodyPaymentMethod from "./body/paymentMethod.vue";
+import headerTransferData from "./header/transferData.vue";
+import bodyTransferData from "./body/transferData.vue";
 import { mapGetters } from 'vuex';
 export default {
   data() {
@@ -21,6 +23,10 @@ export default {
         1: {
           header: "headerPaymentMethod",
           body: "bodyPaymentMethod"
+        },
+        2: {
+          header: 'headerTransferData',
+          body: 'bodyTransferData'
         }
       }
     };
@@ -37,6 +43,8 @@ export default {
   components: {
     headerPaymentMethod,
     bodyPaymentMethod,
+    headerTransferData,
+    bodyTransferData,
   },
 };
 </script>

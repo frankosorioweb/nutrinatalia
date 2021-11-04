@@ -12,7 +12,10 @@ const mutations = {
     nextStep: (state) => {
         if (state.step < 3) state.step++
     },
-    setPayment: (state) => (payment) => state.payment = payment
+    previousStep: state => state.step--,
+    setPayment(state, payment) {
+        state.payment = payment;
+    }
 };
 
 const actions = {

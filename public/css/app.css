@@ -141,6 +141,12 @@
 .payment-card .payment-logo {
   height: 1.7rem;
 }
+.payment-card .transfer-step {
+  font-size: 0.875rem;
+}
+.payment-card .primary-title {
+  font-size: 1rem;
+}
 
 .app-header .logo {
   max-height: 34px;

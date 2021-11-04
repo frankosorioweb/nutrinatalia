@@ -1,6 +1,6 @@
 <template>
   <v-main class="mt-14 cart-page">
-    <v-container class="pa-5">
+    <v-container class="px-5 py-8">
       <stepper />
       <payment />
     </v-container>
