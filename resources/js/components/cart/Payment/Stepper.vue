@@ -26,7 +26,7 @@ export default {
       titles: {
         1: "Elegí tu método de pago",
         2: "Realizá la transferencia",
-        3: "Envia tu comprobante",
+        3: "Envía tu comprobante",
       },
     };
   },

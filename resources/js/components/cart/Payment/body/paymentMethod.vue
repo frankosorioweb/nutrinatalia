@@ -56,15 +56,19 @@ export default {
             transferData: [
               {
                 field: "Número de cuenta",
-                value: "12345678",
+                value: "1234567",
               },
               {
-                field: "Cédula de identidad",
-                value: "1.234.567",
+                field: "Banco",
+                value: "Itaú",
               },
               {
                 field: "Nombres y Apellidos",
                 value: "Juan Pérez",
+              },
+              {
+                field: "Cédula de identidad",
+                value: "1.234.567",
               },
             ],
           },

@@ -39,20 +39,22 @@
       </p>
       <ul class="grey--text text--darken-1">
         <li v-for="item in getPayment.transferData" :key="item.field">
-          <span class="grey--text text--darken-4 font-weight-bold">{{ item.field }}: </span>
+          <span class="grey--text text--darken-4 font-weight-bold"
+            >{{ item.field }}:
+          </span>
           <span>{{ item.value }}</span>
         </li>
       </ul>
     </div>
-    <v-btn color="primary" block>Continuar</v-btn>
+    <v-btn @click="$store.commit('stepper/nextStep')" color="primary" block>Continuar</v-btn>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 export default {
   computed: {
-    ...mapGetters('stepper', ['getPayment'])
+    ...mapGetters("stepper", ["getPayment"]),
   },
 };
 </script>

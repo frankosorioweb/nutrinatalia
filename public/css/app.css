@@ -147,6 +147,9 @@
 .payment-card .primary-title {
   font-size: 1rem;
 }
+.payment-card .buttonLogo {
+  height: 1.5rem;
+}
 
 .app-header .logo {
   max-height: 34px;
