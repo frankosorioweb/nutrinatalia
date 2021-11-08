@@ -76,6 +76,16 @@
   font-size: 1.125rem;
 }
 
+.product-card-responsive {
+  overflow: hidden;
+}
+.product-card-responsive .product-name {
+  font-size: 1.25rem;
+}
+.product-card-responsive .description {
+  font-size: 0.875rem;
+}
+
 .social-media-button-container {
   position: relative;
   --sm-color: #3B5998;

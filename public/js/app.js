@@ -3317,13 +3317,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../productCard/labelType.vue */ "./resources/js/components/productCard/labelType.vue");
 //
 //
 //
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    labelType: _productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
 
 /***/ }),
 
@@ -44434,7 +44484,114 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    ProductCard - Responsive\n")])
+  return _c(
+    "article",
+    {
+      staticClass: "white elevation-5 rounded-lg mt-6 product-card-responsive"
+    },
+    [
+      _c(
+        "a",
+        [
+          _c("v-img", {
+            attrs: {
+              "aspect-ratio": 16 / 9,
+              src: "/img/posters/Spaghetti.jpg"
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "placeholder",
+                fn: function() {
+                  return [
+                    _c(
+                      "v-sheet",
+                      { staticClass: "skeleton-loader-sheet" },
+                      [
+                        _c("v-skeleton-loader", {
+                          staticClass: "skeleton-loader",
+                          attrs: { type: "image" }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                },
+                proxy: true
+              }
+            ])
+          }),
+          _vm._v(" "),
+          _c(
+            "h2",
+            {
+              staticClass:
+                "\n        secondary-color\n        primary-font\n        h3\n        product-name\n        text-center\n        px-4\n        pt-4\n        pb-2\n      "
+            },
+            [_vm._v("\n      Dulces que nos hacen bien bien\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              staticClass:
+                "px-4 pb-4 mb-0 text-center description grey--text text--darken-1"
+            },
+            [
+              _vm._v(
+                "\n      Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y\n      sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos\n    "
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "footer",
+        { staticClass: "grey lighten-4 pa-4" },
+        [
+          _c(
+            "v-row",
+            {
+              attrs: {
+                "no-gutters": "",
+                align: "center",
+                justify: "space-between"
+              }
+            },
+            [
+              _c(
+                "v-col",
+                { attrs: { cols: "auto" } },
+                [_c("label-type", { attrs: { type: "Taller" } })],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-col", { attrs: { cols: "auto" } }, [
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "mb-0 font-weight-bold primary-font primary-color"
+                  },
+                  [
+                    _c(
+                      "span",
+                      { staticClass: "red--text text-decoration-line-through" },
+                      [_vm._v("36")]
+                    ),
+                    _vm._v("\n          13.9 USD\n        ")
+                  ]
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -62873,6 +63030,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _responsive_vue_vue_type_template_id_c9c849a2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./responsive.vue?vue&type=template&id=c9c849a2& */ "./resources/js/components/productCard/responsive.vue?vue&type=template&id=c9c849a2&");
 /* harmony import */ var _responsive_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./responsive.vue?vue&type=script&lang=js& */ "./resources/js/components/productCard/responsive.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/VImg.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
+/* harmony import */ var vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VSheet */ "./node_modules/vuetify/lib/components/VSheet/VSheet.js");
+/* harmony import */ var vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VSkeletonLoader */ "./node_modules/vuetify/lib/components/VSkeletonLoader/VSkeletonLoader.js");
 
 
 
@@ -62890,6 +63054,16 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null
   
 )
+
+/* vuetify-loader */
+;
+
+
+
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_5__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"],VSheet: vuetify_lib_components_VSheet__WEBPACK_IMPORTED_MODULE_7__["default"],VSkeletonLoader: vuetify_lib_components_VSkeletonLoader__WEBPACK_IMPORTED_MODULE_8__["default"]})
+
 
 /* hot reload */
 if (false) { var api; }
