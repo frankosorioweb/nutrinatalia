@@ -1,10 +1,10 @@
 <template>
   <article class="payment-card white elevation-5 rounded-lg">
     <header class="header pa-4">
-      <component v-model="moneyType" :is="getStepComponent.header"></component>
+      <component :is="getStepComponent.header"></component>
     </header>
     <div class="body pa-4">
-      <component :moneyType="moneyType" :is="getStepComponent.body"></component>
+      <component :is="getStepComponent.body"></component>
     </div>
   </article>
 </template>
@@ -20,7 +20,6 @@ import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
-      moneyType: "USD",
       stepComponents: {
         1: {
           header: "headerPaymentMethod",

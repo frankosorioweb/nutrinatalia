@@ -11,10 +11,16 @@
           <img :src="getFlagSrc" alt="bandera" />
         </v-col>
         <v-col cols="auto">
-          <v-select
+          <!--<v-select
             hide-details
             class="money-type pa-0 ma-0"
             :items="['USD', 'GS']"
+            v-model="moneyTypeSelect"
+          >-->
+          <v-select
+            hide-details
+            class="money-type pa-0 ma-0"
+            :items="getMoneyTypes"
             v-model="moneyTypeSelect"
           >
             <template v-slot:item="{ item, attrs, on }">
@@ -30,26 +36,22 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
-  props: ['value'],
   computed: {
+    ...mapGetters('cart', ['getMoneyType', 'getMoneyTypes']),
     getFlagSrc() {
       const flagsSrc = "/img/flags/";
-      const result = `${flagsSrc}${this.value === "USD" ? "world.svg" : "py.svg"}`;
+      const result = `${flagsSrc}${this.getMoneyType === "USD" ? "world.svg" : "py.svg"}`;
       return result;
     },
     moneyTypeSelect: {
       get() {
-        return this.value;
+        return this.getMoneyType;
       },
       set(value) {
-        this.$emit('input', value);
+        this.$store.commit('cart/setMoneyType', value)
       }
-    }
-  },
-  methods: {
-    select($e) {
-      console.log('select:', $e);
     }
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <ul class="list pl-0">
     <li
-      v-for="payment in payments[moneyType]"
+      v-for="payment in payments[getMoneyType]"
       :key="payment.name"
       class="pa-4 grey lighten-4 rounded mb-4 c-pointer"
       @click="onSelectPaymentMethod(payment)"
@@ -25,7 +25,6 @@
 <script>
 import { mapGetters } from 'vuex';
 export default {
-  props: ['moneyType'],
   data() {
     return {
       payments: {
@@ -95,7 +94,8 @@ export default {
     };
   },
   computed: {
-    ...mapGetters('stepper', ['getPayment'])
+    ...mapGetters('stepper', ['getPayment']),
+    ...mapGetters('cart', ['getMoneyType']),
   },
   methods: {
     onSelectPaymentMethod(payment) {

@@ -2228,7 +2228,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['moneyType'],
   data: function data() {
     return {
       payments: {
@@ -2279,7 +2278,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     };
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('stepper', ['getPayment'])),
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('stepper', ['getPayment'])), (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('cart', ['getMoneyType'])),
   methods: {
     onSelectPaymentMethod: function onSelectPaymentMethod(payment) {
       this.$store.commit('stepper/setPayment', payment);
@@ -2408,6 +2407,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2439,28 +2445,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['value'],
-  computed: {
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)('cart', ['getMoneyType', 'getMoneyTypes'])), {}, {
     getFlagSrc: function getFlagSrc() {
       var flagsSrc = "/img/flags/";
-      var result = "".concat(flagsSrc).concat(this.value === "USD" ? "world.svg" : "py.svg");
+      var result = "".concat(flagsSrc).concat(this.getMoneyType === "USD" ? "world.svg" : "py.svg");
       return result;
     },
     moneyTypeSelect: {
       get: function get() {
-        return this.value;
+        return this.getMoneyType;
       },
       set: function set(value) {
-        this.$emit('input', value);
+        this.$store.commit('cart/setMoneyType', value);
       }
     }
-  },
-  methods: {
-    select: function select($e) {
-      console.log('select:', $e);
-    }
-  }
+  })
 });
 
 /***/ }),
@@ -2553,7 +2560,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      moneyType: "USD",
       stepComponents: {
         1: {
           header: "headerPaymentMethod",
@@ -4559,14 +4565,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var state = {
-  moneyType: 'USD'
+  moneyType: 'USD',
+  moneyTypes: ['USD', 'GS']
 };
 var getters = {
   getMoneyType: function getMoneyType(state) {
     return state.moneyType;
+  },
+  getMoneyTypes: function getMoneyTypes(state) {
+    return state.moneyTypes;
   }
 };
-var mutations = {};
+var mutations = {
+  setMoneyType: function setMoneyType(state, payload) {
+    state.moneyType = payload;
+  }
+};
 var actions = {};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
@@ -42902,7 +42916,7 @@ var render = function() {
   return _c(
     "ul",
     { staticClass: "list pl-0" },
-    _vm._l(_vm.payments[_vm.moneyType], function(payment) {
+    _vm._l(_vm.payments[_vm.getMoneyType], function(payment) {
       return _c(
         "li",
         {
@@ -43160,7 +43174,7 @@ var render = function() {
                 [
                   _c("v-select", {
                     staticClass: "money-type pa-0 ma-0",
-                    attrs: { "hide-details": "", items: ["USD", "GS"] },
+                    attrs: { "hide-details": "", items: _vm.getMoneyTypes },
                     scopedSlots: _vm._u([
                       {
                         key: "item",
@@ -43307,30 +43321,14 @@ var render = function() {
       _c(
         "header",
         { staticClass: "header pa-4" },
-        [
-          _c(_vm.getStepComponent.header, {
-            tag: "component",
-            model: {
-              value: _vm.moneyType,
-              callback: function($$v) {
-                _vm.moneyType = $$v
-              },
-              expression: "moneyType"
-            }
-          })
-        ],
+        [_c(_vm.getStepComponent.header, { tag: "component" })],
         1
       ),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "body pa-4" },
-        [
-          _c(_vm.getStepComponent.body, {
-            tag: "component",
-            attrs: { moneyType: _vm.moneyType }
-          })
-        ],
+        [_c(_vm.getStepComponent.body, { tag: "component" })],
         1
       )
     ]

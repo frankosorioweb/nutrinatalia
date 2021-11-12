@@ -1,13 +1,17 @@
 const state = {
-    moneyType: 'USD'
+    moneyType: 'USD',
+    moneyTypes: ['USD', 'GS']
 };
 
 const getters = {
     getMoneyType: (state) => state.moneyType,
+    getMoneyTypes: (state) => state.moneyTypes
 };
 
 const mutations = {
-    
+    setMoneyType: (state, payload) => {
+        state.moneyType = payload;
+    }
 };
 
 const actions = {
