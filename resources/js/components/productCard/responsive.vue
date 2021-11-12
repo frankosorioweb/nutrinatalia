@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import labelType from "../productCard/labelType.vue";
 export default {
   props: ['data', 'moneyType'],
@@ -54,11 +55,14 @@ export default {
     labelType,
   },
   computed: {
+    ...mapGetters('cart', ['getMoneyType']),
     getPrice() {
-      return this.data.price.dollar.value
+      const price = this.data.price;
+      return this.getMoneyType === 'USD' ? price.dollar.value : price.guarani.value
     },
     getOldPrice() {
-      return this.data.price.dollar.old
+      const price = this.data.price;
+      return this.getMoneyType === 'USD' ? price.dollar.old : price.guarani.old
     }
   },
 };
