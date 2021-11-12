@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app>
+  <v-navigation-drawer v-model="drawer" app temporary>
     <v-list nav>
       <v-list-item-group color="primary" mandatory>
         <v-list-item :to="{name: 'home'}" exact>
