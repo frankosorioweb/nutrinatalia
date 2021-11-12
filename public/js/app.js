@@ -3366,12 +3366,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['data', 'moneyType'],
   components: {
     labelType: _productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    getPrice: function getPrice() {
+      return this.data.price.dollar.value;
+    },
+    getOldPrice: function getOldPrice() {
+      return this.data.price.dollar.old;
+    }
   }
 });
 
@@ -3771,6 +3778,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cart_Payment_Stepper_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/cart/Payment/Stepper.vue */ "./resources/js/components/cart/Payment/Stepper.vue");
 /* harmony import */ var _components_cart_Payment___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/cart/Payment/ */ "./resources/js/components/cart/Payment/index.vue");
 /* harmony import */ var _components_productCard_responsive_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/productCard/responsive.vue */ "./resources/js/components/productCard/responsive.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -3781,6 +3795,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
@@ -3789,7 +3804,13 @@ __webpack_require__.r(__webpack_exports__);
     stepper: _components_cart_Payment_Stepper_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     payment: _components_cart_Payment___WEBPACK_IMPORTED_MODULE_1__["default"],
     productCardResponsive: _components_productCard_responsive_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }
+  },
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapGetters)("products", ["getProductFromShortName"])), {}, {
+    getProduct: function getProduct() {
+      var params = this.$route.params;
+      return this.getProductFromShortName(params.type, params.shortName);
+    }
+  })
 });
 
 /***/ }),
@@ -3944,6 +3965,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3955,6 +3986,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     featuresDetails: function featuresDetails() {
       return this.product.features.slice(1);
+    },
+    getBuyTo: function getBuyTo() {
+      var type = _.lowerCase(this.type);
+
+      var shortName = this.product.shortName;
+      return {
+        name: "buy",
+        params: {
+          type: type,
+          shortName: shortName
+        }
+      };
     }
   }),
   components: {
@@ -4247,7 +4290,7 @@ var routes = [{
   }
 }, {
   name: 'buy',
-  path: '/comprar',
+  path: '/comprar/:type/:shortName',
   component: _pages_Cart_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
@@ -4319,12 +4362,10 @@ prices[WORKSHOP] = {
   original: {
     "default": true,
     dollar: {
-      value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar),
-      amount: '36'
+      value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
     },
     guarani: {
-      value: "245.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani),
-      amount: '245.000'
+      value: "245.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
     }
   }
 };
@@ -4333,11 +4374,23 @@ prices[WORKSHOP].off60 = {
   discount: 60,
   dollar: {
     value: "13.9 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar),
-    old: prices[WORKSHOP].original.dollar.amount
+    old: prices[WORKSHOP].original.dollar.value
   },
   guarani: {
     value: "95.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani),
-    old: prices[WORKSHOP].original.guarani.amount
+    old: prices[WORKSHOP].original.guarani.value
+  }
+};
+prices[WORKSHOP].off100 = {
+  "default": false,
+  discount: 100,
+  dollar: {
+    value: 'GRATIS',
+    old: prices[WORKSHOP].original.dollar.value
+  },
+  guarani: {
+    value: 'GRATIS',
+    old: prices[WORKSHOP].original.guarani.value
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prices);
@@ -4370,7 +4423,7 @@ var products = [{
   shortName: 'dulces-saludables',
   duration: '+2 horas',
   description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
-  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off60,
+  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off100,
   type: WORKSHOP,
   features: [{
     title: 'Acerca del taller',
@@ -4387,31 +4440,6 @@ var products = [{
     list: false,
     title: '¿A quién va dirigido el taller?',
     info: ['Este taller es ideal para aquellos que necesiten controlar la glicemia como personas con diabetes, resistencia a la insulina, con sobre peso y obesidad. Ya que utilizamos harinas alternativas, las preparacion es son sin gluten, siendo aptas para celiacos e intolerantes al gluten, y todos los interesados en llevar dietas saludables.']
-  }]
-}, {
-  poster: "".concat(postersSrc, "Spaghetti.jpg"),
-  name: 'Spaghetti',
-  shortName: 'spaghetti',
-  duration: '+2 horas',
-  description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
-  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
-  type: WORKSHOP,
-  features: [{
-    list: false,
-    title: 'Acerca del taller',
-    info: ['Las preparaciones de este taller se caracterizan por ser bajas en carbohidratos, lo que permite disfrutar de un delicioso postre sin elevar los niveles de azúcar en sangre, controlando la ansiedad con saciedad, ya que son ricas en grasas saludables.', 'Mis recetas se caracterizan por utilizar ingredientes sencillos y pasos fáciles de ejecutar.', '¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces que nos hacen bien.']
-  }, {
-    list: true,
-    title: 'Lo que aprenderas',
-    info: ['Que los dulces también son saludables, con los ingredientes correctos.', 'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.', 'Que la preparación de dulces es más sencilla de lo que te imaginas, apenas necesitarás entre 5 a 20 minutos.']
-  }, {
-    list: true,
-    title: 'Lo que necesitas para el taller',
-    info: ['Una cuenta de Google, ya que los videos están almacenados en Google Drive.', 'Un celular o una computadora con conexión wifi estable, ya que los videos están en alta resolución.']
-  }, {
-    list: false,
-    title: '¿A quién va dirigido el taller?',
-    info: ['Este taller es ideal para aquellos que necesiten controlar la glicemia como personas con diabetes, resistencia a la insulina, con sobre peso y obesidad. Ya que utilizamos harinas alternativas, las preparaciones son sin gluten, siendo aptas para celiacos e intolerantes al gluten, y todos los interesados en llevar dietas saludables.']
   }]
 }, {
   poster: "".concat(postersSrc, "Salad.jpg"),
@@ -4474,16 +4502,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _modules_navigationDrawer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigationDrawer */ "./resources/js/store/modules/navigationDrawer.js");
 /* harmony import */ var _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/productTypes */ "./resources/js/store/modules/productTypes.js");
 /* harmony import */ var _modules_stepper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/stepper */ "./resources/js/store/modules/stepper.js");
-/* harmony import */ var _data_testimonials__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/testimonials */ "./resources/js/store/data/testimonials.js");
-/* harmony import */ var _data_links__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/links */ "./resources/js/store/data/links.js");
-/* harmony import */ var _modules_products__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/products */ "./resources/js/store/modules/products.js");
+/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/cart */ "./resources/js/store/modules/cart.js");
+/* harmony import */ var _data_testimonials__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/testimonials */ "./resources/js/store/data/testimonials.js");
+/* harmony import */ var _data_links__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data/links */ "./resources/js/store/data/links.js");
+/* harmony import */ var _modules_products__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/products */ "./resources/js/store/modules/products.js");
 
  // Modules
+
 
 
 
@@ -4492,27 +4522,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_6__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_7__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_7__["default"].use(vuex__WEBPACK_IMPORTED_MODULE_8__["default"]);
 var state = {
-  testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_3__["default"],
-  links: _data_links__WEBPACK_IMPORTED_MODULE_4__["default"]
+  testimonials: _data_testimonials__WEBPACK_IMPORTED_MODULE_4__["default"],
+  links: _data_links__WEBPACK_IMPORTED_MODULE_5__["default"]
 };
 var getters = {
   getTestimonials: function getTestimonials(state) {
     return state.testimonials;
   }
 };
-var store = new vuex__WEBPACK_IMPORTED_MODULE_7__["default"].Store({
+var store = new vuex__WEBPACK_IMPORTED_MODULE_8__["default"].Store({
   state: state,
   getters: getters,
   modules: {
     navigationDrawer: _modules_navigationDrawer__WEBPACK_IMPORTED_MODULE_0__["default"],
     productTypes: _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["default"],
-    products: _modules_products__WEBPACK_IMPORTED_MODULE_5__["default"],
-    stepper: _modules_stepper__WEBPACK_IMPORTED_MODULE_2__["default"]
+    products: _modules_products__WEBPACK_IMPORTED_MODULE_6__["default"],
+    stepper: _modules_stepper__WEBPACK_IMPORTED_MODULE_2__["default"],
+    cart: _modules_cart__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/cart.js":
+/*!********************************************!*\
+  !*** ./resources/js/store/modules/cart.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var state = {
+  moneyType: 'USD'
+};
+var getters = {
+  getMoneyType: function getMoneyType(state) {
+    return state.moneyType;
+  }
+};
+var mutations = {};
+var actions = {};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  namespaced: true,
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+});
 
 /***/ }),
 
@@ -4574,7 +4636,7 @@ var getters = {
   },
   isWorkshop: function isWorkshop(state) {
     return function (value) {
-      return state.types.WORKSHOP === value;
+      return _.lowerCase(state.types.WORKSHOP) === _.lowerCase(value);
     };
   }
 };
@@ -4620,7 +4682,7 @@ var getters = {
   getProductFromShortName: function getProductFromShortName(state) {
     return function (type, shortName) {
       return state.products.find(function (item) {
-        return item.type === type && item.shortName === shortName;
+        return _.lowerCase(item.type) === _.lowerCase(type) && item.shortName === shortName;
       });
     };
   },
@@ -44494,10 +44556,7 @@ var render = function() {
         "a",
         [
           _c("v-img", {
-            attrs: {
-              "aspect-ratio": 16 / 9,
-              src: "/img/posters/Spaghetti.jpg"
-            },
+            attrs: { "aspect-ratio": 16 / 9, src: _vm.data.poster },
             scopedSlots: _vm._u([
               {
                 key: "placeholder",
@@ -44527,7 +44586,7 @@ var render = function() {
               staticClass:
                 "\n        secondary-color\n        primary-font\n        h3\n        product-name\n        text-center\n        px-4\n        pt-4\n        pb-2\n      "
             },
-            [_vm._v("\n      Dulces que nos hacen bien bien\n    ")]
+            [_vm._v("\n      " + _vm._s(_vm.data.name) + "\n    ")]
           ),
           _vm._v(" "),
           _c(
@@ -44536,11 +44595,7 @@ var render = function() {
               staticClass:
                 "px-4 pb-4 mb-0 text-center description grey--text text--darken-1"
             },
-            [
-              _vm._v(
-                "\n      Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y\n      sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos\n    "
-              )
-            ]
+            [_vm._v("\n      " + _vm._s(_vm.data.description) + "\n    ")]
           )
         ],
         1
@@ -44563,7 +44618,7 @@ var render = function() {
               _c(
                 "v-col",
                 { attrs: { cols: "auto" } },
-                [_c("label-type", { attrs: { type: "Taller" } })],
+                [_c("label-type", { attrs: { type: _vm.data.type } })],
                 1
               ),
               _vm._v(" "),
@@ -44575,12 +44630,23 @@ var render = function() {
                       "mb-0 font-weight-bold primary-font primary-color"
                   },
                   [
-                    _c(
-                      "span",
-                      { staticClass: "red--text text-decoration-line-through" },
-                      [_vm._v("36")]
-                    ),
-                    _vm._v("\n          13.9 USD\n        ")
+                    _vm.data.price.discount
+                      ? _c(
+                          "span",
+                          {
+                            staticClass:
+                              "red--text text-decoration-line-through mr-1"
+                          },
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(_vm.getOldPrice) +
+                                "\n          "
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v("\n          " + _vm._s(_vm.getPrice) + "\n        ")
                   ]
                 )
               ])
@@ -45166,7 +45232,7 @@ var render = function() {
           _vm._v(" "),
           _c("payment"),
           _vm._v(" "),
-          _c("product-card-responsive")
+          _c("product-card-responsive", { attrs: { data: _vm.getProduct } })
         ],
         1
       )
@@ -45309,34 +45375,60 @@ var render = function() {
                     "v-col",
                     { attrs: { cols: "12" } },
                     [
-                      _c(
-                        "v-btn",
-                        { attrs: { color: "primary", block: "" } },
-                        [
-                          _c("v-icon", { staticClass: "mr-1" }, [
-                            _vm._v("mdi-cart")
-                          ]),
-                          _vm._v("\n            Comprar por\n            "),
-                          _vm.product.price.discount
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "\n                ml-1\n                secondary-color\n                font-weight-bold\n                text-decoration-line-through\n              "
-                                },
-                                [_vm._v(_vm._s(_vm.product.price.dollar.old))]
-                              )
-                            : _vm._e(),
-                          _vm._v(
-                            "\n            " +
-                              _vm._s(_vm.product.price.dollar.value) +
-                              "\n          "
-                          )
-                        ],
-                        1
-                      )
+                      _vm.product.price.discount === 100
+                        ? [
+                            _c(
+                              "v-btn",
+                              { attrs: { color: "primary", block: "" } },
+                              [
+                                _vm._v(
+                                  "\n              Inscribirme gratis\n            "
+                                )
+                              ]
+                            )
+                          ]
+                        : [
+                            _c(
+                              "v-btn",
+                              {
+                                attrs: {
+                                  to: _vm.getBuyTo,
+                                  color: "primary",
+                                  block: ""
+                                }
+                              },
+                              [
+                                _c("v-icon", { staticClass: "mr-1" }, [
+                                  _vm._v("mdi-cart")
+                                ]),
+                                _vm._v(
+                                  "\n              Comprar por\n              "
+                                ),
+                                _vm.product.price.discount
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "\n                  mx-1\n                  secondary-color\n                  font-weight-bold\n                  text-decoration-line-through\n                "
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.product.price.dollar.old)
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(_vm.product.price.dollar.value) +
+                                    "\n            "
+                                )
+                              ],
+                              1
+                            )
+                          ]
                     ],
-                    1
+                    2
                   )
                 ],
                 1

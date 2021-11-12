@@ -12,12 +12,10 @@ prices[WORKSHOP] = {
     original: {
         default: true,
         dollar: {
-            value: `36 ${money.symbols.dollar}`,
-            amount: '36'
+            value: `36 ${money.symbols.dollar}`
         },
         guarani: {
-            value: `245.000 ${money.symbols.guarani}`,
-            amount: '245.000'
+            value: `245.000 ${money.symbols.guarani}`
         },
     }
 }
@@ -27,11 +25,24 @@ prices[WORKSHOP].off60 = {
     discount: 60,
     dollar: {
         value: `13.9 ${money.symbols.dollar}`,
-        old: prices[WORKSHOP].original.dollar.amount
+        old: prices[WORKSHOP].original.dollar.value
     },
     guarani: {
         value: `95.000 ${money.symbols.guarani}`,
-        old: prices[WORKSHOP].original.guarani.amount
+        old: prices[WORKSHOP].original.guarani.value
+    }
+}
+
+prices[WORKSHOP].off100 = {
+    default: false,
+    discount: 100,
+    dollar: {
+        value: 'GRATIS',
+        old: prices[WORKSHOP].original.dollar.value
+    },
+    guarani: {
+        value: 'GRATIS',
+        old: prices[WORKSHOP].original.guarani.value
     }
 }
 

@@ -49,7 +49,7 @@ const routes = [
     },
     {
         name: 'buy',
-        path: '/comprar',
+        path: '/comprar/:type/:shortName',
         component: Cart
     }
 ]

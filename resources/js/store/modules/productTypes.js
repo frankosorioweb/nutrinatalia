@@ -7,7 +7,7 @@ const state = {
 
 const getters = {
     getProductsTypes: (state) => state.types,
-    isWorkshop: (state) => (value) => state.types.WORKSHOP === value,
+    isWorkshop: (state) => (value) => _.lowerCase(state.types.WORKSHOP) === _.lowerCase(value),
 };
 
 const mutations = {

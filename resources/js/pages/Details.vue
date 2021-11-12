@@ -1,7 +1,7 @@
 <template>
   <div class="mt-14 mb-7 grey lighten-5 details-page">
     <div class="banner">
-      <v-img :aspect-ratio="16/9" :src="product.poster">
+      <v-img :aspect-ratio="16 / 9" :src="product.poster">
         <template v-slot:placeholder>
           <v-sheet class="skeleton-loader-sheet">
             <v-skeleton-loader class="skeleton-loader" type="image" />
@@ -36,27 +36,37 @@
             </div>
           </v-col>
           <v-col cols="12">
-            <v-btn color="primary" block>
-              <v-icon class="mr-1">mdi-cart</v-icon>
-              Comprar por
-              <span
-                v-if="product.price.discount"
-                class="
-                  ml-1
-                  secondary-color
-                  font-weight-bold
-                  text-decoration-line-through
-                "
-                >{{ product.price.dollar.old }}</span
-              >
-              {{ product.price.dollar.value }}
-            </v-btn>
+            <template v-if="product.price.discount === 100">
+              <v-btn color="primary" block>
+                Inscribirme gratis
+              </v-btn>
+            </template>
+            <template v-else>
+              <v-btn :to="getBuyTo" color="primary" block>
+                <v-icon class="mr-1">mdi-cart</v-icon>
+                Comprar por
+                <span
+                  v-if="product.price.discount"
+                  class="
+                    mx-1
+                    secondary-color
+                    font-weight-bold
+                    text-decoration-line-through
+                  "
+                  >{{ product.price.dollar.old }}</span
+                >
+                {{ product.price.dollar.value }}
+              </v-btn>
+            </template>
           </v-col>
         </v-row>
       </div>
     </div>
     <v-main>
-      <v-row no-gutters class="card-features elevation-1 rounded-lg white mx-5 pa-4 pb-1">
+      <v-row
+        no-gutters
+        class="card-features elevation-1 rounded-lg white mx-5 pa-4 pb-1"
+      >
         <v-col cols="12">
           <h2
             class="
@@ -143,6 +153,18 @@ export default {
     },
     featuresDetails() {
       return this.product.features.slice(1);
+    },
+    getBuyTo() {
+      const type = _.lowerCase(this.type);
+      const shortName = this.product.shortName;
+
+      return {
+        name: "buy",
+        params: {
+          type,
+          shortName,
+        },
+      };
     },
   },
   components: {

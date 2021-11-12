@@ -7,7 +7,7 @@ const state = {
 const getters = {
     getProducts: (state) => state.products,
     getCustomProducts: (state) => (type) => state.products.filter(item => item.type === type),
-    getProductFromShortName: (state) => (type, shortName) => state.products.find(item => item.type === type && item.shortName === shortName),
+    getProductFromShortName: (state) => (type, shortName) => state.products.find(item => _.lowerCase(item.type) === _.lowerCase(type) && item.shortName === shortName),
     getDetailsTo: (state) => ({type, shortName}) => {
         return {
             name: `${type}-details`,
