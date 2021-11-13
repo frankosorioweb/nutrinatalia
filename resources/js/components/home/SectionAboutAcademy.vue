@@ -5,8 +5,8 @@
       <span class="primary-color">academia</span>?
     </h2>
     <v-container>
-      <v-row>
-        <v-col cols="12">
+      <v-row justify="center">
+        <v-col cols="12" sm="6" md="4">
           <product-card
             :buttonTo="{name: getProductsTypes.WORKSHOP}"
             :data="{
@@ -17,7 +17,7 @@
             }"
           ></product-card>
         </v-col>
-        <v-col cols="12">
+        <v-col cols="12" sm="6" md="4">
           <product-card
             :buttonTo="{name: getProductsTypes.EBOOK}"
             :data="{

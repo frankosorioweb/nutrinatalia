@@ -2,6 +2,9 @@
 .section-presentation .img-frontal {
   max-height: 17, 1875rem;
 }
+.section-presentation .primary-title {
+  max-width: 36rem;
+}
 
 .section-presentation-video .responsive-video {
   max-width: 48rem;
@@ -32,9 +35,20 @@
   border: 6px solid #764191;
 }
 
+.section-gift .primary-title {
+  max-width: 36rem;
+}
+
 .section-faq .faq-title {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.section-social-media .description {
+  max-width: 40rem;
+}
+.section-social-media .buttons-container {
+  max-width: 40rem;
 }
 
 .product-card-label-type-container {

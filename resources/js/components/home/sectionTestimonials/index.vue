@@ -9,8 +9,14 @@
     </p>
     <v-container>
       <v-row class="flex-nowrap overflow-x-auto">
-        <v-col v-for="(testimony, index) in getTestimonials" :key="index" cols="12">
-          <testimony 
+        <v-col
+          v-for="(testimony, index) in getTestimonials"
+          :key="index"
+          cols="12"
+          sm="6"
+          md="4"
+        >
+          <testimony
             :avatar="testimony.avatar"
             :name="testimony.name"
             :text="testimony.text"
@@ -23,14 +29,14 @@
 </template>
 
 <script>
-import testimony from './testimonyCard.vue';
-import { mapGetters } from 'vuex';
+import testimony from "./testimonyCard.vue";
+import { mapGetters } from "vuex";
 export default {
   components: {
-    testimony
+    testimony,
   },
   computed: {
-    ...mapGetters(['getTestimonials'])
-  }
+    ...mapGetters(["getTestimonials"]),
+  },
 };
 </script>

@@ -2965,13 +2965,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     testimony: _testimonyCard_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['getTestimonials']))
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(["getTestimonials"]))
 });
 
 /***/ }),
@@ -4534,6 +4540,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var avatarSource = '/img/avatars';
 var testimonials = [{
+  avatar: "".concat(avatarSource, "/1.png"),
+  name: 'Will Smith',
+  text: 'La mejor academia online de nutrición del planeta, mi calificación son cinco estrellas para la plataforma.',
+  socialMedia: {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com'
+  }
+}, {
+  avatar: "".concat(avatarSource, "/1.png"),
+  name: 'Will Smith',
+  text: 'La mejor academia online de nutrición del planeta, mi calificación son cinco estrellas para la plataforma.',
+  socialMedia: {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com'
+  }
+}, {
+  avatar: "".concat(avatarSource, "/1.png"),
+  name: 'Will Smith',
+  text: 'La mejor academia online de nutrición del planeta, mi calificación son cinco estrellas para la plataforma.',
+  socialMedia: {
+    facebook: 'https://facebook.com',
+    instagram: 'https://instagram.com'
+  }
+}, {
   avatar: "".concat(avatarSource, "/1.png"),
   name: 'Will Smith',
   text: 'La mejor academia online de nutrición del planeta, mi calificación son cinco estrellas para la plataforma.',
@@ -43417,10 +43447,11 @@ var render = function() {
         [
           _c(
             "v-row",
+            { attrs: { justify: "center" } },
             [
               _c(
                 "v-col",
-                { attrs: { cols: "12" } },
+                { attrs: { cols: "12", sm: "6", md: "4" } },
                 [
                   _c("product-card", {
                     attrs: {
@@ -43439,7 +43470,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "v-col",
-                { attrs: { cols: "12" } },
+                { attrs: { cols: "12", sm: "6", md: "4" } },
                 [
                   _c("product-card", {
                     attrs: {
@@ -43507,7 +43538,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "text-center py-6 mx-3" },
+    { staticClass: "section-gift text-center py-6 mx-3" },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -43516,10 +43547,11 @@ var render = function() {
         [
           _c(
             "v-row",
+            { attrs: { justify: "center" } },
             [
               _c(
                 "v-col",
-                { attrs: { cols: "12" } },
+                { attrs: { cols: "12", sm: "6", md: "4" } },
                 [
                   _c("product-card", {
                     attrs: {
@@ -43547,7 +43579,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "h2",
-      { staticClass: "mb-3 mx-2 primary-font font-weight-bold" },
+      {
+        staticClass:
+          "primary-title mb-3 mx-auto px-2 primary-font font-weight-bold"
+      },
       [
         _vm._v("\n    ¿Eres "),
         _c("span", { staticClass: "primary-color" }, [_vm._v("nuevo")]),
@@ -43594,7 +43629,7 @@ var staticRenderFns = [
           "h1",
           {
             staticClass:
-              "primary-font font-weight-bold pa-5 grey--text text--lighten-5"
+              "primary-title mx-auto primary-font font-weight-bold pa-5 grey--text text--lighten-5"
           },
           [
             _vm._v("\n    Soy Natalia y "),
@@ -43715,7 +43750,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "text-center py-6 mx-5" },
+    { staticClass: "section-social-media text-center py-6 mx-5" },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -43723,22 +43758,21 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-container",
-        { staticClass: "px-0" },
+        { staticClass: "px-0 buttons-container" },
         [
           _c(
             "v-row",
-            { attrs: { "no-gutters": "" } },
             [
               _c(
                 "v-col",
-                { attrs: { cols: "12 mb-6" } },
+                { staticClass: "mb-3 mb-sm-0", attrs: { cols: "12", sm: "6" } },
                 [_c("social-media-big-button", { attrs: { facebook: true } })],
                 1
               ),
               _vm._v(" "),
               _c(
                 "v-col",
-                { attrs: { cols: "12 mt-3" } },
+                { attrs: { cols: "12", sm: "6" } },
                 [_c("social-media-big-button", { attrs: { facebook: false } })],
                 1
               )
@@ -43767,7 +43801,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", [
+    return _c("p", { staticClass: "description mx-auto" }, [
       _vm._v("Aprende algo "),
       _c("span", { staticClass: "secondary-color font-weight-bold" }, [
         _vm._v("nuevo")
@@ -43810,7 +43844,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-col",
-    { attrs: { cols: "12" } },
+    { attrs: { cols: "12", sm: "6", md: "4" } },
     [
       _c(
         "v-card",
@@ -44020,7 +44054,7 @@ var render = function() {
             _vm._l(_vm.getTestimonials, function(testimony, index) {
               return _c(
                 "v-col",
-                { key: index, attrs: { cols: "12" } },
+                { key: index, attrs: { cols: "12", sm: "6", md: "4" } },
                 [
                   _c("testimony", {
                     attrs: {

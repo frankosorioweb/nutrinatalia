@@ -1,12 +1,12 @@
 <template>
-  <section class="text-center py-6 mx-3">
-    <h2 class="mb-3 mx-2 primary-font font-weight-bold">
+  <section class="section-gift text-center py-6 mx-3">
+    <h2 class="primary-title mb-3 mx-auto px-2 primary-font font-weight-bold">
       ¿Eres <span class="primary-color">nuevo</span> en la academia?, de ser
       así, aquí te dejo un <span class="primary-color">regalo</span>
     </h2>
     <v-container>
-      <v-row>
-        <v-col cols="12">
+      <v-row justify="center">
+        <v-col cols="12" sm="6" md="4">
           <product-card
             :buttonTo="getDetailsTo(getGift)"
             :data="getGift"
