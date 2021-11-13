@@ -3701,6 +3701,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
@@ -45160,7 +45161,12 @@ var render = function() {
                 {
                   key: menuItem.name,
                   staticClass: "text-capitalize",
-                  attrs: { color: "grey darken-2", to: menuItem.to, text: "" }
+                  attrs: {
+                    color: "grey darken-2",
+                    to: menuItem.to,
+                    text: "",
+                    exact: ""
+                  }
                 },
                 [
                   _c("v-icon", { staticClass: "mr-1" }, [

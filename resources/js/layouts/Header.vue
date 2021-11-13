@@ -17,6 +17,7 @@
         :key="menuItem.name"
         :to="menuItem.to"
         text
+        exact
       >
         <v-icon class="mr-1">{{ menuItem.icon }}</v-icon>
         {{ menuItem.name }}
