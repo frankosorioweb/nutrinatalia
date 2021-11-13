@@ -3494,6 +3494,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -44877,7 +44881,7 @@ var render = function() {
         _vm._l(_vm.getProducts, function(product) {
           return _c(
             "v-col",
-            { key: product.name, attrs: { cols: "12" } },
+            { key: product.name, attrs: { cols: "12", sm: "6", md: "4" } },
             [
               _c("product-card", {
                 attrs: {
