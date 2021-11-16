@@ -1,9 +1,15 @@
 <template>
   <v-main class="mt-14 cart-page">
     <v-container class="px-5 py-8">
-      <stepper />
-      <payment />
-      <product-card-responsive :data="getProduct" />
+      <v-row no-gutters>
+        <v-col cols="12" lg="5">
+          <stepper />
+          <payment />
+        </v-col>
+        <v-col cols="12" lg="7">
+          <product-card-responsive :data="getProduct" />
+        </v-col>
+      </v-row>
     </v-container>
   </v-main>
 </template>
