@@ -3979,7 +3979,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var params = this.$route.params;
       return this.getProductFromShortName(params.type, params.shortName);
     }
-  })
+  }),
+  beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    this.$store.commit('stepper/resetSteeps');
+    next();
+  }
 });
 
 /***/ }),
@@ -4960,6 +4964,9 @@ var mutations = {
   },
   previousStep: function previousStep(state) {
     return state.step--;
+  },
+  resetSteeps: function resetSteeps(state) {
+    return state.step = 1;
   },
   setPayment: function setPayment(state, payment) {
     state.payment = payment;

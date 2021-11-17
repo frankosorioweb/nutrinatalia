@@ -32,5 +32,9 @@ export default {
       return this.getProductFromShortName(params.type, params.shortName);
     },
   },
+  beforeRouteLeave (to, from, next) {
+    this.$store.commit('stepper/resetSteeps');
+    next();
+  }
 };
 </script>

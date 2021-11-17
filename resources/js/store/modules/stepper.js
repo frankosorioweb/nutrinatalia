@@ -13,6 +13,7 @@ const mutations = {
         if (state.step < 3) state.step++
     },
     previousStep: state => state.step--,
+    resetSteeps: (state) => state.step = 1,
     setPayment(state, payment) {
         state.payment = payment;
     }
