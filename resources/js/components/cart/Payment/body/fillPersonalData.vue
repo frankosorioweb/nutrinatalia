@@ -31,7 +31,7 @@
         src="/img/Whatsapp.svg"
         alt="logo whatsapp"
       />
-      Enviar comprobante
+      {{ isFreeInfoProduct ? 'Continuar' : 'Enviar comprobante' }}
     </v-btn>
 
     <v-dialog v-model="dialog.state" persistent max-width="290">
@@ -52,6 +52,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
+  props: ['isFreeInfoProduct'],
   data() {
     return {
       email: null,

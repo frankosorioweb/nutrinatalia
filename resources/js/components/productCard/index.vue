@@ -76,7 +76,7 @@ export default {
       return !_.isUndefined(this.data.price);
     },
     hasDiscount() {
-      return this.hasPrice && !_.isUndefined(this.data.price.discount);
+      return this.hasPrice && this.data.price.discount !== 0;
     },
   },
   components: {

@@ -1,10 +1,10 @@
 <template>
   <article class="payment-card white elevation-5 rounded-lg">
     <header class="header pa-4">
-      <component :is="getStepComponent.header"></component>
+      <component :hideBackButton="this.isFreeInfoProduct" :is="getStepComponent.header"></component>
     </header>
     <div class="body pa-4">
-      <component :is="getStepComponent.body"></component>
+      <component :isFreeInfoProduct="this.isFreeInfoProduct" :is="getStepComponent.body"></component>
     </div>
   </article>
 </template>
@@ -18,6 +18,7 @@ import headerFillPersonalData from "./header/fillPersonalData.vue";
 import bodyFillPersonalData from "./body/fillPersonalData.vue";
 import { mapGetters } from 'vuex';
 export default {
+  props: ['isFreeInfoProduct'],
   data() {
     return {
       stepComponents: {
@@ -39,10 +40,17 @@ export default {
   computed: {
     ...mapGetters('stepper', ['getStep']),
     getStepComponent() {
-      return {
-        header: this.stepComponents[this.getStep].header,
-        body: this.stepComponents[this.getStep].body,
-      };
+      if(this.isFreeInfoProduct) {
+        return {
+          header: this.stepComponents[3].header,
+          body: this.stepComponents[3].body,
+        }
+      } else {
+        return {
+          header: this.stepComponents[this.getStep].header,
+          body: this.stepComponents[this.getStep].body,
+        };
+      }
     },
   },
   components: {
@@ -52,6 +60,6 @@ export default {
     bodyTransferData,
     headerFillPersonalData,
     bodyFillPersonalData,
-  },
+  }
 };
 </script>

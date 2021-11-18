@@ -11,6 +11,7 @@ let prices = {};
 prices[WORKSHOP] = {
     original: {
         default: true,
+        discount: 0,
         dollar: {
             value: `36 ${money.symbols.dollar}`
         },

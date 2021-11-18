@@ -3,8 +3,8 @@
     <v-container class="px-5 py-8">
       <v-row no-gutters>
         <v-col cols="12" lg="5">
-          <stepper />
-          <payment />
+          <stepper v-if="!this.isFreeInfoProduct"></stepper>
+          <payment :isFreeInfoProduct="this.isFreeInfoProduct"></payment>
         </v-col>
         <v-col cols="12" lg="7">
           <product-card-responsive :data="getProduct" />
@@ -31,6 +31,12 @@ export default {
       const params = this.$route.params;
       return this.getProductFromShortName(params.type, params.shortName);
     },
+    isFreeInfoProduct() {
+      const discount = this.getProduct.price.discount;
+
+      if(discount && discount === 100) return true;
+      return false;
+    }
   },
   beforeRouteLeave (to, from, next) {
     this.$store.commit('stepper/resetSteeps');

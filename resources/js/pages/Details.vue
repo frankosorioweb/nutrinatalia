@@ -55,7 +55,7 @@
                 </v-col>
                 <v-col cols="12">
                   <template v-if="product.price.discount === 100">
-                    <v-btn color="primary" block> Inscribirme gratis </v-btn>
+                    <v-btn :to="getBuyTo" color="primary" block> Inscribirme gratis </v-btn>
                   </template>
                   <template v-else>
                     <v-btn :to="getBuyTo" color="primary" block>

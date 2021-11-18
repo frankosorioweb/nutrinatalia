@@ -2214,6 +2214,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['isFreeInfoProduct'],
   data: function data() {
     return {
       email: null,
@@ -2472,7 +2473,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['hideBackButton']
+});
 
 /***/ }),
 
@@ -2638,6 +2641,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['isFreeInfoProduct'],
   data: function data() {
     return {
       stepComponents: {
@@ -2658,10 +2662,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)('stepper', ['getStep'])), {}, {
     getStepComponent: function getStepComponent() {
-      return {
-        header: this.stepComponents[this.getStep].header,
-        body: this.stepComponents[this.getStep].body
-      };
+      if (this.isFreeInfoProduct) {
+        return {
+          header: this.stepComponents[3].header,
+          body: this.stepComponents[3].body
+        };
+      } else {
+        return {
+          header: this.stepComponents[this.getStep].header,
+          body: this.stepComponents[this.getStep].body
+        };
+      }
     }
   }),
   components: {
@@ -3347,7 +3358,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return !_.isUndefined(this.data.price);
     },
     hasDiscount: function hasDiscount() {
-      return this.hasPrice && !_.isUndefined(this.data.price.discount);
+      return this.hasPrice && this.data.price.discount !== 0;
     }
   }),
   components: {
@@ -3978,6 +3989,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getProduct: function getProduct() {
       var params = this.$route.params;
       return this.getProductFromShortName(params.type, params.shortName);
+    },
+    isFreeInfoProduct: function isFreeInfoProduct() {
+      var discount = this.getProduct.price.discount;
+      if (discount && discount === 100) return true;
+      return false;
     }
   }),
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
@@ -4553,6 +4569,7 @@ var prices = {};
 prices[WORKSHOP] = {
   original: {
     "default": true,
+    discount: 0,
     dollar: {
       value: "36 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
     },
@@ -43152,7 +43169,13 @@ var render = function() {
             staticClass: "buttonLogo mr-1",
             attrs: { src: "/img/Whatsapp.svg", alt: "logo whatsapp" }
           }),
-          _vm._v("\n    Enviar comprobante\n  ")
+          _vm._v(
+            "\n    " +
+              _vm._s(
+                _vm.isFreeInfoProduct ? "Continuar" : "Enviar comprobante"
+              ) +
+              "\n  "
+          )
         ]
       ),
       _vm._v(" "),
@@ -43403,30 +43426,32 @@ var render = function() {
     "v-row",
     { attrs: { "no-gutters": "", align: "center", justify: "center" } },
     [
-      _c(
-        "v-col",
-        { attrs: { cols: "auto mr-1" } },
-        [
-          _c(
-            "v-btn",
-            {
-              attrs: { icon: "" },
-              on: {
-                click: function($event) {
-                  return _vm.$store.commit("stepper/previousStep")
-                }
-              }
-            },
+      !_vm.hideBackButton
+        ? _c(
+            "v-col",
+            { attrs: { cols: "auto mr-1" } },
             [
-              _c("v-icon", { attrs: { large: "" } }, [
-                _vm._v("mdi-chevron-left")
-              ])
+              _c(
+                "v-btn",
+                {
+                  attrs: { icon: "" },
+                  on: {
+                    click: function($event) {
+                      return _vm.$store.commit("stepper/previousStep")
+                    }
+                  }
+                },
+                [
+                  _c("v-icon", { attrs: { large: "" } }, [
+                    _vm._v("mdi-chevron-left")
+                  ])
+                ],
+                1
+              )
             ],
             1
           )
-        ],
-        1
-      ),
+        : _vm._e(),
       _vm._v(" "),
       _c("v-col", { attrs: { cols: "auto" } }, [
         _c(
@@ -43639,14 +43664,24 @@ var render = function() {
       _c(
         "header",
         { staticClass: "header pa-4" },
-        [_c(_vm.getStepComponent.header, { tag: "component" })],
+        [
+          _c(_vm.getStepComponent.header, {
+            tag: "component",
+            attrs: { hideBackButton: this.isFreeInfoProduct }
+          })
+        ],
         1
       ),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "body pa-4" },
-        [_c(_vm.getStepComponent.body, { tag: "component" })],
+        [
+          _c(_vm.getStepComponent.body, {
+            tag: "component",
+            attrs: { isFreeInfoProduct: this.isFreeInfoProduct }
+          })
+        ],
         1
       )
     ]
@@ -45623,7 +45658,13 @@ var render = function() {
               _c(
                 "v-col",
                 { attrs: { cols: "12", lg: "5" } },
-                [_c("stepper"), _vm._v(" "), _c("payment")],
+                [
+                  !this.isFreeInfoProduct ? _c("stepper") : _vm._e(),
+                  _vm._v(" "),
+                  _c("payment", {
+                    attrs: { isFreeInfoProduct: this.isFreeInfoProduct }
+                  })
+                ],
                 1
               ),
               _vm._v(" "),
@@ -45831,7 +45872,11 @@ var render = function() {
                                       _c(
                                         "v-btn",
                                         {
-                                          attrs: { color: "primary", block: "" }
+                                          attrs: {
+                                            to: _vm.getBuyTo,
+                                            color: "primary",
+                                            block: ""
+                                          }
                                         },
                                         [_vm._v(" Inscribirme gratis ")]
                                       )

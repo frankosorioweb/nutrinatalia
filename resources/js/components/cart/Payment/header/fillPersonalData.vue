@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters align="center" justify="center">
-    <v-col cols="auto mr-1">
+    <v-col v-if="!hideBackButton" cols="auto mr-1">
       <v-btn icon @click="$store.commit('stepper/previousStep')">
         <v-icon large>mdi-chevron-left</v-icon>
       </v-btn>
@@ -14,5 +14,7 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['hideBackButton']
+};
 </script>
