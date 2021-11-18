@@ -54,6 +54,7 @@ const products = [{
         poster: `${postersSrc}Salad.jpg`,
         name: 'Salad',
         shortName: 'salad',
+        pages: '+50',
         description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
         price: prices[WORKSHOP].original,
         type: EBOOK,

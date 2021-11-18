@@ -4183,11 +4183,25 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["type"],
-  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getProductFromShortName"])), {}, {
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes", "isWorkshop"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getProductFromShortName"])), {}, {
     product: function product() {
       var shortName = this.$route.params.shortName;
       return this.getProductFromShortName(this.type, shortName);
@@ -4654,6 +4668,7 @@ var products = [{
   poster: "".concat(postersSrc, "Salad.jpg"),
   name: 'Salad',
   shortName: 'salad',
+  pages: '+50',
   description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
   type: EBOOK,
@@ -45820,48 +45835,62 @@ var render = function() {
                               )
                             ]),
                             _vm._v(" "),
-                            _vm.product.duration
-                              ? _c("v-col", { attrs: { cols: "12 mb-3" } }, [
-                                  _c("div", { staticClass: "details" }, [
+                            _c("v-col", { attrs: { cols: "12 mb-3" } }, [
+                              _c("div", { staticClass: "details" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "item d-flex align-center" },
+                                  [
                                     _c(
-                                      "div",
-                                      {
-                                        staticClass: "item d-flex align-center"
-                                      },
+                                      "v-icon",
+                                      { attrs: { color: "secondary" } },
                                       [
-                                        _c(
-                                          "v-icon",
-                                          { attrs: { color: "secondary" } },
-                                          [
-                                            _vm._v(
-                                              "mdi-clock-time-eight-outline"
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("span", { staticClass: "ml-1" }, [
-                                          _c(
-                                            "span",
-                                            { staticClass: "font-weight-bold" },
-                                            [_vm._v("Duración:")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "span",
-                                            { staticClass: "text--secondary" },
-                                            [
-                                              _vm._v(
-                                                _vm._s(_vm.product.duration)
-                                              )
-                                            ]
+                                        _vm._v(
+                                          "\n                      " +
+                                            _vm._s(
+                                              _vm.isWorkshop(_vm.type)
+                                                ? "mdi-clock-time-eight-outline"
+                                                : "mdi-book-open-page-variant-outline"
+                                            ) +
+                                            "\n                    "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "ml-1" }, [
+                                      _c(
+                                        "span",
+                                        { staticClass: "font-weight-bold" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.isWorkshop(_vm.type)
+                                                ? "Duración"
+                                                : "Páginas"
+                                            ) + ":"
                                           )
-                                        ])
-                                      ],
-                                      1
-                                    )
-                                  ])
-                                ])
-                              : _vm._e(),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "span",
+                                        { staticClass: "text--secondary" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.isWorkshop(_vm.type)
+                                                ? _vm.product.duration
+                                                : _vm.product.pages
+                                            )
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ])
+                            ]),
                             _vm._v(" "),
                             _c(
                               "v-col",
@@ -45878,7 +45907,11 @@ var render = function() {
                                             block: ""
                                           }
                                         },
-                                        [_vm._v(" Inscribirme gratis ")]
+                                        [
+                                          _vm._v(
+                                            "\n                    Inscribirme gratis\n                  "
+                                          )
+                                        ]
                                       )
                                     ]
                                   : [

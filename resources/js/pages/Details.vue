@@ -4,7 +4,11 @@
       <div class="banner">
         <v-row no-gutters>
           <v-col class="pa-md-5 pr-md-0" cols="12" md="6" align-self="center">
-            <v-img :class="{'rounded': $vuetify.breakpoint.mdAndUp}" :aspect-ratio="16 / 9" :src="product.poster">
+            <v-img
+              :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+              :aspect-ratio="16 / 9"
+              :src="product.poster"
+            >
               <template v-slot:placeholder>
                 <v-sheet class="skeleton-loader-sheet">
                   <v-skeleton-loader class="skeleton-loader" type="image" />
@@ -38,16 +42,24 @@
                     {{ product.description }}
                   </p>
                 </v-col>
-                <v-col cols="12 mb-3" v-if="product.duration">
+                <v-col cols="12 mb-3">
                   <div class="details">
                     <div class="item d-flex align-center">
-                      <v-icon color="secondary"
-                        >mdi-clock-time-eight-outline</v-icon
-                      >
+                      <v-icon color="secondary">
+                        {{
+                          isWorkshop(type)
+                            ? "mdi-clock-time-eight-outline"
+                            : "mdi-book-open-page-variant-outline"
+                        }}
+                      </v-icon>
                       <span class="ml-1"
-                        ><span class="font-weight-bold">Duración:</span>
+                        ><span class="font-weight-bold"
+                          >{{
+                            isWorkshop(type) ? "Duración" : "Páginas"
+                          }}:</span
+                        >
                         <span class="text--secondary">{{
-                          product.duration
+                          isWorkshop(type) ? product.duration : product.pages
                         }}</span>
                       </span>
                     </div>
@@ -55,7 +67,9 @@
                 </v-col>
                 <v-col cols="12">
                   <template v-if="product.price.discount === 100">
-                    <v-btn :to="getBuyTo" color="primary" block> Inscribirme gratis </v-btn>
+                    <v-btn :to="getBuyTo" color="primary" block>
+                      Inscribirme gratis
+                    </v-btn>
                   </template>
                   <template v-else>
                     <v-btn :to="getBuyTo" color="primary" block>
@@ -164,7 +178,7 @@ import labelType from "../components/productCard/labelType.vue";
 export default {
   props: ["type"],
   computed: {
-    ...mapGetters("productTypes", ["getProductsTypes"]),
+    ...mapGetters("productTypes", ["getProductsTypes", "isWorkshop"]),
     ...mapGetters("products", ["getProductFromShortName"]),
     product() {
       const shortName = this.$route.params.shortName;
