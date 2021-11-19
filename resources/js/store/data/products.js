@@ -13,7 +13,7 @@ const products = [{
         name: 'Dulces que nos hacen bien',
         shortName: 'dulces-saludables',
         duration: '+2 horas',
-        description: 'Taller aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+        description: 'Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
         price: prices[WORKSHOP].off100,
         type: WORKSHOP,
         features: [{
@@ -55,7 +55,7 @@ const products = [{
         name: 'Salad',
         shortName: 'salad',
         pages: '+50',
-        description: 'Ebook aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
+        description: 'Aprende a ejecutar recetas de postres dulces saludables, sin azúcar y sin harinas, con pocos pasos, ingredientes sencillos y súper deliciosos.',
         price: prices[WORKSHOP].original,
         type: EBOOK,
         features: [{
