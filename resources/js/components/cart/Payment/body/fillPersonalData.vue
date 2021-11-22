@@ -31,7 +31,7 @@
         src="/img/Whatsapp.svg"
         alt="logo whatsapp"
       />
-      {{ isFreeInfoProduct ? 'Continuar' : 'Enviar comprobante' }}
+      {{ isFreeInfoProduct ? "Continuar" : "Enviar comprobante" }}
     </v-btn>
 
     <v-dialog v-model="dialog.state" persistent max-width="290">
@@ -52,7 +52,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  props: ['isFreeInfoProduct'],
+  props: ["isFreeInfoProduct"],
   data() {
     return {
       email: null,
@@ -67,10 +67,11 @@ export default {
   methods: {
     onSendVoucher() {
       const validForm = this.validateForm();
-      if(validForm) this.redirectToWhatsApp()
+      if (validForm) this.redirectToWhatsApp();
     },
     redirectToWhatsApp() {
-      const url = `https://wa.me/595991406723?text=${encodeURIComponent(
+      const whatsappSupport = this.$store.state.links.support.whatsapp;
+      const url = `${whatsappSupport}?text=${encodeURIComponent(
         `--Datos personales--\n•correo: ${this.email}\n•nombre: ${this.name} ${this.lastName}\n--Datos adicionales--\n•infoproducto: ${this.getProduct.name}\n•tipo: ${this.getProduct.type}\n(Obs.: No modificar el texto de arriba)`
       )}`;
       window.open(url);

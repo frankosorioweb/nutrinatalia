@@ -59,6 +59,7 @@ export default {
         {
           name: "Soporte",
           icon: "mdi-face-agent",
+          to: { name: 'support' }
         },
       ];
     },

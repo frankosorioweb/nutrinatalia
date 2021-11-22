@@ -30,7 +30,7 @@
           <v-list-item-title>Consultas</v-list-item-title>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item :to="{name: 'support'}">
           <v-list-item-icon>
             <v-icon>mdi-face-agent</v-icon>
           </v-list-item-icon>

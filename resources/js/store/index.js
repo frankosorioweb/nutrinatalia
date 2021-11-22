@@ -10,13 +10,15 @@ import cart from './modules/cart';
 // Data
 import testimonials from './data/testimonials';
 import links from './data/links';
+import support from './data/support';
 import products from './modules/products';
 
 Vue.use(Vuex);
 
 const state = {
     testimonials,
-    links
+    links,
+    support
 }
 
 const getters = {
