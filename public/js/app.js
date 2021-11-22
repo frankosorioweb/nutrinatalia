@@ -2068,6 +2068,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts/Header.vue */ "./resources/js/layouts/Header.vue");
 /* harmony import */ var _layouts_NavigationDrawer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/NavigationDrawer.vue */ "./resources/js/layouts/NavigationDrawer.vue");
 /* harmony import */ var _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layouts/Footer.vue */ "./resources/js/layouts/Footer.vue");
+/* harmony import */ var _layouts_SupportButton_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layouts/SupportButton.vue */ "./resources/js/layouts/SupportButton.vue");
 //
 //
 //
@@ -2077,6 +2078,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -2084,7 +2087,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     appHeader: _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     appNavigationDrawer: _layouts_NavigationDrawer_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    appFooter: _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    appFooter: _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    supportButton: _layouts_SupportButton_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
 });
 
@@ -43030,6 +43034,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad& ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./SupportButton.vue?vue&type=template&id=0c4a91ad& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad&");
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Cart.vue?vue&type=template&id=7908d3ae&":
 /*!********************************************************************!*\
   !*** ./resources/js/pages/Cart.vue?vue&type=template&id=7908d3ae& ***!
@@ -43141,7 +43162,9 @@ var render = function() {
       _vm._v(" "),
       _c("router-view"),
       _vm._v(" "),
-      _c("app-footer")
+      _c("app-footer"),
+      _vm._v(" "),
+      _c("support-button")
     ],
     1
   )
@@ -45755,6 +45778,47 @@ var render = function() {
         1
       )
     ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-btn",
+    {
+      attrs: {
+        target: "_blank",
+        href: _vm.$store.state.links.support.whatsapp,
+        bottom: "",
+        right: "",
+        color: "teal white--text",
+        elevation: "2",
+        fab: "",
+        fixed: ""
+      }
+    },
+    [_c("v-icon", { attrs: { large: "" } }, [_vm._v(" mdi-whatsapp ")])],
     1
   )
 }
@@ -64379,6 +64443,54 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/layouts/NavigationDrawer.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/layouts/SupportButton.vue":
+/*!************************************************!*\
+  !*** ./resources/js/layouts/SupportButton.vue ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SupportButton.vue?vue&type=template&id=0c4a91ad& */ "./resources/js/layouts/SupportButton.vue?vue&type=template&id=0c4a91ad&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__.render,
+  _SupportButton_vue_vue_type_template_id_0c4a91ad___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* vuetify-loader */
+;
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_3__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_4__["default"]})
+
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/layouts/SupportButton.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
