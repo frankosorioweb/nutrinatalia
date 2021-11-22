@@ -3,6 +3,7 @@ import Products from '../pages/Products.vue';
 import Details from '../pages/Details.vue';
 import Cart from '../pages/Cart.vue';
 import Support from '../pages/Support.vue';
+import OnlineConsultations from '../pages/OnlineConsultations.vue';
 
 import productTypes from '../store/modules/productTypes';
 const {
@@ -57,6 +58,11 @@ const routes = [
         name: 'support',
         path: '/soporte',
         component: Support
+    },
+    {
+        name: 'online-consultations',
+        path: '/consultas',
+        component: OnlineConsultations
     },
 ]
 

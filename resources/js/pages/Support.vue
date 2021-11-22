@@ -7,7 +7,7 @@
         ayudarte con lo que necesites, el equipo te responderá en la brevedad
         posible.
       </p>
-      <div class="buttons, buttons-container mx-auto">
+      <div class="buttons-container mx-auto">
         <v-row justify="center">
           <v-col cols="12" sm="6" class="pb-0">
             <p class="text-center mb-1 font-weight-bold">+{{ $store.state.support.whatsapp }}</p>

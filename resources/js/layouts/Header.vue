@@ -55,6 +55,7 @@ export default {
         {
           name: "Consultas",
           icon: "mdi-notebook-edit",
+          to: { name: 'online-consultations' }
         },
         {
           name: "Soporte",

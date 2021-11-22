@@ -23,7 +23,7 @@
           <v-list-item-title>Ebooks</v-list-item-title>
         </v-list-item>
 
-        <v-list-item>
+        <v-list-item  :to="{name: 'online-consultations'}">
           <v-list-item-icon>
             <v-icon>mdi-notebook-edit</v-icon>
           </v-list-item-icon>
