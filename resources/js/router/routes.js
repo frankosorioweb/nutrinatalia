@@ -2,6 +2,7 @@ import Home from '../pages/Home.vue';
 import Products from '../pages/Products.vue';
 import Details from '../pages/Details.vue';
 import Cart from '../pages/Cart.vue';
+import Support from '../pages/Support.vue';
 
 import productTypes from '../store/modules/productTypes';
 const {
@@ -51,7 +52,12 @@ const routes = [
         name: 'buy',
         path: '/comprar/:type/:shortName',
         component: Cart
-    }
+    },
+    {
+        name: 'support',
+        path: '/soporte',
+        component: Support
+    },
 ]
 
 export default routes;
