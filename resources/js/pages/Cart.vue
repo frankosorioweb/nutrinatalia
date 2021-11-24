@@ -2,6 +2,7 @@
   <v-main class="mt-14 cart-page">
     <v-container class="px-5 py-8">
       <v-row no-gutters>
+        <purchase-policy-alert />
         <v-col cols="12" lg="5">
           <stepper v-if="!this.isFreeInfoProduct"></stepper>
           <payment :isFreeInfoProduct="this.isFreeInfoProduct"></payment>
@@ -17,6 +18,7 @@
 <script>
 import stepper from "../components/cart/Payment/Stepper.vue";
 import payment from "../components/cart/Payment/";
+import purchasePolicyAlert from "../components/cart/PurchasePolicyAlert.vue";
 import productCardResponsive from "../components/productCard/responsive.vue";
 import { mapGetters } from "vuex";
 export default {
@@ -24,6 +26,7 @@ export default {
     stepper,
     payment,
     productCardResponsive,
+    purchasePolicyAlert
   },
   computed: {
     ...mapGetters("products", ["getProductFromShortName"]),
