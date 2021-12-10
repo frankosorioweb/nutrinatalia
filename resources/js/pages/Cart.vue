@@ -2,7 +2,7 @@
   <v-main class="mt-14 cart-page">
     <v-container class="px-5 py-8">
       <v-row no-gutters>
-        <purchase-policy-alert />
+        <purchase-policy-alert v-if="!isFreeInfoProduct" />
         <v-col cols="12" lg="5">
           <stepper v-if="!this.isFreeInfoProduct"></stepper>
           <payment :isFreeInfoProduct="this.isFreeInfoProduct"></payment>

@@ -46115,7 +46115,7 @@ var render = function() {
             "v-row",
             { attrs: { "no-gutters": "" } },
             [
-              _c("purchase-policy-alert"),
+              !_vm.isFreeInfoProduct ? _c("purchase-policy-alert") : _vm._e(),
               _vm._v(" "),
               _c(
                 "v-col",
