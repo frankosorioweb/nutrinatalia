@@ -24,7 +24,7 @@ const products = [{
             },
             {
                 list: true,
-                title: 'Lo que aprenderas',
+                title: 'Lo que aprenderás',
                 info: [
                     'Que los dulces con los ingredientes correctos ¡también son saludables!.',
                     'A disfrutar y sorprender a tu familia con dulces deliciosos que nos hacen bien',
@@ -67,7 +67,7 @@ const products = [{
             },
             {
                 list: true,
-                title: 'Lo que aprenderas',
+                title: 'Lo que aprenderás',
                 info: [
                     'Que los dulces también son saludables, con los ingredientes correctos.',
                     'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.',

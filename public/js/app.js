@@ -2722,10 +2722,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      dialog: {
+        state: false,
+        msg: "No realizamos reembolsos, ya que, en las redes sociales (@nutrinatalia) se comparte mucho contenido gratuito para que puedas visualizar la calidad de la enseñanza e información, así como también cada taller e ebook cuenta con toda la información necesaria para que a partir de ella puedas tomar la decisión de realizar una compra si es que considerás que se ajusta a tus necesidades. Por otro lado, los montos se muestran claramente a lo largo del proceso de compra."
+      }
+    };
+  },
   methods: {
     showPurchasePolicyDialog: function showPurchasePolicyDialog() {
-      console.log("show dialog");
+      this.dialog.state = true;
     }
   }
 });
@@ -4726,7 +4747,7 @@ var products = [{
     info: ['En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies con gotas de cacao, muffins y tarta de frutos rojos, todo esto sin azúcares y sin harinas, pocos pasos, ingredientes sencillos y súper deliciosos.']
   }, {
     list: true,
-    title: 'Lo que aprenderas',
+    title: 'Lo que aprenderás',
     info: ['Que los dulces con los ingredientes correctos ¡también son saludables!.', 'A disfrutar y sorprender a tu familia con dulces deliciosos que nos hacen bien', 'Que la preparación de dulces saludables es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.']
   }, {
     list: true,
@@ -4751,7 +4772,7 @@ var products = [{
     info: ['Las preparaciones de este taller se caracterizan por ser bajas en carbohidratos, lo que permite disfrutar de un delicioso postre sin elevar los niveles de azúcar en sangre, controlando la ansiedad con saciedad, ya que son ricas en grasas saludables.', 'Mis recetas se caracterizan por utilizar ingredientes sencillos y pasos fáciles de ejecutar.', '¡Inscríbete ahora mismo y sorprende a tus seres queridos con dulces que nos hacen bien.']
   }, {
     list: true,
-    title: 'Lo que aprenderas',
+    title: 'Lo que aprenderás',
     info: ['Que los dulces también son saludables, con los ingredientes correctos.', 'A disfrutar y sorprender a tus seres queridos con postres que nos hacen bien, sin necesidad salir de tu dieta o afectando tu salud.', 'Que la preparación de dulces es más sencilla de lo que te imaginas, apenas necesitarás entre 5 a 20 minutos.']
   }, {
     list: false,
@@ -44099,6 +44120,55 @@ var render = function() {
             )
           ])
         ]
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { persistent: "" },
+          model: {
+            value: _vm.dialog.state,
+            callback: function($$v) {
+              _vm.$set(_vm.dialog, "state", $$v)
+            },
+            expression: "dialog.state"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", { staticClass: "text-h5" }, [
+                _vm._v(" Política de compra ")
+              ]),
+              _vm._v(" "),
+              _c("v-card-text", [_vm._v(_vm._s(_vm.dialog.msg))]),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary", text: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog.state = false
+                        }
+                      }
+                    },
+                    [_vm._v("\n          Aceptar\n        ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
       )
     ],
     1
@@ -63818,7 +63888,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VAlert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VAlert */ "./node_modules/vuetify/lib/components/VAlert/VAlert.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
+/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/VCard.js");
+/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VDialog */ "./node_modules/vuetify/lib/components/VDialog/VDialog.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VSpacer.js");
 
 
 
@@ -63841,7 +63916,14 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 ;
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VAlert: vuetify_lib_components_VAlert__WEBPACK_IMPORTED_MODULE_4__["default"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"]})
+
+
+
+
+
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VAlert: vuetify_lib_components_VAlert__WEBPACK_IMPORTED_MODULE_4__["default"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["default"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["default"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_7__.VCardActions,VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_7__.VCardText,VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_7__.VCardTitle,VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["default"],VDialog: vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__["default"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_10__["default"]})
 
 
 /* hot reload */
