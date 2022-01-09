@@ -16,7 +16,11 @@
       <ol class="grey--text text--darken-1">
         <li>
           Realizá la transferencia correspondiente según los datos que se
-          presentan a continuación.
+          presentan a continuación <template v-if="getPayment.name != 'Depósito bancario'">
+            <span>
+              <strong> (Ten presente que {{ getPayment.name }} te cobrará una comisión que no es parte del pago y tienes que asumirla)</strong>
+            </span>
+          </template>.
         </li>
         <li>
           Presiona en el botón “Continuar” para enviar el comprobante de la
