@@ -13,24 +13,24 @@ prices[WORKSHOP] = {
         default: true,
         discount: 0,
         dollar: {
-            value: `36 ${money.symbols.dollar}`
+            value: `14 ${money.symbols.dollar}`
         },
         guarani: {
-            value: `245.000 ${money.symbols.guarani}`
+            value: `95.000 ${money.symbols.guarani}`
         },
     }
 }
 
-prices[WORKSHOP].off60 = {
-    default: false,
-    discount: 60,
-    dollar: {
-        value: `13.9 ${money.symbols.dollar}`,
-        old: prices[WORKSHOP].original.dollar.value
-    },
-    guarani: {
-        value: `95.000 ${money.symbols.guarani}`,
-        old: prices[WORKSHOP].original.guarani.value
+prices[EBOOK] = {
+    original: {
+        default: true,
+        discount: 0,
+        dollar: {
+            value: `29 ${money.symbols.dollar}`
+        },
+        guarani: {
+            value: `200.000 ${money.symbols.guarani}`
+        },
     }
 }
 
