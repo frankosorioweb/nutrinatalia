@@ -5,7 +5,8 @@ const state = {
 
 const getters = {
     getStep: (state) => state.step,
-    getPayment: (state) => state.payment
+    getPayment: (state) => state.payment,
+    isBankDeposit: (state) => state.payment.name == 'Depósito bancario'
 };
 
 const mutations = {

@@ -2449,9 +2449,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)("stepper", ["getPayment"]))
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)("stepper", ["getPayment", "isBankDeposit"]))
 });
 
 /***/ }),
@@ -5183,6 +5209,9 @@ var getters = {
   },
   getPayment: function getPayment(state) {
     return state.payment;
+  },
+  isBankDeposit: function isBankDeposit(state) {
+    return state.payment.name == 'Depósito bancario';
   }
 };
 var mutations = {
@@ -43792,16 +43821,16 @@ var render = function() {
             "li",
             [
               _vm._v(
-                "\n        Realizá la transferencia correspondiente según los datos que se\n        presentan a continuación "
+                "\n        Realizá la transferencia correspondiente según los datos que se\n        presentan a continuación\n        "
               ),
-              _vm.getPayment.name != "Depósito bancario"
+              !_vm.isBankDeposit
                 ? [
                     _c("span", [
                       _c("strong", [
                         _vm._v(
-                          " (Ten presente que " +
+                          "\n              (Ten presente que " +
                             _vm._s(_vm.getPayment.name) +
-                            " te cobrará una comisión que no es parte del pago y tienes que asumirla)"
+                            " te cobrará una comisión\n              que no es parte del pago y tienes que asumirla)"
                         )
                       ])
                     ])
@@ -43820,33 +43849,40 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "transfer-data mb-4" }, [
-        _c(
-          "p",
-          {
-            staticClass:
-              "\n        primary-title\n        mb-1\n        primary-font\n        font-weight-bold\n        primary-color\n        text-center\n      "
-          },
-          [_vm._v("\n      Datos para la transferencia\n    ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "ul",
-          { staticClass: "grey--text text--darken-1" },
-          _vm._l(_vm.getPayment.transferData, function(item) {
-            return _c("li", { key: item.field }, [
-              _c(
-                "span",
-                { staticClass: "grey--text text--darken-4 font-weight-bold" },
-                [_vm._v(_vm._s(item.field) + ":\n        ")]
-              ),
-              _vm._v(" "),
-              _c("span", [_vm._v(_vm._s(item.value))])
-            ])
-          }),
-          0
-        )
-      ]),
+      _c(
+        "div",
+        { staticClass: "transfer-data mb-4" },
+        [
+          _c(
+            "p",
+            {
+              staticClass:
+                "\n        primary-title\n        mb-1\n        primary-font\n        font-weight-bold\n        primary-color\n        text-center\n      "
+            },
+            [_vm._v("\n      Datos para la transferencia\n    ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "grey--text text--darken-1" },
+            _vm._l(_vm.getPayment.transferData, function(item) {
+              return _c("li", { key: item.field }, [
+                _c(
+                  "span",
+                  { staticClass: "grey--text text--darken-4 font-weight-bold" },
+                  [_vm._v(_vm._s(item.field) + ":\n        ")]
+                ),
+                _vm._v(" "),
+                _c("span", [_vm._v(_vm._s(item.value))])
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _vm.isBankDeposit ? [_vm._m(0)] : _vm._e()
+        ],
+        2
+      ),
       _vm._v(" "),
       _c(
         "v-btn",
@@ -43864,7 +43900,29 @@ var render = function() {
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "p",
+        {
+          staticClass:
+            "\n            primary-title\n            mb-1\n            mt-2\n            primary-font\n            font-weight-bold\n            primary-color\n            text-center\n          "
+        },
+        [_vm._v("\n          Pago con QR\n        ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "qr-wrapper text-center" }, [
+        _c("img", {
+          attrs: { src: "/img/payments/Qr atlas.png", alt: "Qr pago" }
+        })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -44815,7 +44873,7 @@ var render = function() {
                 [
                   _c("p", { staticClass: "mb-0 text-left word-break" }, [
                     _vm._v(
-                      "\n          Si sos de Paraguay, podes realizar tus pagos mediante transferencia\n          bancaria (banco itaú) y Giros claro. "
+                      "\n          Si sos de Paraguay, podes realizar tus pagos mediante transferencia\n          bancaria y Giros claro. "
                     ),
                     _c("br"),
                     _vm._v(

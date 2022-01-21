@@ -31,7 +31,7 @@
         <faq-card title="¿Cuales son los medios de pago?">
           <p class="mb-0 text-left word-break">
             Si sos de Paraguay, podes realizar tus pagos mediante transferencia
-            bancaria (banco itaú) y Giros claro. <br />Si sos del exterior podes
+            bancaria y Giros claro. <br />Si sos del exterior podes
             pagar mediante Western Union.
           </p>
         </faq-card>

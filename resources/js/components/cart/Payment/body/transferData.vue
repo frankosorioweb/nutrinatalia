@@ -16,11 +16,15 @@
       <ol class="grey--text text--darken-1">
         <li>
           Realizá la transferencia correspondiente según los datos que se
-          presentan a continuación <template v-if="getPayment.name != 'Depósito bancario'">
+          presentan a continuación
+          <template v-if="!isBankDeposit">
             <span>
-              <strong> (Ten presente que {{ getPayment.name }} te cobrará una comisión que no es parte del pago y tienes que asumirla)</strong>
-            </span>
-          </template>.
+              <strong>
+                (Ten presente que {{ getPayment.name }} te cobrará una comisión
+                que no es parte del pago y tienes que asumirla)</strong
+              >
+            </span> </template
+          >.
         </li>
         <li>
           Presiona en el botón “Continuar” para enviar el comprobante de la
@@ -49,8 +53,30 @@
           <span>{{ item.value }}</span>
         </li>
       </ul>
+      <template v-if="isBankDeposit">
+        <div>
+          <p
+            class="
+              primary-title
+              mb-1
+              mt-2
+              primary-font
+              font-weight-bold
+              primary-color
+              text-center
+            "
+          >
+            Pago con QR
+          </p>
+          <div class="qr-wrapper text-center">
+            <img src="/img/payments/Qr atlas.png" alt="Qr pago" />
+          </div>
+        </div>
+      </template>
     </div>
-    <v-btn @click="$store.commit('stepper/nextStep')" color="primary" block>Continuar</v-btn>
+    <v-btn @click="$store.commit('stepper/nextStep')" color="primary" block
+      >Continuar</v-btn
+    >
   </div>
 </template>
 
@@ -58,7 +84,7 @@
 import { mapGetters } from "vuex";
 export default {
   computed: {
-    ...mapGetters("stepper", ["getPayment"]),
+    ...mapGetters("stepper", ["getPayment", "isBankDeposit"]),
   },
 };
 </script>
