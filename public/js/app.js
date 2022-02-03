@@ -4846,39 +4846,6 @@ var products = [{
     title: 'Este ebook no recomiendo para personas:',
     info: ['En etapa de embarazo o lactancia.', 'Menores de 18 años.', 'Con alguna enfermedad de base.', 'Tomando mediciones especificas, simplemente porque bajo estas situaciones necesitas un asesoramiento mas personalizado para adaptar a tu vida estos cambios, así que te recomiendo tomar un turno presencial u online para iniciarte en este estilo de vida con acompañamiento profesional. Será lo mejor para vos.']
   }]
-}, {
-  poster: "".concat(postersSrc, "Salad.jpg"),
-  name: '21 días Sirtfoods + Lowcarb',
-  shortName: '21-dias-sirtfoods-lowcarb',
-  pages: '+x',
-  description: 'Aprendé a llevar a tu cuerpo a usar grasa como fuente energética y como consecuencia perder peso comiendo delicioso.',
-  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][EBOOK].original,
-  type: EBOOK,
-  features: [{
-    list: false,
-    title: 'Acerca del ebook',
-    info: ['Con este ebook podrás conocer mas sobre las sirtuinas: grandes señalizadores de nuestro metabolismo; como estimularlas con la alimentación con jugos verdes refrescantes, alimentos deliciosos y los hábitos correctos para llevar a tu cuerpo a usar grasas como fuente de energía, en combinación con una dieta Lowcarb o baja en carbohidratos. Si buscas potenciar tu salud, llevar a tu cuerpo a usar grasa como fuente energética, con mucha vitalidad, como consecuencia perder peso comiendo delicioso ¡este es el camino!.', 'Son xxx etapas de xx dias mas de xx paginas.']
-  }, {
-    list: true,
-    title: 'Lo que incluye',
-    info: ['Guía de inicio informativa, donde conocerás de que se tratan las sirtuinas, en que alimentos las encontramos y como las estimulamos.', 'Guía para pesarte, medirte y registrar tus avances.', 'Lista de compras.', 'Tips para leer etiquetas.', 'Planner.', 'Recetario de mas de 50 preparaciones de desayunos, meriendas, almuerzos, cenas, batidos e infusiones y mas!.', 'Guia de como comer fuera de casa.', 'Recomendaciones de como seguir mas allá de los xxxx días.']
-  }, {
-    list: true,
-    title: 'Lo que aprenderás',
-    info: ['Las bases de como actúan las sirtuinas, ya que para iniciar algo nuevo primero necesitas tener la información completa.', 'Todos los alimentos deliciosos a incluir y cuales mejor evitar.', 'A leer etiquetas y seleccionar productos.', 'A que la cocina saludables es más sencilla de lo que te imaginas, y mas deliciosa!.']
-  }, {
-    list: true,
-    title: 'Lo que necesitas',
-    info: ['Un correo electrónico para recibir el ebook.', 'Una aplicación compatible para leer documentos en pdf.']
-  }, {
-    list: true,
-    title: '¿A quienes va dirigido el ebook?',
-    info: ['A las personas que buscan perder peso, revertir potenciales enfermedades metabólicas como el hígado graso, obesidad, resistencia a la insulina, y sus consecuencias.', 'A las personas con síntomas de migrañas, cansancio, molestias gastrointestinales, ansiedad constante.', 'Y a todas las personas interesadas en potenciar su salud, inmunidad y aprender a incorporar alimentos saludables en su día a día.']
-  }, {
-    list: true,
-    title: 'Este ebook no recomiendo para personas:',
-    info: ['En etapa de embarazo o lactancia.', 'Menores de 18 años.', 'Con alguna enfermedad de base.', 'Tomando mediciones específicas, simplemente porque bajo estas situaciones necesitas un asesoramiento mas personalizado para adaptar a tu vida estos cambios, así que te recomiendo tomar un turno presencial u online para iniciarte en este estilo de vida con acompañamiento profesional. Será lo mejor para vos.']
-  }]
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
 
