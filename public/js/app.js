@@ -4049,7 +4049,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cart_Payment___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/cart/Payment/ */ "./resources/js/components/cart/Payment/index.vue");
 /* harmony import */ var _components_cart_PurchasePolicyAlert_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/cart/PurchasePolicyAlert.vue */ "./resources/js/components/cart/PurchasePolicyAlert.vue");
 /* harmony import */ var _components_productCard_responsive_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/productCard/responsive.vue */ "./resources/js/components/productCard/responsive.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/index.js */ "./resources/js/store/index.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -4078,6 +4079,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     stepper: _components_cart_Payment_Stepper_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -4085,7 +4087,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     productCardResponsive: _components_productCard_responsive_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     purchasePolicyAlert: _components_cart_PurchasePolicyAlert_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapGetters)("products", ["getProductFromShortName"])), {}, {
+  computed: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapGetters)("products", ["getProductFromShortName"])), {}, {
     getProduct: function getProduct() {
       var params = this.$route.params;
       return this.getProductFromShortName(params.type, params.shortName);
@@ -4099,6 +4101,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   beforeRouteLeave: function beforeRouteLeave(to, from, next) {
     this.$store.commit('stepper/resetSteeps');
     next();
+  },
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    var type = to.params.type;
+    var shortName = to.params.shortName;
+    var existsInfoproduct = _store_index_js__WEBPACK_IMPORTED_MODULE_4__["default"].getters.verifyInfoproduct(type, shortName) ? true : false;
+
+    if (existsInfoproduct) {
+      next();
+    } else {
+      next('/');
+    }
   }
 });
 
@@ -4115,8 +4128,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/productCard/labelType.vue */ "./resources/js/components/productCard/labelType.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _store_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/index.js */ "./resources/js/store/index.js");
+/* harmony import */ var _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/productCard/labelType.vue */ "./resources/js/components/productCard/labelType.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -4299,9 +4313,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["type"],
-  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("productTypes", ["getProductsTypes", "isWorkshop"])), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)("products", ["getProductFromShortName"])), {}, {
+  computed: _objectSpread(_objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("productTypes", ["getProductsTypes", "isWorkshop"])), (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)("products", ["getProductFromShortName"])), {}, {
     product: function product() {
       var shortName = this.$route.params.shortName;
       return this.getProductFromShortName(this.type, shortName);
@@ -4323,7 +4338,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   }),
   components: {
-    labelType: _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    labelType: _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    var type = to.name.split('-')[0];
+    var shortName = to.params.shortName;
+    var existsInfoproduct = _store_index_js__WEBPACK_IMPORTED_MODULE_0__["default"].getters.verifyInfoproduct(type, shortName) ? true : false;
+
+    if (existsInfoproduct) {
+      next();
+    } else {
+      next('/');
+    }
   }
 });
 
@@ -4626,6 +4652,11 @@ var routes = [{
   name: 'online-consultations',
   path: '/consultas',
   component: _pages_OnlineConsultations_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: '*',
+  redirect: {
+    name: 'home'
+  }
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
 
@@ -4960,6 +4991,13 @@ var state = {
 var getters = {
   getTestimonials: function getTestimonials(state) {
     return state.testimonials;
+  },
+  verifyInfoproduct: function verifyInfoproduct(state) {
+    return function (type, shortName) {
+      return state.products.products.find(function (item) {
+        return _.lowerCase(item.type) === _.lowerCase(type) && item.shortName === shortName;
+      });
+    };
   }
 };
 var store = new vuex__WEBPACK_IMPORTED_MODULE_9__["default"].Store({

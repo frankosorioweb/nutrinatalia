@@ -22,7 +22,10 @@ const state = {
 }
 
 const getters = {
-    getTestimonials: (state) => state.testimonials
+    getTestimonials: (state) => state.testimonials,
+    verifyInfoproduct: (state) => (type, shortName) => {
+        return state.products.products.find(item => _.lowerCase(item.type) === _.lowerCase(type) && item.shortName === shortName)
+    }
 };
 
 const store = new Vuex.Store({

@@ -64,6 +64,10 @@ const routes = [
         path: '/consultas',
         component: OnlineConsultations
     },
+    {
+        path: '*',
+        redirect: { name: 'home' }
+    }
 ]
 
 export default routes;

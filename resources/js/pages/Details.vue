@@ -174,6 +174,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import store from '../store/index.js';
 import labelType from "../components/productCard/labelType.vue";
 export default {
   props: ["type"],
@@ -203,5 +204,16 @@ export default {
   components: {
     labelType,
   },
+  beforeRouteEnter (to, from, next) {
+    const type = to.name.split('-')[0];
+    const shortName = to.params.shortName;
+    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName) ? true : false;
+    
+    if(existsInfoproduct) {
+      next();
+    } else {
+      next('/');
+    }
+  }
 };
 </script>

@@ -21,6 +21,7 @@ import payment from "../components/cart/Payment/";
 import purchasePolicyAlert from "../components/cart/PurchasePolicyAlert.vue";
 import productCardResponsive from "../components/productCard/responsive.vue";
 import { mapGetters } from "vuex";
+import store from '../store/index.js';
 export default {
   components: {
     stepper,
@@ -44,6 +45,18 @@ export default {
   beforeRouteLeave (to, from, next) {
     this.$store.commit('stepper/resetSteeps');
     next();
+  },
+  beforeRouteEnter (to, from, next) {
+    const type = to.params.type;
+    const shortName = to.params.shortName;
+    
+    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName) ? true : false;
+    
+    if(existsInfoproduct) {
+      next();
+    } else {
+      next('/');
+    }
   }
 };
 </script>
