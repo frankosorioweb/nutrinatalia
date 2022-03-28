@@ -11,12 +11,6 @@
           <img :src="getFlagSrc" alt="bandera" />
         </v-col>
         <v-col cols="auto">
-          <!--<v-select
-            hide-details
-            class="money-type pa-0 ma-0"
-            :items="['USD', 'GS']"
-            v-model="moneyTypeSelect"
-          >-->
           <v-select
             hide-details
             class="money-type pa-0 ma-0"
