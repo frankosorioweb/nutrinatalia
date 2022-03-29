@@ -1,6 +1,6 @@
 <template>
   <v-app-bar class="app-header" color="grey lighten-5" fixed height="56">
-    <img @click="goToHome" class="logo c-pointer" src="/img/logo.svg" />
+    <img @click="goToHome" class="logo c-pointer" src="/img/logo.png" />
 
     <v-spacer></v-spacer>
 

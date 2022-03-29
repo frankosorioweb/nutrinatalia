@@ -46066,7 +46066,7 @@ var render = function() {
     [
       _c("img", {
         staticClass: "logo c-pointer",
-        attrs: { src: "/img/logo.svg" },
+        attrs: { src: "/img/logo.png" },
         on: { click: _vm.goToHome }
       }),
       _vm._v(" "),

@@ -19,8 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/getPresentationVideo', function() {
-    $response = response()->file(public_path('videos/presentation.mp4'),[
-        'Content-Type' => 'video/mp4'
+    $response = response()->file(public_path('videos/presentation.m4v'),[
+        'Content-Type' => 'video/m4v'
     ]);
     
     return $response;
