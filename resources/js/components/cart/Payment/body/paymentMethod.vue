@@ -34,16 +34,16 @@ export default {
             logo: "/img/payments/Western-Union.png",
             transferData: [
               {
-                field: "Número de cuenta",
-                value: "12345678",
+                field: "País",
+                value: "Paraguay",
               },
               {
                 field: "Cédula de identidad",
-                value: "1.234.567",
+                value: "3408455",
               },
               {
                 field: "Nombres y Apellidos",
-                value: "Juan Pérez",
+                value: "Natalia Maria Chaparro Fox",
               },
             ],
           },
@@ -54,8 +54,8 @@ export default {
             logo: "/img/payments/Itau.png",
             transferData: [
               {
-                field: "Número de cuenta",
-                value: "1234567",
+                field: "Cuenta Corriente",
+                value: "100075636",
               },
               {
                 field: "Banco",
@@ -63,11 +63,11 @@ export default {
               },
               {
                 field: "Nombres y Apellidos",
-                value: "Juan Pérez",
+                value: "Natalia Maria Chaparro Fox",
               },
               {
                 field: "Cédula de identidad",
-                value: "1.234.567",
+                value: "3408455",
               },
             ],
           },
@@ -76,16 +76,12 @@ export default {
             logo: "/img/payments/Claro.svg",
             transferData: [
               {
-                field: "Número de cuenta",
-                value: "12345678",
+                field: "Celular",
+                value: "(0986) 576 - 037",
               },
               {
-                field: "Cédula de identidad",
-                value: "1.234.567",
-              },
-              {
-                field: "Nombres y Apellidos",
-                value: "Juan Pérez",
+                field: "Comisión",
+                value: "Se debe enviar +10% por comisión",
               },
             ],
           },

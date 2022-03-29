@@ -69,7 +69,7 @@
             Pago con QR
           </p>
           <div class="qr-wrapper text-center">
-            <img src="/img/payments/Qr atlas.png" alt="Qr pago" />
+            <img src="/img/payments/Qr itau.jpg" alt="Qr pago" />
           </div>
         </div>
       </template>
