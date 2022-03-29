@@ -46,8 +46,8 @@
         </v-card-text>
       </div>
       <div class="px-5 py-3 mt-auto grey lighten-4 text-center">
-        <social-media-small-button :link="socialMedia.facebook" :type="true" />
-        <social-media-small-button :link="socialMedia.instagram" :type="false" />
+        <social-media-small-button v-if="socialMedia.facebook" :link="socialMedia.facebook" :type="true" />
+        <social-media-small-button v-if="socialMedia.instagram" :link="socialMedia.instagram" :type="false" />
       </div>
     </v-card>
   </article>

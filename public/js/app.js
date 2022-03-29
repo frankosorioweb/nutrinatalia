@@ -45108,13 +45108,17 @@ var render = function() {
             "div",
             { staticClass: "px-5 py-3 mt-auto grey lighten-4 text-center" },
             [
-              _c("social-media-small-button", {
-                attrs: { link: _vm.socialMedia.facebook, type: true }
-              }),
+              _vm.socialMedia.facebook
+                ? _c("social-media-small-button", {
+                    attrs: { link: _vm.socialMedia.facebook, type: true }
+                  })
+                : _vm._e(),
               _vm._v(" "),
-              _c("social-media-small-button", {
-                attrs: { link: _vm.socialMedia.instagram, type: false }
-              })
+              _vm.socialMedia.instagram
+                ? _c("social-media-small-button", {
+                    attrs: { link: _vm.socialMedia.instagram, type: false }
+                  })
+                : _vm._e()
             ],
             1
           )
