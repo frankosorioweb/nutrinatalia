@@ -13,10 +13,10 @@ prices[WORKSHOP] = {
         default: true,
         discount: 0,
         dollar: {
-            value: `14 ${money.symbols.dollar}`
+            value: `14.5 ${money.symbols.dollar}`
         },
         guarani: {
-            value: `95.000 ${money.symbols.guarani}`
+            value: `100.000 ${money.symbols.guarani}`
         },
     }
 }

@@ -4731,10 +4731,10 @@ prices[WORKSHOP] = {
     "default": true,
     discount: 0,
     dollar: {
-      value: "14 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
+      value: "14.5 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
     },
     guarani: {
-      value: "95.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
+      value: "100.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
     }
   }
 };
