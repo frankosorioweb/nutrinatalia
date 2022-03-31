@@ -4886,12 +4886,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var onlineConsultationsPhone = '595971579290';
 var support = {
-  whatsapp: '595991406723',
+  whatsapp: onlineConsultationsPhone,
   onlineConsultations: {
     phone: onlineConsultationsPhone,
     whatsapp: "https://wa.me/".concat(onlineConsultationsPhone, "?text=Hola, me gustar\xEDa conocer m\xE1s acerca de las consultas online")
   },
-  email: 'osoriofranciscoj99@gmail.com'
+  email: 'soporte@nutrinatalia.com'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (support);
 
