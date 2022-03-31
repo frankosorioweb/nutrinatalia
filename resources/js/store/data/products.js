@@ -53,7 +53,7 @@ const products = [{
         ]
     },
     {
-        poster: `${postersSrc}Panes sin culpa.png`,
+        poster: `${postersSrc}Comidas tipicas paraguayas.jpg`,
         name: 'Panes sin culpa',
         shortName: 'panes-sin-culpa',
         duration: '+2 horas que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
@@ -98,7 +98,7 @@ const products = [{
         ]
     },
     {
-        poster: `${postersSrc}Salad.jpg`,
+        poster: `${postersSrc}Ebooks.jpg`,
         name: '30 días keto + ayunos',
         shortName: '30-dias-keto-ayunos',
         pages: '+80',

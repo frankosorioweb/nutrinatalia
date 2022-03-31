@@ -4815,7 +4815,7 @@ var products = [{
     info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
   }]
 }, (_ref = {
-  poster: "".concat(postersSrc, "Panes sin culpa.png"),
+  poster: "".concat(postersSrc, "Comidas tipicas paraguayas.jpg"),
   name: 'Panes sin culpa',
   shortName: 'panes-sin-culpa',
   duration: '+2 horas que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
@@ -4836,7 +4836,7 @@ var products = [{
   title: '¿A quienes va dirigido el taller?',
   info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
 }]), _ref), {
-  poster: "".concat(postersSrc, "Salad.jpg"),
+  poster: "".concat(postersSrc, "Ebooks.jpg"),
   name: '30 días keto + ayunos',
   shortName: '30-dias-keto-ayunos',
   pages: '+80',
