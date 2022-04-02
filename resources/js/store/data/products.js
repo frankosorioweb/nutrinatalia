@@ -18,7 +18,7 @@ const products = [
         duration: 'Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones',
         description: 'Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.',
         price: prices[WORKSHOP].off100Short,
-        driveLink: 'https://drive.google.com/drive/folders/1Xj6UfLmZd8pwcDRfnR8IlopQpKhVx9ue?usp=sharing',
+        driveLink: 'https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing',
         type: WORKSHOP,
         features: [{
                 title: 'Acerca de mi receta favorita de pan',
