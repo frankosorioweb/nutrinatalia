@@ -9,7 +9,7 @@
         <title>Nutrinatalia | La academia</title>
         <meta property='og:title'  content='Nutrinatalia | La academia'>
 
-        <link rel='icon' type='image/ico' href='{{ asset('favicon.ico') }}'>
+        <link rel='icon' type='image/ico' href="{{ asset('favicon.ico') }}">
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </head>
