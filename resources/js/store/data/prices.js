@@ -58,4 +58,15 @@ prices[EBOOK].recetario = {
     }
 }
 
+prices[EBOOK].ketoAyuno30Dias = {
+    default: false,
+    discount: 0,
+    dollar: {
+        value: `32 ${money.symbols.dollar}`
+    },
+    guarani: {
+        value: `220.000 ${money.symbols.guarani}`
+    }
+}
+
 export default prices;

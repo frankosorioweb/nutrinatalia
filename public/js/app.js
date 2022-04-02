@@ -4775,6 +4775,16 @@ prices[EBOOK].recetario = {
     value: "50.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
   }
 };
+prices[EBOOK].ketoAyuno30Dias = {
+  "default": false,
+  discount: 0,
+  dollar: {
+    value: "32 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
+  },
+  guarani: {
+    value: "220.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
+  }
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prices);
 
 /***/ }),
@@ -4876,7 +4886,7 @@ var products = [//WORKSHOPS
   shortName: '30-dias-keto-ayunos',
   pages: '+80',
   description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
-  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][EBOOK].original,
+  price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][EBOOK].ketoAyuno30Dias,
   type: EBOOK,
   features: [{
     list: false,

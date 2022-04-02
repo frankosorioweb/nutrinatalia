@@ -142,7 +142,7 @@ const products = [
         shortName: '30-dias-keto-ayunos',
         pages: '+80',
         description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
-        price: prices[EBOOK].original,
+        price: prices[EBOOK].ketoAyuno30Dias,
         type: EBOOK,
         features: [{
                 list: false,
