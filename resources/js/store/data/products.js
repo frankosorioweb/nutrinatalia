@@ -12,7 +12,7 @@ const products = [
 
     //WORKSHOPS
     {
-        poster: `${postersSrc}pan.png`,
+        poster: `${postersSrc}Receta favorita pan.jpg`,
         name: 'Mi receta favorita de pan',
         shortName: 'receta-favorita-pan',
         duration: '8 minutos',
