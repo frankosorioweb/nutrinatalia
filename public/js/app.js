@@ -4798,7 +4798,7 @@ var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["
 
 var products = [//WORKSHOPS
 {
-  poster: "".concat(postersSrc, "pan.png"),
+  poster: "".concat(postersSrc, "Receta favorita pan.jpg"),
   name: 'Mi receta favorita de pan',
   shortName: 'receta-favorita-pan',
   duration: '8 minutos',
