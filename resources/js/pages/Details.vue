@@ -67,7 +67,7 @@
                 </v-col>
                 <v-col cols="12">
                   <template v-if="product.price.discount === 100">
-                    <v-btn :to="getBuyTo" color="primary" block>
+                    <v-btn :href="product.driveLink" target="_blank" color="primary" block>
                       Inscribirme gratis
                     </v-btn>
                   </template>
