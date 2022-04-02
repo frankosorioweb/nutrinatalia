@@ -33,3 +33,11 @@ Route::get('/getPresentationVideoWebM', function() {
     
     return $response;
 });
+
+Route::get('/getPresentationVideoOgg', function() {
+    $response = response()->file(public_path('videos/presentation.ogg'),[
+        'Content-Type' => 'video/ogg'
+    ]);
+    
+    return $response;
+});

@@ -14,6 +14,7 @@
       >
         <source src="/api/getPresentationVideoMp4" type="video/mp4" />
         <source src="/api/getPresentationVideoWebM" type="video/webm" />
+        <source src="/api/getPresentationVideoOgg" type="video/ogg" />
       </video>
     </div>
   </section>
