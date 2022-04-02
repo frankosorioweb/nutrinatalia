@@ -26,11 +26,11 @@ prices[WORKSHOP].off100Short = {
     discount: 100,
     dollar: {
         value: 'GRATIS',
-        old: `7 ${money.symbols.dollar}`
+        old: `5 ${money.symbols.dollar}`
     },
     guarani: {
         value: 'GRATIS',
-        old: `48.000 ${money.symbols.guarani}`
+        old: `34.000 ${money.symbols.guarani}`
     }
 }
 

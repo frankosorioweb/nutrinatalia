@@ -9,9 +9,11 @@
         class="presentation-video rounded"
         controls
         controlsList="nodownload"
+        poster="/img/posters/presentation.jpg"
         @contextmenu="onContextMenu($event)"
       >
-        <source src="/api/getPresentationVideo" type="video/mp4" />
+        <source src="/api/getPresentationVideoMp4" type="video/mp4" />
+        <source src="/api/getPresentationVideoWebM" type="video/webm" />
       </video>
     </div>
   </section>

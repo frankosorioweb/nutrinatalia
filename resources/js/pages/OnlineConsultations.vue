@@ -1,9 +1,9 @@
 <template>
   <v-main class="mt-14 online-consultations-page">
     <v-container>
-      <h1 class="text-center primary-font">Consultas online</h1>
+      <h1 class="text-center primary-font">Consultas online y presenciales</h1>
       <p class="mx-auto text-center description">
-        Solicitá una consulta online para que pueda ayudarte a resolver todas tus dudas con respecto a tu salud y alimentación, y ¡desde la comodidad de tu hogar!
+        Para personalizar tu proceso de cambio de hábitos solicita aquí una consulta ONLINE, para conectarnos desde la comodidad de tu casa u oficina, o una consulta PRESENCIAL si vivis en Paraguay
       </p>
       <div class="buttons-container mx-auto">
         <v-row justify="center">

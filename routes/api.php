@@ -18,9 +18,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/getPresentationVideo', function() {
-    $response = response()->file(public_path('videos/presentation.m4v'),[
-        'Content-Type' => 'video/m4v'
+Route::get('/getPresentationVideoMp4', function() {
+    $response = response()->file(public_path('videos/presentation.mp4'),[
+        'Content-Type' => 'video/mp4'
+    ]);
+    
+    return $response;
+});
+
+Route::get('/getPresentationVideoWebM', function() {
+    $response = response()->file(public_path('videos/presentation.webm'),[
+        'Content-Type' => 'video/webm'
     ]);
     
     return $response;

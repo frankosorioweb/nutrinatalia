@@ -2948,6 +2948,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
     onContextMenu: function onContextMenu(e) {
@@ -4743,11 +4745,11 @@ prices[WORKSHOP].off100Short = {
   discount: 100,
   dollar: {
     value: 'GRATIS',
-    old: "7 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
+    old: "5 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
   },
   guarani: {
     value: 'GRATIS',
-    old: "48.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
+    old: "34.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
   }
 };
 prices[EBOOK] = {
@@ -4799,39 +4801,35 @@ var _productTypes$state$t = _modules_productTypes__WEBPACK_IMPORTED_MODULE_1__["
 var products = [//WORKSHOPS
 {
   poster: "".concat(postersSrc, "Receta favorita pan.jpg"),
-  name: 'Mi receta favorita de pan',
-  shortName: 'receta-favorita-pan',
-  duration: '8 minutos',
+  name: 'Receta Regalo: Mi Receta Favorita De Pan',
+  shortName: 'regalo-receta-favorita-pan',
+  duration: 'Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones',
   description: 'Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].off100Short,
   type: WORKSHOP,
   features: [{
-    title: 'Acerca del taller',
-    info: ['En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies con gotas de cacao, muffins, y panqueques de frutos rojos, todo esto sin azúcares, sin harinas, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.']
+    title: 'Acerca de mi receta favorita de pan',
+    info: ['Con esta receta de fácil y rápida elaboración aprenderás a hacer 3 diferentes panes bajos en carbohidratos: pan de sandwich, de hamburguesas y prepizza; todo esto sin harinas ni gluten, en pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia. Además te comparto tips para que puedas hacer tus propias modificaciones.']
   }, {
     list: true,
     title: 'Lo que aprenderás',
-    info: ['Que los dulces con los ingredientes correctos son saludables!.', 'A disfrutar, sorprender a tu familia y amigos con postres deliciosos que nos hacen bien.', 'Que la preparación de postres saludables es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.', 'A despojarte de mitos que limitan ingredientes y alimentos saludables.']
+    info: ['Que los panes con los ingredientes correctos son saludables, y pueden estar en tu dieta!.', 'A usar una misma receta para distintas preparaciones con mínimas modificaciones.', 'Que la preparación de un pan es más sencilla de lo que te imaginas, apenas necesitas 3 minutos.']
   }, {
     list: true,
-    title: 'Lo que necesitas para el taller',
-    info: ['Una cuenta de Google, ya que los videos estarán en el Google Drive.', 'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.']
-  }, {
-    list: false,
-    title: '¿A quienes va dirigido el taller?',
-    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
+    title: '¿A quienes puede ser útil mi receta favorita de pan?',
+    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, esta receta es sin gluten siendo apto para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en una receta para lograr saciedad y controlar la ansiedad.']
   }]
 }, {
   poster: "".concat(postersSrc, "Comidas tipicas paraguayas version lowcarb.jpg"),
-  name: 'Comidas típicas paraguayas versión lowcarb',
+  name: 'Comida Típica Paraguaya Versión Lowcarb',
   shortName: 'comidas-tipicas-py-lowcarb',
-  duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo',
+  duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
   description: 'Aprende ejecutar las recetas de la cocina típica paraguaya en su versión baja en carbohidratos.',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][WORKSHOP].original,
   type: WORKSHOP,
   features: [{
     title: 'Acerca del taller',
-    info: ['En este taller aprenderás a ejecutar las recetas de estos 5 platos de la cocina típica paraguaya: mbeju, chipa, empanada, chipa so’o y pajagua mascada, todo esto en la versión baja en carbohidratos, sin harinas, ni almidones lo que permite disfrutar de preparaciones tradicionales sin afectar los niveles de glucosa en sangre, controlando la ansiedad con saciedad ya que son ricos en grasas buenas, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.']
+    info: ['En este taller aprenderás a ejecutar las recetas de estos 5 platos de la cocina típica paraguaya: mbeju, chipa, empanada, chipa so’o y pajagua mascada, todo esto en la versión baja en carbohidratos, sin harinas, ni almidones lo que permite disfrutar de preparaciones tradicionales sin afectar los niveles de glucosa en sangre, controlando la ansiedad con saciedad ya que son ricos en grasas buenas, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.']
   }, {
     list: true,
     title: 'Lo que aprenderás',
@@ -4841,9 +4839,9 @@ var products = [//WORKSHOPS
     title: 'Lo que necesitas para el taller',
     info: ['Una cuenta de Google, ya que los videos estarán en el Google Drive.', 'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.']
   }, {
-    list: false,
+    list: true,
     title: '¿A quienes va dirigido el taller?',
-    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
+    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en sus preparaciones para lograr saciedad y controlar la ansiedad.']
   }]
 }, {
   poster: "".concat(postersSrc, "Dulces que nos hacen bien.jpg"),
@@ -4855,7 +4853,7 @@ var products = [//WORKSHOPS
   type: WORKSHOP,
   features: [{
     title: 'Acerca del taller',
-    info: ['En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies, barritas de frutos secos, y lemon pie, todo esto sin azúcares, sin harinas ni gluten, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.']
+    info: ['En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies, barritas de frutos secos, y lemon pie, todo esto sin azúcares, sin harinas ni gluten, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.']
   }, {
     list: true,
     title: 'Lo que aprenderás',
@@ -4865,14 +4863,14 @@ var products = [//WORKSHOPS
     title: 'Lo que necesitas para el taller',
     info: ['Una cuenta de Google, ya que los videos estarán en el Google Drive.', 'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.']
   }, {
-    list: false,
+    list: true,
     title: '¿A quienes va dirigido el taller?',
     info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
   }]
 }, //EBOOKS
 {
   poster: "".concat(postersSrc, "30 dias keto ayuno.jpg"),
-  name: '30 días keto + ayunos',
+  name: '30 días Keto + Ayuno',
   shortName: '30-dias-keto-ayunos',
   pages: '+80',
   description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
@@ -4901,11 +4899,11 @@ var products = [//WORKSHOPS
   }, {
     list: true,
     title: 'Este ebook no recomiendo para personas:',
-    info: ['En etapa de embarazo o lactancia.', 'Menores de 18 años.', 'Con alguna enfermedad de base.', 'Tomando mediciones especificas', 'Simplemente porque bajo estas situaciones necesitas un asesoramiento mas personalizado para adaptar a tu vida estos cambios, así que te recomiendo bajo estas circunstancias tomar un turno presencial u online para iniciarte en este estilo de vida con acompañamiento profesional. Será lo mejor para vos']
+    info: ['En etapa de embarazo o lactancia.', 'Menores de 18 años.', 'Con alguna enfermedad de base.', 'Tomando mediciones especificas, simplemente porque bajo estas situaciones necesitas un asesoramiento mas personalizado para adaptar a tu vida estos cambios, así que te recomiendo bajo estas circunstancias tomar un turno presencial u online para iniciarte en este estilo de vida con acompañamiento profesional. Será lo mejor para vos']
   }]
 }, {
   poster: "".concat(postersSrc, "Recetario comidas tipicas paraguayas version lowcarb.jpg"),
-  name: 'Recetario comidas tipicas paraguayas lowcarb',
+  name: 'Recetario Comida Típica Paraguaya Versión Lowcarb',
   shortName: 'recetario-comida-tipica-py-lowcarb',
   pages: 'N/A',
   description: 'Accedé a las cinco recetas del taller comidas tipicas paraguayas vesión lowcarb.',
@@ -4922,22 +4920,22 @@ var products = [//WORKSHOPS
   }, {
     list: true,
     title: 'Lo que necesitas',
-    info: ['Una dirección de correo electrónico donde recibir el material en pdf.', 'Una aplicación compatible para leer documentos en pdf.']
+    info: ['Un correo electrónico para recibir el ebook.', 'Una aplicación compatible para leer documentos en pdf.']
   }, {
     list: true,
     title: '¿A quienes va dirigido?',
-    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
+    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este ebook son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus preparaciones para lograr saciedad y controlar la ansiedad.']
   }]
 }, {
   poster: "".concat(postersSrc, "Recetario dulces que nos hacen bien.jpg"),
-  name: 'Recetario dulces que nos hacen bien',
+  name: 'Recetario Dulces que nos hacen bien',
   shortName: 'recetario-dulces-saludables',
   pages: 'N/A',
   description: 'Aprende a ejecutar las cinco recetas del taller dulces que nos hacen bien',
   price: _prices__WEBPACK_IMPORTED_MODULE_0__["default"][EBOOK].recetario,
   type: EBOOK,
   features: [{
-    list: false,
+    list: true,
     title: 'Acerca del recetario',
     info: ['En este recetario aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies, barritas de frutos secos, y lemon pie, todo esto sin azúcares, sin harinas ni gluten, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.', 'Recibirás un material en pdf con las recetas, imágenes y otras extra de regalo!.']
   }, {
@@ -4947,11 +4945,11 @@ var products = [//WORKSHOPS
   }, {
     list: true,
     title: 'Lo que necesitas',
-    info: ['Una dirección de correo electrónico donde recibir el material en formato pdf.']
+    info: ['Un correo electrónico para recibir el ebook.', 'Una aplicación compatible para leer documentos en pdf.']
   }, {
     list: true,
     title: '¿A quienes va dirigido?',
-    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
+    info: ['A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.', 'Ya que utilizamos harinas alternativas, las preparaciones de este ebook son sin gluten siendo aptos para celiacos e intolerantes al gluten.', 'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.']
   }]
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (products);
@@ -44663,7 +44661,11 @@ var render = function() {
           "video",
           {
             staticClass: "presentation-video rounded",
-            attrs: { controls: "", controlsList: "nodownload" },
+            attrs: {
+              controls: "",
+              controlsList: "nodownload",
+              poster: "/img/posters/presentation.jpg"
+            },
             on: {
               contextmenu: function($event) {
                 return _vm.onContextMenu($event)
@@ -44672,7 +44674,14 @@ var render = function() {
           },
           [
             _c("source", {
-              attrs: { src: "/api/getPresentationVideo", type: "video/mp4" }
+              attrs: { src: "/api/getPresentationVideoMp4", type: "video/mp4" }
+            }),
+            _vm._v(" "),
+            _c("source", {
+              attrs: {
+                src: "/api/getPresentationVideoWebM",
+                type: "video/webm"
+              }
             })
           ]
         )
@@ -46946,12 +46955,12 @@ var render = function() {
     [
       _c("v-container", [
         _c("h1", { staticClass: "text-center primary-font" }, [
-          _vm._v("Consultas online")
+          _vm._v("Consultas online y presenciales")
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "mx-auto text-center description" }, [
           _vm._v(
-            "\n      Solicitá una consulta online para que pueda ayudarte a resolver todas tus dudas con respecto a tu salud y alimentación, y ¡desde la comodidad de tu hogar!\n    "
+            "\n      Para personalizar tu proceso de cambio de hábitos solicita aquí una consulta ONLINE, para conectarnos desde la comodidad de tu casa u oficina, o una consulta PRESENCIAL si vivis en Paraguay\n    "
           )
         ]),
         _vm._v(" "),
