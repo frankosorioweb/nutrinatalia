@@ -21,6 +21,19 @@ prices[WORKSHOP] = {
     }
 }
 
+prices[WORKSHOP].off100Short = {
+    default: false,
+    discount: 100,
+    dollar: {
+        value: 'GRATIS',
+        old: `7 ${money.symbols.dollar}`
+    },
+    guarani: {
+        value: 'GRATIS',
+        old: `48.000 ${money.symbols.guarani}`
+    }
+}
+
 prices[EBOOK] = {
     original: {
         default: true,
@@ -34,16 +47,14 @@ prices[EBOOK] = {
     }
 }
 
-prices[WORKSHOP].off100 = {
+prices[EBOOK].recetario = {
     default: false,
-    discount: 100,
+    discount: 0,
     dollar: {
-        value: 'GRATIS',
-        old: prices[WORKSHOP].original.dollar.value
+        value: `7.5 ${money.symbols.dollar}`
     },
     guarani: {
-        value: 'GRATIS',
-        old: prices[WORKSHOP].original.guarani.value
+        value: `50.000 ${money.symbols.guarani}`
     }
 }
 

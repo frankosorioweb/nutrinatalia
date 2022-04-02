@@ -13,7 +13,7 @@
               poster: '/img/posters/Workshops.jpg',
               name: 'Talleres',
               description:
-                'Son videos de aproximadamente 2 horas con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.',
+                'Son videos de aproximadamente 1 hora con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.',
             }"
           ></product-card>
         </v-col>
@@ -24,7 +24,7 @@
               poster: '/img/posters/Ebooks.jpg',
               name: 'Ebooks',
               description:
-                'Son libros digitales que diseñé para que inicies tu camino hacia un estilo de vida saludable. Incluyen: información, guías, listas de compras, recetas, y mucho más.',
+                'Son libros digitales que diseñé para que te ayuden en tu camino hacia un estilo de vida saludable. Tenemos: planes completos con información, guías, etc., recetarios y más!.',
             }"
           ></product-card>
         </v-col>
