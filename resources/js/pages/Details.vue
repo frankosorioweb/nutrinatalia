@@ -68,7 +68,7 @@
                 <v-col cols="12">
                   <template v-if="product.price.discount === 100">
                     <v-btn :href="product.driveLink" target="_blank" color="primary" block>
-                      Inscribirme gratis
+                      OBTENER RECETA DE REGALO
                     </v-btn>
                   </template>
                   <template v-else>

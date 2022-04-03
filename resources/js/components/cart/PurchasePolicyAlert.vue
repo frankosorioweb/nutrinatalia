@@ -36,7 +36,7 @@ export default {
     return {
       dialog: {
         state: false,
-        msg: "No realizamos reembolsos, ya que, en las redes sociales (@nutrinatalia) se comparte mucho contenido gratuito para que puedas visualizar la calidad de la enseñanza e información, así como también cada taller e ebook cuenta con toda la información necesaria para que a partir de ella puedas tomar la decisión de realizar una compra si es que considerás que se ajusta a tus necesidades. Por otro lado, los montos se muestran claramente a lo largo del proceso de compra."
+        msg: "No realizamos reembolsos, ya que, en las redes sociales se comparte mucho contenido gratuito para que puedas visualizar la calidad de la enseñanza e información, así como también cada taller e ebook cuenta con toda la información necesaria para que a partir de ella puedas tomar la decisión de realizar una compra si es que considerás que se ajusta a tus necesidades. Por otro lado, los montos se muestran claramente a lo largo del proceso de compra."
       }
     }
   },

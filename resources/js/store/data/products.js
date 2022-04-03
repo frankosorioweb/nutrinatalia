@@ -54,7 +54,8 @@ const products = [
         description: 'Aprende ejecutar las recetas de la cocina típica paraguaya en su versión baja en carbohidratos.',
         price: prices[WORKSHOP].original,
         type: WORKSHOP,
-        features: [{
+        features: [
+            {
                 title: 'Acerca del taller',
                 info: [
                     'En este taller aprenderás a ejecutar las recetas de estos 5 platos de la cocina típica paraguaya: mbeju, chipa, empanada, chipa so’o y pajagua mascada, todo esto en la versión baja en carbohidratos, sin harinas, ni almidones lo que permite disfrutar de preparaciones tradicionales sin afectar los niveles de glucosa en sangre, controlando la ansiedad con saciedad ya que son ricos en grasas buenas, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.',
@@ -75,7 +76,7 @@ const products = [
                 list: true,
                 title: 'Lo que necesitas para el taller',
                 info: [
-                    'Una cuenta de Google, ya que los videos estarán en el Google Drive.',
+                    'Una dirección de correo electrónico para acceder al taller.',
                     'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.',
                 ]
             },
@@ -119,7 +120,7 @@ const products = [
                 list: true,
                 title: 'Lo que necesitas para el taller',
                 info: [
-                    'Una cuenta de Google, ya que los videos estarán en el Google Drive.',
+                    'Una dirección de correo electrónico para acceder al taller.',
                     'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.',
                 ]
             },
@@ -180,8 +181,7 @@ const products = [
                 list: true,
                 title: 'Lo que necesitas',
                 info: [
-                    'Un correo electrónico para recibir el ebook.',
-                    'Una aplicación compatible para leer documentos en pdf.',
+                    'Una dirección de correo electrónico para acceder al ebook.',
                 ]
             },
             {
@@ -235,8 +235,7 @@ const products = [
                 list: true,
                 title: 'Lo que necesitas',
                 info: [
-                    'Un correo electrónico para recibir el ebook.',
-                    'Una aplicación compatible para leer documentos en pdf.',
+                    'Una dirección de correo electrónico para acceder al ebook.',
                 ]
             },
             {
@@ -281,8 +280,7 @@ const products = [
                 list: true,
                 title: 'Lo que necesitas',
                 info: [
-                    'Un correo electrónico para recibir el ebook.',
-                    'Una aplicación compatible para leer documentos en pdf.',
+                    'Una dirección de correo electrónico para acceder al ebook.',
                 ]
             },
             {
