@@ -8,6 +8,7 @@
           <payment :isFreeInfoProduct="this.isFreeInfoProduct"></payment>
         </v-col>
         <v-col cols="12" lg="7">
+          <coupon-box></coupon-box>
           <product-card-responsive :data="getProduct" />
         </v-col>
       </v-row>
@@ -20,6 +21,7 @@ import stepper from "../components/cart/Payment/Stepper.vue";
 import payment from "../components/cart/Payment/";
 import purchasePolicyAlert from "../components/cart/PurchasePolicyAlert.vue";
 import productCardResponsive from "../components/productCard/responsive.vue";
+import couponBox from "../components/couponBox/index.vue";
 import { mapGetters } from "vuex";
 import store from '../store/index.js';
 export default {
@@ -27,7 +29,8 @@ export default {
     stepper,
     payment,
     productCardResponsive,
-    purchasePolicyAlert
+    purchasePolicyAlert,
+    couponBox
   },
   computed: {
     ...mapGetters("products", ["getProductFromShortName"]),
