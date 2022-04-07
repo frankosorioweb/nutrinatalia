@@ -77,8 +77,15 @@ export default {
       window.open(url);
     },
     appendCoupon() {
-      const coupons = Object.values(this.getProduct.price.coupons)[0];
-      return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "" ;
+      if(this.hasApplicableCoupon()) {
+        const coupons = Object.values(this.getProduct.price.coupons)[0];
+        return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "" ;
+      } else {
+        return "";
+      }
+    },
+    hasApplicableCoupon() {
+      return !_.isEmpty(this.getProduct.price.coupons);
     },
     showDialog(msg) {
       this.dialog.state = true;

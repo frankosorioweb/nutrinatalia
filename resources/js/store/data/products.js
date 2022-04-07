@@ -141,7 +141,7 @@ const products = [
         poster: `${postersSrc}30 dias keto ayuno.jpg`,
         name: '30 días Keto + Ayuno',
         shortName: '30-dias-keto-ayunos',
-        pages: '+80',
+        pages: '+98',
         description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
         price: JSON.parse(JSON.stringify(prices[EBOOK].ketoAyuno30Dias)),
         type: EBOOK,

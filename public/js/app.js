@@ -2241,8 +2241,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       window.open(url);
     },
     appendCoupon: function appendCoupon() {
-      var coupons = Object.values(this.getProduct.price.coupons)[0];
-      return coupons.applied ? "\u2022CUP\xD3N: ".concat(coupons.value, "\n") : "";
+      if (this.hasApplicableCoupon()) {
+        var coupons = Object.values(this.getProduct.price.coupons)[0];
+        return coupons.applied ? "\u2022CUP\xD3N: ".concat(coupons.value, "\n") : "";
+      } else {
+        return "";
+      }
+    },
+    hasApplicableCoupon: function hasApplicableCoupon() {
+      return !_.isEmpty(this.getProduct.price.coupons);
     },
     showDialog: function showDialog(msg) {
       this.dialog.state = true;
@@ -2862,8 +2869,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['product'],
+  props: ["product"],
   data: function data() {
     return {
       coupon: "",
@@ -2873,7 +2884,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     hasAppliedCoupon: function hasAppliedCoupon() {
-      return Object.values(this.product.price.coupons)[0].applied;
+      return this.hasApplicableCoupon() && Object.values(this.product.price.coupons)[0].applied;
     }
   },
   methods: {
@@ -2883,27 +2894,38 @@ __webpack_require__.r(__webpack_exports__);
       this.coupon = _.toUpper(this.coupon).trim();
 
       if (this.coupon) {
-        this.loading = true;
-        this.$store.dispatch("coupon/validate", this.coupon).then(function (res) {
-          _this.verifyResponse(res);
+        if (this.hasApplicableCoupon()) {
+          this.loading = true;
+          this.$store.dispatch("coupon/validate", this.coupon).then(function (res) {
+            _this.verifyResponse(res);
 
-          _this.loading = false;
-        })["catch"](function (err) {
-          console.log(err);
-          _this.loading = false;
-        });
+            _this.loading = false;
+          })["catch"](function (err) {
+            console.log(err);
+            _this.loading = false;
+          });
+        } else {
+          this.displayInvalidCoupon();
+        }
       }
+    },
+    hasApplicableCoupon: function hasApplicableCoupon() {
+      var hasApplicableCoupon = !_.isEmpty(this.product.price.coupons);
+      return hasApplicableCoupon;
     },
     verifyResponse: function verifyResponse(res) {
       var exists = res.data.coupon.exists;
       var expired = res.data.coupon.expired;
 
       if (!exists || expired) {
-        this.$store.commit("coupon/openSnackBar", "El cupón introducido no es válido para este infoproducto");
+        this.displayInvalidCoupon();
       } else {
         this.applyDiscount();
         this.$store.commit("coupon/openSnackBar", "FELICITACIONES, HAS CONSEGUIDO UN 20% DE DESCUENTO");
       }
+    },
+    displayInvalidCoupon: function displayInvalidCoupon() {
+      this.$store.commit("coupon/openSnackBar", "El cupón introducido no es válido para este infoproducto");
     },
     applyDiscount: function applyDiscount() {
       var productCoupon = this.product.price.coupons.jmBrC2fs9y;
@@ -4961,20 +4983,7 @@ prices[EBOOK].recetario = {
   guarani: {
     value: "50.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
   },
-  coupons: {
-    // Últimos 10 caracteres del encriptado
-    jmBrC2fs9y: {
-      discount: 20,
-      applied: false,
-      value: "",
-      dollar: {
-        value: "6 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
-      },
-      guarani: {
-        value: "40.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
-      }
-    }
-  }
+  coupons: {}
 };
 prices[EBOOK].ketoAyuno30Dias = {
   "default": false,
@@ -4985,20 +4994,7 @@ prices[EBOOK].ketoAyuno30Dias = {
   guarani: {
     value: "220.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
   },
-  coupons: {
-    // Últimos 10 caracteres del encriptado
-    jmBrC2fs9y: {
-      discount: 20,
-      applied: false,
-      value: "",
-      dollar: {
-        value: "25.6 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.dollar)
-      },
-      guarani: {
-        value: "176.000 ".concat(_money__WEBPACK_IMPORTED_MODULE_1__["default"].symbols.guarani)
-      }
-    }
-  }
+  coupons: {}
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prices);
 
@@ -5099,7 +5095,7 @@ var products = [//WORKSHOPS
   poster: "".concat(postersSrc, "30 dias keto ayuno.jpg"),
   name: '30 días Keto + Ayuno',
   shortName: '30-dias-keto-ayunos',
-  pages: '+80',
+  pages: '+98',
   description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
   price: JSON.parse(JSON.stringify(_prices__WEBPACK_IMPORTED_MODULE_0__["default"][EBOOK].ketoAyuno30Dias)),
   type: EBOOK,

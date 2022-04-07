@@ -6,7 +6,11 @@
           v-model="coupon"
           :disabled="loading || hasAppliedCoupon"
           hide-details
-          :label="hasAppliedCoupon ? getAppliedCoupon() : '¿Tienes un cupón de descuento?'"
+          :label="
+            hasAppliedCoupon
+              ? getAppliedCoupon()
+              : '¿Tienes un cupón de descuento?'
+          "
           solo
         ></v-text-field>
       </v-col>
@@ -19,7 +23,7 @@
           height="100%"
           color="primary"
         >
-          {{ hasAppliedCoupon ? 'Aplicado' : 'Aplicar' }}
+          {{ hasAppliedCoupon ? "Aplicado" : "Aplicar" }}
           <template v-slot:loader>
             <span class="custom-loader">
               <v-icon light>mdi-cached</v-icon>
@@ -33,7 +37,7 @@
 
 <script>
 export default {
-  props: ['product'],
+  props: ["product"],
   data() {
     return {
       coupon: "",
@@ -43,34 +47,42 @@ export default {
   },
   computed: {
     hasAppliedCoupon() {
-      return Object.values(this.product.price.coupons)[0].applied;
+      return (
+        this.hasApplicableCoupon() &&
+        Object.values(this.product.price.coupons)[0].applied
+      );
     },
   },
   methods: {
     validateCoupon() {
       this.coupon = _.toUpper(this.coupon).trim();
       if (this.coupon) {
-        this.loading = true;
-        this.$store
-          .dispatch("coupon/validate", this.coupon)
-          .then((res) => {
-            this.verifyResponse(res);
-            this.loading = false;
-          })
-          .catch((err) => {
-            console.log(err);
-            this.loading = false;
-          });
+        if (this.hasApplicableCoupon()) {
+          this.loading = true;
+          this.$store
+            .dispatch("coupon/validate", this.coupon)
+            .then((res) => {
+              this.verifyResponse(res);
+              this.loading = false;
+            })
+            .catch((err) => {
+              console.log(err);
+              this.loading = false;
+            });
+        } else {
+          this.displayInvalidCoupon();
+        }
       }
+    },
+    hasApplicableCoupon() {
+      const hasApplicableCoupon = !_.isEmpty(this.product.price.coupons);
+      return hasApplicableCoupon;
     },
     verifyResponse(res) {
       const exists = res.data.coupon.exists;
       const expired = res.data.coupon.expired;
       if (!exists || expired) {
-        this.$store.commit(
-          "coupon/openSnackBar",
-          "El cupón introducido no es válido para este infoproducto"
-        );
+        this.displayInvalidCoupon();
       } else {
         this.applyDiscount();
         this.$store.commit(
@@ -79,11 +91,17 @@ export default {
         );
       }
     },
+    displayInvalidCoupon() {
+      this.$store.commit(
+        "coupon/openSnackBar",
+        "El cupón introducido no es válido para este infoproducto"
+      );
+    },
     applyDiscount() {
       const productCoupon = this.product.price.coupons.jmBrC2fs9y;
       const { discount, dollar, guarani } = productCoupon;
       const productPrice = this.product.price;
-      
+
       // Pasamos el precio actual como OLD
       this.product.price.dollar.old = productPrice.dollar.value;
       this.product.price.guarani.old = productPrice.guarani.value;
@@ -101,7 +119,7 @@ export default {
     getAppliedCoupon() {
       const coupon = Object.values(this.product.price.coupons)[0].value;
       return coupon;
-    }
+    },
   },
 };
 </script>

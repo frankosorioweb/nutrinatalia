@@ -71,20 +71,7 @@ prices[EBOOK].recetario = {
     guarani: {
         value: `50.000 ${money.symbols.guarani}`
     },
-    coupons: {
-        // Últimos 10 caracteres del encriptado
-        jmBrC2fs9y: {
-            discount: 20,
-            applied: false,
-            value: "",
-            dollar: {
-                value: `6 ${money.symbols.dollar}`,
-            },
-            guarani: {
-                value: `40.000 ${money.symbols.guarani}`,
-            }
-        }
-    }
+    coupons: {}
 }
 
 prices[EBOOK].ketoAyuno30Dias = {
@@ -96,20 +83,7 @@ prices[EBOOK].ketoAyuno30Dias = {
     guarani: {
         value: `220.000 ${money.symbols.guarani}`
     },
-    coupons: {
-        // Últimos 10 caracteres del encriptado
-        jmBrC2fs9y: {
-            discount: 20,
-            applied: false,
-            value: "",
-            dollar: {
-                value: `25.6 ${money.symbols.dollar}`,
-            },
-            guarani: {
-                value: `176.000 ${money.symbols.guarani}`,
-            }
-        }
-    }
+    coupons: {}
 }
 
 export default prices;
