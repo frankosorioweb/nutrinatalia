@@ -17,7 +17,7 @@ const products = [
         shortName: 'regalo-receta-favorita-pan',
         duration: 'Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones',
         description: 'Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.',
-        price: prices[WORKSHOP].off100Short,
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].off100Short)),
         driveLink: 'https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing',
         type: WORKSHOP,
         features: [{
@@ -52,7 +52,7 @@ const products = [
         shortName: 'comidas-tipicas-py-lowcarb',
         duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
         description: 'Aprende ejecutar las recetas de la cocina típica paraguaya en su versión baja en carbohidratos.',
-        price: prices[WORKSHOP].original,
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
         type: WORKSHOP,
         features: [
             {
@@ -97,7 +97,7 @@ const products = [
         shortName: 'dulces-saludables',
         duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
         description: 'Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.',
-        price: prices[WORKSHOP].original,
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
         type: WORKSHOP,
         features: [{
                 title: 'Acerca del taller',
@@ -143,7 +143,7 @@ const products = [
         shortName: '30-dias-keto-ayunos',
         pages: '+80',
         description: 'Te ayudo a iniciar en el estilo de vida keto, e incorporar el ayuno de forma progresiva e intuitiva sin forzar.',
-        price: prices[EBOOK].ketoAyuno30Dias,
+        price: JSON.parse(JSON.stringify(prices[EBOOK].ketoAyuno30Dias)),
         type: EBOOK,
         features: [{
                 list: false,
@@ -211,7 +211,7 @@ const products = [
         shortName: 'recetario-comida-tipica-py-lowcarb',
         pages: '+17',
         description: 'Accedé a las cinco recetas del taller comidas tipicas paraguayas vesión lowcarb.',
-        price: prices[EBOOK].recetario,
+        price: JSON.parse(JSON.stringify(prices[EBOOK].recetario)),
         type: EBOOK,
         features: [
             {
@@ -255,7 +255,7 @@ const products = [
         shortName: 'recetario-dulces-saludables',
         pages: '+17',
         description: 'Aprende a ejecutar las cinco recetas del taller dulces que nos hacen bien',
-        price: prices[EBOOK].recetario,
+        price: JSON.parse(JSON.stringify(prices[EBOOK].recetario)),
         type: EBOOK,
         features: [
             {

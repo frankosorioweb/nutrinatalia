@@ -72,9 +72,13 @@ export default {
     redirectToWhatsApp() {
       const whatsappSupport = this.$store.state.links.support.whatsapp;
       const url = `${whatsappSupport}?text=${encodeURIComponent(
-        `--Datos personales--\n•correo: ${this.email}\n•nombre: ${this.name} ${this.lastName}\n--Datos adicionales--\n•infoproducto: ${this.getProduct.name}\n•tipo: ${this.getProduct.type}\n(Obs.: No modificar el texto de arriba)`
+        `--Datos personales--\n•correo: ${this.email}\n•nombre: ${this.name} ${this.lastName}\n--Datos adicionales--\n•infoproducto: ${this.getProduct.name}\n•tipo: ${this.getProduct.type}\n${this.appendCoupon()}(Obs.: No modificar el texto de arriba)`
       )}`;
       window.open(url);
+    },
+    appendCoupon() {
+      const coupons = Object.values(this.getProduct.price.coupons)[0];
+      return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "" ;
     },
     showDialog(msg) {
       this.dialog.state = true;

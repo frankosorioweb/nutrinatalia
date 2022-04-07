@@ -8,11 +8,18 @@
           <payment :isFreeInfoProduct="this.isFreeInfoProduct"></payment>
         </v-col>
         <v-col cols="12" lg="7">
-          <coupon-box></coupon-box>
-          <product-card-responsive :data="getProduct" />
+          <v-row no-gutters>
+            <v-col cols="12" order-lg="last">
+              <coupon-box :product="getProduct"></coupon-box>
+            </v-col>
+            <v-col cols="12" order-lg="first">
+              <product-card-responsive :data="getProduct" />
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
+    <custom-snack-bar></custom-snack-bar>
   </v-main>
 </template>
 
@@ -22,15 +29,17 @@ import payment from "../components/cart/Payment/";
 import purchasePolicyAlert from "../components/cart/PurchasePolicyAlert.vue";
 import productCardResponsive from "../components/productCard/responsive.vue";
 import couponBox from "../components/couponBox/index.vue";
+import customSnackBar from "../components/couponBox/customSnackBar.vue";
 import { mapGetters } from "vuex";
-import store from '../store/index.js';
+import store from "../store/index.js";
 export default {
   components: {
     stepper,
     payment,
     productCardResponsive,
     purchasePolicyAlert,
-    couponBox
+    couponBox,
+    customSnackBar
   },
   computed: {
     ...mapGetters("products", ["getProductFromShortName"]),
@@ -41,25 +50,27 @@ export default {
     isFreeInfoProduct() {
       const discount = this.getProduct.price.discount;
 
-      if(discount && discount === 100) return true;
+      if (discount && discount === 100) return true;
       return false;
-    }
+    },
   },
-  beforeRouteLeave (to, from, next) {
-    this.$store.commit('stepper/resetSteeps');
+  beforeRouteLeave(to, from, next) {
+    this.$store.commit("stepper/resetSteeps");
     next();
   },
-  beforeRouteEnter (to, from, next) {
+  beforeRouteEnter(to, from, next) {
     const type = to.params.type;
     const shortName = to.params.shortName;
-    
-    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName) ? true : false;
-    
-    if(existsInfoproduct) {
+
+    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName)
+      ? true
+      : false;
+
+    if (existsInfoproduct) {
       next();
     } else {
-      next('/');
+      next("/");
     }
-  }
+  },
 };
 </script>
