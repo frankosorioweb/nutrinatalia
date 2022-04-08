@@ -4,7 +4,7 @@ const support = {
     whatsapp: onlineConsultationsPhone,
     onlineConsultations: {
         phone: onlineConsultationsPhone,
-        whatsapp: `https://wa.me/${onlineConsultationsPhone}?text=Hola, me gustaría conocer más acerca de las consultas online`
+        whatsapp: `https://wa.me/${onlineConsultationsPhone}?text=Hola, me gustaría conocer más sobre las consultas con la Nutrinatalia`
     },
     email: 'soporte@nutrinatalia.com'
 };
