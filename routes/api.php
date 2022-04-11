@@ -47,9 +47,9 @@ Route::get('/getPresentationVideoOgg', function () {
 Route::get('/validateCoupon/{coupon}', function ($coupon) {
     $coupons = [
         [
-            "value"     => "SOYDELATRIBU",
+            "value"     => "KETOAYUNOFF",
             "percetage" => "20",
-            "validUpTo" => "10-04-2022"
+            "validUpTo" => "17-04-2022"
         ]
     ];
 
