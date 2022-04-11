@@ -1,7 +1,7 @@
 <template>
-  <div class="support-page">
+  <div class="support-page mt-14">
     <div class="img-bg support-bg"></div>
-    <v-main class="mt-14">
+    <v-main>
       <v-container>
         <h1 class="text-center primary-font">Soporte</h1>
         <p class="mx-auto text-center description">
@@ -44,6 +44,7 @@
 
 <style lang="scss">
 .support-page {
+  height: max(30rem, 100vh);
   .description,
   .buttons-container {
     max-width: 36rem;
