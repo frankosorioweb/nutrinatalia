@@ -50,7 +50,7 @@
   width: 100vw;
   height: 100%;
   &.online-consultations {
-    background-image: url("/img/posters/consultas-online.jpg");
+    background-image: url("/img/posters/consultas.jpg");
   }
 }
 </style>
