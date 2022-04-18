@@ -26,7 +26,8 @@ const getters = {
     getTestimonials: (state) => state.testimonials,
     verifyInfoproduct: (state) => (type, shortName) => {
         return state.products.products.find(item => _.lowerCase(item.type) === _.lowerCase(type) && item.shortName === shortName)
-    }
+    },
+    isChallengeRoute: (state) => (vm) => vm.$route.path.split('/')[1] === 'reto'
 };
 
 const store = new Vuex.Store({

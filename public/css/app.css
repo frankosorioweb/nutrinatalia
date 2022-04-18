@@ -194,6 +194,10 @@
   font-size: 0.875rem;
 }
 
+html {
+  overflow-y: auto !important;
+}
+
 img {
   vertical-align: middle;
 }

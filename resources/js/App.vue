@@ -3,7 +3,7 @@
     <app-header />
     <app-navigation-drawer />
     <router-view />
-    <app-footer />
+    <app-footer v-if="!$store.getters.isChallengeRoute(this)"/>
     <support-button />
   </v-app>
 </template>

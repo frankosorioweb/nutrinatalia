@@ -4,6 +4,7 @@ import Details from '../pages/Details.vue';
 import Cart from '../pages/Cart.vue';
 import Support from '../pages/Support.vue';
 import OnlineConsultations from '../pages/OnlineConsultations.vue';
+const ChallengeKetoAyunoV4 = () => import('../pages/ChallengeKetoAyunoV4.vue');
 
 import productTypes from '../store/modules/productTypes';
 const {
@@ -63,6 +64,11 @@ const routes = [
         name: 'online-consultations',
         path: '/consultas',
         component: OnlineConsultations
+    },
+    {
+        name: 'challenge-15-dias-keto-ayuno-v4',
+        path: '/reto/15-dias-keto-ayuno-v4',
+        component: ChallengeKetoAyunoV4,
     },
     {
         path: '*',
