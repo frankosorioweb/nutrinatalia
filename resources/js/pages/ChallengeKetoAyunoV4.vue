@@ -1,7 +1,14 @@
 <template>
-  <div class="reto-page h-100 mt-14">
-    <v-main>
-      <p>Reto 15 Keto</p>
-    </v-main>
-  </div>
+  <v-main class="challenge-page h-100 pt-14">
+    <section-presentation/>
+  </v-main>
 </template>
+
+<script>
+import sectionPresentation from "../components/challengeKetoAyunoV4/sections/presentation.vue";
+export default {
+  components: {
+    sectionPresentation
+  }
+}
+</script>

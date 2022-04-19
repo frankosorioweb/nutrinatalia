@@ -1,0 +1,22 @@
+.small-calendar {
+  width: auto;
+  font-weight: 600;
+  
+  .primary-text {
+    font-size: .9375rem;
+  }
+
+  .secondary-text {
+    font-size: .8125rem;
+    font-weight: 300;
+  }
+  .date {
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .square {
+    width: 100%;
+    height: 100%;
+    background-color: $secondary-color;
+  }
+}
