@@ -1,15 +1,5 @@
 <template>
-  <div
-    class="
-      small-calendar
-      d-inline-block
-      black
-      rounded
-      primary-font
-      lh-1
-      py-2 px-3
-    "
-  >
+  <div class="small-calendar d-inline-block black rounded primary-font lh-1 py-2 px-3">
     <v-row align="center">
       <v-col cols="auto pr-2">
         <div class="text-center">

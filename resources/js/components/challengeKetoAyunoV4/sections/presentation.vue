@@ -2,7 +2,7 @@
   <section class="section-presentation white--text">
     <img class="hero d-block" src="/img/landing-reto/keto.jpg" alt="bg" />
     <div class="hero-gradient"></div>
-    <div class="content d-block pa-14">
+    <div class="content d-block text-center text-lg-left mx-auto mx-lg-0 pa-4 pa-lg-14">
       <h1 class="primary-font main-title lh-1 mb-5">
         <span class="secondary-color">Reto</span> 15 Días Keto + Ayuno
         <span class="secondary-color">versión 4.0</span>

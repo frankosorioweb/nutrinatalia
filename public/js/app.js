@@ -45022,7 +45022,10 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "content d-block pa-14" },
+      {
+        staticClass:
+          "content d-block text-center text-lg-left mx-auto mx-lg-0 pa-4 pa-lg-14"
+      },
       [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("small-calendar")],
       1
     )
@@ -45083,7 +45086,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "\n    small-calendar\n    d-inline-block\n    black\n    rounded\n    primary-font\n    lh-1\n    py-2 px-3\n  "
+        "small-calendar d-inline-block black rounded primary-font lh-1 py-2 px-3"
     },
     [
       _c(
