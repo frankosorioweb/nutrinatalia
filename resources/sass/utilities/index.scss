@@ -19,6 +19,10 @@ a {
     background: linear-gradient(180deg, $primary-color 0%, $secondary-color 100%);
 }
 
+.gradient-bg-secondary {
+    background: linear-gradient(90.51deg, $secondary-color 30.52%, transparentize($secondary-color, 0.5) 100%);
+}
+
 .primary-color {
     color: $primary-color;
 }
@@ -28,11 +32,11 @@ a {
 }
 
 .primary-bg {
-    background-color: $primary-color;
+    background-color: $primary-color !important;
 }
 
 .secondary-bg {
-    background-color: $secondary-color;
+    background-color: $secondary-color !important;
 }
 
 .fb-color {

@@ -30,7 +30,7 @@
       <v-col cols="12" md="6">
         <div class="content">
           <div
-            class="img rounded-lg"
+            class="img small-content rounded-lg"
             style="background-image: url('/img/landing-reto/stop.jpg')"
           ></div>
         </div>

@@ -1,7 +1,7 @@
 @import '~vuetify/src/styles/settings/_variables';
 @import "./sectionPresentation.scss";
-@import "./sectionNotSuitable.scss";
 @import "./smallCalendar.scss";
+@import "./footer.scss";
 
 .challenge-page {
   .content {
@@ -24,7 +24,11 @@
 
       @media #{map-get($display-breakpoints, 'lg-and-up')} {
         min-height: 0;
+        &.small-content {
+          min-height: 22.25rem;
+        }
       }
+
     }
 
     .list-info {

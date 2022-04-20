@@ -215,16 +215,11 @@
 }
 .challenge-page .section-presentation .description {
   font-size: 1.125rem;
+  line-height: normal;
 }
 .challenge-page .section-presentation .description .strong {
   font-weight: 600;
   color: #000000;
-}
-
-@media only screen and (min-width: 1264px) {
-  .section-not-suitable .img {
-    min-height: 22.25rem !important;
-  }
 }
 
 .small-calendar {
@@ -248,6 +243,12 @@
   background-color: #764191;
 }
 
+.challenge-footer {
+  border-top-width: 5px;
+  border-top-style: solid;
+  border-top-color: #00959B !important;
+}
+
 .challenge-page .content {
   height: 100%;
 }
@@ -269,6 +270,9 @@
 @media only screen and (min-width: 1264px) {
   .challenge-page .content .img {
     min-height: 0;
+  }
+  .challenge-page .content .img.small-content {
+    min-height: 22.25rem;
   }
 }
 .challenge-page .content .list-info {
@@ -310,6 +314,10 @@ a {
   background: linear-gradient(180deg, #00959B 0%, #764191 100%);
 }
 
+.gradient-bg-secondary {
+  background: linear-gradient(90.51deg, #764191 30.52%, rgba(118, 65, 145, 0.5) 100%);
+}
+
 .primary-color {
   color: #00959B;
 }
@@ -319,11 +327,11 @@ a {
 }
 
 .primary-bg {
-  background-color: #00959B;
+  background-color: #00959B !important;
 }
 
 .secondary-bg {
-  background-color: #764191;
+  background-color: #764191 !important;
 }
 
 .fb-color {
