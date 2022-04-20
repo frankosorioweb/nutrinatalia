@@ -1,0 +1,9 @@
+@import '~vuetify/src/styles/settings/_variables';
+
+.section-not-suitable {
+  .img {
+    @media #{map-get($display-breakpoints, 'lg-and-up')} {
+      min-height: 22.25rem !important;
+    }
+  }
+}
