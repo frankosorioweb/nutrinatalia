@@ -3092,9 +3092,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      email: "",
+      name: "",
+      phone: "",
+      dialog: {
+        state: false,
+        msg: ""
+      }
+    };
+  },
+  methods: {
+    reserveAction: function reserveAction() {
+      this.trimData();
+
+      if (this.validateForm()) {
+        this.redirectToWhatsApp();
+      }
+    },
+    trimData: function trimData() {
+      this.email = this.email.trim();
+      this.name = this.name.trim();
+      this.phone = this.phone.trim();
+    },
+    showDialog: function showDialog(msg) {
+      this.dialog = {
+        state: true,
+        msg: msg
+      };
+    },
+    validateForm: function validateForm() {
+      var pass = true;
+      var re = /\S+@\S+\.\S+/;
+      var validEmail = re.test(this.email);
+
+      if (!validEmail) {
+        pass = false;
+        this.showDialog("El email ingresado no es válido");
+      } else if (_.isEmpty(this.name) || _.isEmpty(this.phone)) {
+        pass = false;
+        this.showDialog("Debe completar todos los campos");
+      }
+
+      return pass;
+    },
+    redirectToWhatsApp: function redirectToWhatsApp() {
+      var whatsappSupport = this.$store.state.links.support.whatsapp;
+      var url = "".concat(whatsappSupport, "?text=").concat(encodeURIComponent("Hola, deseo inscribirme al Reto 15 D\xEDas Keto + Ayuno v4.0\n--Datos personales--\n\u2022Correo: ".concat(this.email, "\n\u2022Nombres y Apellidos: ").concat(this.name, "\n\u2022Celular: ").concat(this.phone, "\n(Obs.: No modificar el texto de arriba)")));
+      window.open(url);
+    }
   }
 });
 
@@ -46012,6 +46076,55 @@ var render = function() {
     },
     [
       _c(
+        "v-dialog",
+        {
+          attrs: { persistent: "", "max-width": "290" },
+          model: {
+            value: _vm.dialog.state,
+            callback: function($$v) {
+              _vm.$set(_vm.dialog, "state", $$v)
+            },
+            expression: "dialog.state"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", { staticClass: "text-h5" }, [
+                _vm._v(" Atención ")
+              ]),
+              _vm._v(" "),
+              _c("v-card-text", [_vm._v(_vm._s(_vm.dialog.msg))]),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary", text: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog.state = false
+                        }
+                      }
+                    },
+                    [_vm._v("\n          Aceptar\n        ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
         "v-row",
         [
           _c("v-col", { attrs: { cols: "12", md: "6" } }, [
@@ -46105,6 +46218,13 @@ var render = function() {
                                           "Ingrese su dirección de correo electrónico",
                                         "hide-details": "",
                                         solo: ""
+                                      },
+                                      model: {
+                                        value: _vm.email,
+                                        callback: function($$v) {
+                                          _vm.email = $$v
+                                        },
+                                        expression: "email"
                                       }
                                     })
                                   ],
@@ -46134,6 +46254,13 @@ var render = function() {
                                           "Ingrese sus nombres y apellidos",
                                         "hide-details": "",
                                         solo: ""
+                                      },
+                                      model: {
+                                        value: _vm.name,
+                                        callback: function($$v) {
+                                          _vm.name = $$v
+                                        },
+                                        expression: "name"
                                       }
                                     })
                                   ],
@@ -46162,6 +46289,13 @@ var render = function() {
                                         label: "Ingrese su número de celular",
                                         "hide-details": "",
                                         solo: ""
+                                      },
+                                      model: {
+                                        value: _vm.phone,
+                                        callback: function($$v) {
+                                          _vm.phone = $$v
+                                        },
+                                        expression: "phone"
                                       }
                                     })
                                   ],
@@ -46175,7 +46309,10 @@ var render = function() {
                                 [
                                   _c(
                                     "v-btn",
-                                    { attrs: { color: "primary", block: "" } },
+                                    {
+                                      attrs: { color: "primary", block: "" },
+                                      on: { click: _vm.reserveAction }
+                                    },
                                     [
                                       _c(
                                         "v-icon",
@@ -66957,12 +67094,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VContainer.js");
-/* harmony import */ var vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VForm */ "./node_modules/vuetify/lib/components/VForm/VForm.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-/* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/VTextField.js");
+/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/VCard.js");
+/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VContainer.js");
+/* harmony import */ var vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VDialog */ "./node_modules/vuetify/lib/components/VDialog/VDialog.js");
+/* harmony import */ var vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VForm */ "./node_modules/vuetify/lib/components/VForm/VForm.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VSpacer.js");
+/* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/VTextField.js");
 
 
 
@@ -66990,7 +67131,13 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"],VForm: vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_7__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_8__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_9__["default"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_10__["default"]})
+
+
+
+
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["default"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardActions,VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardText,VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardTitle,VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["default"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["default"],VDialog: vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__["default"],VForm: vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_10__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_11__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_12__["default"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_13__["default"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_14__["default"]})
 
 
 /* hot reload */

@@ -3,6 +3,19 @@
     id="section-inscription"
     class="section-inscription pa-4 pa-lg-14 gradient-bg white--text"
   >
+    <v-dialog v-model="dialog.state" persistent max-width="290">
+      <v-card>
+        <v-card-title class="text-h5"> Atención </v-card-title>
+        <v-card-text>{{ dialog.msg }}</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialog.state = false">
+            Aceptar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
     <v-row>
       <v-col cols="12" md="6">
         <div class="content">
@@ -48,6 +61,7 @@
                       >
                       <v-text-field
                         id="email"
+                        v-model="email"
                         label="Ingrese su dirección de correo electrónico"
                         hide-details=""
                         solo
@@ -63,6 +77,7 @@
                       >
                       <v-text-field
                         id="name"
+                        v-model="name"
                         label="Ingrese sus nombres y apellidos"
                         hide-details=""
                         solo
@@ -78,6 +93,7 @@
                       >
                       <v-text-field
                         id="phone"
+                        v-model="phone"
                         label="Ingrese su número de celular"
                         hide-details=""
                         solo
@@ -85,7 +101,7 @@
                     </div>
                   </v-col>
                   <v-col cols="12">
-                    <v-btn color="primary" block>
+                    <v-btn @click="reserveAction" color="primary" block>
                       <v-icon left size="25px">mdi-whatsapp</v-icon>
                       Reservar mi lugar
                     </v-btn>
@@ -111,7 +127,56 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      email: "",
+      name: "",
+      phone: "",
+      dialog: {
+        state: false,
+        msg: "",
+      },
+    };
+  },
+  methods: {
+    reserveAction() {
+      this.trimData();
+      if(this.validateForm()) {
+        this.redirectToWhatsApp();
+      }
+    },
+    trimData() {
+      this.email = this.email.trim();
+      this.name  = this.name.trim();
+      this.phone = this.phone.trim();
+    },
+    showDialog(msg) {
+      this.dialog = {
+        state: true,
+        msg,
+      };
+    },
+    validateForm() {
+      let pass = true;
+      const re = /\S+@\S+\.\S+/;
+      const validEmail = re.test(this.email);
+
+      if (!validEmail) {
+        pass = false;
+        this.showDialog("El email ingresado no es válido");
+      } else if (_.isEmpty(this.name) || _.isEmpty(this.phone)) {
+        pass = false;
+        this.showDialog("Debe completar todos los campos");
+      }
+
+      return pass;
+    },
+    redirectToWhatsApp() {
+      const whatsappSupport = this.$store.state.links.support.whatsapp;
+      const url = `${whatsappSupport}?text=${encodeURIComponent(
+        `Hola, deseo inscribirme al Reto 15 Días Keto + Ayuno v4.0\n--Datos personales--\n•Correo: ${this.email}\n•Nombres y Apellidos: ${this.name}\n•Celular: ${this.phone}\n(Obs.: No modificar el texto de arriba)`
+      )}`;
+      window.open(url);
+    }
   },
 };
 </script>
