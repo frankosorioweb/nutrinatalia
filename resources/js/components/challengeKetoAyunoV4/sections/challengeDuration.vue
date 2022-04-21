@@ -15,11 +15,27 @@
             ¿Cuando inicia el <span class="secondary-color">reto</span>?
           </h2>
           <div class="dates-wrapper white--text">
-            <div class="date mb-5">
-              <small-calendar/>
+            <div class="date d-inline-block mb-5">
+              <small-calendar
+                primaryText="El reto inicia el:"
+                secondaryText="DOMINGO"
+                :date="{
+                  day: '08',
+                  month: ['MA', 'YO'],
+                  year: ['20', '22'],
+                }"
+              />
             </div>
-            <div class="date">
-              <small-calendar/>
+            <div class="date d-inline-block">
+              <small-calendar
+                primaryText="El reto finaliza el:"
+                secondaryText="DOMINGO"
+                :date="{
+                  day: '22',
+                  month: ['MA', 'YO'],
+                  year: ['20', '22'],
+                }"
+              />
             </div>
           </div>
         </div>

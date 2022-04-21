@@ -38,7 +38,7 @@ export default {
     return {
       moreInfo: [
         "Grupo de WhatsApp guiado por la Nutri Natalia.",
-        "Videos en vivo a diario, por google meet, durante 15 días.",
+        "Videos a diario.",
         "Lista de compras, guías, recetas.",
         "Acceso de por vida a recursos en la nube.",
         "Respuestas a tus dudas diarias.",

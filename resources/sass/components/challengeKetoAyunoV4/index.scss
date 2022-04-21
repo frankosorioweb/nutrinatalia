@@ -4,6 +4,11 @@
 @import "./footer.scss";
 
 .challenge-page {
+  padding-bottom: 11.75rem !important;
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    padding-bottom: 9rem !important;
+  }
+
   .content {
     height: 100%;
 
