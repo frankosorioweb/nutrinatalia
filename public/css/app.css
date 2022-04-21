@@ -249,6 +249,13 @@
   background-color: #00959B;
 }
 
+.section-inscription .description {
+  font-size: 1.125rem;
+}
+.section-inscription .price-wrapper {
+  font-size: 1.25rem;
+}
+
 .challenge-footer {
   border-top-width: 5px;
   border-top-style: solid;
@@ -290,7 +297,7 @@
   }
 }
 .challenge-page .content .list-info {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .app-header .logo {
@@ -362,6 +369,10 @@ a {
 
 .lh-1 {
   line-height: 1;
+}
+
+.lh-normal {
+  line-height: normal !important;
 }
 
 .h-100 {

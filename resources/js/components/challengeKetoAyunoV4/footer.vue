@@ -16,13 +16,23 @@
         }"
       />
       <div class="cta text-center pt-3">
-        <v-btn color="error">¡RESERVAR MI LUGAR!</v-btn>
+        <v-btn
+          href="#section-inscription"
+          @click="
+            $vuetify.goTo('#section-inscription', {
+              offset: 56,
+            })
+          "
+          color="error"
+          >¡RESERVAR MI LUGAR!</v-btn
+        >
       </div>
     </div>
   </v-footer>
 </template>
 
 <script>
+import * as easings from "vuetify/lib/services/goto/easing-patterns";
 import smallCalendar from "./smallCalendar.vue";
 export default {
   components: {
@@ -61,7 +71,7 @@ export default {
         this.minutes = this.formatNum(0);
         this.seconds = this.formatNum(0);
 
-        if(timer) {
+        if (timer) {
           clearInterval(timer);
         }
         return;

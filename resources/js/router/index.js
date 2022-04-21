@@ -9,6 +9,17 @@ export default new VueRouter({
   mode: 'history',
   routes,
   scrollBehavior(to, from, savedPosition) {
+    if(to.hash) {
+      return {
+        selector: to.hash,
+        behavior: 'smooth',
+        offset: {
+          x: 0,
+          y: 56
+        }
+      }
+    }
+
     if(savedPosition === null) {
       savedPosition = {x:0, y:0}
     }

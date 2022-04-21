@@ -5,6 +5,7 @@
       <section-more-info/>
       <section-not-suitable/>
       <section-challenge-duration/>
+      <section-inscription/>
     </v-main>
     <app-footer/>
   </div>
@@ -15,6 +16,7 @@ import sectionPresentation from "../components/challengeKetoAyunoV4/sections/pre
 import sectionMoreInfo from "../components/challengeKetoAyunoV4/sections/moreInfo.vue";
 import sectionNotSuitable from "../components/challengeKetoAyunoV4/sections/notSuitable.vue";
 import sectionChallengeDuration from "../components/challengeKetoAyunoV4/sections/challengeDuration.vue";
+import sectionInscription from "../components/challengeKetoAyunoV4/sections/inscription.vue";
 import appFooter from "../components/challengeKetoAyunoV4/footer.vue";
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     sectionMoreInfo,
     sectionNotSuitable,
     sectionChallengeDuration,
+    sectionInscription,
     appFooter
   },
 }

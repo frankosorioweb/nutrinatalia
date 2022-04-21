@@ -1,6 +1,7 @@
 @import '~vuetify/src/styles/settings/_variables';
 @import "./sectionPresentation.scss";
 @import "./smallCalendar.scss";
+@import "./sectionInscription.scss";
 @import "./footer.scss";
 
 .challenge-page {
@@ -37,7 +38,7 @@
     }
 
     .list-info {
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 }

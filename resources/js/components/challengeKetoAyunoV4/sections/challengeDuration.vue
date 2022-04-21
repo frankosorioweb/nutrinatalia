@@ -4,7 +4,7 @@
       <v-col cols="12" md="6">
         <div class="content">
           <div
-            class="img small-content rounded-lg"
+            class="img small-content rounded-lg elevation-5"
             style="background-image: url('/img/landing-reto/pesaje.jpg')"
           ></div>
         </div>

@@ -6,7 +6,7 @@
           <h2 class="main-title primary-font mb-5 text-center text-md-left">
             Este reto <span class="black--text">¡NO!</span> es para:
           </h2>
-          <ul class="list-style-type-none pl-0">
+          <ul class="list list-style-type-none pl-0 lh-normal">
             <li class="py-2" v-for="(item, index) in list" :key="index">
               <v-row no-gutters align="center">
                 <v-col cols="auto mr-2">
@@ -30,7 +30,7 @@
       <v-col cols="12" md="6">
         <div class="content">
           <div
-            class="img small-content rounded-lg"
+            class="img small-content rounded-lg elevation-5"
             style="background-image: url('/img/landing-reto/stop.jpg')"
           ></div>
         </div>
