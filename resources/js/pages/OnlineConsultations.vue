@@ -1,8 +1,8 @@
 <template>
-  <div class="online-consultations-page mt-14">
-    <div class="img-bg online-consultations" :class="{ 'bg-position-left': $vuetify.breakpoint.name === 'xs' }"></div>
-    <v-main>
-      <v-container class="main-container ml-lg-14 text-center text-lg-left">
+  <!-- <div class="online-consultations-page"> -->
+    <v-main class="online-consultations-page">
+      <div class="img-bg online-consultations" :class="{ 'bg-position-left': $vuetify.breakpoint.name === 'xs' }"></div>
+      <v-container class="main-container ml-lg-14 pt-5 text-center text-lg-left">
         <h1 class="mt-lg-14 primary-font">
           Consultas online y presenciales
         </h1>
@@ -28,18 +28,20 @@
         </div>
       </v-container>
     </v-main>
-  </div>
+  <!-- </div> -->
 </template>
 
 <style lang="scss">
 .online-consultations-page {
+  position: relative;
   .main-container {
     max-width: 36rem;
+    position: relative;
+    min-height: 100vh;
   }
   .bg-position-left {
     background-position-x: -5.5rem !important;
   }
-  height: max(30rem, 100vh);
 }
 .img-bg {
   position: absolute;

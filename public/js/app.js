@@ -2069,6 +2069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_NavigationDrawer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./layouts/NavigationDrawer.vue */ "./resources/js/layouts/NavigationDrawer.vue");
 /* harmony import */ var _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layouts/Footer.vue */ "./resources/js/layouts/Footer.vue");
 /* harmony import */ var _layouts_SupportButton_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layouts/SupportButton.vue */ "./resources/js/layouts/SupportButton.vue");
+/* harmony import */ var _layouts_BannerChallengeKetoAyunoV4_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layouts/BannerChallengeKetoAyunoV4.vue */ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue");
 //
 //
 //
@@ -2079,6 +2080,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -2088,7 +2091,8 @@ __webpack_require__.r(__webpack_exports__);
     appHeader: _layouts_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     appNavigationDrawer: _layouts_NavigationDrawer_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     appFooter: _layouts_Footer_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    supportButton: _layouts_SupportButton_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    supportButton: _layouts_SupportButton_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    bannerChallenge: _layouts_BannerChallengeKetoAyunoV4_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 
@@ -2780,736 +2784,6 @@ __webpack_require__.r(__webpack_exports__);
     showPurchasePolicyDialog: function showPurchasePolicyDialog() {
       this.dialog.state = true;
     }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./smallCalendar.vue */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    smallCalendar: _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  data: function data() {
-    return {
-      days: "",
-      hours: "",
-      minutes: "",
-      seconds: ""
-    };
-  },
-  computed: {
-    _seconds: function _seconds() {
-      return 1000;
-    },
-    _minutes: function _minutes() {
-      return this._seconds * 60;
-    },
-    _hours: function _hours() {
-      return this._minutes * 60;
-    },
-    _days: function _days() {
-      return this._hours * 24;
-    }
-  },
-  methods: {
-    formatNum: function formatNum(num) {
-      return num < 10 ? "0".concat(num) : num;
-    },
-    showRemaining: function showRemaining(timer) {
-      var now = new Date();
-      var end = new Date(2022, 4, 5);
-      var distance = end.getTime() - now.getTime();
-
-      if (distance < 0) {
-        this.days = this.formatNum(0);
-        this.hours = this.formatNum(0);
-        this.minutes = this.formatNum(0);
-        this.seconds = this.formatNum(0);
-
-        if (timer) {
-          clearInterval(timer);
-        }
-
-        return;
-      }
-
-      var days = Math.floor(distance / this._days);
-      var hours = Math.floor(distance % this._days / this._hours);
-      var minutes = Math.floor(distance % this._hours / this._minutes);
-      var seconds = Math.floor(distance % this._minutes / this._seconds);
-      this.days = this.formatNum(days);
-      this.hours = this.formatNum(hours);
-      this.minutes = this.formatNum(minutes);
-      this.seconds = this.formatNum(seconds);
-    }
-  },
-  created: function created() {
-    this.showRemaining();
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var timer = setInterval(function () {
-      _this.showRemaining(timer);
-    }, 1000);
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../smallCalendar.vue */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    smallCalendar: _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      email: "",
-      name: "",
-      phone: "",
-      dialog: {
-        state: false,
-        msg: ""
-      }
-    };
-  },
-  methods: {
-    reserveAction: function reserveAction() {
-      this.trimData();
-
-      if (this.validateForm()) {
-        this.redirectToWhatsApp();
-      }
-    },
-    trimData: function trimData() {
-      this.email = this.email.trim();
-      this.name = this.name.trim();
-      this.phone = this.phone.trim();
-    },
-    showDialog: function showDialog(msg) {
-      this.dialog = {
-        state: true,
-        msg: msg
-      };
-    },
-    validateForm: function validateForm() {
-      var pass = true;
-      var re = /\S+@\S+\.\S+/;
-      var validEmail = re.test(this.email);
-
-      if (!validEmail) {
-        pass = false;
-        this.showDialog("El email ingresado no es válido");
-      } else if (_.isEmpty(this.name) || _.isEmpty(this.phone)) {
-        pass = false;
-        this.showDialog("Debe completar todos los campos");
-      }
-
-      return pass;
-    },
-    redirectToWhatsApp: function redirectToWhatsApp() {
-      var whatsappSupport = this.$store.state.links.support.whatsapp;
-      var url = "".concat(whatsappSupport, "?text=").concat(encodeURIComponent("Hola, deseo inscribirme al Reto 15 D\xEDas Keto + Ayuno v4.0\n--Datos personales--\n\u2022Correo: ".concat(this.email, "\n\u2022Nombres y Apellidos: ").concat(this.name, "\n\u2022Celular: ").concat(this.phone, "\n(Obs.: No modificar el texto de arriba)")));
-      window.open(url);
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      moreInfo: ["Tendrás el contenido en videos diarios.", "Serás parte del grupo de WhatsApp guiado por la Nutri Natalia.", "Recibirás: lista de compras, guías y recetas.", "Tendrás acceso de por vida a recursos en la nube.", "Despejarás todas tus dudas diarias.", "Obtendrás descuentos exclusivos en la academia.", "Formarás parte de la Tribu de la Nutri Natalia."]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      list: ["Embarazadas o mujeres lactantes.", "Menores de 18 años.", "Personas con enfermedades de base.", "Personas con medicaciones específicas."]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../smallCalendar.vue */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    smallCalendar: _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["red", "primaryText", "secondaryText", "date", "countDown"],
-  data: function data() {
-    return {
-      cols: this.countDown ? 3 : 4,
-      countDownClass: {
-        'flex-column': !_.isEmpty(this.countDown),
-        'flex-sm-row': !_.isEmpty(this.countDown)
-      },
-      textWrapperClass: {
-        'pb-0': !_.isEmpty(this.countDown),
-        'pb-sm-3': !_.isEmpty(this.countDown)
-      },
-      textWrapperColClass: {
-        'ml-3': !_.isEmpty(this.countDown),
-        'ml-sm-0': !_.isEmpty(this.countDown)
-      },
-      smallClendarClass: {
-        'count-down': !_.isEmpty(this.countDown)
-      },
-      squareClass: {
-        'red darken-4': this.red
-      }
-    };
-  },
-  mounted: function mounted() {
-    console.log(this.red);
   }
 });
 
@@ -5048,55 +4322,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _components_challengeKetoAyunoV4_sections_presentation_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/sections/presentation.vue */ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue");
-/* harmony import */ var _components_challengeKetoAyunoV4_sections_moreInfo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/sections/moreInfo.vue */ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue");
-/* harmony import */ var _components_challengeKetoAyunoV4_sections_notSuitable_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/sections/notSuitable.vue */ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue");
-/* harmony import */ var _components_challengeKetoAyunoV4_sections_challengeDuration_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/sections/challengeDuration.vue */ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue");
-/* harmony import */ var _components_challengeKetoAyunoV4_sections_inscription_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/sections/inscription.vue */ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue");
-/* harmony import */ var _components_challengeKetoAyunoV4_footer_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/footer.vue */ "./resources/js/components/challengeKetoAyunoV4/footer.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  components: {
-    sectionPresentation: _components_challengeKetoAyunoV4_sections_presentation_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    sectionMoreInfo: _components_challengeKetoAyunoV4_sections_moreInfo_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    sectionNotSuitable: _components_challengeKetoAyunoV4_sections_notSuitable_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    sectionChallengeDuration: _components_challengeKetoAyunoV4_sections_challengeDuration_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    sectionInscription: _components_challengeKetoAyunoV4_sections_inscription_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    appFooter: _components_challengeKetoAyunoV4_footer_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Details.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Details.vue?vue&type=script&lang=js& ***!
@@ -5406,6 +4631,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5588,8 +4814,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Cart_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Cart.vue */ "./resources/js/pages/Cart.vue");
 /* harmony import */ var _pages_Support_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/Support.vue */ "./resources/js/pages/Support.vue");
 /* harmony import */ var _pages_OnlineConsultations_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/OnlineConsultations.vue */ "./resources/js/pages/OnlineConsultations.vue");
-/* harmony import */ var _pages_ChallengeKetoAyunoV4_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/ChallengeKetoAyunoV4.vue */ "./resources/js/pages/ChallengeKetoAyunoV4.vue");
-/* harmony import */ var _store_modules_productTypes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../store/modules/productTypes */ "./resources/js/store/modules/productTypes.js");
+/* harmony import */ var _store_modules_productTypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/modules/productTypes */ "./resources/js/store/modules/productTypes.js");
 
 
 
@@ -5597,8 +4822,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var ChallengeKetoAyunoV4 = function ChallengeKetoAyunoV4() {
+  return __webpack_require__.e(/*! import() */ "resources_js_pages_ChallengeKetoAyunoV4_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/ChallengeKetoAyunoV4.vue */ "./resources/js/pages/ChallengeKetoAyunoV4.vue"));
+};
 
-var _productTypes$state$t = _store_modules_productTypes__WEBPACK_IMPORTED_MODULE_7__["default"].state.types,
+
+var _productTypes$state$t = _store_modules_productTypes__WEBPACK_IMPORTED_MODULE_6__["default"].state.types,
     WORKSHOP = _productTypes$state$t.WORKSHOP,
     EBOOK = _productTypes$state$t.EBOOK;
 var routes = [{
@@ -5648,7 +4877,7 @@ var routes = [{
 }, {
   name: 'challenge-15-dias-keto-ayuno-v4',
   path: '/reto/15-dias-keto-ayuno-v4',
-  component: _pages_ChallengeKetoAyunoV4_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+  component: ChallengeKetoAyunoV4
 }, {
   path: '*',
   redirect: {
@@ -11746,6 +10975,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-subheader {\n  color: 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass ***!
+  \******************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/* Theme */\n.theme--light.v-system-bar {\n  background-color: #e0e0e0;\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-system-bar .v-icon {\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-system-bar--lights-out {\n  background-color: rgba(255, 255, 255, 0.7) !important;\n}\n\n.theme--dark.v-system-bar {\n  background-color: #000000;\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-system-bar .v-icon {\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-system-bar--lights-out {\n  background-color: rgba(0, 0, 0, 0.2) !important;\n}\n\n.v-system-bar {\n  align-items: center;\n  display: flex;\n  font-size: 0.875rem;\n  font-weight: 400;\n  padding: 0 8px;\n}\n.v-system-bar .v-icon {\n  font-size: 1rem;\n  margin-right: 4px;\n}\n.v-system-bar--fixed, .v-system-bar--absolute {\n  left: 0;\n  top: 0;\n  width: 100%;\n  z-index: 3;\n}\n.v-system-bar--fixed {\n  position: fixed;\n}\n.v-system-bar--absolute {\n  position: absolute;\n}\n.v-system-bar--window .v-icon {\n  font-size: 1.25rem;\n  margin-right: 8px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VTextField/VTextField.sass":
 /*!******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VTextField/VTextField.sass ***!
@@ -11859,7 +11112,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".online-consultations-page {\n  height: max(30rem, 100vh);\n}\n.online-consultations-page .main-container {\n  max-width: 36rem;\n}\n.online-consultations-page .bg-position-left {\n  background-position-x: -5.5rem !important;\n}\n.img-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-size: cover;\n  background-position: center;\n  width: 100vw;\n  height: 100%;\n}\n.img-bg.online-consultations {\n  background-image: url(\"/img/posters/consultas.jpg\");\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".online-consultations-page {\n  position: relative;\n}\n.online-consultations-page .main-container {\n  max-width: 36rem;\n  position: relative;\n  min-height: 100vh;\n}\n.online-consultations-page .bg-position-left {\n  background-position-x: -5.5rem !important;\n}\n.img-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-size: cover;\n  background-position: center;\n  width: 100vw;\n  height: 100%;\n}\n.img-bg.online-consultations {\n  background-image: url(\"/img/posters/consultas.jpg\");\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11883,7 +11136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".support-page {\n  height: max(30rem, 100vh);\n}\n.support-page .description,\n.support-page .buttons-container {\n  max-width: 36rem;\n}\n.support-page .img-bg.support-bg {\n  background-image: url(\"/img/posters/soporte.jpg\");\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".support-page .description,\n.support-page .buttons-container {\n  max-width: 36rem;\n}\n.support-page .img-bg.support-bg {\n  background-image: url(\"/img/posters/soporte.jpg\");\n}\n.support-page .main-container {\n  min-height: 100vh;\n  position: relative;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -43652,118 +42905,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_challengeDuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./challengeDuration.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_challengeDuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inscription_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./inscription.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_inscription_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moreInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./moreInfo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_moreInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_notSuitable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./notSuitable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_notSuitable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_presentation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./presentation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_presentation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js& ***!
@@ -44132,22 +43273,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/pages/Details.vue?vue&type=script&lang=js&":
 /*!*****************************************************************!*\
   !*** ./resources/js/pages/Details.vue?vue&type=script&lang=js& ***!
@@ -44401,125 +43526,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PurchasePolicyAlert_vue_vue_type_template_id_20c7c845___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PurchasePolicyAlert_vue_vue_type_template_id_20c7c845___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PurchasePolicyAlert.vue?vue&type=template&id=20c7c845& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cart/PurchasePolicyAlert.vue?vue&type=template&id=20c7c845&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab& ***!
-  \************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./footer.vue?vue&type=template&id=3faf72ab& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906& ***!
-  \********************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./challengeDuration.vue?vue&type=template&id=1e0ab906& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87& ***!
-  \**************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./inscription.vue?vue&type=template&id=2785fe87& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8& ***!
-  \***********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./moreInfo.vue?vue&type=template&id=0c3a43f8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89& ***!
-  \**************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./notSuitable.vue?vue&type=template&id=20360f89& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b& ***!
-  \***************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./presentation.vue?vue&type=template&id=7c991b7b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
-  \*******************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
 
 
 /***/ }),
@@ -44847,6 +43853,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8&");
+
+
+/***/ }),
+
 /***/ "./resources/js/layouts/Footer.vue?vue&type=template&id=fbacad02&":
 /*!************************************************************************!*\
   !*** ./resources/js/layouts/Footer.vue?vue&type=template&id=fbacad02& ***!
@@ -44928,23 +43951,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_7908d3ae___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cart_vue_vue_type_template_id_7908d3ae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cart.vue?vue&type=template&id=7908d3ae& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Cart.vue?vue&type=template&id=7908d3ae&");
-
-
-/***/ }),
-
-/***/ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& ***!
-  \************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&");
 
 
 /***/ }),
@@ -45055,6 +44061,8 @@ var render = function() {
     { attrs: { app: "" } },
     [
       _c("app-header"),
+      _vm._v(" "),
+      _c("banner-challenge"),
       _vm._v(" "),
       _c("app-navigation-drawer"),
       _vm._v(" "),
@@ -45879,1058 +44887,6 @@ var render = function() {
                     },
                     [_vm._v("\n          Aceptar\n        ")]
                   )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab&":
-/*!***************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab& ***!
-  \***************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-footer",
-    {
-      staticClass:
-        "challenge-footer white--text justify-center gradient-bg-secondary",
-      attrs: { fixed: "", app: "" }
-    },
-    [
-      _c(
-        "div",
-        { staticClass: "content py-3" },
-        [
-          _c("small-calendar", {
-            attrs: {
-              primaryText: "Las inscripciones cierran en:",
-              secondaryText: "(cupos limitados)",
-              countDown: {
-                days: _vm.days,
-                hours: _vm.hours,
-                minutes: _vm.minutes,
-                seconds: _vm.seconds
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "cta text-center pt-3" },
-            [
-              _c(
-                "v-btn",
-                {
-                  attrs: { href: "#section-inscription", color: "error" },
-                  on: {
-                    click: function($event) {
-                      return _vm.$vuetify.goTo("#section-inscription", {
-                        offset: 56
-                      })
-                    }
-                  }
-                },
-                [_vm._v("¡RESERVAR MI LUGAR!")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ]
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906&":
-/*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    { staticClass: "section-challenge-duration pa-4 pa-lg-14" },
-    [
-      _c(
-        "v-row",
-        [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img small-content rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image": "url('/img/landing-reto/pesaje.jpg')"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content text-center" }, [
-              _c("h2", { staticClass: "main-title primary-font mb-8" }, [
-                _vm._v("\n          ¿Cuando inicia el "),
-                _c("span", { staticClass: "secondary-color" }, [
-                  _vm._v("reto")
-                ]),
-                _vm._v("?\n        ")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "dates-wrapper white--text" }, [
-                _c(
-                  "div",
-                  { staticClass: "date mb-3" },
-                  [
-                    _c("small-calendar", {
-                      attrs: {
-                        primaryText: "El reto inicia el:",
-                        secondaryText: "DOMINGO",
-                        date: {
-                          day: "08",
-                          month: ["MA", "YO"],
-                          year: ["20", "22"]
-                        }
-                      }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "date mb-3" },
-                  [
-                    _c("small-calendar", {
-                      attrs: {
-                        primaryText: "El reto finaliza el:",
-                        secondaryText: "DOMINGO",
-                        date: {
-                          day: "22",
-                          month: ["MA", "YO"],
-                          year: ["20", "22"]
-                        }
-                      }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "date mb-5" },
-                  [
-                    _c("small-calendar", {
-                      attrs: {
-                        primaryText: "Inscripciones hasta el:",
-                        secondaryText: "JUEVES",
-                        red: true,
-                        date: {
-                          day: "05",
-                          month: ["MA", "YO"],
-                          year: ["20", "22"]
-                        }
-                      }
-                    })
-                  ],
-                  1
-                )
-              ])
-            ])
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    {
-      staticClass: "section-inscription pa-4 pa-lg-14 gradient-bg white--text",
-      attrs: { id: "section-inscription" }
-    },
-    [
-      _c(
-        "v-dialog",
-        {
-          attrs: { persistent: "", "max-width": "290" },
-          model: {
-            value: _vm.dialog.state,
-            callback: function($$v) {
-              _vm.$set(_vm.dialog, "state", $$v)
-            },
-            expression: "dialog.state"
-          }
-        },
-        [
-          _c(
-            "v-card",
-            [
-              _c("v-card-title", { staticClass: "text-h5" }, [
-                _vm._v(" Atención ")
-              ]),
-              _vm._v(" "),
-              _c("v-card-text", [_vm._v(_vm._s(_vm.dialog.msg))]),
-              _vm._v(" "),
-              _c(
-                "v-card-actions",
-                [
-                  _c("v-spacer"),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      attrs: { color: "primary", text: "" },
-                      on: {
-                        click: function($event) {
-                          _vm.dialog.state = false
-                        }
-                      }
-                    },
-                    [_vm._v("\n          Aceptar\n        ")]
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-row",
-        [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "main-title primary-font mb-5 text-center text-md-left"
-                },
-                [
-                  _vm._v("\n          ¡Inscribite "),
-                  _c("span", { staticClass: "black--text" }, [_vm._v("ahora")]),
-                  _vm._v("!\n        ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n            price-wrapper\n            white\n            rounded\n            pa-3\n            mb-4\n            font-weight-bold\n            text-center\n            elevation-5\n          "
-                },
-                [
-                  _c(
-                    "p",
-                    { staticClass: "d-inline-block primary-color mb-0" },
-                    [_vm._v("Inversión:")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticClass:
-                        "d-inline-block mb-0 red--text text--darken-4"
-                    },
-                    [_vm._v("\n            150.000 Gs (22 USD).\n          ")]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "description lh-normal mb-4" }, [
-                _c("p", { staticClass: "text-center text-md-left" }, [
-                  _vm._v(
-                    "\n            Completá tus datos para que el equipo de ventas pueda comunicarse\n            contigo en la brevedad posible y puedas\n            "
-                  ),
-                  _c(
-                    "span",
-                    { staticClass: "text--primary font-weight-bold" },
-                    [_vm._v("\n              reservar tu lugar.\n            ")]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "inscription-form-wrapper" },
-                [
-                  _c(
-                    "v-form",
-                    {
-                      staticClass:
-                        "inscription-form white elevation-5 rounded pa-3"
-                    },
-                    [
-                      _c(
-                        "v-container",
-                        [
-                          _c(
-                            "v-row",
-                            [
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "email" }
-                                      },
-                                      [_vm._v("Correo electrónico:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "email",
-                                        label:
-                                          "Ingrese su dirección de correo electrónico",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.email,
-                                        callback: function($$v) {
-                                          _vm.email = $$v
-                                        },
-                                        expression: "email"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "name" }
-                                      },
-                                      [_vm._v("Nombres y Apellidos:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "name",
-                                        label:
-                                          "Ingrese sus nombres y apellidos",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.name,
-                                        callback: function($$v) {
-                                          _vm.name = $$v
-                                        },
-                                        expression: "name"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "phone" }
-                                      },
-                                      [_vm._v("Celular:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "phone",
-                                        label: "Ingrese su número de celular",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.phone,
-                                        callback: function($$v) {
-                                          _vm.phone = $$v
-                                        },
-                                        expression: "phone"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "v-col",
-                                { attrs: { cols: "12" } },
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { color: "primary", block: "" },
-                                      on: { click: _vm.reserveAction }
-                                    },
-                                    [
-                                      _c(
-                                        "v-icon",
-                                        { attrs: { left: "", size: "25px" } },
-                                        [_vm._v("mdi-whatsapp")]
-                                      ),
-                                      _vm._v(
-                                        "\n                    Reservar mi lugar\n                  "
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img small-content rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image": "url('/img/landing-reto/computer.jpg')"
-                }
-              })
-            ])
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8&":
-/*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8& ***!
-  \**************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    { staticClass: "section-more-info pa-4 pa-lg-14" },
-    [
-      _c(
-        "v-row",
-        [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image":
-                    "url('/img/landing-reto/nati-profesional.jpg')"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "main-title primary-font mb-5 text-center text-md-left"
-                },
-                [
-                  _vm._v("\n          ¿Por qué ser parte del "),
-                  _c("span", { staticClass: "secondary-color" }, [
-                    _vm._v("reto")
-                  ]),
-                  _vm._v("?\n        ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "list-style-type-none pl-0 lh-normal" },
-                _vm._l(_vm.moreInfo, function(info, index) {
-                  return _c(
-                    "li",
-                    { key: index, staticClass: "py-2" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "auto mr-2" } },
-                            [
-                              _c("v-icon", { attrs: { color: "primary" } }, [
-                                _vm._v("mdi-check-circle-outline")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "list-info text--primary" },
-                            [
-                              _vm._v(
-                                "\n                " +
-                                  _vm._s(info) +
-                                  "\n              "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                }),
-                0
-              )
-            ])
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    {
-      staticClass: "section-not-suitable pa-4 pa-lg-14 gradient-bg white--text"
-    },
-    [
-      _c(
-        "v-row",
-        [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "main-title primary-font mb-5 text-center text-md-left"
-                },
-                [
-                  _vm._v("\n          Este reto "),
-                  _c("span", { staticClass: "black--text" }, [_vm._v("¡NO!")]),
-                  _vm._v(" es para:\n        ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "list list-style-type-none pl-0 lh-normal" },
-                [
-                  _vm._l(_vm.list, function(item, index) {
-                    return _c(
-                      "li",
-                      { key: index, staticClass: "py-2" },
-                      [
-                        _c(
-                          "v-row",
-                          { attrs: { "no-gutters": "", align: "center" } },
-                          [
-                            _c(
-                              "v-col",
-                              { attrs: { cols: "auto mr-2" } },
-                              [
-                                _c("v-icon", { attrs: { color: "black" } }, [
-                                  _vm._v("mdi-check-circle-outline")
-                                ])
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("v-col", { staticClass: "list-info" }, [
-                              _vm._v(
-                                "\n                " +
-                                  _vm._s(item) +
-                                  "\n              "
-                              )
-                            ])
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "py-2" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c("v-col", { staticClass: "list-info" }, [
-                            _vm._v("\n                Porque necesitan un "),
-                            _c(
-                              "span",
-                              { staticClass: "black--text font-weight-bold" },
-                              [_vm._v("ACOMPAÑAMIENTO PERSONALIZADO")]
-                            ),
-                            _vm._v(", no grupal.\n              ")
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                2
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img small-content rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image": "url('/img/landing-reto/stop.jpg')"
-                }
-              })
-            ])
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "section-presentation white--text" }, [
-    _c("img", {
-      staticClass: "hero d-block",
-      attrs: { src: "/img/landing-reto/keto.jpg", alt: "bg" }
-    }),
-    _vm._v(" "),
-    _c("div", { staticClass: "hero-gradient" }),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "\n      content\n      d-block\n      text-center text-lg-left\n      mx-auto mx-lg-0\n      pa-4 pa-lg-14\n    "
-      },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _c("small-calendar", {
-          attrs: {
-            primaryText: "El reto inicia el:",
-            secondaryText: "(cupos limitados)",
-            date: {
-              day: "08",
-              month: ["MA", "YO"],
-              year: ["20", "22"]
-            }
-          }
-        })
-      ],
-      1
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h1", { staticClass: "primary-font main-title lh-1 mb-5" }, [
-      _c("span", { staticClass: "secondary-color" }, [_vm._v("Reto")]),
-      _vm._v(" 15 Días Keto + Ayuno\n      "),
-      _c("span", { staticClass: "secondary-color" }, [_vm._v("versión 4.0")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "mb-5 description" }, [
-      _vm._v("\n      Este reto está "),
-      _c("span", { staticClass: "strong" }, [_vm._v("dirigido")]),
-      _vm._v(
-        " a todas las personas\n      que buscan iniciar este estilo de vida con la información correcta, que\n      buscan "
-      ),
-      _c("span", { staticClass: "strong" }, [_vm._v("superar la ansiedad")]),
-      _vm._v(" y lograr sus\n      "),
-      _c("span", { staticClass: "strong" }, [_vm._v("metas de peso.")])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
-/*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
-  \**********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass:
-        "\n    small-calendar\n    d-inline-block\n    black\n    rounded\n    primary-font\n    lh-1\n    py-2\n    px-3\n  ",
-      class: _vm.smallClendarClass
-    },
-    [
-      _c(
-        "v-row",
-        {
-          staticClass: "justify-center",
-          class: _vm.countDownClass,
-          attrs: { align: "center" }
-        },
-        [
-          _c(
-            "v-col",
-            { class: _vm.textWrapperClass, attrs: { cols: "auto pr-2" } },
-            [
-              _c("div", { staticClass: "text-center" }, [
-                _c("div", { staticClass: "primary-text mb-1" }, [
-                  _c("span", [_vm._v(_vm._s(_vm.primaryText))])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "secondary-text" }, [
-                  _c("span", [_vm._v(_vm._s(_vm.secondaryText))])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "v-col",
-            { class: _vm.textWrapperColClass, attrs: { cols: "auto" } },
-            [
-              _c(
-                "v-row",
-                { staticClass: "text-center date pr-2" },
-                [
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _c("span", [
-                            _vm._v(
-                              _vm._s(
-                                _vm.date ? _vm.date.day : _vm.countDown.days
-                              )
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _vm.countDown
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "time-info d-inline-block mt-1 px-1"
-                                },
-                                [_vm._v("DÍAS")]
-                              )
-                            : _vm._e()
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _vm.date
-                            ? [
-                                _c("span", [_vm._v(_vm._s(_vm.date.month[0]))]),
-                                _vm._v(" "),
-                                _c("span", [_vm._v(_vm._s(_vm.date.month[1]))])
-                              ]
-                            : [
-                                _c("span", [
-                                  _vm._v(_vm._s(_vm.countDown.hours))
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "time-info d-inline-block mt-1 px-1"
-                                  },
-                                  [_vm._v("HORAS")]
-                                )
-                              ]
-                        ],
-                        2
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _vm.date
-                            ? [
-                                _c("span", [_vm._v(_vm._s(_vm.date.year[0]))]),
-                                _vm._v(" "),
-                                _c("span", [_vm._v(_vm._s(_vm.date.year[1]))])
-                              ]
-                            : [
-                                _c("span", [
-                                  _vm._v(_vm._s(_vm.countDown.minutes))
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "time-info d-inline-block mt-1 px-1"
-                                  },
-                                  [_vm._v("MINUTOS")]
-                                )
-                              ]
-                        ],
-                        2
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm.countDown
-                    ? _c(
-                        "v-col",
-                        { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
-                            },
-                            [
-                              _c("span", [
-                                _vm._v(_vm._s(_vm.countDown.seconds))
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "time-info d-inline-block mt-1 px-1"
-                                },
-                                [_vm._v("SEGUNDOS")]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    : _vm._e()
                 ],
                 1
               )
@@ -48530,7 +46486,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    { staticClass: "px-1" },
+    { staticClass: "pt-6 px-1" },
     [
       _c(
         "v-row",
@@ -48778,6 +46734,77 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-system-bar",
+    {
+      staticClass: "banner-challenge justify-center",
+      attrs: { height: "100", app: "" }
+    },
+    [
+      _c("a", [
+        _c("img", {
+          staticClass: "hero",
+          attrs: { src: "/img/landing-reto/banner.jpg", alt: "Hero" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "hero-gradient" }),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "content white--text" },
+          [
+            _c(
+              "v-row",
+              { attrs: { "no-gutters": "" } },
+              [
+                _c("v-col", { attrs: { cols: "12" } }, [
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "mb-0 event-name font-weight-bold primary-font"
+                    },
+                    [
+                      _vm._v("15 Días Keto + Ayuno "),
+                      _c("span", { staticClass: "primary-color" }, [
+                        _vm._v("Versión 4.0")
+                      ])
+                    ]
+                  )
+                ])
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Footer.vue?vue&type=template&id=fbacad02&":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Footer.vue?vue&type=template&id=fbacad02& ***!
@@ -48895,7 +46922,7 @@ var render = function() {
     "v-app-bar",
     {
       staticClass: "app-header",
-      attrs: { color: "grey lighten-5", fixed: "", height: "56" }
+      attrs: { color: "grey lighten-5", fixed: "", height: "56", app: "" }
     },
     [
       _c("img", {
@@ -49217,54 +47244,6 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("custom-snack-bar")
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& ***!
-  \***************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "v-main",
-        { staticClass: "challenge-page h-100 pt-14 lh-1" },
-        [
-          _c("section-presentation"),
-          _vm._v(" "),
-          _c("section-more-info"),
-          _vm._v(" "),
-          _c("section-not-suitable"),
-          _vm._v(" "),
-          _c("section-challenge-duration"),
-          _vm._v(" "),
-          _c("section-inscription")
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("app-footer")
     ],
     1
   )
@@ -49727,7 +47706,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-main",
-    { staticClass: "mt-14" },
     [
       _c("section-presentation"),
       _vm._v(" "),
@@ -49770,8 +47748,8 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "online-consultations-page mt-14" },
+    "v-main",
+    { staticClass: "online-consultations-page" },
     [
       _c("div", {
         staticClass: "img-bg online-consultations",
@@ -49779,55 +47757,51 @@ var render = function() {
       }),
       _vm._v(" "),
       _c(
-        "v-main",
+        "v-container",
+        {
+          staticClass: "main-container ml-lg-14 pt-5 text-center text-lg-left"
+        },
         [
+          _c("h1", { staticClass: "mt-lg-14 primary-font" }, [
+            _vm._v("\n        Consultas online y presenciales\n      ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "description" }, [
+            _vm._v(
+              "\n        Para personalizar tu proceso de cambio de hábitos solicita aquí una\n        consulta ONLINE, para conectarnos desde la comodidad de tu casa u\n        oficina, o una consulta PRESENCIAL si vivis en Paraguay\n      "
+            )
+          ]),
+          _vm._v(" "),
           _c(
-            "v-container",
-            { staticClass: "main-container ml-lg-14 text-center text-lg-left" },
+            "div",
+            { staticClass: "buttons-container" },
             [
-              _c("h1", { staticClass: "mt-lg-14 primary-font" }, [
-                _vm._v("\n        Consultas online y presenciales\n      ")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "description" }, [
-                _vm._v(
-                  "\n        Para personalizar tu proceso de cambio de hábitos solicita aquí una\n        consulta ONLINE, para conectarnos desde la comodidad de tu casa u\n        oficina, o una consulta PRESENCIAL si vivis en Paraguay\n      "
-                )
-              ]),
-              _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "buttons-container" },
+                "v-row",
+                { attrs: { justify: "center" } },
                 [
                   _c(
-                    "v-row",
-                    { attrs: { justify: "center" } },
+                    "v-col",
+                    { staticClass: "pb-0", attrs: { cols: "12" } },
                     [
                       _c(
-                        "v-col",
-                        { staticClass: "pb-0", attrs: { cols: "12" } },
+                        "v-btn",
+                        {
+                          attrs: {
+                            target: "_blank",
+                            href:
+                              _vm.$store.state.support.onlineConsultations
+                                .whatsapp,
+                            color: "teal white--text",
+                            block: ""
+                          }
+                        },
                         [
-                          _c(
-                            "v-btn",
-                            {
-                              attrs: {
-                                target: "_blank",
-                                href:
-                                  _vm.$store.state.support.onlineConsultations
-                                    .whatsapp,
-                                color: "teal white--text",
-                                block: ""
-                              }
-                            },
-                            [
-                              _c("v-icon", { staticClass: "mr-1" }, [
-                                _vm._v("mdi-whatsapp")
-                              ]),
-                              _vm._v(
-                                "\n              Más información\n            "
-                              )
-                            ],
-                            1
+                          _c("v-icon", { staticClass: "mr-1" }, [
+                            _vm._v("mdi-whatsapp")
+                          ]),
+                          _vm._v(
+                            "\n              Más información\n            "
                           )
                         ],
                         1
@@ -49838,10 +47812,10 @@ var render = function() {
                 ],
                 1
               )
-            ]
+            ],
+            1
           )
-        ],
-        1
+        ]
       )
     ],
     1
@@ -49872,7 +47846,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-main",
-    { staticClass: "mt-14 pt-3 px-3 mb-6 text-center" },
+    { staticClass: "px-3 mb-6 text-center" },
     [_c("product-type-select"), _vm._v(" "), _c("products-list")],
     1
   )
@@ -49901,97 +47875,99 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "support-page mt-14" },
+    "v-main",
+    { staticClass: "support-page" },
     [
       _c("div", { staticClass: "img-bg support-bg" }),
       _vm._v(" "),
-      _c(
-        "v-main",
-        [
-          _c("v-container", [
-            _c("h1", { staticClass: "text-center primary-font" }, [
-              _vm._v("Soporte")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "mx-auto text-center description" }, [
-              _vm._v(
-                "\n        Si tenés alguna duda, podes consultar con el soporte para que puedan\n        ayudarte con lo que necesites, el equipo te responderá en la brevedad\n        posible.\n      "
-              )
-            ]),
-            _vm._v(" "),
+      _c("v-container", { staticClass: "main-container pt-5" }, [
+        _c("h1", { staticClass: "text-center primary-font" }, [
+          _vm._v("Soporte")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "mx-auto text-center description" }, [
+          _vm._v(
+            "\n      Si tenés alguna duda, podes consultar con el soporte para que puedan\n      ayudarte con lo que necesites, el equipo te responderá en la brevedad\n      posible.\n    "
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "buttons-container mx-auto" },
+          [
             _c(
-              "div",
-              { staticClass: "buttons-container mx-auto" },
+              "v-row",
+              { attrs: { justify: "center" } },
               [
                 _c(
-                  "v-row",
-                  { attrs: { justify: "center" } },
+                  "v-col",
+                  { staticClass: "pb-0", attrs: { cols: "12", sm: "6" } },
                   [
                     _c(
-                      "v-col",
-                      { staticClass: "pb-0", attrs: { cols: "12", sm: "6" } },
+                      "p",
+                      { staticClass: "text-center mb-1 font-weight-bold" },
                       [
-                        _c(
-                          "p",
-                          { staticClass: "text-center mb-1 font-weight-bold" },
-                          [
-                            _vm._v(
-                              "+" + _vm._s(_vm.$store.state.support.whatsapp)
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "v-btn",
-                          {
-                            attrs: {
-                              target: "_blank",
-                              href: _vm.$store.state.links.support.whatsapp,
-                              color: "teal white--text",
-                              block: ""
-                            }
-                          },
-                          [
-                            _c("v-icon", { staticClass: "mr-1" }, [
-                              _vm._v("mdi-whatsapp")
-                            ]),
-                            _vm._v("\n              Whatsapp\n            ")
-                          ],
-                          1
+                        _vm._v(
+                          "\n            +" +
+                            _vm._s(_vm.$store.state.support.whatsapp) +
+                            "\n          "
                         )
-                      ],
-                      1
+                      ]
                     ),
                     _vm._v(" "),
                     _c(
-                      "v-col",
-                      { staticClass: "pb-0", attrs: { cols: "12", sm: "6" } },
+                      "v-btn",
+                      {
+                        attrs: {
+                          target: "_blank",
+                          href: _vm.$store.state.links.support.whatsapp,
+                          color: "teal white--text",
+                          block: ""
+                        }
+                      },
                       [
-                        _c(
-                          "p",
-                          { staticClass: "text-center mb-1 font-weight-bold" },
-                          [_vm._v(_vm._s(_vm.$store.state.support.email))]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "v-btn",
-                          {
-                            attrs: {
-                              target: "_blank",
-                              href: _vm.$store.state.links.support.email,
-                              color: "red white--text",
-                              block: ""
-                            }
-                          },
-                          [
-                            _c("v-icon", { staticClass: "mr-1" }, [
-                              _vm._v("mdi-email")
-                            ]),
-                            _vm._v("\n              Correo\n            ")
-                          ],
-                          1
+                        _c("v-icon", { staticClass: "mr-1" }, [
+                          _vm._v("mdi-whatsapp")
+                        ]),
+                        _vm._v("\n            Whatsapp\n          ")
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-col",
+                  { staticClass: "pb-0", attrs: { cols: "12", sm: "6" } },
+                  [
+                    _c(
+                      "p",
+                      { staticClass: "text-center mb-1 font-weight-bold" },
+                      [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(_vm.$store.state.support.email) +
+                            "\n          "
                         )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      {
+                        attrs: {
+                          target: "_blank",
+                          href: _vm.$store.state.links.support.email,
+                          color: "red white--text",
+                          block: ""
+                        }
+                      },
+                      [
+                        _c("v-icon", { staticClass: "mr-1" }, [
+                          _vm._v("mdi-email")
+                        ]),
+                        _vm._v("\n            Correo\n          ")
                       ],
                       1
                     )
@@ -50001,10 +47977,10 @@ var render = function() {
               ],
               1
             )
-          ])
-        ],
-        1
-      )
+          ],
+          1
+        )
+      ])
     ],
     1
   )
@@ -54081,6 +52057,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
 var update = add("052416f4", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass":
+/*!************************************************************************!*\
+  !*** ./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass ***!
+  \************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./VSystemBar.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
+var update = add("033670bd", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -67019,369 +65016,6 @@ component.options.__file = "resources/js/components/cart/PurchasePolicyAlert.vue
 
 /***/ }),
 
-/***/ "./resources/js/components/challengeKetoAyunoV4/footer.vue":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/footer.vue ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.vue?vue&type=template&id=3faf72ab& */ "./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=template&id=3faf72ab&");
-/* harmony import */ var _footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/footer.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
-/* harmony import */ var vuetify_lib_components_VFooter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VFooter */ "./node_modules/vuetify/lib/components/VFooter/VFooter.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__.render,
-  _footer_vue_vue_type_template_id_3faf72ab___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VFooter: vuetify_lib_components_VFooter__WEBPACK_IMPORTED_MODULE_5__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/footer.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue ***!
-  \*************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./challengeDuration.vue?vue&type=template&id=1e0ab906& */ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=template&id=1e0ab906&");
-/* harmony import */ var _challengeDuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./challengeDuration.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _challengeDuration_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__.render,
-  _challengeDuration_vue_vue_type_template_id_1e0ab906___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/challengeDuration.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./inscription.vue?vue&type=template&id=2785fe87& */ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=template&id=2785fe87&");
-/* harmony import */ var _inscription_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./inscription.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/sections/inscription.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
-/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/VCard.js");
-/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VContainer.js");
-/* harmony import */ var vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuetify/lib/components/VDialog */ "./node_modules/vuetify/lib/components/VDialog/VDialog.js");
-/* harmony import */ var vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuetify/lib/components/VForm */ "./node_modules/vuetify/lib/components/VForm/VForm.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VSpacer.js");
-/* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/VTextField.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _inscription_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__.render,
-  _inscription_vue_vue_type_template_id_2785fe87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-
-
-
-
-
-
-
-
-
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_4__["default"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["default"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardActions,VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardText,VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__.VCardTitle,VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["default"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["default"],VDialog: vuetify_lib_components_VDialog__WEBPACK_IMPORTED_MODULE_9__["default"],VForm: vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_10__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_11__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_12__["default"],VSpacer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_13__["default"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_14__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/inscription.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./moreInfo.vue?vue&type=template&id=0c3a43f8& */ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=template&id=0c3a43f8&");
-/* harmony import */ var _moreInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moreInfo.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _moreInfo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__.render,
-  _moreInfo_vue_vue_type_template_id_0c3a43f8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_5__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/moreInfo.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./notSuitable.vue?vue&type=template&id=20360f89& */ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=template&id=20360f89&");
-/* harmony import */ var _notSuitable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./notSuitable.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _notSuitable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__.render,
-  _notSuitable_vue_vue_type_template_id_20360f89___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_5__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/notSuitable.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue":
-/*!********************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./presentation.vue?vue&type=template&id=7c991b7b& */ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=template&id=7c991b7b&");
-/* harmony import */ var _presentation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./presentation.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/sections/presentation.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _presentation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__.render,
-  _presentation_vue_vue_type_template_id_7c991b7b___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/presentation.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
-/* harmony import */ var _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render,
-  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/smallCalendar.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/couponBox/customSnackBar.vue":
 /*!**************************************************************!*\
   !*** ./resources/js/components/couponBox/customSnackBar.vue ***!
@@ -68340,6 +65974,56 @@ component.options.__file = "resources/js/components/socialMediaButtons/smallButt
 
 /***/ }),
 
+/***/ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/layouts/BannerChallengeKetoAyunoV4.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8& */ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
+/* harmony import */ var vuetify_lib_components_VSystemBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VSystemBar */ "./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* vuetify-loader */
+;
+
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_3__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VSystemBar: vuetify_lib_components_VSystemBar__WEBPACK_IMPORTED_MODULE_5__["default"]})
+
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/layouts/BannerChallengeKetoAyunoV4.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/layouts/Footer.vue":
 /*!*****************************************!*\
   !*** ./resources/js/layouts/Footer.vue ***!
@@ -68613,54 +66297,6 @@ _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/pages/Cart.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/pages/ChallengeKetoAyunoV4.vue":
-/*!*****************************************************!*\
-  !*** ./resources/js/pages/ChallengeKetoAyunoV4.vue ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& */ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&");
-/* harmony import */ var _ChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& */ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VMain */ "./node_modules/vuetify/lib/components/VMain/VMain.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__.render,
-  _ChallengeKetoAyunoV4_vue_vue_type_template_id_4ec0e86d___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VMain: vuetify_lib_components_VMain__WEBPACK_IMPORTED_MODULE_4__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/pages/ChallengeKetoAyunoV4.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -71056,157 +68692,6 @@ __webpack_require__.r(__webpack_exports__);
 
 }));
 //# sourceMappingURL=VFooter.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/components/VForm/VForm.js":
-/*!************************************************************!*\
-  !*** ./node_modules/vuetify/lib/components/VForm/VForm.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
-/* harmony import */ var _mixins_binds_attrs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixins/binds-attrs */ "./node_modules/vuetify/lib/mixins/binds-attrs/index.js");
-/* harmony import */ var _mixins_registrable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/registrable */ "./node_modules/vuetify/lib/mixins/registrable/index.js");
-// Mixins
-
-
-
-/* @vue/component */
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_0__["default"])(_mixins_binds_attrs__WEBPACK_IMPORTED_MODULE_1__["default"], (0,_mixins_registrable__WEBPACK_IMPORTED_MODULE_2__.provide)('form')
-/* @vue/component */
-).extend({
-  name: 'v-form',
-
-  provide() {
-    return {
-      form: this
-    };
-  },
-
-  inheritAttrs: false,
-  props: {
-    disabled: Boolean,
-    lazyValidation: Boolean,
-    readonly: Boolean,
-    value: Boolean
-  },
-  data: () => ({
-    inputs: [],
-    watchers: [],
-    errorBag: {}
-  }),
-  watch: {
-    errorBag: {
-      handler(val) {
-        const errors = Object.values(val).includes(true);
-        this.$emit('input', !errors);
-      },
-
-      deep: true,
-      immediate: true
-    }
-  },
-  methods: {
-    watchInput(input) {
-      const watcher = input => {
-        return input.$watch('hasError', val => {
-          this.$set(this.errorBag, input._uid, val);
-        }, {
-          immediate: true
-        });
-      };
-
-      const watchers = {
-        _uid: input._uid,
-        valid: () => {},
-        shouldValidate: () => {}
-      };
-
-      if (this.lazyValidation) {
-        // Only start watching inputs if we need to
-        watchers.shouldValidate = input.$watch('shouldValidate', val => {
-          if (!val) return; // Only watch if we're not already doing it
-
-          if (this.errorBag.hasOwnProperty(input._uid)) return;
-          watchers.valid = watcher(input);
-        });
-      } else {
-        watchers.valid = watcher(input);
-      }
-
-      return watchers;
-    },
-
-    /** @public */
-    validate() {
-      return this.inputs.filter(input => !input.validate(true)).length === 0;
-    },
-
-    /** @public */
-    reset() {
-      this.inputs.forEach(input => input.reset());
-      this.resetErrorBag();
-    },
-
-    resetErrorBag() {
-      if (this.lazyValidation) {
-        // Account for timeout in validatable
-        setTimeout(() => {
-          this.errorBag = {};
-        }, 0);
-      }
-    },
-
-    /** @public */
-    resetValidation() {
-      this.inputs.forEach(input => input.resetValidation());
-      this.resetErrorBag();
-    },
-
-    register(input) {
-      this.inputs.push(input);
-      this.watchers.push(this.watchInput(input));
-    },
-
-    unregister(input) {
-      const found = this.inputs.find(i => i._uid === input._uid);
-      if (!found) return;
-      const unwatch = this.watchers.find(i => i._uid === found._uid);
-
-      if (unwatch) {
-        unwatch.valid();
-        unwatch.shouldValidate();
-      }
-
-      this.watchers = this.watchers.filter(i => i._uid !== found._uid);
-      this.inputs = this.inputs.filter(i => i._uid !== found._uid);
-      this.$delete(this.errorBag, found._uid);
-    }
-
-  },
-
-  render(h) {
-    return h('form', {
-      staticClass: 'v-form',
-      attrs: {
-        novalidate: true,
-        ...this.attrs$
-      },
-      on: {
-        submit: e => this.$emit('submit', e)
-      }
-    }, this.$slots.default);
-  }
-
-}));
-//# sourceMappingURL=VForm.js.map
 
 /***/ }),
 
@@ -77705,6 +75190,90 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_VSubheader__WEBPACK_IMPORTED_MODULE_0__["default"]);
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VSystemBar/VSystemBar.sass */ "./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass");
+/* harmony import */ var _src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mixins_applicationable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/applicationable */ "./node_modules/vuetify/lib/mixins/applicationable/index.js");
+/* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/colorable */ "./node_modules/vuetify/lib/mixins/colorable/index.js");
+/* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/themeable */ "./node_modules/vuetify/lib/mixins/themeable/index.js");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+// Styles
+ // Mixins
+
+
+
+ // Utilities
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__["default"])((0,_mixins_applicationable__WEBPACK_IMPORTED_MODULE_2__["default"])('bar', ['height', 'window']), _mixins_colorable__WEBPACK_IMPORTED_MODULE_3__["default"], _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__["default"]
+/* @vue/component */
+).extend({
+  name: 'v-system-bar',
+  props: {
+    height: [Number, String],
+    lightsOut: Boolean,
+    window: Boolean
+  },
+  computed: {
+    classes() {
+      return {
+        'v-system-bar--lights-out': this.lightsOut,
+        'v-system-bar--absolute': this.absolute,
+        'v-system-bar--fixed': !this.absolute && (this.app || this.fixed),
+        'v-system-bar--window': this.window,
+        ...this.themeClasses
+      };
+    },
+
+    computedHeight() {
+      if (this.height) {
+        return isNaN(parseInt(this.height)) ? this.height : parseInt(this.height);
+      }
+
+      return this.window ? 32 : 24;
+    },
+
+    styles() {
+      return {
+        height: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.convertToUnit)(this.computedHeight)
+      };
+    }
+
+  },
+  methods: {
+    updateApplication() {
+      return this.$el ? this.$el.clientHeight : this.computedHeight;
+    }
+
+  },
+
+  render(h) {
+    const data = {
+      staticClass: 'v-system-bar',
+      class: this.classes,
+      style: this.styles,
+      on: this.$listeners
+    };
+    return h('div', this.setBackgroundColor(this.color, data), (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.getSlot)(this));
+  }
+
+}));
+//# sourceMappingURL=VSystemBar.js.map
 
 /***/ }),
 
@@ -86840,6 +84409,39 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames not based on template
+/******/ 			if (chunkId === "resources_js_pages_ChallengeKetoAyunoV4_vue") return "js/" + chunkId + ".js";
+/******/ 			// return url for filenames based on template
+/******/ 			return undefined;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get mini-css chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference all chunks
+/******/ 		__webpack_require__.miniCssF = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "" + chunkId + ".css";
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -86855,6 +84457,52 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		// data-webpack is not used as build has no uniqueName
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 		
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			;
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -86877,6 +84525,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
@@ -86889,7 +84542,44 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
-/******/ 		// no chunk on demand loading
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if("css/app" != chunkId) {
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
 /******/ 		
 /******/ 		// no prefetching
 /******/ 		

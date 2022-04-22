@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="app-header" color="grey lighten-5" fixed height="56">
+  <v-app-bar class="app-header" color="grey lighten-5" fixed height="56" app>
     <img
       @click="goToHome"
       class="logo c-pointer"

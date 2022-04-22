@@ -146,8 +146,5 @@ export default {
       }
     };
   },
-  mounted() {
-    console.log(this.red);
-  },
 };
 </script>
