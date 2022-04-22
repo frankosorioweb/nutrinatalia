@@ -37,12 +37,13 @@ export default {
   data() {
     return {
       moreInfo: [
-        "Grupo de WhatsApp guiado por la Nutri Natalia.",
-        "Videos a diario.",
-        "Lista de compras, guías, recetas.",
-        "Acceso de por vida a recursos en la nube.",
-        "Respuestas a tus dudas diarias.",
-        "Descuentos exclusivos en la academia.",
+        "Tendrás el contenido en videos diarios.",
+        "Serás parte del grupo de WhatsApp guiado por la Nutri Natalia.",
+        "Recibirás: lista de compras, guías y recetas.",
+        "Tendrás acceso de por vida a recursos en la nube.",
+        "Despejarás todas tus dudas diarias.",
+        "Obtendrás descuentos exclusivos en la academia.",
+        "Formarás parte de la Tribu de la Nutri Natalia.",
       ]
     }
   },

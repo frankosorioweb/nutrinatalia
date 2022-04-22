@@ -6,7 +6,7 @@
   >
     <div class="content py-3">
       <small-calendar
-        primaryText="El reto inicia en:"
+        primaryText="Las inscripciones cierran en:"
         secondaryText="(cupos limitados)"
         :countDown="{
           days,
@@ -62,7 +62,7 @@ export default {
     formatNum: (num) => (num < 10 ? `0${num}` : num),
     showRemaining(timer) {
       const now = new Date();
-      const end = new Date(2022, 4, 8);
+      const end = new Date(2022, 4, 5);
       const distance = end.getTime() - now.getTime();
 
       if (distance < 0) {

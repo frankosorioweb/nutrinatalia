@@ -41,6 +41,7 @@
                 py-1
                 rounded
               "
+              :class="squareClass"
             >
               <span>{{ date ? date.day : countDown.days }}</span>
               <span v-if="countDown" class="time-info d-inline-block mt-1 px-1"
@@ -60,6 +61,7 @@
                 py-1
                 rounded
               "
+              :class="squareClass"
             >
               <template v-if="date">
                 <span>{{ date.month[0] }}</span>
@@ -83,6 +85,7 @@
                 py-1
                 rounded
               "
+              :class="squareClass"
             >
               <template v-if="date">
                 <span>{{ date.year[0] }}</span>
@@ -119,7 +122,7 @@
 
 <script>
 export default {
-  props: ["primaryText", "secondaryText", "date", "countDown"],
+  props: ["red", "primaryText", "secondaryText", "date", "countDown"],
   data() {
     return {
       cols: this.countDown ? 3 : 4,
@@ -136,9 +139,15 @@ export default {
         'ml-sm-0': !_.isEmpty(this.countDown),
       },
       smallClendarClass: {
-        'count-down': !_.isEmpty(this.countDown)
+        'count-down': !_.isEmpty(this.countDown),
+      },
+      squareClass: {
+        'red darken-4': this.red
       }
     };
+  },
+  mounted() {
+    console.log(this.red);
   },
 };
 </script>

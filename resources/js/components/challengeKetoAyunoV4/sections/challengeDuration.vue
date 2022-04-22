@@ -10,12 +10,12 @@
         </div>
       </v-col>
       <v-col cols="12" md="6">
-        <div class="content text-center text-md-left">
+        <div class="content text-center">
           <h2 class="main-title primary-font mb-8">
             ¿Cuando inicia el <span class="secondary-color">reto</span>?
           </h2>
           <div class="dates-wrapper white--text">
-            <div class="date d-inline-block mb-5">
+            <div class="date mb-3">
               <small-calendar
                 primaryText="El reto inicia el:"
                 secondaryText="DOMINGO"
@@ -26,12 +26,24 @@
                 }"
               />
             </div>
-            <div class="date d-inline-block">
+            <div class="date mb-3">
               <small-calendar
                 primaryText="El reto finaliza el:"
                 secondaryText="DOMINGO"
                 :date="{
                   day: '22',
+                  month: ['MA', 'YO'],
+                  year: ['20', '22'],
+                }"
+              />
+            </div>
+            <div class="date mb-5">
+              <small-calendar
+                primaryText="Inscripciones hasta el:"
+                secondaryText="JUEVES"
+                :red="true"
+                :date="{
+                  day: '05',
                   month: ['MA', 'YO'],
                   year: ['20', '22'],
                 }"

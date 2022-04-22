@@ -18,7 +18,7 @@
       <p class="mb-5 description">
         Este reto está <span class="strong">dirigido</span> a todas las personas
         que buscan iniciar este estilo de vida con la información correcta, que
-        <span class="strong">buscan superar la ansiedad</span> y lograr sus
+        buscan <span class="strong">superar la ansiedad</span> y lograr sus
         <span class="strong">metas de peso.</span>
       </p>
       <small-calendar

@@ -2864,7 +2864,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     showRemaining: function showRemaining(timer) {
       var now = new Date();
-      var end = new Date(2022, 4, 8);
+      var end = new Date(2022, 4, 5);
       var distance = end.getTime() - now.getTime();
 
       if (distance < 0) {
@@ -2916,6 +2916,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../smallCalendar.vue */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3212,7 +3224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      moreInfo: ["Grupo de WhatsApp guiado por la Nutri Natalia.", "Videos a diario.", "Lista de compras, guías, recetas.", "Acceso de por vida a recursos en la nube.", "Respuestas a tus dudas diarias.", "Descuentos exclusivos en la academia."]
+      moreInfo: ["Tendrás el contenido en videos diarios.", "Serás parte del grupo de WhatsApp guiado por la Nutri Natalia.", "Recibirás: lista de compras, guías y recetas.", "Tendrás acceso de por vida a recursos en la nube.", "Despejarás todas tus dudas diarias.", "Obtendrás descuentos exclusivos en la academia.", "Formarás parte de la Tribu de la Nutri Natalia."]
     };
   }
 });
@@ -3468,8 +3480,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["primaryText", "secondaryText", "date", "countDown"],
+  props: ["red", "primaryText", "secondaryText", "date", "countDown"],
   data: function data() {
     return {
       cols: this.countDown ? 3 : 4,
@@ -3487,8 +3502,14 @@ __webpack_require__.r(__webpack_exports__);
       },
       smallClendarClass: {
         'count-down': !_.isEmpty(this.countDown)
+      },
+      squareClass: {
+        'red darken-4': this.red
       }
     };
+  },
+  mounted: function mounted() {
+    console.log(this.red);
   }
 });
 
@@ -45908,7 +45929,7 @@ var render = function() {
         [
           _c("small-calendar", {
             attrs: {
-              primaryText: "El reto inicia en:",
+              primaryText: "Las inscripciones cierran en:",
               secondaryText: "(cupos limitados)",
               countDown: {
                 days: _vm.days,
@@ -45988,7 +46009,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content text-center text-md-left" }, [
+            _c("div", { staticClass: "content text-center" }, [
               _c("h2", { staticClass: "main-title primary-font mb-8" }, [
                 _vm._v("\n          ¿Cuando inicia el "),
                 _c("span", { staticClass: "secondary-color" }, [
@@ -46000,7 +46021,7 @@ var render = function() {
               _c("div", { staticClass: "dates-wrapper white--text" }, [
                 _c(
                   "div",
-                  { staticClass: "date d-inline-block mb-5" },
+                  { staticClass: "date mb-3" },
                   [
                     _c("small-calendar", {
                       attrs: {
@@ -46019,7 +46040,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "date d-inline-block" },
+                  { staticClass: "date mb-3" },
                   [
                     _c("small-calendar", {
                       attrs: {
@@ -46027,6 +46048,26 @@ var render = function() {
                         secondaryText: "DOMINGO",
                         date: {
                           day: "22",
+                          month: ["MA", "YO"],
+                          year: ["20", "22"]
+                        }
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "date mb-5" },
+                  [
+                    _c("small-calendar", {
+                      attrs: {
+                        primaryText: "Inscripciones hasta el:",
+                        secondaryText: "JUEVES",
+                        red: true,
+                        date: {
+                          day: "05",
                           month: ["MA", "YO"],
                           year: ["20", "22"]
                         }
@@ -46680,11 +46721,9 @@ var staticRenderFns = [
       _vm._v("\n      Este reto está "),
       _c("span", { staticClass: "strong" }, [_vm._v("dirigido")]),
       _vm._v(
-        " a todas las personas\n      que buscan iniciar este estilo de vida con la información correcta, que\n      "
+        " a todas las personas\n      que buscan iniciar este estilo de vida con la información correcta, que\n      buscan "
       ),
-      _c("span", { staticClass: "strong" }, [
-        _vm._v("buscan superar la ansiedad")
-      ]),
+      _c("span", { staticClass: "strong" }, [_vm._v("superar la ansiedad")]),
       _vm._v(" y lograr sus\n      "),
       _c("span", { staticClass: "strong" }, [_vm._v("metas de peso.")])
     ])
@@ -46760,7 +46799,8 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
                         },
                         [
                           _c("span", [
@@ -46794,7 +46834,8 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
                         },
                         [
                           _vm.date
@@ -46831,7 +46872,8 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
                         },
                         [
                           _vm.date
