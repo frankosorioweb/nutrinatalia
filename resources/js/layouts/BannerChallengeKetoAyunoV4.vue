@@ -15,7 +15,7 @@
           <v-col cols="12" class="mb-2">
             <small-calendar
               primaryText="Las inscripciones cierran en:"
-              secondaryText="(cupos limitados)"
+              secondaryText="(o hasta llenar el cupo)"
               :countDown="{
                 day: 5,
                 month: 4,
@@ -34,17 +34,15 @@
       </div>
     </router-link>
 
-    <!-- <template v-slot:actions="{ dismiss }"> -->
-      <v-btn
-        class="btn-close-banner"
-        color="secondary"
-        x-small
-        @click="$refs.banner.toggle()"
-        fab
-      >
-        <v-icon> mdi-close </v-icon>
-      </v-btn>
-    <!-- </template> -->
+    <v-btn
+      class="btn-close-banner"
+      color="secondary"
+      x-small
+      @click="$refs.banner.toggle()"
+      fab
+    >
+      <v-icon> mdi-close </v-icon>
+    </v-btn>
   </v-banner>
 </template>
 

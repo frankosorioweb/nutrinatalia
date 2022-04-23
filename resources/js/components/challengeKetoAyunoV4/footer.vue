@@ -9,7 +9,7 @@
     <div class="content py-3">
       <small-calendar
         primaryText="Las inscripciones cierran en:"
-        secondaryText="(cupos limitados)"
+        secondaryText="(o hasta llenar el cupo)"
         :countDown="{
           year: 2022,
           month: 4,

@@ -4254,8 +4254,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -47361,7 +47359,7 @@ var render = function() {
                       _c("small-calendar", {
                         attrs: {
                           primaryText: "Las inscripciones cierran en:",
-                          secondaryText: "(cupos limitados)",
+                          secondaryText: "(o hasta llenar el cupo)",
                           countDown: {
                             day: 5,
                             month: 4,
