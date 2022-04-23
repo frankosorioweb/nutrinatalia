@@ -1,9 +1,5 @@
 <template>
-  <v-footer
-    class="challenge-footer white--text justify-center"
-    fixed
-    app
-  >
+  <v-footer class="challenge-footer white--text justify-center" fixed app>
     <img class="hero" src="/img/landing-reto/banner.jpg" alt="Hero" />
     <div class="hero-gradient gradient-bg-secondary"></div>
     <div class="content py-3">

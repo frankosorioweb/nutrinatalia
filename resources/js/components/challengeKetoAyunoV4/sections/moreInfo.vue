@@ -1,5 +1,5 @@
 <template>
-  <section class="section-more-info pa-4 pa-lg-14">
+  <section class="section-more-info px-5 py-8 pa-lg-14">
     <v-row>
       <v-col cols="12" md="6">
         <div class="content">

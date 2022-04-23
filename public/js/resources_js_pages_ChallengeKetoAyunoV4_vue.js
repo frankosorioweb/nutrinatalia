@@ -38,10 +38,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -851,7 +847,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "section-challenge-duration pa-4 pa-lg-14" },
+    { staticClass: "section-challenge-duration px-5 py-8 pa-lg-14" },
     [
       _c(
         "v-row",
@@ -970,7 +966,8 @@ var render = function() {
   return _c(
     "section",
     {
-      staticClass: "section-inscription pa-4 pa-lg-14 gradient-bg white--text",
+      staticClass:
+        "section-inscription px-5 py-8 pa-lg-14 gradient-bg white--text",
       attrs: { id: "section-inscription" }
     },
     [
@@ -1026,232 +1023,246 @@ var render = function() {
       _c(
         "v-row",
         [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "main-title primary-font mb-5 text-center text-md-left"
-                },
-                [
-                  _vm._v("\n          ¡Inscribite "),
-                  _c("span", { staticClass: "black--text" }, [_vm._v("ahora")]),
-                  _vm._v("!\n        ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n            price-wrapper\n            white\n            rounded\n            pa-3\n            mb-4\n            font-weight-bold\n            text-center\n            elevation-5\n          "
-                },
-                [
-                  _c(
-                    "p",
-                    { staticClass: "d-inline-block primary-color mb-0" },
-                    [_vm._v("Inversión:")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticClass:
-                        "d-inline-block mb-0 red--text text--darken-4"
-                    },
-                    [_vm._v("\n            150.000 Gs (22 USD).\n          ")]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "description lh-normal mb-4" }, [
-                _c("p", { staticClass: "text-center text-md-left" }, [
-                  _vm._v(
-                    "\n            Completá tus datos para que el equipo de ventas pueda comunicarse\n            contigo en la brevedad posible y puedas\n            "
-                  ),
-                  _c(
-                    "span",
-                    { staticClass: "text--primary font-weight-bold" },
-                    [_vm._v("\n              reservar tu lugar.\n            ")]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "inscription-form-wrapper" },
-                [
-                  _c(
-                    "v-form",
-                    {
-                      staticClass:
-                        "inscription-form white elevation-5 rounded pa-3"
-                    },
-                    [
-                      _c(
-                        "v-container",
-                        [
-                          _c(
-                            "v-row",
-                            [
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "email" }
-                                      },
-                                      [_vm._v("Correo electrónico:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "email",
-                                        label:
-                                          "Ingrese su dirección de correo electrónico",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.email,
-                                        callback: function($$v) {
-                                          _vm.email = $$v
-                                        },
-                                        expression: "email"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "name" }
-                                      },
-                                      [_vm._v("Nombres y Apellidos:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "name",
-                                        label:
-                                          "Ingrese sus nombres y apellidos",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.name,
-                                        callback: function($$v) {
-                                          _vm.name = $$v
-                                        },
-                                        expression: "name"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c("v-col", { attrs: { cols: "12" } }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "input-group" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "d-block secondary-color font-weight-bold mb-3",
-                                        attrs: { for: "phone" }
-                                      },
-                                      [_vm._v("Celular:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("v-text-field", {
-                                      attrs: {
-                                        id: "phone",
-                                        label: "Ingrese su número de celular",
-                                        "hide-details": "",
-                                        solo: ""
-                                      },
-                                      model: {
-                                        value: _vm.phone,
-                                        callback: function($$v) {
-                                          _vm.phone = $$v
-                                        },
-                                        expression: "phone"
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "v-col",
-                                { attrs: { cols: "12" } },
-                                [
+          _c(
+            "v-col",
+            { attrs: { cols: "12", md: "6", order: "2", "order-lg": "1" } },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "main-title primary-font mb-5 text-center text-md-left"
+                  },
+                  [
+                    _vm._v("\n          ¡Inscribite "),
+                    _c("span", { staticClass: "text--primary" }, [
+                      _vm._v("ahora")
+                    ]),
+                    _vm._v("!\n        ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "\n            price-wrapper\n            white\n            rounded\n            pa-3\n            mb-4\n            font-weight-bold\n            text-center\n            elevation-5\n          "
+                  },
+                  [
+                    _c(
+                      "p",
+                      { staticClass: "d-inline-block primary-color mb-0" },
+                      [_vm._v("Inversión:")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "d-inline-block mb-0 red--text text--darken-4"
+                      },
+                      [_vm._v("\n            150.000 Gs (22 USD).\n          ")]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "description lh-normal mb-4" }, [
+                  _c("p", { staticClass: "text-center text-md-left" }, [
+                    _vm._v(
+                      "\n            Completá tus datos para que el equipo de ventas pueda comunicarse\n            contigo en la brevedad posible y puedas\n            "
+                    ),
+                    _c(
+                      "span",
+                      { staticClass: "text--primary font-weight-bold" },
+                      [
+                        _vm._v(
+                          "\n              reservar tu lugar.\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "inscription-form-wrapper" },
+                  [
+                    _c(
+                      "v-form",
+                      {
+                        staticClass:
+                          "inscription-form white elevation-5 rounded pa-3"
+                      },
+                      [
+                        _c(
+                          "v-container",
+                          [
+                            _c(
+                              "v-row",
+                              [
+                                _c("v-col", { attrs: { cols: "12" } }, [
                                   _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { color: "primary", block: "" },
-                                      on: { click: _vm.reserveAction }
-                                    },
+                                    "div",
+                                    { staticClass: "input-group" },
                                     [
                                       _c(
-                                        "v-icon",
-                                        { attrs: { left: "", size: "25" } },
-                                        [_vm._v("mdi-whatsapp")]
+                                        "label",
+                                        {
+                                          staticClass:
+                                            "d-block secondary-color font-weight-bold mb-3",
+                                          attrs: { for: "email" }
+                                        },
+                                        [_vm._v("Correo electrónico:")]
                                       ),
-                                      _vm._v(
-                                        "\n                    Reservar mi lugar\n                  "
-                                      )
+                                      _vm._v(" "),
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          id: "email",
+                                          label:
+                                            "Ingrese su dirección de correo electrónico",
+                                          "hide-details": "",
+                                          solo: ""
+                                        },
+                                        model: {
+                                          value: _vm.email,
+                                          callback: function($$v) {
+                                            _vm.email = $$v
+                                          },
+                                          expression: "email"
+                                        }
+                                      })
                                     ],
                                     1
                                   )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ])
-          ]),
+                                ]),
+                                _vm._v(" "),
+                                _c("v-col", { attrs: { cols: "12" } }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "input-group" },
+                                    [
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass:
+                                            "d-block secondary-color font-weight-bold mb-3",
+                                          attrs: { for: "name" }
+                                        },
+                                        [_vm._v("Nombres y Apellidos:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          id: "name",
+                                          label:
+                                            "Ingrese sus nombres y apellidos",
+                                          "hide-details": "",
+                                          solo: ""
+                                        },
+                                        model: {
+                                          value: _vm.name,
+                                          callback: function($$v) {
+                                            _vm.name = $$v
+                                          },
+                                          expression: "name"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("v-col", { attrs: { cols: "12" } }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "input-group" },
+                                    [
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass:
+                                            "d-block secondary-color font-weight-bold mb-3",
+                                          attrs: { for: "phone" }
+                                        },
+                                        [_vm._v("Celular:")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          id: "phone",
+                                          label: "Ingrese su número de celular",
+                                          "hide-details": "",
+                                          solo: ""
+                                        },
+                                        model: {
+                                          value: _vm.phone,
+                                          callback: function($$v) {
+                                            _vm.phone = $$v
+                                          },
+                                          expression: "phone"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "v-col",
+                                  { attrs: { cols: "12" } },
+                                  [
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        attrs: { color: "primary", block: "" },
+                                        on: { click: _vm.reserveAction }
+                                      },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          { attrs: { left: "", size: "25" } },
+                                          [_vm._v("mdi-whatsapp")]
+                                        ),
+                                        _vm._v(
+                                          "\n                    Reservar mi lugar\n                  "
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img small-content rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image": "url('/img/landing-reto/computer.jpg')"
-                }
-              })
-            ])
-          ])
+          _c(
+            "v-col",
+            { attrs: { cols: "12", md: "6", order: "1", "order-lg": "2" } },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c("div", {
+                  staticClass: "img small-content rounded-lg elevation-5",
+                  staticStyle: {
+                    "background-image": "url('/img/landing-reto/computer.jpg')"
+                  }
+                })
+              ])
+            ]
+          )
         ],
         1
       )
@@ -1283,7 +1294,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "section-more-info pa-4 pa-lg-14" },
+    { staticClass: "section-more-info px-5 py-8 pa-lg-14" },
     [
       _c(
         "v-row",
@@ -1394,57 +1405,92 @@ var render = function() {
   return _c(
     "section",
     {
-      staticClass: "section-not-suitable pa-4 pa-lg-14 gradient-bg white--text"
+      staticClass:
+        "section-not-suitable px-5 py-8 pa-lg-14 gradient-bg white--text"
     },
     [
       _c(
         "v-row",
         [
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c(
-                "h2",
-                {
-                  staticClass:
-                    "main-title primary-font mb-5 text-center text-md-left"
-                },
-                [
-                  _vm._v("\n          Este reto "),
-                  _c("span", { staticClass: "black--text" }, [_vm._v("¡NO!")]),
-                  _vm._v(" es para:\n        ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "ul",
-                { staticClass: "list list-style-type-none pl-0 lh-normal" },
-                [
-                  _vm._l(_vm.list, function(item, index) {
-                    return _c(
+          _c(
+            "v-col",
+            { attrs: { cols: "12", md: "6", order: "2", "order-lg": "1" } },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c(
+                  "h2",
+                  {
+                    staticClass:
+                      "main-title primary-font mb-5 text-center text-md-left"
+                  },
+                  [
+                    _vm._v("\n          Este reto "),
+                    _c("span", { staticClass: "text--primary" }, [
+                      _vm._v("¡NO!")
+                    ]),
+                    _vm._v(" es para:\n        ")
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  { staticClass: "list list-style-type-none pl-0 lh-normal" },
+                  [
+                    _vm._l(_vm.list, function(item, index) {
+                      return _c(
+                        "li",
+                        { key: index, staticClass: "py-2" },
+                        [
+                          _c(
+                            "v-row",
+                            { attrs: { "no-gutters": "", align: "center" } },
+                            [
+                              _c(
+                                "v-col",
+                                { attrs: { cols: "auto mr-2" } },
+                                [
+                                  _c(
+                                    "v-icon",
+                                    { attrs: { color: "text--primary" } },
+                                    [_vm._v("mdi-check-circle-outline")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-col", { staticClass: "list-info" }, [
+                                _vm._v(
+                                  "\n                " +
+                                    _vm._s(item) +
+                                    "\n              "
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c(
                       "li",
-                      { key: index, staticClass: "py-2" },
+                      { staticClass: "py-2" },
                       [
                         _c(
                           "v-row",
                           { attrs: { "no-gutters": "", align: "center" } },
                           [
-                            _c(
-                              "v-col",
-                              { attrs: { cols: "auto mr-2" } },
-                              [
-                                _c("v-icon", { attrs: { color: "black" } }, [
-                                  _vm._v("mdi-check-circle-outline")
-                                ])
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
                             _c("v-col", { staticClass: "list-info" }, [
-                              _vm._v(
-                                "\n                " +
-                                  _vm._s(item) +
-                                  "\n              "
-                              )
+                              _vm._v("\n                Porque necesitan un "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "text--primary font-weight-bold"
+                                },
+                                [_vm._v("acompañamiento personalizado")]
+                              ),
+                              _vm._v(", no grupal.\n              ")
                             ])
                           ],
                           1
@@ -1452,47 +1498,27 @@ var render = function() {
                       ],
                       1
                     )
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    { staticClass: "py-2" },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c("v-col", { staticClass: "list-info" }, [
-                            _vm._v("\n                Porque necesitan un "),
-                            _c(
-                              "span",
-                              { staticClass: "black--text font-weight-bold" },
-                              [_vm._v("ACOMPAÑAMIENTO PERSONALIZADO")]
-                            ),
-                            _vm._v(", no grupal.\n              ")
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                2
-              )
-            ])
-          ]),
+                  ],
+                  2
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-            _c("div", { staticClass: "content" }, [
-              _c("div", {
-                staticClass: "img small-content rounded-lg elevation-5",
-                staticStyle: {
-                  "background-image": "url('/img/landing-reto/stop.jpg')"
-                }
-              })
-            ])
-          ])
+          _c(
+            "v-col",
+            { attrs: { cols: "12", md: "6", order: "1", "order-md": "2" } },
+            [
+              _c("div", { staticClass: "content" }, [
+                _c("div", {
+                  staticClass: "img small-content rounded-lg elevation-5",
+                  staticStyle: {
+                    "background-image": "url('/img/landing-reto/stop.jpg')"
+                  }
+                })
+              ])
+            ]
+          )
         ],
         1
       )
@@ -1534,7 +1560,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "\n      content\n      d-block\n      text-center text-lg-left\n      mx-auto mx-lg-0\n      pa-4 pa-lg-14\n    "
+          "\n      content\n      d-block\n      text-center text-lg-left\n      mx-auto mx-lg-0\n      px-5 py-8 pa-lg-14\n    "
       },
       [
         _vm._m(0),
@@ -1574,13 +1600,19 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", { staticClass: "mb-5 description" }, [
       _vm._v("\n      Este reto está "),
-      _c("span", { staticClass: "strong" }, [_vm._v("dirigido")]),
+      _c("span", { staticClass: "font-weight-bold text--primary" }, [
+        _vm._v("dirigido")
+      ]),
       _vm._v(
         " a todas las personas\n      que buscan iniciar este estilo de vida con la información correcta, que\n      buscan "
       ),
-      _c("span", { staticClass: "strong" }, [_vm._v("superar la ansiedad")]),
+      _c("span", { staticClass: "font-weight-bold text--primary" }, [
+        _vm._v("superar la ansiedad")
+      ]),
       _vm._v(" y lograr sus\n      "),
-      _c("span", { staticClass: "strong" }, [_vm._v("metas de peso.")])
+      _c("span", { staticClass: "font-weight-bold text--primary" }, [
+        _vm._v("metas de peso.")
+      ])
     ])
   }
 ]

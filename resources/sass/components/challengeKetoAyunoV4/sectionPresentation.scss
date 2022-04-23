@@ -1,7 +1,7 @@
 @import '~vuetify/src/styles/settings/_variables';
 
 .challenge-page {
-  font-weight: 300;
+  font-weight: 400;
 
   .section-presentation {
     position: relative;
@@ -31,21 +31,16 @@
     .content {
       position: relative;
       max-width: 38rem;
+      
+      .main-title {
+        font-size: 3rem;
+      }
     }
 
-    .main-title {
-      font-size: 3.125rem;
-      font-weight: 700;
-    }
 
     .description {
       font-size: 1.125rem;
       line-height: normal;
-
-      .strong {
-        font-weight: 600;
-        color: #000000;
-      }
     }
   }
 }

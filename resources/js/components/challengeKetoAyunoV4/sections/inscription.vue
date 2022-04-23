@@ -1,7 +1,7 @@
 <template>
   <section
     id="section-inscription"
-    class="section-inscription pa-4 pa-lg-14 gradient-bg white--text"
+    class="section-inscription px-5 py-8 pa-lg-14 gradient-bg white--text"
   >
     <v-dialog v-model="dialog.state" persistent max-width="290">
       <v-card>
@@ -17,10 +17,10 @@
     </v-dialog>
 
     <v-row>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" order="2" order-lg="1">
         <div class="content">
           <h2 class="main-title primary-font mb-5 text-center text-md-left">
-            ¡Inscribite <span class="black--text">ahora</span>!
+            ¡Inscribite <span class="text--primary">ahora</span>!
           </h2>
           <div
             class="
@@ -112,7 +112,7 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" order="1" order-lg="2">
         <div class="content">
           <div
             class="img small-content rounded-lg elevation-5"

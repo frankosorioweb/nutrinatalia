@@ -1,5 +1,5 @@
 <template>
-  <section class="section-challenge-duration pa-4 pa-lg-14">
+  <section class="section-challenge-duration px-5 py-8 pa-lg-14">
     <v-row>
       <v-col cols="12" md="6">
         <div class="content">

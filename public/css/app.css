@@ -181,7 +181,7 @@
 }
 
 .challenge-page {
-  font-weight: 300;
+  font-weight: 400;
 }
 .challenge-page .section-presentation {
   position: relative;
@@ -209,17 +209,12 @@
   position: relative;
   max-width: 38rem;
 }
-.challenge-page .section-presentation .main-title {
-  font-size: 3.125rem;
-  font-weight: 700;
+.challenge-page .section-presentation .content .main-title {
+  font-size: 3rem;
 }
 .challenge-page .section-presentation .description {
   font-size: 1.125rem;
   line-height: normal;
-}
-.challenge-page .section-presentation .description .strong {
-  font-weight: 600;
-  color: #000000;
 }
 
 .small-calendar {
@@ -249,17 +244,15 @@
   background-color: #00959B;
 }
 
-.section-inscription .description {
-  font-size: 1.125rem;
-}
 .section-inscription .price-wrapper {
   font-size: 1.25rem;
 }
 
 .challenge-footer {
-  border-top-width: 5px;
-  border-top-style: solid;
+  border-top-width: 5px !important;
+  border-top-style: solid !important;
   border-top-color: #00959B !important;
+  background-color: #00959B !important;
 }
 .challenge-footer .content {
   position: relative;
@@ -277,8 +270,7 @@
   height: 100%;
 }
 .challenge-page .content .main-title {
-  font-size: 3rem;
-  font-weight: 600 !important;
+  font-size: 2.25rem;
 }
 .challenge-page .content .img {
   background-size: cover;
