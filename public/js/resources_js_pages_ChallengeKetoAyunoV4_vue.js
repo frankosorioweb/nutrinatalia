@@ -42,78 +42,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     smallCalendar: _smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  data: function data() {
-    return {
-      days: "",
-      hours: "",
-      minutes: "",
-      seconds: ""
-    };
-  },
-  computed: {
-    _seconds: function _seconds() {
-      return 1000;
-    },
-    _minutes: function _minutes() {
-      return this._seconds * 60;
-    },
-    _hours: function _hours() {
-      return this._minutes * 60;
-    },
-    _days: function _days() {
-      return this._hours * 24;
-    }
-  },
-  methods: {
-    formatNum: function formatNum(num) {
-      return num < 10 ? "0".concat(num) : num;
-    },
-    showRemaining: function showRemaining(timer) {
-      var now = new Date();
-      var end = new Date(2022, 4, 5);
-      var distance = end.getTime() - now.getTime();
-
-      if (distance < 0) {
-        this.days = this.formatNum(0);
-        this.hours = this.formatNum(0);
-        this.minutes = this.formatNum(0);
-        this.seconds = this.formatNum(0);
-
-        if (timer) {
-          clearInterval(timer);
-        }
-
-        return;
-      }
-
-      var days = Math.floor(distance / this._days);
-      var hours = Math.floor(distance % this._days / this._hours);
-      var minutes = Math.floor(distance % this._hours / this._minutes);
-      var seconds = Math.floor(distance % this._minutes / this._seconds);
-      this.days = this.formatNum(days);
-      this.hours = this.formatNum(hours);
-      this.minutes = this.formatNum(minutes);
-      this.seconds = this.formatNum(seconds);
-    }
-  },
-  created: function created() {
-    this.showRemaining();
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var timer = setInterval(function () {
-      _this.showRemaining(timer);
-    }, 1000);
   }
 });
 
@@ -560,167 +492,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["red", "primaryText", "secondaryText", "date", "countDown"],
-  data: function data() {
-    return {
-      cols: this.countDown ? 3 : 4,
-      countDownClass: {
-        'flex-column': !_.isEmpty(this.countDown),
-        'flex-sm-row': !_.isEmpty(this.countDown)
-      },
-      textWrapperClass: {
-        'pb-0': !_.isEmpty(this.countDown),
-        'pb-sm-3': !_.isEmpty(this.countDown)
-      },
-      textWrapperColClass: {
-        'ml-3': !_.isEmpty(this.countDown),
-        'ml-sm-0': !_.isEmpty(this.countDown)
-      },
-      smallClendarClass: {
-        'count-down': !_.isEmpty(this.countDown)
-      },
-      squareClass: {
-        'red darken-4': this.red
-      }
-    };
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
@@ -859,21 +630,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
 /***/ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
 /*!******************************************************************************!*\
   !*** ./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
@@ -985,22 +741,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
-  \*******************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
-
-
-/***/ }),
-
 /***/ "./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&":
 /*!************************************************************************************!*\
   !*** ./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& ***!
@@ -1035,11 +775,17 @@ var render = function() {
   return _c(
     "v-footer",
     {
-      staticClass:
-        "challenge-footer white--text justify-center gradient-bg-secondary",
+      staticClass: "challenge-footer white--text justify-center",
       attrs: { fixed: "", app: "" }
     },
     [
+      _c("img", {
+        staticClass: "hero",
+        attrs: { src: "/img/landing-reto/banner.jpg", alt: "Hero" }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "hero-gradient gradient-bg-secondary" }),
+      _vm._v(" "),
       _c(
         "div",
         { staticClass: "content py-3" },
@@ -1049,10 +795,9 @@ var render = function() {
               primaryText: "Las inscripciones cierran en:",
               secondaryText: "(cupos limitados)",
               countDown: {
-                days: _vm.days,
-                hours: _vm.hours,
-                minutes: _vm.minutes,
-                seconds: _vm.seconds
+                year: 2022,
+                month: 4,
+                day: 5
               }
             }
           }),
@@ -1067,9 +812,7 @@ var render = function() {
                   attrs: { href: "#section-inscription", color: "error" },
                   on: {
                     click: function($event) {
-                      return _vm.$vuetify.goTo("#section-inscription", {
-                        offset: 56
-                      })
+                      return _vm.$vuetify.goTo("#section-inscription")
                     }
                   }
                 },
@@ -1472,7 +1215,7 @@ var render = function() {
                                     [
                                       _c(
                                         "v-icon",
-                                        { attrs: { left: "", size: "25px" } },
+                                        { attrs: { left: "", size: "25" } },
                                         [_vm._v("mdi-whatsapp")]
                                       ),
                                       _vm._v(
@@ -1847,221 +1590,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
-/*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
-  \**********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass:
-        "\n    small-calendar\n    d-inline-block\n    black\n    rounded\n    primary-font\n    lh-1\n    py-2\n    px-3\n  ",
-      class: _vm.smallClendarClass
-    },
-    [
-      _c(
-        "v-row",
-        {
-          staticClass: "justify-center",
-          class: _vm.countDownClass,
-          attrs: { align: "center" }
-        },
-        [
-          _c(
-            "v-col",
-            { class: _vm.textWrapperClass, attrs: { cols: "auto pr-2" } },
-            [
-              _c("div", { staticClass: "text-center" }, [
-                _c("div", { staticClass: "primary-text mb-1" }, [
-                  _c("span", [_vm._v(_vm._s(_vm.primaryText))])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "secondary-text" }, [
-                  _c("span", [_vm._v(_vm._s(_vm.secondaryText))])
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "v-col",
-            { class: _vm.textWrapperColClass, attrs: { cols: "auto" } },
-            [
-              _c(
-                "v-row",
-                { staticClass: "text-center date pr-2" },
-                [
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _c("span", [
-                            _vm._v(
-                              _vm._s(
-                                _vm.date ? _vm.date.day : _vm.countDown.days
-                              )
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _vm.countDown
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "time-info d-inline-block mt-1 px-1"
-                                },
-                                [_vm._v("DÍAS")]
-                              )
-                            : _vm._e()
-                        ]
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _vm.date
-                            ? [
-                                _c("span", [_vm._v(_vm._s(_vm.date.month[0]))]),
-                                _vm._v(" "),
-                                _c("span", [_vm._v(_vm._s(_vm.date.month[1]))])
-                              ]
-                            : [
-                                _c("span", [
-                                  _vm._v(_vm._s(_vm.countDown.hours))
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "time-info d-inline-block mt-1 px-1"
-                                  },
-                                  [_vm._v("HORAS")]
-                                )
-                              ]
-                        ],
-                        2
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
-                          class: _vm.squareClass
-                        },
-                        [
-                          _vm.date
-                            ? [
-                                _c("span", [_vm._v(_vm._s(_vm.date.year[0]))]),
-                                _vm._v(" "),
-                                _c("span", [_vm._v(_vm._s(_vm.date.year[1]))])
-                              ]
-                            : [
-                                _c("span", [
-                                  _vm._v(_vm._s(_vm.countDown.minutes))
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass:
-                                      "time-info d-inline-block mt-1 px-1"
-                                  },
-                                  [_vm._v("MINUTOS")]
-                                )
-                              ]
-                        ],
-                        2
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm.countDown
-                    ? _c(
-                        "v-col",
-                        { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
-                            },
-                            [
-                              _c("span", [
-                                _vm._v(_vm._s(_vm.countDown.seconds))
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                {
-                                  staticClass:
-                                    "time-info d-inline-block mt-1 px-1"
-                                },
-                                [_vm._v("SEGUNDOS")]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    : _vm._e()
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d&":
 /*!***************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/ChallengeKetoAyunoV4.vue?vue&type=template&id=4ec0e86d& ***!
@@ -2082,7 +1610,7 @@ var render = function() {
     [
       _c(
         "v-main",
-        { staticClass: "challenge-page h-100 pt-14 lh-1" },
+        { staticClass: "challenge-page h-100 lh-1" },
         [
           _c("section-presentation"),
           _vm._v(" "),
@@ -2412,55 +1940,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/challengeKetoAyunoV4/sections/presentation.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
-/* harmony import */ var _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render,
-  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* vuetify-loader */
-;
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"]})
-
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/challengeKetoAyunoV4/smallCalendar.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),

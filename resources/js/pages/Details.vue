@@ -1,100 +1,106 @@
 <template>
-  <div class="mt-14 mb-7 grey lighten-5 details-page">
-    <v-container class="pa-0">
-      <div class="banner">
-        <v-row no-gutters>
-          <v-col class="pa-md-5 pr-md-0" cols="12" md="6" align-self="center">
-            <v-img
-              :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
-              :aspect-ratio="16 / 9"
-              :src="product.poster"
-            >
-              <template v-slot:placeholder>
-                <v-sheet class="skeleton-loader-sheet">
-                  <v-skeleton-loader class="skeleton-loader" type="image" />
-                </v-sheet>
-              </template>
-            </v-img>
-          </v-col>
+  <div class="mb-7 grey lighten-5 details-page">
+    <v-main>
+      <v-container class="pa-0">
+        <div class="banner">
+          <v-row no-gutters>
+            <v-col class="pa-md-5 pr-md-0" cols="12" md="6" align-self="center">
+              <v-img
+                :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                :aspect-ratio="16 / 9"
+                :src="product.poster"
+              >
+                <template v-slot:placeholder>
+                  <v-sheet class="skeleton-loader-sheet">
+                    <v-skeleton-loader class="skeleton-loader" type="image" />
+                  </v-sheet>
+                </template>
+              </v-img>
+            </v-col>
 
-          <v-col cols="12" md="6">
-            <div class="main-info pa-5">
-              <v-row no-gutters>
-                <v-col cols="auto">
-                  <label-type :type="product.type"></label-type>
-                </v-col>
-                <v-col cols="12">
-                  <h1
-                    class="
-                      mt-3
-                      mb-1
-                      main-title
-                      primary-font
-                      font-weight-bold
-                      lh-1
-                    "
-                  >
-                    {{ product.name }}
-                  </h1>
-                </v-col>
-                <v-col cols="12 mb-3">
-                  <p class="mb-0 description text--secondary">
-                    {{ product.description }}
-                  </p>
-                </v-col>
-                <v-col cols="12 mb-3">
-                  <div class="details">
-                    <div class="item d-flex align-center">
-                      <v-icon color="secondary">
-                        {{
-                          isWorkshop(type)
-                            ? "mdi-clock-time-eight-outline"
-                            : "mdi-book-open-page-variant-outline"
-                        }}
-                      </v-icon>
-                      <span class="ml-1"
-                        ><span class="font-weight-bold"
-                          >{{
-                            isWorkshop(type) ? "Duración" : "Páginas"
-                          }}:</span
-                        >
-                        <span class="text--secondary">{{
-                          isWorkshop(type) ? product.duration : product.pages
-                        }}</span>
-                      </span>
+            <v-col cols="12" md="6">
+              <div class="main-info pa-5">
+                <v-row no-gutters>
+                  <v-col cols="auto">
+                    <label-type :type="product.type"></label-type>
+                  </v-col>
+                  <v-col cols="12">
+                    <h1
+                      class="
+                        mt-3
+                        mb-1
+                        main-title
+                        primary-font
+                        font-weight-bold
+                        lh-1
+                      "
+                    >
+                      {{ product.name }}
+                    </h1>
+                  </v-col>
+                  <v-col cols="12 mb-3">
+                    <p class="mb-0 description text--secondary">
+                      {{ product.description }}
+                    </p>
+                  </v-col>
+                  <v-col cols="12 mb-3">
+                    <div class="details">
+                      <div class="item d-flex align-center">
+                        <v-icon color="secondary">
+                          {{
+                            isWorkshop(type)
+                              ? "mdi-clock-time-eight-outline"
+                              : "mdi-book-open-page-variant-outline"
+                          }}
+                        </v-icon>
+                        <span class="ml-1"
+                          ><span class="font-weight-bold"
+                            >{{
+                              isWorkshop(type) ? "Duración" : "Páginas"
+                            }}:</span
+                          >
+                          <span class="text--secondary">{{
+                            isWorkshop(type) ? product.duration : product.pages
+                          }}</span>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </v-col>
-                <v-col cols="12">
-                  <template v-if="product.price.discount === 100">
-                    <v-btn :href="product.driveLink" target="_blank" color="primary" block>
-                      OBTENER RECETA DE REGALO
-                    </v-btn>
-                  </template>
-                  <template v-else>
-                    <v-btn :to="getBuyTo" color="primary" block>
-                      <v-icon class="mr-1">mdi-cart</v-icon>
-                      Comprar por
-                      <span
-                        v-if="product.price.discount"
-                        class="
-                          mx-1
-                          secondary-color
-                          font-weight-bold
-                          text-decoration-line-through
-                        "
-                        >{{ product.price.dollar.old }}</span
+                  </v-col>
+                  <v-col cols="12">
+                    <template v-if="product.price.discount === 100">
+                      <v-btn
+                        :href="product.driveLink"
+                        target="_blank"
+                        color="primary"
+                        block
                       >
-                      {{ product.price.dollar.value }}
-                    </v-btn>
-                  </template>
-                </v-col>
-              </v-row>
-            </div>
-          </v-col>
-        </v-row>
-      </div>
-      <v-main>
+                        OBTENER RECETA DE REGALO
+                      </v-btn>
+                    </template>
+                    <template v-else>
+                      <v-btn :to="getBuyTo" color="primary" block>
+                        <v-icon class="mr-1">mdi-cart</v-icon>
+                        Comprar por
+                        <span
+                          v-if="product.price.discount"
+                          class="
+                            mx-1
+                            secondary-color
+                            font-weight-bold
+                            text-decoration-line-through
+                          "
+                          >{{ product.price.dollar.old }}</span
+                        >
+                        {{ product.price.dollar.value }}
+                      </v-btn>
+                    </template>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+
         <v-row
           no-gutters
           class="card-features elevation-1 rounded-lg white mx-5 pa-4 pb-1"
@@ -167,14 +173,14 @@
             </template>
           </v-col>
         </v-row>
-      </v-main>
-    </v-container>
+      </v-container>
+    </v-main>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import store from '../store/index.js';
+import store from "../store/index.js";
 import labelType from "../components/productCard/labelType.vue";
 export default {
   props: ["type"],
@@ -204,16 +210,18 @@ export default {
   components: {
     labelType,
   },
-  beforeRouteEnter (to, from, next) {
-    const type = to.name.split('-')[0];
+  beforeRouteEnter(to, from, next) {
+    const type = to.name.split("-")[0];
     const shortName = to.params.shortName;
-    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName) ? true : false;
-    
-    if(existsInfoproduct) {
+    const existsInfoproduct = store.getters.verifyInfoproduct(type, shortName)
+      ? true
+      : false;
+
+    if (existsInfoproduct) {
       next();
     } else {
-      next('/');
+      next("/");
     }
-  }
+  },
 };
 </script>

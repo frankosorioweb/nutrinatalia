@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-main class="challenge-page h-100 pt-14 lh-1">
+    <v-main class="challenge-page h-100 lh-1">
       <section-presentation/>
       <section-more-info/>
       <section-not-suitable/>

@@ -102,7 +102,7 @@
                   </v-col>
                   <v-col cols="12">
                     <v-btn @click="reserveAction" color="primary" block>
-                      <v-icon left size="25px">mdi-whatsapp</v-icon>
+                      <v-icon left size="25">mdi-whatsapp</v-icon>
                       Reservar mi lugar
                     </v-btn>
                   </v-col>

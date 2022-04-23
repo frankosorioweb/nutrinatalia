@@ -1,5 +1,5 @@
 <template>
-  <v-main class="mt-14 cart-page">
+  <v-main class="cart-page">
     <v-container class="px-5 py-8">
       <v-row no-gutters>
         <purchase-policy-alert v-if="!isFreeInfoProduct" />

@@ -2789,6 +2789,228 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["red", "primaryText", "secondaryText", "date", "countDown"],
+  data: function data() {
+    return {
+      days: "",
+      hours: "",
+      minutes: "",
+      seconds: "",
+      cols: this.countDown ? 3 : 4,
+      countDownClass: {
+        "flex-column": !_.isEmpty(this.countDown),
+        "flex-sm-row": !_.isEmpty(this.countDown)
+      },
+      textWrapperClass: {
+        "pb-0": !_.isEmpty(this.countDown),
+        "pb-sm-3": !_.isEmpty(this.countDown)
+      },
+      textWrapperColClass: {
+        "ml-3": !_.isEmpty(this.countDown),
+        "ml-sm-0": !_.isEmpty(this.countDown)
+      },
+      smallClendarClass: {
+        "count-down": !_.isEmpty(this.countDown)
+      },
+      squareClass: {
+        "red darken-4": this.red
+      }
+    };
+  },
+  computed: {
+    _seconds: function _seconds() {
+      return 1000;
+    },
+    _minutes: function _minutes() {
+      return this._seconds * 60;
+    },
+    _hours: function _hours() {
+      return this._minutes * 60;
+    },
+    _days: function _days() {
+      return this._hours * 24;
+    }
+  },
+  methods: {
+    formatNum: function formatNum(num) {
+      return num < 10 ? "0".concat(num) : num;
+    },
+    showRemaining: function showRemaining(timer) {
+      var now = new Date();
+      var end = new Date(this.countDown.year, this.countDown.month, this.countDown.day);
+      var distance = end.getTime() - now.getTime();
+
+      if (distance < 0) {
+        this.days = this.formatNum(0);
+        this.hours = this.formatNum(0);
+        this.minutes = this.formatNum(0);
+        this.seconds = this.formatNum(0);
+
+        if (timer) {
+          clearInterval(timer);
+        }
+
+        return;
+      }
+
+      var days = Math.floor(distance / this._days);
+      var hours = Math.floor(distance % this._days / this._hours);
+      var minutes = Math.floor(distance % this._hours / this._minutes);
+      var seconds = Math.floor(distance % this._minutes / this._seconds);
+      this.days = this.formatNum(days);
+      this.hours = this.formatNum(hours);
+      this.minutes = this.formatNum(minutes);
+      this.seconds = this.formatNum(seconds);
+    }
+  },
+  created: function created() {
+    if (this.countDown) {
+      this.showRemaining();
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    if (this.countDown) {
+      var timer = setInterval(function () {
+        _this.showRemaining(timer);
+      }, 1000);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js& ***!
@@ -3972,6 +4194,77 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_challengeKetoAyunoV4_smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/challengeKetoAyunoV4/smallCalendar.vue */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    smallCalendar: _components_challengeKetoAyunoV4_smallCalendar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Footer.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Footer.vue?vue&type=script&lang=js& ***!
@@ -4516,6 +4809,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4546,14 +4845,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     labelType: _components_productCard_labelType_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   beforeRouteEnter: function beforeRouteEnter(to, from, next) {
-    var type = to.name.split('-')[0];
+    var type = to.name.split("-")[0];
     var shortName = to.params.shortName;
     var existsInfoproduct = _store_index_js__WEBPACK_IMPORTED_MODULE_0__["default"].getters.verifyInfoproduct(type, shortName) ? true : false;
 
     if (existsInfoproduct) {
       next();
     } else {
-      next('/');
+      next("/");
     }
   }
 });
@@ -10159,6 +10458,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".v-avatar {\n  align-items: center;\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VBanner/VBanner.sass":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VBanner/VBanner.sass ***!
+  \************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-banner.v-sheet {\n  background-color: transparent;\n}\n.theme--light.v-banner.v-sheet:not(.v-sheet--outlined):not(.v-sheet--shaped) .v-banner__wrapper {\n  border-bottom: thin solid rgba(0, 0, 0, 0.12);\n}\n\n.theme--dark.v-banner.v-sheet {\n  background-color: transparent;\n}\n.theme--dark.v-banner.v-sheet:not(.v-sheet--outlined):not(.v-sheet--shaped) .v-banner__wrapper {\n  border-bottom: thin solid rgba(255, 255, 255, 0.12);\n}\n\n.v-sheet.v-banner {\n  border-radius: 0;\n}\n.v-sheet.v-banner:not(.v-sheet--outlined) {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);\n}\n.v-sheet.v-banner.v-sheet--shaped {\n  border-radius: 24px 0;\n}\n\n.v-banner {\n  position: relative;\n  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.v-banner__actions {\n  align-items: center;\n  align-self: flex-end;\n  display: flex;\n  flex: 1 0 auto;\n  justify-content: flex-end;\n  margin-bottom: -8px;\n}\n.v-application--is-ltr .v-banner__actions {\n  margin-left: 90px;\n}\n.v-application--is-rtl .v-banner__actions {\n  margin-right: 90px;\n}\n.v-application--is-ltr .v-banner__actions > * {\n  margin-left: 8px;\n}\n.v-application--is-rtl .v-banner__actions > * {\n  margin-right: 8px;\n}\n\n.v-banner__content {\n  align-items: center;\n  display: flex;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n\n.v-banner__text {\n  flex: 1 1 auto;\n  line-height: 20px;\n  max-width: 100%;\n}\n\n.v-banner__icon {\n  display: inline-flex;\n  flex: 0 0 auto;\n}\n.v-application--is-ltr .v-banner__icon {\n  margin-right: 24px;\n}\n.v-application--is-rtl .v-banner__icon {\n  margin-left: 24px;\n}\n\n.v-banner__wrapper {\n  align-items: center;\n  display: flex;\n  flex: 1 1 auto;\n}\n.v-application--is-ltr .v-banner__wrapper {\n  padding: 16px 8px 16px 24px;\n}\n.v-application--is-rtl .v-banner__wrapper {\n  padding: 16px 24px 16px 8px;\n}\n\n.v-banner--single-line .v-banner__actions {\n  margin-bottom: 0;\n  align-self: center;\n}\n.v-banner--single-line .v-banner__text {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.v-banner--single-line .v-banner__wrapper {\n  padding-top: 8px;\n  padding-bottom: 8px;\n}\n\n.v-application--is-ltr .v-banner--has-icon .v-banner__wrapper {\n  padding-left: 16px;\n}\n.v-application--is-rtl .v-banner--has-icon .v-banner__wrapper {\n  padding-right: 16px;\n}\n\n.v-banner--is-mobile .v-banner__actions {\n  flex: 1 0 100%;\n  margin-left: 0;\n  margin-right: 0;\n  padding-top: 12px;\n}\n.v-banner--is-mobile .v-banner__wrapper {\n  flex-wrap: wrap;\n  padding-top: 16px;\n}\n.v-application--is-ltr .v-banner--is-mobile .v-banner__wrapper {\n  padding-left: 16px;\n}\n.v-application--is-rtl .v-banner--is-mobile .v-banner__wrapper {\n  padding-right: 16px;\n}\n.v-banner--is-mobile.v-banner--has-icon .v-banner__wrapper {\n  padding-top: 24px;\n}\n.v-banner--is-mobile.v-banner--single-line .v-banner__actions {\n  flex: initial;\n  padding-top: 0;\n}\n.v-application--is-ltr .v-banner--is-mobile.v-banner--single-line .v-banner__actions {\n  margin-left: 36px;\n}\n.v-application--is-rtl .v-banner--is-mobile.v-banner--single-line .v-banner__actions {\n  margin-right: 36px;\n}\n.v-banner--is-mobile.v-banner--single-line .v-banner__wrapper {\n  flex-wrap: nowrap;\n  padding-top: 10px;\n}\n.v-application--is-ltr .v-banner--is-mobile .v-banner__icon {\n  margin-right: 16px;\n}\n.v-application--is-rtl .v-banner--is-mobile .v-banner__icon {\n  margin-left: 16px;\n}\n.v-application--is-ltr .v-banner--is-mobile .v-banner__content {\n  padding-right: 8px;\n}\n.v-application--is-rtl .v-banner--is-mobile .v-banner__content {\n  padding-left: 8px;\n}\n.v-banner--is-mobile .v-banner__content .v-banner__wrapper {\n  flex-wrap: nowrap;\n  padding-top: 10px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass":
 /*!******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass ***!
@@ -10969,30 +11292,6 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".theme--light.v-subheader {\n  color: rgba(0, 0, 0, 0.6);\n}\n\n.theme--dark.v-subheader {\n  color: rgba(255, 255, 255, 0.7);\n}\n\n.v-subheader {\n  align-items: center;\n  display: flex;\n  height: 48px;\n  font-size: 0.875rem;\n  font-weight: 400;\n  padding: 0 16px 0 16px;\n}\n.v-subheader--inset {\n  margin-left: 56px;\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass ***!
-  \******************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Theme */\n.theme--light.v-system-bar {\n  background-color: #e0e0e0;\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-system-bar .v-icon {\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-system-bar--lights-out {\n  background-color: rgba(255, 255, 255, 0.7) !important;\n}\n\n.theme--dark.v-system-bar {\n  background-color: #000000;\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-system-bar .v-icon {\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-system-bar--lights-out {\n  background-color: rgba(0, 0, 0, 0.2) !important;\n}\n\n.v-system-bar {\n  align-items: center;\n  display: flex;\n  font-size: 0.875rem;\n  font-weight: 400;\n  padding: 0 8px;\n}\n.v-system-bar .v-icon {\n  font-size: 1rem;\n  margin-right: 4px;\n}\n.v-system-bar--fixed, .v-system-bar--absolute {\n  left: 0;\n  top: 0;\n  width: 100%;\n  z-index: 3;\n}\n.v-system-bar--fixed {\n  position: fixed;\n}\n.v-system-bar--absolute {\n  position: absolute;\n}\n.v-system-bar--window .v-icon {\n  font-size: 1.25rem;\n  margin-right: 8px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42905,6 +43204,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************!*\
   !*** ./resources/js/components/couponBox/customSnackBar.vue?vue&type=script&lang=js& ***!
@@ -43206,6 +43521,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/socialMediaButtons/smallButton.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_smallButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BannerChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BannerChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -43526,6 +43857,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PurchasePolicyAlert_vue_vue_type_template_id_20c7c845___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PurchasePolicyAlert_vue_vue_type_template_id_20c7c845___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PurchasePolicyAlert.vue?vue&type=template&id=20c7c845& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cart/PurchasePolicyAlert.vue?vue&type=template&id=20c7c845&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
 
 
 /***/ }),
@@ -44060,9 +44408,11 @@ var render = function() {
     "v-app",
     { attrs: { app: "" } },
     [
-      _c("app-header"),
+      !_vm.$store.getters.isChallengeRoute(this)
+        ? _c("banner-challenge")
+        : _vm._e(),
       _vm._v(" "),
-      _c("banner-challenge"),
+      _c("app-header"),
       _vm._v(" "),
       _c("app-navigation-drawer"),
       _vm._v(" "),
@@ -44887,6 +45237,212 @@ var render = function() {
                     },
                     [_vm._v("\n          Aceptar\n        ")]
                   )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass:
+        "\n    small-calendar\n    d-inline-block\n    black\n    rounded\n    primary-font\n    lh-1\n    py-2\n    px-3\n  ",
+      class: _vm.smallClendarClass
+    },
+    [
+      _c(
+        "v-row",
+        {
+          staticClass: "justify-center",
+          class: _vm.countDownClass,
+          attrs: { align: "center" }
+        },
+        [
+          _c(
+            "v-col",
+            { class: _vm.textWrapperClass, attrs: { cols: "auto pr-2" } },
+            [
+              _c("div", { staticClass: "text-center" }, [
+                _c("div", { staticClass: "primary-text mb-1" }, [
+                  _c("span", [_vm._v(_vm._s(_vm.primaryText))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "secondary-text" }, [
+                  _c("span", [_vm._v(_vm._s(_vm.secondaryText))])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "v-col",
+            { class: _vm.textWrapperColClass, attrs: { cols: "auto" } },
+            [
+              _c(
+                "v-row",
+                { staticClass: "text-center date pr-2" },
+                [
+                  _c(
+                    "v-col",
+                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
+                        },
+                        [
+                          _c("span", [
+                            _vm._v(_vm._s(_vm.date ? _vm.date.day : _vm.days))
+                          ]),
+                          _vm._v(" "),
+                          _vm.countDown
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "time-info d-inline-block mt-1 px-1"
+                                },
+                                [_vm._v("DÍAS")]
+                              )
+                            : _vm._e()
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
+                        },
+                        [
+                          _vm.date
+                            ? [
+                                _c("span", [_vm._v(_vm._s(_vm.date.month[0]))]),
+                                _vm._v(" "),
+                                _c("span", [_vm._v(_vm._s(_vm.date.month[1]))])
+                              ]
+                            : [
+                                _c("span", [_vm._v(_vm._s(_vm.hours))]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "time-info d-inline-block mt-1 px-1"
+                                  },
+                                  [_vm._v("HORAS")]
+                                )
+                              ]
+                        ],
+                        2
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            ",
+                          class: _vm.squareClass
+                        },
+                        [
+                          _vm.date
+                            ? [
+                                _c("span", [_vm._v(_vm._s(_vm.date.year[0]))]),
+                                _vm._v(" "),
+                                _c("span", [_vm._v(_vm._s(_vm.date.year[1]))])
+                              ]
+                            : [
+                                _c("span", [_vm._v(_vm._s(_vm.minutes))]),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass:
+                                      "time-info d-inline-block mt-1 px-1"
+                                  },
+                                  [_vm._v("MINUTOS")]
+                                )
+                              ]
+                        ],
+                        2
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.countDown
+                    ? _c(
+                        "v-col",
+                        { staticClass: "pl-0 pr-1", attrs: { cols: _vm.cols } },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "\n              square\n              d-flex\n              flex-column\n              justify-center\n              align-center\n              px-2\n              py-1\n              rounded\n            "
+                            },
+                            [
+                              _c("span", [_vm._v(_vm._s(_vm.seconds))]),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "time-info d-inline-block mt-1 px-1"
+                                },
+                                [_vm._v("SEGUNDOS")]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    : _vm._e()
                 ],
                 1
               )
@@ -46751,51 +47307,120 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-system-bar",
+    "v-banner",
     {
-      staticClass: "banner-challenge justify-center",
-      attrs: { height: "100", app: "" }
+      ref: "banner",
+      staticClass: "banner-challenge text-center",
+      attrs: { app: "", elevation: "3" }
     },
     [
-      _c("a", [
-        _c("img", {
-          staticClass: "hero",
-          attrs: { src: "/img/landing-reto/banner.jpg", alt: "Hero" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "hero-gradient" }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "content white--text" },
-          [
-            _c(
-              "v-row",
-              { attrs: { "no-gutters": "" } },
-              [
-                _c("v-col", { attrs: { cols: "12" } }, [
+      _c(
+        "router-link",
+        { attrs: { to: { name: "challenge-15-dias-keto-ayuno-v4" } } },
+        [
+          _c("img", {
+            staticClass: "hero",
+            attrs: { src: "/img/landing-reto/banner.jpg", alt: "Hero" }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "hero-gradient gradient-bg-secondary" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content white--text" },
+            [
+              _c(
+                "v-row",
+                { attrs: { "no-gutters": "" } },
+                [
+                  _c("v-col", { staticClass: "mb-2", attrs: { cols: "12" } }, [
+                    _c(
+                      "p",
+                      {
+                        staticClass:
+                          "mb-0 event-name font-weight-bold primary-font"
+                      },
+                      [
+                        _c("span", { staticClass: "primary-color" }, [
+                          _vm._v("Reto")
+                        ]),
+                        _vm._v(
+                          "\n            15 Días Keto + Ayuno\n            "
+                        ),
+                        _c("span", { staticClass: "primary-color" }, [
+                          _vm._v("Versión 4.0")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
                   _c(
-                    "p",
-                    {
-                      staticClass:
-                        "mb-0 event-name font-weight-bold primary-font"
-                    },
+                    "v-col",
+                    { staticClass: "mb-2", attrs: { cols: "12" } },
                     [
-                      _vm._v("15 Días Keto + Ayuno "),
-                      _c("span", { staticClass: "primary-color" }, [
-                        _vm._v("Versión 4.0")
-                      ])
-                    ]
+                      _c("small-calendar", {
+                        attrs: {
+                          primaryText: "Las inscripciones cierran en:",
+                          secondaryText: "(cupos limitados)",
+                          countDown: {
+                            day: 5,
+                            month: 4,
+                            year: 2022
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    { attrs: { cols: "12" } },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "font-weight-bold primary-font",
+                          attrs: {
+                            to: { name: "challenge-15-dias-keto-ayuno-v4" }
+                          }
+                        },
+                        [
+                          _vm._v("Click "),
+                          _c("span", { staticClass: "white--text" }, [
+                            _vm._v("aquí")
+                          ]),
+                          _vm._v(" para más información")
+                        ]
+                      )
+                    ],
+                    1
                   )
-                ])
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ])
-    ]
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "v-btn",
+        {
+          staticClass: "btn-close-banner",
+          attrs: { color: "secondary", "x-small": "", fab: "" },
+          on: {
+            click: function($event) {
+              return _vm.$refs.banner.toggle()
+            }
+          }
+        },
+        [_c("v-icon", [_vm._v(" mdi-close ")])],
+        1
+      )
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -47176,7 +47801,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-main",
-    { staticClass: "mt-14 cart-page" },
+    { staticClass: "cart-page" },
     [
       _c(
         "v-container",
@@ -47273,260 +47898,263 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "mt-14 mb-7 grey lighten-5 details-page" },
+    { staticClass: "mb-7 grey lighten-5 details-page" },
     [
       _c(
-        "v-container",
-        { staticClass: "pa-0" },
+        "v-main",
         [
           _c(
-            "div",
-            { staticClass: "banner" },
+            "v-container",
+            { staticClass: "pa-0" },
             [
               _c(
-                "v-row",
-                { attrs: { "no-gutters": "" } },
+                "div",
+                { staticClass: "banner" },
                 [
                   _c(
-                    "v-col",
-                    {
-                      staticClass: "pa-md-5 pr-md-0",
-                      attrs: { cols: "12", md: "6", "align-self": "center" }
-                    },
+                    "v-row",
+                    { attrs: { "no-gutters": "" } },
                     [
-                      _c("v-img", {
-                        class: { rounded: _vm.$vuetify.breakpoint.mdAndUp },
-                        attrs: {
-                          "aspect-ratio": 16 / 9,
-                          src: _vm.product.poster
+                      _c(
+                        "v-col",
+                        {
+                          staticClass: "pa-md-5 pr-md-0",
+                          attrs: { cols: "12", md: "6", "align-self": "center" }
                         },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "placeholder",
-                            fn: function() {
-                              return [
+                        [
+                          _c("v-img", {
+                            class: { rounded: _vm.$vuetify.breakpoint.mdAndUp },
+                            attrs: {
+                              "aspect-ratio": 16 / 9,
+                              src: _vm.product.poster
+                            },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "placeholder",
+                                fn: function() {
+                                  return [
+                                    _c(
+                                      "v-sheet",
+                                      { staticClass: "skeleton-loader-sheet" },
+                                      [
+                                        _c("v-skeleton-loader", {
+                                          staticClass: "skeleton-loader",
+                                          attrs: { type: "image" }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ]
+                                },
+                                proxy: true
+                              }
+                            ])
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-col", { attrs: { cols: "12", md: "6" } }, [
+                        _c(
+                          "div",
+                          { staticClass: "main-info pa-5" },
+                          [
+                            _c(
+                              "v-row",
+                              { attrs: { "no-gutters": "" } },
+                              [
                                 _c(
-                                  "v-sheet",
-                                  { staticClass: "skeleton-loader-sheet" },
+                                  "v-col",
+                                  { attrs: { cols: "auto" } },
                                   [
-                                    _c("v-skeleton-loader", {
-                                      staticClass: "skeleton-loader",
-                                      attrs: { type: "image" }
+                                    _c("label-type", {
+                                      attrs: { type: _vm.product.type }
                                     })
                                   ],
                                   1
+                                ),
+                                _vm._v(" "),
+                                _c("v-col", { attrs: { cols: "12" } }, [
+                                  _c(
+                                    "h1",
+                                    {
+                                      staticClass:
+                                        "\n                      mt-3\n                      mb-1\n                      main-title\n                      primary-font\n                      font-weight-bold\n                      lh-1\n                    "
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                    " +
+                                          _vm._s(_vm.product.name) +
+                                          "\n                  "
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("v-col", { attrs: { cols: "12 mb-3" } }, [
+                                  _c(
+                                    "p",
+                                    {
+                                      staticClass:
+                                        "mb-0 description text--secondary"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                    " +
+                                          _vm._s(_vm.product.description) +
+                                          "\n                  "
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("v-col", { attrs: { cols: "12 mb-3" } }, [
+                                  _c("div", { staticClass: "details" }, [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "item d-flex align-center"
+                                      },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          { attrs: { color: "secondary" } },
+                                          [
+                                            _vm._v(
+                                              "\n                        " +
+                                                _vm._s(
+                                                  _vm.isWorkshop(_vm.type)
+                                                    ? "mdi-clock-time-eight-outline"
+                                                    : "mdi-book-open-page-variant-outline"
+                                                ) +
+                                                "\n                      "
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "ml-1" }, [
+                                          _c(
+                                            "span",
+                                            { staticClass: "font-weight-bold" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.isWorkshop(_vm.type)
+                                                    ? "Duración"
+                                                    : "Páginas"
+                                                ) + ":"
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            { staticClass: "text--secondary" },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.isWorkshop(_vm.type)
+                                                    ? _vm.product.duration
+                                                    : _vm.product.pages
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "v-col",
+                                  { attrs: { cols: "12" } },
+                                  [
+                                    _vm.product.price.discount === 100
+                                      ? [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                href: _vm.product.driveLink,
+                                                target: "_blank",
+                                                color: "primary",
+                                                block: ""
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                      OBTENER RECETA DE REGALO\n                    "
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      : [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                to: _vm.getBuyTo,
+                                                color: "primary",
+                                                block: ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                { staticClass: "mr-1" },
+                                                [_vm._v("mdi-cart")]
+                                              ),
+                                              _vm._v(
+                                                "\n                      Comprar por\n                      "
+                                              ),
+                                              _vm.product.price.discount
+                                                ? _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "\n                          mx-1\n                          secondary-color\n                          font-weight-bold\n                          text-decoration-line-through\n                        "
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(
+                                                          _vm.product.price
+                                                            .dollar.old
+                                                        )
+                                                      )
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.product.price.dollar
+                                                      .value
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                  ],
+                                  2
                                 )
-                              ]
-                            },
-                            proxy: true
-                          }
-                        ])
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-col", { attrs: { cols: "12", md: "6" } }, [
-                    _c(
-                      "div",
-                      { staticClass: "main-info pa-5" },
-                      [
-                        _c(
-                          "v-row",
-                          { attrs: { "no-gutters": "" } },
-                          [
-                            _c(
-                              "v-col",
-                              { attrs: { cols: "auto" } },
-                              [
-                                _c("label-type", {
-                                  attrs: { type: _vm.product.type }
-                                })
                               ],
                               1
-                            ),
-                            _vm._v(" "),
-                            _c("v-col", { attrs: { cols: "12" } }, [
-                              _c(
-                                "h1",
-                                {
-                                  staticClass:
-                                    "\n                    mt-3\n                    mb-1\n                    main-title\n                    primary-font\n                    font-weight-bold\n                    lh-1\n                  "
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                  " +
-                                      _vm._s(_vm.product.name) +
-                                      "\n                "
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("v-col", { attrs: { cols: "12 mb-3" } }, [
-                              _c(
-                                "p",
-                                {
-                                  staticClass:
-                                    "mb-0 description text--secondary"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                  " +
-                                      _vm._s(_vm.product.description) +
-                                      "\n                "
-                                  )
-                                ]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("v-col", { attrs: { cols: "12 mb-3" } }, [
-                              _c("div", { staticClass: "details" }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "item d-flex align-center" },
-                                  [
-                                    _c(
-                                      "v-icon",
-                                      { attrs: { color: "secondary" } },
-                                      [
-                                        _vm._v(
-                                          "\n                      " +
-                                            _vm._s(
-                                              _vm.isWorkshop(_vm.type)
-                                                ? "mdi-clock-time-eight-outline"
-                                                : "mdi-book-open-page-variant-outline"
-                                            ) +
-                                            "\n                    "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("span", { staticClass: "ml-1" }, [
-                                      _c(
-                                        "span",
-                                        { staticClass: "font-weight-bold" },
-                                        [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.isWorkshop(_vm.type)
-                                                ? "Duración"
-                                                : "Páginas"
-                                            ) + ":"
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        { staticClass: "text--secondary" },
-                                        [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm.isWorkshop(_vm.type)
-                                                ? _vm.product.duration
-                                                : _vm.product.pages
-                                            )
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ],
-                                  1
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "v-col",
-                              { attrs: { cols: "12" } },
-                              [
-                                _vm.product.price.discount === 100
-                                  ? [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            href: _vm.product.driveLink,
-                                            target: "_blank",
-                                            color: "primary",
-                                            block: ""
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    OBTENER RECETA DE REGALO\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  : [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            to: _vm.getBuyTo,
-                                            color: "primary",
-                                            block: ""
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-icon",
-                                            { staticClass: "mr-1" },
-                                            [_vm._v("mdi-cart")]
-                                          ),
-                                          _vm._v(
-                                            "\n                    Comprar por\n                    "
-                                          ),
-                                          _vm.product.price.discount
-                                            ? _c(
-                                                "span",
-                                                {
-                                                  staticClass:
-                                                    "\n                        mx-1\n                        secondary-color\n                        font-weight-bold\n                        text-decoration-line-through\n                      "
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      _vm.product.price.dollar
-                                                        .old
-                                                    )
-                                                  )
-                                                ]
-                                              )
-                                            : _vm._e(),
-                                          _vm._v(
-                                            "\n                    " +
-                                              _vm._s(
-                                                _vm.product.price.dollar.value
-                                              ) +
-                                              "\n                  "
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ]
-                              ],
-                              2
                             )
                           ],
                           1
                         )
-                      ],
-                      1
-                    )
-                  ])
+                      ])
+                    ],
+                    1
+                  )
                 ],
                 1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-main",
-            [
+              ),
+              _vm._v(" "),
               _c(
                 "v-row",
                 {
@@ -51348,6 +51976,27 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/vuetify/src/components/VBanner/VBanner.sass":
+/*!******************************************************************!*\
+  !*** ./node_modules/vuetify/src/components/VBanner/VBanner.sass ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./VBanner.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VBanner/VBanner.sass");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
+var update = add("f2bec322", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass":
 /*!************************************************************************!*\
   !*** ./node_modules/vuetify/src/components/VBtnToggle/VBtnToggle.sass ***!
@@ -52057,27 +52706,6 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
 var update = add("052416f4", content, false, {});
-// Hot Module Replacement
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass":
-/*!************************************************************************!*\
-  !*** ./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass ***!
-  \************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(/*! !!../../../../css-loader/dist/cjs.js!../../../../sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./VSystemBar.sass */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22[0].rules[0].use[2]!./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.id, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__(/*! !../../../../vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js")["default"]
-var update = add("033670bd", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -65016,6 +65644,56 @@ component.options.__file = "resources/js/components/cart/PurchasePolicyAlert.vue
 
 /***/ }),
 
+/***/ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=template&id=f2fa82f6& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=template&id=f2fa82f6&");
+/* harmony import */ var _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./smallCalendar.vue?vue&type=script&lang=js& */ "./resources/js/components/challengeKetoAyunoV4/smallCalendar.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _smallCalendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.render,
+  _smallCalendar_vue_vue_type_template_id_f2fa82f6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* vuetify-loader */
+;
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_5__["default"]})
+
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/challengeKetoAyunoV4/smallCalendar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/couponBox/customSnackBar.vue":
 /*!**************************************************************!*\
   !*** ./resources/js/components/couponBox/customSnackBar.vue ***!
@@ -65986,20 +66664,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8& */ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=template&id=7ad80bd8&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
-/* harmony import */ var vuetify_lib_components_VSystemBar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VSystemBar */ "./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js");
+/* harmony import */ var _BannerChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js& */ "./resources/js/layouts/BannerChallengeKetoAyunoV4.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
+/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vuetify_lib_components_VBanner__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VBanner */ "./node_modules/vuetify/lib/components/VBanner/VBanner.js");
+/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/VBtn.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VCol.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/VIcon.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/VRow.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BannerChallengeKetoAyunoV4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.render,
   _BannerChallengeKetoAyunoV4_vue_vue_type_template_id_7ad80bd8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -66014,7 +66696,9 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_2___default()(component, {VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_3__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_4__["default"],VSystemBar: vuetify_lib_components_VSystemBar__WEBPACK_IMPORTED_MODULE_5__["default"]})
+
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBanner: vuetify_lib_components_VBanner__WEBPACK_IMPORTED_MODULE_4__["default"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["default"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["default"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_7__["default"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_8__["default"]})
 
 
 /* hot reload */
@@ -67338,6 +68022,175 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_VAvatar__WEBPACK_IMPORTED_MODULE_0__["default"]);
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/vuetify/lib/components/VBanner/VBanner.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/vuetify/lib/components/VBanner/VBanner.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _src_components_VBanner_VBanner_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VBanner/VBanner.sass */ "./node_modules/vuetify/src/components/VBanner/VBanner.sass");
+/* harmony import */ var _src_components_VBanner_VBanner_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VBanner_VBanner_sass__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _VSheet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../VSheet */ "./node_modules/vuetify/lib/components/VSheet/index.js");
+/* harmony import */ var _VAvatar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../VAvatar */ "./node_modules/vuetify/lib/components/VAvatar/index.js");
+/* harmony import */ var _VIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
+/* harmony import */ var _transitions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../transitions */ "./node_modules/vuetify/lib/components/transitions/index.js");
+/* harmony import */ var _mixins_mobile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/mobile */ "./node_modules/vuetify/lib/mixins/mobile/index.js");
+/* harmony import */ var _mixins_toggleable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/toggleable */ "./node_modules/vuetify/lib/mixins/toggleable/index.js");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
+// Styles
+ // Extensions
+
+ // Components
+
+
+
+ // Mixins
+
+
+ // Utilities
+
+
+
+/* @vue/component */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__["default"])(_VSheet__WEBPACK_IMPORTED_MODULE_2__["default"], _mixins_mobile__WEBPACK_IMPORTED_MODULE_3__["default"], _mixins_toggleable__WEBPACK_IMPORTED_MODULE_4__["default"]).extend({
+  name: 'v-banner',
+  inheritAttrs: false,
+  props: {
+    app: Boolean,
+    icon: String,
+    iconColor: String,
+    singleLine: Boolean,
+    sticky: Boolean,
+    value: {
+      type: Boolean,
+      default: true
+    }
+  },
+  computed: {
+    classes() {
+      return { ..._VSheet__WEBPACK_IMPORTED_MODULE_2__["default"].options.computed.classes.call(this),
+        'v-banner--has-icon': this.hasIcon,
+        'v-banner--is-mobile': this.isMobile,
+        'v-banner--single-line': this.singleLine,
+        'v-banner--sticky': this.isSticky
+      };
+    },
+
+    hasIcon() {
+      return Boolean(this.icon || this.$slots.icon);
+    },
+
+    isSticky() {
+      return this.sticky || this.app;
+    },
+
+    styles() {
+      const styles = { ..._VSheet__WEBPACK_IMPORTED_MODULE_2__["default"].options.computed.styles.call(this)
+      };
+
+      if (this.isSticky) {
+        const top = !this.app ? 0 : this.$vuetify.application.bar + this.$vuetify.application.top;
+        styles.top = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.convertToUnit)(top);
+        styles.position = 'sticky';
+        styles.zIndex = 1;
+      }
+
+      return styles;
+    }
+
+  },
+  methods: {
+    /** @public */
+    toggle() {
+      this.isActive = !this.isActive;
+    },
+
+    iconClick(e) {
+      this.$emit('click:icon', e);
+    },
+
+    genIcon() {
+      if (!this.hasIcon) return undefined;
+      let content;
+
+      if (this.icon) {
+        content = this.$createElement(_VIcon__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          props: {
+            color: this.iconColor,
+            size: 28
+          }
+        }, [this.icon]);
+      } else {
+        content = this.$slots.icon;
+      }
+
+      return this.$createElement(_VAvatar__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        staticClass: 'v-banner__icon',
+        props: {
+          color: this.color,
+          size: 40
+        },
+        on: {
+          click: this.iconClick
+        }
+      }, [content]);
+    },
+
+    genText() {
+      return this.$createElement('div', {
+        staticClass: 'v-banner__text'
+      }, this.$slots.default);
+    },
+
+    genActions() {
+      const children = (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.getSlot)(this, 'actions', {
+        dismiss: () => this.isActive = false
+      });
+      if (!children) return undefined;
+      return this.$createElement('div', {
+        staticClass: 'v-banner__actions'
+      }, children);
+    },
+
+    genContent() {
+      return this.$createElement('div', {
+        staticClass: 'v-banner__content'
+      }, [this.genIcon(), this.genText()]);
+    },
+
+    genWrapper() {
+      return this.$createElement('div', {
+        staticClass: 'v-banner__wrapper'
+      }, [this.genContent(), this.genActions()]);
+    }
+
+  },
+
+  render(h) {
+    return h(_transitions__WEBPACK_IMPORTED_MODULE_8__.VExpandTransition, [h('div', this.setBackgroundColor(this.color, {
+      staticClass: 'v-banner',
+      attrs: this.attrs$,
+      class: this.classes,
+      style: this.styles,
+      directives: [{
+        name: 'show',
+        value: this.isActive
+      }]
+    }), [this.genWrapper()])]);
+  }
+
+}));
+//# sourceMappingURL=VBanner.js.map
 
 /***/ }),
 
@@ -75190,90 +76043,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_VSubheader__WEBPACK_IMPORTED_MODULE_0__["default"]);
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/vuetify/lib/components/VSystemBar/VSystemBar.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/VSystemBar/VSystemBar.sass */ "./node_modules/vuetify/src/components/VSystemBar/VSystemBar.sass");
-/* harmony import */ var _src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_components_VSystemBar_VSystemBar_sass__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mixins_applicationable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixins/applicationable */ "./node_modules/vuetify/lib/mixins/applicationable/index.js");
-/* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/colorable */ "./node_modules/vuetify/lib/mixins/colorable/index.js");
-/* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/themeable */ "./node_modules/vuetify/lib/mixins/themeable/index.js");
-/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/mixins */ "./node_modules/vuetify/lib/util/mixins.js");
-/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util/helpers */ "./node_modules/vuetify/lib/util/helpers.js");
-// Styles
- // Mixins
-
-
-
- // Utilities
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_util_mixins__WEBPACK_IMPORTED_MODULE_1__["default"])((0,_mixins_applicationable__WEBPACK_IMPORTED_MODULE_2__["default"])('bar', ['height', 'window']), _mixins_colorable__WEBPACK_IMPORTED_MODULE_3__["default"], _mixins_themeable__WEBPACK_IMPORTED_MODULE_4__["default"]
-/* @vue/component */
-).extend({
-  name: 'v-system-bar',
-  props: {
-    height: [Number, String],
-    lightsOut: Boolean,
-    window: Boolean
-  },
-  computed: {
-    classes() {
-      return {
-        'v-system-bar--lights-out': this.lightsOut,
-        'v-system-bar--absolute': this.absolute,
-        'v-system-bar--fixed': !this.absolute && (this.app || this.fixed),
-        'v-system-bar--window': this.window,
-        ...this.themeClasses
-      };
-    },
-
-    computedHeight() {
-      if (this.height) {
-        return isNaN(parseInt(this.height)) ? this.height : parseInt(this.height);
-      }
-
-      return this.window ? 32 : 24;
-    },
-
-    styles() {
-      return {
-        height: (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.convertToUnit)(this.computedHeight)
-      };
-    }
-
-  },
-  methods: {
-    updateApplication() {
-      return this.$el ? this.$el.clientHeight : this.computedHeight;
-    }
-
-  },
-
-  render(h) {
-    const data = {
-      staticClass: 'v-system-bar',
-      class: this.classes,
-      style: this.styles,
-      on: this.$listeners
-    };
-    return h('div', this.setBackgroundColor(this.color, data), (0,_util_helpers__WEBPACK_IMPORTED_MODULE_5__.getSlot)(this));
-  }
-
-}));
-//# sourceMappingURL=VSystemBar.js.map
 
 /***/ }),
 

@@ -1,7 +1,7 @@
 <template>
   <v-app app>
+    <banner-challenge v-if="!$store.getters.isChallengeRoute(this)" />
     <app-header />
-    <banner-challenge />
     <app-navigation-drawer />
     <router-view />
     <app-footer v-if="!$store.getters.isChallengeRoute(this)"/>
