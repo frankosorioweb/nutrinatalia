@@ -7,6 +7,7 @@ import productTypes from './modules/productTypes';
 import stepper from './modules/stepper';
 import cart from './modules/cart';
 import coupon from './modules/coupon';
+import events from './modules/events';
 
 // Data
 import testimonials from './data/testimonials';
@@ -39,7 +40,8 @@ const store = new Vuex.Store({
         products,
         stepper,
         cart,
-        coupon
+        coupon,
+        events
     }
 });
 

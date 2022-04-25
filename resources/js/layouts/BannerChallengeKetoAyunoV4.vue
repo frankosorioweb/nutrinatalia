@@ -16,11 +16,7 @@
             <small-calendar
               primaryText="Las inscripciones cierran en:"
               secondaryText="(o hasta llenar el cupo)"
-              :countDown="{
-                day: 5,
-                month: 4,
-                year: 2022,
-              }"
+              :countDown="getChallengeKetoAyunoV4Event.inscriptionEndDate"
             />
           </v-col>
           <v-col cols="12">
@@ -47,10 +43,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import smallCalendar from "../components/challengeKetoAyunoV4/smallCalendar.vue";
 export default {
   components: {
     smallCalendar,
+  },
+  computed: {
+    ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
   },
 };
 </script>
