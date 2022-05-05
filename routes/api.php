@@ -2,8 +2,8 @@
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CouponsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +44,16 @@ Route::get('/getPresentationVideoOgg', function () {
     return $response;
 });
 
-Route::get('/validateCoupon/{coupon}', function ($coupon) {
+Route::get('/date', function () {
+    $date = date_create('now', new DateTimeZone("America/Asuncion"));
+    return new JsonResponse([
+        $date
+    ]);
+});
+
+Route::get('/validateCoupon/{coupon}', [CouponsController::class, 'validator']);
+
+/*Route::get('/validateCoupon/{coupon}', function ($coupon) {
     $coupons = [
         [
             "value"     => "KETOAYUNOFF",
@@ -85,11 +94,4 @@ Route::get('/validateCoupon/{coupon}', function ($coupon) {
             ]
         ], Response::HTTP_OK);
     }
-});
-
-Route::get('/date', function () {
-    $date = date_create('now', new DateTimeZone("America/Asuncion"));
-    return new JsonResponse([
-        $date
-    ]);
-});
+});*/

@@ -80,11 +80,12 @@ export default {
     },
     verifyResponse(res) {
       const exists = res.data.coupon.exists;
-      const expired = res.data.coupon.expired;
-      if (!exists || expired) {
+      const valid = res.data.coupon.valid;
+      const hash = res.data.coupon.hash;
+      if (!exists || !valid) {
         this.displayInvalidCoupon();
       } else {
-        this.applyDiscount();
+        this.applyDiscount(hash);
         this.$store.commit(
           "coupon/openSnackBar",
           "FELICITACIONES, HAS CONSEGUIDO UN 20% DE DESCUENTO"
@@ -97,8 +98,8 @@ export default {
         "El cupón introducido no es válido para este infoproducto"
       );
     },
-    applyDiscount() {
-      const productCoupon = this.product.price.coupons.jmBrC2fs9y;
+    applyDiscount(hash) {
+      const productCoupon = this.product.price.coupons[hash];
       const { discount, dollar, guarani } = productCoupon;
       const productPrice = this.product.price;
 

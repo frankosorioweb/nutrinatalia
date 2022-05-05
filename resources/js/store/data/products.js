@@ -97,7 +97,7 @@ const products = [
         shortName: 'dulces-saludables',
         duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
         description: 'Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.',
-        price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].dulcesSaludables)),
         type: WORKSHOP,
         features: [{
                 title: 'Acerca del taller',
