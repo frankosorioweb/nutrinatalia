@@ -22,7 +22,7 @@ prices[WORKSHOP] = {
   }
 }
 
-prices[WORKSHOP].dulcesSaludables = {
+prices[WORKSHOP].panesSinCulpa = {
   default: false,
   discount: 0,
   dollar: {
@@ -32,7 +32,7 @@ prices[WORKSHOP].dulcesSaludables = {
     value: `100.000 ${money.symbols.guarani}`
   },
   coupons: {
-    "$2y$08$23ZrfghBvigreWGRy3ZpOuIRevdHcVWjf5Md60MFWbqW6fFlsE.0.": {
+    "$2a$12$pfRyfpxH79P4zwzxXUC.huOkvHn17CEATlrf1R9X41KWaVPn62Z.a": {
       discount: 20,
       applied: false,
       value: "",
@@ -73,7 +73,7 @@ prices[EBOOK] = {
   }
 }
 
-prices[EBOOK].recetario = {
+/*prices[EBOOK].recetario = {
   default: false,
   discount: 0,
   dollar: {
@@ -83,7 +83,7 @@ prices[EBOOK].recetario = {
     value: `50.000 ${money.symbols.guarani}`
   },
   coupons: {}
-}
+}*/
 
 prices[EBOOK].ketoAyuno30Dias = {
   default: false,

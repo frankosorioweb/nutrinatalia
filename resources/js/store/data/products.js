@@ -12,6 +12,50 @@ const products = [
 
     //WORKSHOPS
     {
+        poster: `${postersSrc}Panes sin culpa.jpg`,
+        name: 'Panes sin culpa',
+        shortName: 'panes-sin-culpa',
+        duration: '1 hora 15 minutos que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.',
+        description: 'Aprendé a ejecutar la receta de 5 variedades de panes sin culpas, libre de harinas y azúcares, aptos para toda la familia.',
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].panesSinCulpa)),
+        type: WORKSHOP,
+        features: [{
+                title: 'Acerca del taller',
+                info: [
+                    'En este taller aprenderás a ejecutar las recetas de estos 5 panificados sin culpas: pan de molde, pan de hamburguesa, crackers, grisines y budín de naranja.. todo esto sin harinas, sin azúcares, pocos pasos, ingredientes sencillos y muy deliciosos, aptos para toda la familia.',
+                    'Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!.',
+                ]
+            },
+            {
+                list: true,
+                title: 'Lo que aprenderás',
+                info: [
+                    'A preparar panificados sin harinas tradicionales, conociendo nuevos ingredientes.',
+                    'Una nueva versión saludable de aquellos menús que amas.',
+                    'Que la preparación de panificados saludables es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.',
+                    'A despojarte de mitos que limitan ingredientes y alimentos saludables.',
+                ]
+            },
+            {
+                list: true,
+                title: 'Lo que necesitas para el taller',
+                info: [
+                    'Una dirección de correo electrónico para acceder al taller.',
+                    'Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución.',
+                ]
+            },
+            {
+                list: true,
+                title: '¿A quienes va dirigido el taller?',
+                info: [
+                    'A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc..',
+                    'Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.',
+                    'Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad.',
+                ]
+            },
+        ]
+    },
+    {
         poster: `${postersSrc}Receta favorita pan.jpg`,
         name: 'Receta Regalo: Mi Receta Favorita De Pan',
         shortName: 'regalo-receta-favorita-pan',
@@ -97,7 +141,7 @@ const products = [
         shortName: 'dulces-saludables',
         duration: '1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.',
         description: 'Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.',
-        price: JSON.parse(JSON.stringify(prices[WORKSHOP].dulcesSaludables)),
+        price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
         type: WORKSHOP,
         features: [{
                 title: 'Acerca del taller',
@@ -205,7 +249,7 @@ const products = [
             },
         ]
     },
-    {
+    /* YA NO SE VENDERÁN LOS EBOOKS DE 50.000 GS {
         poster: `${postersSrc}Recetario comidas tipicas paraguayas version lowcarb.jpg`,
         name: 'Recetario Comida Típica Paraguaya Versión Lowcarb',
         shortName: 'recetario-comida-tipica-py-lowcarb',
@@ -293,7 +337,7 @@ const products = [
                 ]
             },
         ]
-    },
+    },*/
 ];
 
 export default products;

@@ -11,14 +11,15 @@ class Coupons extends Model
 {
   /**
    * El nombre de los cupones debe ir en mayúsculas para que los métodos de este modelo funcionen correctamente
+   * end: Es la fecha de expiración, a partir de esta fecha el cupón deja de funcionar
    */
   private $coupons = [
     [
-      "name"       => "FLASHSALEDULCES",
-      "hash"       => "$2y$08$23ZrfghBvigreWGRy3ZpOuIRevdHcVWjf5Md60MFWbqW6fFlsE.0.",
+      "name"       => "OFFTRIBUPANES",
+      "hash"       => '$2a$12$pfRyfpxH79P4zwzxXUC.huOkvHn17CEATlrf1R9X41KWaVPn62Z.a',
       "percentage" => 20,
-      "begin"      => "29-04-2022",
-      "end"        => "03-05-2022"
+      "begin"      => "09-05-2022",
+      "end"        => "15-05-2022"
     ],
   ];
 
