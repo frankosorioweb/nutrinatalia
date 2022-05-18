@@ -21,7 +21,7 @@
                 secondaryText="DOMINGO"
                 :date="{
                   day: '08',
-                  month: ['MA', 'YO'],
+                  month: ['JU', 'NIO'],
                   year: ['20', '22'],
                 }"
               />
@@ -32,7 +32,7 @@
                 secondaryText="DOMINGO"
                 :date="{
                   day: '22',
-                  month: ['MA', 'YO'],
+                  month: ['JU', 'NIO'],
                   year: ['20', '22'],
                 }"
               />
@@ -44,7 +44,7 @@
                 :red="true"
                 :date="{
                   day: '05',
-                  month: ['MA', 'YO'],
+                  month: ['JU', 'NIO'],
                   year: ['20', '22'],
                 }"
               />

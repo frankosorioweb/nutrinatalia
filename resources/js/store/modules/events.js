@@ -2,7 +2,7 @@ const state = {
   challengeKetoAyunoV4: {
     inscriptionEndDate: {
       day: 6,
-      month: 4,
+      month: 5,
       year: 2022
     }
   }

@@ -13,7 +13,7 @@
           href="#section-inscription"
           @click="$vuetify.goTo('#section-inscription')"
           color="error"
-          >¡RESERVAR MI LUGAR!</v-btn
+          >¡DESEO INSCRIBIRME!</v-btn
         >
       </div>
     </div>

@@ -26,7 +26,7 @@
         secondaryText="(cupos limitados)"
         :date="{
           day: '08',
-          month: ['MA', 'YO'],
+          month: ['JU', 'NIO'],
           year: ['20', '22'],
         }"
       />

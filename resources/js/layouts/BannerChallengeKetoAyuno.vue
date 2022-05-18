@@ -9,7 +9,7 @@
             <p class="mb-0 event-name font-weight-bold primary-font">
               <span class="primary-color">Reto</span>
               15 Días Keto + Ayuno
-              <span class="primary-color">Versión 4.0</span>
+              <span class="primary-color">Versión 5.0</span>
             </p>
           </v-col>
           <v-col cols="12" class="mb-2">
