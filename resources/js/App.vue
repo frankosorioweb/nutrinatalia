@@ -1,11 +1,11 @@
 <template>
   <v-app app>
-    <!-- <banner-challenge v-if="!$store.getters.isChallengeRoute(this)" /> -->
+    <banner-challenge v-if="!$store.getters.isChallengeRoute(this)" />
     <app-header />
     <app-navigation-drawer />
     <router-view />
-    <!-- <app-footer v-if="!$store.getters.isChallengeRoute(this)"/> -->
-    <app-footer />
+    <app-footer v-if="!$store.getters.isChallengeRoute(this)"/>
+    <!-- <app-footer /> -->
     <support-button />
   </v-app>
 </template>
@@ -15,7 +15,7 @@ import appHeader from "./layouts/Header.vue";
 import appNavigationDrawer from "./layouts/NavigationDrawer.vue";
 import appFooter from "./layouts/Footer.vue";
 import supportButton from './layouts/SupportButton.vue';
-// import bannerChallenge from './layouts/BannerChallengeKetoAyunoV4.vue'
+import bannerChallenge from './layouts/BannerChallengeKetoAyuno.vue'
 
 export default {
   components: {
@@ -23,7 +23,7 @@ export default {
     appNavigationDrawer,
     appFooter,
     supportButton,
-    // bannerChallenge
+    bannerChallenge
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <v-banner ref="banner" class="banner-challenge text-center" app elevation="3">
-    <router-link :to="{ name: 'challenge-15-dias-keto-ayuno-v4' }">
+    <router-link :to="{ name: 'challenge-15-dias-keto-ayuno' }">
       <img class="hero" src="/img/landing-reto/banner.jpg" alt="Hero" />
       <div class="hero-gradient gradient-bg-secondary"></div>
       <div class="content white--text">
@@ -21,7 +21,7 @@
           </v-col>
           <v-col cols="12">
             <router-link
-              :to="{ name: 'challenge-15-dias-keto-ayuno-v4' }"
+              :to="{ name: 'challenge-15-dias-keto-ayuno' }"
               class="font-weight-bold primary-font"
               >Click <span class="white--text">aquí</span> para más información</router-link
             >
@@ -44,7 +44,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import smallCalendar from "../components/challengeKetoAyunoV4/smallCalendar.vue";
+import smallCalendar from "../components/challengeKetoAyuno/smallCalendar.vue";
 export default {
   components: {
     smallCalendar,

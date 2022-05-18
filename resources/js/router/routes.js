@@ -4,7 +4,7 @@ import Details from '../pages/Details.vue';
 import Cart from '../pages/Cart.vue';
 import Support from '../pages/Support.vue';
 import OnlineConsultations from '../pages/OnlineConsultations.vue';
-// const ChallengeKetoAyunoV4 = () => import('../pages/ChallengeKetoAyunoV4.vue');
+const ChallengeKetoAyuno = () => import('../pages/ChallengeKetoAyuno.vue');
 
 import productTypes from '../store/modules/productTypes';
 const {
@@ -65,11 +65,11 @@ const routes = [
         path: '/consultas',
         component: OnlineConsultations
     },
-    /*{
-        name: 'challenge-15-dias-keto-ayuno-v4',
-        path: '/reto/15-dias-keto-ayuno-v4',
-        component: ChallengeKetoAyunoV4,
-    },*/
+    {
+        name: 'challenge-15-dias-keto-ayuno',
+        path: '/reto/15-dias-keto-ayuno-v5',
+        component: ChallengeKetoAyuno,
+    },
     {
         path: '*',
         redirect: { name: 'home' }

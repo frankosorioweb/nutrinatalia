@@ -13,7 +13,7 @@
     >
       <h1 class="primary-font main-title lh-1 mb-5">
         <span class="secondary-color">Reto</span> 15 Días Keto + Ayuno
-        <span class="secondary-color">versión 4.0</span>
+        <span class="secondary-color">versión 5.0</span>
       </h1>
       <p class="mb-5 description">
         Este reto está <span class="font-weight-bold text--primary">dirigido</span> a todas las personas
