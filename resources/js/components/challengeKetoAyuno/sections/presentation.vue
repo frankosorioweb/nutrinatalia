@@ -12,8 +12,8 @@
       "
     >
       <h1 class="primary-font main-title lh-1 mb-5">
-        <span class="secondary-color">Reto</span> 15 Días Keto + Ayuno
-        <span class="secondary-color">versión 5.0</span>
+        <span class="secondary-color">Taller/Reto</span> 15 Días Keto + Ayuno
+        <span class="secondary-color">versión {{ getChallengeKetoAyunoV4Event.textDateInfo.version }}</span>
       </h1>
       <p class="mb-5 description">
         Este reto está <span class="font-weight-bold text--primary">dirigido</span> a todas las personas
@@ -22,13 +22,9 @@
         <span class="font-weight-bold text--primary">metas de peso.</span>
       </p>
       <small-calendar
-        primaryText="El reto inicia el:" 
+        primaryText="El taller inicia el:" 
         secondaryText="(cupos limitados)"
-        :date="{
-          day: '08',
-          month: ['JU', 'NIO'],
-          year: ['20', '22'],
-        }"
+        :date="getChallengeKetoAyunoV4Event.textDateInfo.startChallenge"
       />
     </div>
   </section>
@@ -36,9 +32,13 @@
 
 <script>
 import smallCalendar from "../smallCalendar.vue";
+import { mapGetters } from 'vuex';
 export default {
   components: {
     smallCalendar,
   },
+  computed: {
+    ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
+  }
 };
 </script>

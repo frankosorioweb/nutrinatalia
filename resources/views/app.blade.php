@@ -10,6 +10,7 @@
     <title>Nutrinatalia | La academia</title>
     <meta property='og:title' content='Nutrinatalia | La academia'>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/splide.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- GOOGLE ANALYTICS -->
@@ -31,6 +32,7 @@
         <app></app>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/js/splide.min.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

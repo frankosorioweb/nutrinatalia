@@ -17,36 +17,24 @@
           <div class="dates-wrapper white--text">
             <div class="date mb-3">
               <small-calendar
-                primaryText="El reto inicia el:"
-                secondaryText="DOMINGO"
-                :date="{
-                  day: '08',
-                  month: ['JU', 'NIO'],
-                  year: ['20', '22'],
-                }"
+                primaryText="El taller inicia el:"
+                :secondaryText="getChallengeKetoAyunoV4Event.textDateInfo.startChallenge.dayName"
+                :date="getChallengeKetoAyunoV4Event.textDateInfo.startChallenge"
               />
             </div>
             <div class="date mb-3">
               <small-calendar
-                primaryText="El reto finaliza el:"
-                secondaryText="DOMINGO"
-                :date="{
-                  day: '22',
-                  month: ['JU', 'NIO'],
-                  year: ['20', '22'],
-                }"
+                primaryText="El taller finaliza el:"
+                :secondaryText="getChallengeKetoAyunoV4Event.textDateInfo.endChallenge.dayName"
+                :date="getChallengeKetoAyunoV4Event.textDateInfo.endChallenge"
               />
             </div>
             <div class="date mb-5">
               <small-calendar
                 primaryText="Inscripciones hasta el:"
-                secondaryText="JUEVES"
+                :secondaryText="getChallengeKetoAyunoV4Event.textDateInfo.inscriptionEnd.dayName"
                 :red="true"
-                :date="{
-                  day: '05',
-                  month: ['JU', 'NIO'],
-                  year: ['20', '22'],
-                }"
+                :date="getChallengeKetoAyunoV4Event.textDateInfo.inscriptionEnd"
               />
             </div>
           </div>
@@ -58,9 +46,13 @@
 
 <script>
 import smallCalendar from "../smallCalendar.vue";
+import { mapGetters } from 'vuex';
 export default {
   components: {
     smallCalendar,
   },
+  computed: {
+    ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
+  }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="section-not-suitable px-5 py-8 pa-lg-14 gradient-bg white--text">
     <v-row>
-      <v-col cols="12" md="6" order="2" order-lg="1">
+      <v-col cols="12" md="6" order="2" order-md="1">
         <div class="content">
           <h2 class="main-title primary-font mb-5 text-center text-md-left">
             Este reto <span class="text--primary">¡NO!</span> es para:

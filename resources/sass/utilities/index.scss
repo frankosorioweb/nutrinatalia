@@ -54,7 +54,11 @@ a {
 }
 
 .lh-1 {
-  line-height: 1;
+  line-height: 1 !important;
+}
+
+.lh-normal {
+  line-height: normal !important;
 }
 
 .lh-normal {
@@ -70,7 +74,7 @@ a {
 }
 
 .word-break {
-  word-break: break-word;
+  word-break: break-word !important;
 }
 
 .skeleton-loader-sheet {

@@ -17,7 +17,7 @@
     </v-dialog>
 
     <v-row>
-      <v-col cols="12" md="6" order="2" order-lg="1">
+      <v-col cols="12" md="6" order="2" order-md="1">
         <div class="content">
           <h2 class="main-title primary-font mb-5 text-center text-md-left">
             ¡Inscribite <span class="text--primary">ahora</span>!
@@ -36,7 +36,7 @@
           >
             <p class="d-inline-block primary-color mb-0">Inversión:</p>
             <p class="d-inline-block mb-0 red--text text--darken-4">
-              150.000 Gs (22 USD).
+              {{ getChallengeKetoAyunoV4Event.price.guarani }} ({{ getChallengeKetoAyunoV4Event.price.dollar }})
             </p>
           </div>
           <div class="description lh-normal mb-4">
@@ -57,12 +57,12 @@
                       <label
                         for="email"
                         class="d-block secondary-color font-weight-bold mb-3"
-                        >Correo electrónico:</label
+                        >GMAIL:</label
                       >
                       <v-text-field
                         id="email"
                         v-model="email"
-                        label="Ingrese su dirección de correo electrónico"
+                        label="Ingrese su dirección de GMAIL"
                         hide-details=""
                         solo
                       ></v-text-field>
@@ -78,7 +78,7 @@
                       <v-text-field
                         id="name"
                         v-model="name"
-                        label="Ingrese sus nombres y apellidos"
+                        label="Ingrese sus Nombres y Apellidos"
                         hide-details=""
                         solo
                       ></v-text-field>
@@ -89,12 +89,12 @@
                       <label
                         for="phone"
                         class="d-block secondary-color font-weight-bold mb-3"
-                        >Celular:</label
+                        >WhatsApp:</label
                       >
                       <v-text-field
                         id="phone"
                         v-model="phone"
-                        label="Ingrese su número de celular"
+                        label="Ingrese su número de WhatsApp"
                         hide-details=""
                         solo
                       ></v-text-field>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="12" md="6" order="1" order-lg="2">
+      <v-col cols="12" md="6" order="1" order-md="2">
         <div class="content">
           <div
             class="img small-content rounded-lg elevation-5"
@@ -125,6 +125,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
@@ -136,6 +137,9 @@ export default {
         msg: "",
       },
     };
+  },
+  computed: {
+    ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
   },
   methods: {
     reserveAction() {
@@ -157,15 +161,15 @@ export default {
     },
     validateForm() {
       let pass = true;
-      const re = /\S+@\S+\.\S+/;
+      const re = /\S+@gmail+\.\S+/;
       const validEmail = re.test(this.email);
 
       if (!validEmail) {
         pass = false;
-        this.showDialog("El email ingresado no es válido");
+        this.showDialog("El correo debe ser de tipo GMAIL (Ejemplo: correo@gmail.com)");
       } else if (_.isEmpty(this.name) || _.isEmpty(this.phone)) {
         pass = false;
-        this.showDialog("Debe completar todos los campos");
+        this.showDialog("Debe completar todos los campos correctamente");
       }
 
       return pass;
