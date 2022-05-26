@@ -1,10 +1,10 @@
 <template>
-  <article class="product-card">
+  <article class="product-card h-100">
     <discount-sticker
       v-if="this.hasDiscount"
       :discount="this.data.price.discount"
     />
-    <v-card :to="cardTo" elevation="5" class="mx-auto rounded-lg">
+    <v-card :to="cardTo" elevation="5" class="mx-auto rounded-lg h-100 d-flex flex-column">
       <v-img :aspect-ratio="16/9" :src="this.data.poster">
         <template v-slot:placeholder>
           <v-sheet class="skeleton-loader-sheet">
