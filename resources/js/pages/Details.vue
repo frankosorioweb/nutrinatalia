@@ -67,14 +67,15 @@
                     </div>
                   </v-col>
                   <v-col cols="12">
-                    <template v-if="product.price.discount === 100">
+                    <template v-if="product.customCTA">
                       <v-btn
-                        :href="product.driveLink"
-                        target="_blank"
+                        :href="product.customCTA.link"
+                        :to="product.customCTA.to"
+                        :target="product.customCTA.target"
                         color="primary"
                         block
                       >
-                        OBTENER RECETA DE REGALO
+                        {{ product.customCTA.text }}
                       </v-btn>
                     </template>
                     <template v-else>

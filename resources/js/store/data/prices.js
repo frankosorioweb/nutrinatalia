@@ -73,6 +73,19 @@ prices[EBOOK] = {
   }
 }
 
+// Para el Reto
+prices[WORKSHOP].Reto15DiasKetoAyuno = {
+  default: false,
+  discount: 0,
+  dollar: {
+    value: `29.5 ${money.symbols.dollar}`
+  },
+  guarani: {
+    value: `200.000 ${money.symbols.guarani}`
+  },
+  coupons: {}
+}
+
 /*prices[EBOOK].recetario = {
   default: false,
   discount: 0,
