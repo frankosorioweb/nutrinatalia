@@ -20,7 +20,7 @@
           justify-center
           pb-2
         "
-        ><h3 class="product-card-title word-break">{{ this.data.name }}</h3>
+        ><h3 class="product-card-title word-break lh-normal">{{ this.data.name }}</h3>
       </v-card-title>
       <v-card-text class="secondary-font">
         <p class="mb-0">{{ this.data.description }}</p>
