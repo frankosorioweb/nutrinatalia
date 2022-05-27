@@ -28,6 +28,7 @@ const state = {
       month: 5,
       year: 2022
     },
+    fullInscriptionCuotaState: false,
     price: {
       guarani: '200.000 GS',
       dollar: '29.5 USD'
@@ -37,6 +38,22 @@ const state = {
 
 const getters = {
   getChallengeKetoAyunoV4Event: (state) => state.challengeKetoAyunoV4,
+  /**
+   * @returns True o False si no queremos mostrar el banner principal del evento keto + ayuno.
+   */
+   getInscriptionState: (state) => {
+    const { inscriptionEndDate } = state.challengeKetoAyunoV4;
+    let expired = false;
+    
+    const now = new Date();
+    const expireEventDate = new Date(`${inscriptionEndDate.year}-${inscriptionEndDate.month+1}-${inscriptionEndDate.day}`);
+
+    if( now.getTime() >= expireEventDate.getTime() ) {
+      expired = true;
+    }
+
+    return !expired && !state.challengeKetoAyunoV4.fullInscriptionCuotaState;
+  }
 };
 
 const mutations = {

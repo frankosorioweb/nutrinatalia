@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-main class="challenge-page h-100 lh-1">
+    <v-main class="challenge-page h-100 lh-1" :class="{'pb-auto-and-responsive': $store.getters['events/getInscriptionState']}">
       <section-presentation/>
       <section-more-info/>
       <section-not-suitable/>
@@ -8,7 +8,7 @@
       <section-lessons/>
       <section-inscription/>
     </v-main>
-    <app-footer/>
+    <app-footer v-if="$store.getters['events/getInscriptionState']"/>
   </div>
 </template>
 
