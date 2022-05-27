@@ -12,19 +12,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.2/dist/css/splide.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DGT6KSRBC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-2DGT6KSRBC');
-    </script>
 </head>
 
 <body>
