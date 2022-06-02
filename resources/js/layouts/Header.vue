@@ -1,35 +1,30 @@
 <template>
   <v-app-bar class="app-header" color="grey lighten-5" fixed height="56" app>
-    <img
-      @click="goToHome"
-      class="logo c-pointer"
-      :class="{ 'mx-auto': $store.getters.isChallengeRoute(this) }"
-      src="/img/logo.png"
-    />
+    <img @click="goToHome" class="logo c-pointer" src="/img/logo.png" />
 
-    <template v-if="!$store.getters.isChallengeRoute(this)">
-      <v-spacer></v-spacer>
+    <!-- <template v-if="!$store.getters.isChallengeRoute(this)"> -->
+    <v-spacer></v-spacer>
 
-      <v-app-bar-nav-icon
-        v-if="$vuetify.breakpoint.mobile"
-        @click="openDrawer()"
-      ></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon
+      v-if="$vuetify.breakpoint.mobile"
+      @click="openDrawer()"
+    ></v-app-bar-nav-icon>
 
-      <nav v-if="!$vuetify.breakpoint.mobile">
-        <v-btn
-          color="grey darken-2"
-          class="text-capitalize"
-          v-for="menuItem in menuList"
-          :key="menuItem.name"
-          :to="menuItem.to"
-          text
-          exact
-        >
-          <v-icon class="mr-1">{{ menuItem.icon }}</v-icon>
-          {{ menuItem.name }}
-        </v-btn>
-      </nav>
-    </template>
+    <nav v-if="!$vuetify.breakpoint.mobile">
+      <v-btn
+        color="grey darken-2"
+        class="text-capitalize"
+        v-for="menuItem in menuList"
+        :key="menuItem.name"
+        :to="menuItem.to"
+        text
+        exact
+      >
+        <v-icon class="mr-1">{{ menuItem.icon }}</v-icon>
+        {{ menuItem.name }}
+      </v-btn>
+    </nav>
+    <!-- </template> -->
   </v-app-bar>
 </template>
 
@@ -42,7 +37,7 @@ export default {
     },
     goToHome() {
       if (this.$route.name !== "home") this.$router.push({ name: "home" });
-    },
+    }
   },
   computed: {
     ...mapState("navigationDrawer", ["drawer"]),
@@ -52,25 +47,25 @@ export default {
         {
           name: "Talleres",
           icon: "mdi-school",
-          to: { name: this.types.WORKSHOP },
+          to: { name: this.types.WORKSHOP }
         },
         {
           name: "Ebooks",
           icon: "mdi-bookshelf",
-          to: { name: this.types.EBOOK },
+          to: { name: this.types.EBOOK }
         },
         {
           name: "Consultas",
           icon: "mdi-notebook-edit",
-          to: { name: "online-consultations" },
+          to: { name: "online-consultations" }
         },
         {
           name: "Soporte",
           icon: "mdi-face-agent",
-          to: { name: "support" },
-        },
+          to: { name: "support" }
+        }
       ];
-    },
-  },
+    }
+  }
 };
 </script>
