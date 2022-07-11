@@ -15,6 +15,7 @@ const products = [
     poster: `${postersSrc}Reto 15 dias keto ayuno.jpg`,
     name: `Reto 15 Días Keto + Ayuno versión ${challengeTextInfo.version}`,
     shortName: "reto-15-dias-keto-ayuno",
+    isChallenge: true,
     duration: "15 Días (1 Clase por día).",
     description:
       "Si estás buscando iniciar este estilo de vida con la información correcta, superar la ansiedad y lograr tus metas de peso, este reto es para ti.",

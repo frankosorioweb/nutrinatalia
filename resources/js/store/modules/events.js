@@ -1,23 +1,23 @@
 const state = {
   challengeKetoAyunoV4: {
     textDateInfo: {
-      version: '5.0',
+      version: '7.0',
       startChallenge: {
-        day: '12',
+        day: '11',
         dayName: 'DOMINGO',
-        month: ['JU', 'NIO'],
+        month: ['SE', 'PT'],
         year: ['20', '22'],
       },
       endChallenge: {
-        day: '26',
+        day: '25',
         dayName: 'DOMINGO',
-        month: ['JU', 'NIO'],
+        month: ['SE', 'PT'],
         year: ['20', '22'],
       },
       inscriptionEnd: {
         day: '09',
-        dayName: 'JUEVES',
-        month: ['JU', 'NIO'],
+        dayName: 'VIERNES',
+        month: ['SE', 'PT'],
         year: ['20', '22'],
       }
     },
@@ -25,7 +25,7 @@ const state = {
     inscriptionEndDate: {
       // Enero empieza en 0
       day: 10,
-      month: 5,
+      month: 8,
       year: 2022
     },
     fullInscriptionCuotaState: false,

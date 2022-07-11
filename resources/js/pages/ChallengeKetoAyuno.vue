@@ -6,7 +6,6 @@
       <section-not-suitable/>
       <section-challenge-duration/>
       <section-lessons/>
-      <section-inscription/>
     </v-main>
     <app-footer v-if="$store.getters['events/getInscriptionState']"/>
   </div>
@@ -18,7 +17,6 @@ import sectionMoreInfo from "../components/challengeKetoAyuno/sections/moreInfo.
 import sectionNotSuitable from "../components/challengeKetoAyuno/sections/notSuitable.vue";
 import sectionChallengeDuration from "../components/challengeKetoAyuno/sections/challengeDuration.vue";
 import sectionLessons from "../components/challengeKetoAyuno/sections/lessons.vue";
-import sectionInscription from "../components/challengeKetoAyuno/sections/inscription.vue";
 import appFooter from "../components/challengeKetoAyuno/footer.vue";
 export default {
   components: {
@@ -27,7 +25,6 @@ export default {
     sectionNotSuitable,
     sectionChallengeDuration,
     sectionLessons,
-    sectionInscription,
     appFooter
   },
 }

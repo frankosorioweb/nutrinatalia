@@ -1,10 +1,7 @@
-import productTypes from '../modules/productTypes';
-import money from './money';
+import productTypes from "../modules/productTypes";
+import money from "./money";
 
-const {
-  WORKSHOP,
-  EBOOK
-} = productTypes.state.types;
+const { WORKSHOP, EBOOK } = productTypes.state.types;
 
 let prices = {};
 
@@ -18,9 +15,22 @@ prices[WORKSHOP] = {
     guarani: {
       value: `100.000 ${money.symbols.guarani}`
     },
-    coupons: {}
+    // Cupón general para todos los talleres (Se debe utilizar prices[WORKSHOP].original.coupons en los talleres que tengan este mismo precio)
+    coupons: {
+      "$2a$12$ppS4ZePXaMNnnby/5o39sOhLfvi55w8A/8SaGuT6eO/oA79fYmkAu": {
+        discount: 20,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `11.6 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `80.000 ${money.symbols.guarani}`
+        }
+      }
+    }
   }
-}
+};
 
 prices[WORKSHOP].panesSinCulpa = {
   default: false,
@@ -31,33 +41,21 @@ prices[WORKSHOP].panesSinCulpa = {
   guarani: {
     value: `100.000 ${money.symbols.guarani}`
   },
-  coupons: {
-    "$2a$12$pfRyfpxH79P4zwzxXUC.huOkvHn17CEATlrf1R9X41KWaVPn62Z.a": {
-      discount: 20,
-      applied: false,
-      value: "",
-      dollar: {
-        value: `11.6 ${money.symbols.dollar}`,
-      },
-      guarani: {
-        value: `80.000 ${money.symbols.guarani}`,
-      }
-    }
-  }
-}
+  coupons: prices[WORKSHOP].original.coupons
+};
 
 prices[WORKSHOP].off100Short = {
   default: false,
   discount: 100,
   dollar: {
-    value: 'GRATIS',
+    value: "GRATIS",
     old: `5 ${money.symbols.dollar}`
   },
   guarani: {
-    value: 'GRATIS',
+    value: "GRATIS",
     old: `34.000 ${money.symbols.guarani}`
   }
-}
+};
 
 // Actualmente no utilizado
 prices[EBOOK] = {
@@ -69,9 +67,9 @@ prices[EBOOK] = {
     },
     guarani: {
       value: `200.000 ${money.symbols.guarani}`
-    },
+    }
   }
-}
+};
 
 // Para el Reto
 prices[WORKSHOP].Reto15DiasKetoAyuno = {
@@ -83,8 +81,20 @@ prices[WORKSHOP].Reto15DiasKetoAyuno = {
   guarani: {
     value: `200.000 ${money.symbols.guarani}`
   },
-  coupons: {}
-}
+  coupons: {
+    "$2a$12$ppS4ZePXaMNnnby/5o39sOhLfvi55w8A/8SaGuT6eO/oA79fYmkAu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `23.6 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `160.000 ${money.symbols.guarani}`
+      }
+    }
+  }
+};
 
 /*prices[EBOOK].recetario = {
   default: false,
@@ -108,6 +118,6 @@ prices[EBOOK].ketoAyuno30Dias = {
     value: `220.000 ${money.symbols.guarani}`
   },
   coupons: {}
-}
+};
 
 export default prices;

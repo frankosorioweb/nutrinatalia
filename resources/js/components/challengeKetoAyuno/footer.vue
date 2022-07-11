@@ -10,8 +10,7 @@
       />
       <div class="cta text-center pt-3">
         <v-btn
-          href="#section-inscription"
-          @click="$vuetify.goTo('#section-inscription')"
+          :to="getBuyTo()"
           color="error"
           >¡DESEO INSCRIBIRME!</v-btn
         >
@@ -30,5 +29,16 @@ export default {
   computed: {
     ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
   },
+  methods: {
+    getBuyTo() {
+      return {
+        name: "buy",
+        params: {
+          type: 'Taller',
+          shortName: 'reto-15-dias-keto-ayuno',
+        }
+      }
+    }
+  }
 };
 </script>

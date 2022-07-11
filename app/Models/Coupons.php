@@ -15,11 +15,11 @@ class Coupons extends Model
    */
   private $coupons = [
     [
-      "name"       => "OFFTRIBUPANES",
-      "hash"       => '$2a$12$pfRyfpxH79P4zwzxXUC.huOkvHn17CEATlrf1R9X41KWaVPn62Z.a',
+      "name"       => "SANJUANDICEQUESI",
+      "hash"       => '$2a$12$ppS4ZePXaMNnnby/5o39sOhLfvi55w8A/8SaGuT6eO/oA79fYmkAu',
       "percentage" => 20,
-      "begin"      => "09-05-2022",
-      "end"        => "15-05-2022"
+      "begin"      => "16-06-2022",
+      "end"        => "19-06-2022"
     ],
   ];
 

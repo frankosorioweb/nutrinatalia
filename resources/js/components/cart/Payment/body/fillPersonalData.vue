@@ -15,13 +15,19 @@
     <div class="form">
       <v-text-field
         v-model="email"
-        label="Correo electrónico"
+        :label="getProduct.isChallenge ? 'GMAIL' : 'Correo electrónico'"
         type="email"
       ></v-text-field>
       <v-text-field v-model="name" label="Nombres" type="text"></v-text-field>
       <v-text-field
         v-model="lastName"
         label="Apellidos"
+        type="text"
+      ></v-text-field>
+      <v-text-field
+        v-if="getProduct.isChallenge"
+        v-model="whatsapp"
+        label="WhatsApp"
         type="text"
       ></v-text-field>
     </div>
@@ -58,10 +64,11 @@ export default {
       email: null,
       name: null,
       lastName: null,
+      whatsapp: null,
       dialog: {
         state: false,
-        msg: null,
-      },
+        msg: null
+      }
     };
   },
   methods: {
@@ -72,14 +79,14 @@ export default {
     redirectToWhatsApp() {
       const whatsappSupport = this.$store.state.links.support.whatsapp;
       const url = `${whatsappSupport}?text=${encodeURIComponent(
-        `--Datos personales--\n•correo: ${this.email}\n•nombre: ${this.name} ${this.lastName}\n--Datos adicionales--\n•infoproducto: ${this.getProduct.name}\n•tipo: ${this.getProduct.type}\n${this.appendCoupon()}(Obs.: No modificar el texto de arriba)`
+        `--Datos personales--\n•correo: ${this.email}\n•nombre: ${this.name} ${this.lastName}${this.getProduct.isChallenge? '\n•whatsapp: '.concat(this.whatsapp) : ''}\n--Datos adicionales--\n•infoproducto: ${this.getProduct.name}\n•tipo: ${this.getProduct.type}\n${this.appendCoupon()}(Obs.: No modificar el texto de arriba)`
       )}`;
       window.open(url);
     },
     appendCoupon() {
-      if(this.hasApplicableCoupon()) {
+      if (this.hasApplicableCoupon()) {
         const coupons = Object.values(this.getProduct.price.coupons)[0];
-        return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "" ;
+        return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "";
       } else {
         return "";
       }
@@ -93,19 +100,29 @@ export default {
     },
     validateForm() {
       let pass = true;
-      const re = /\S+@\S+\.\S+/;
-      const validEmail = re.test(this.email);
+      const anyMailre = /\S+@\S+\.\S+/;
+
+      let validEmail = anyMailre.test(this.email);
+      if (this.getProduct.isChallenge)
+        validEmail = this.gmailRe.test(this.email);
 
       if (!validEmail) {
         pass = false;
-        this.showDialog("El email ingresado no es válido");
+        this.showDialog(
+          this.getProduct.isChallenge
+            ? "El correo debe ser de tipo GMAIL (Ejemplo: correo@gmail.com)"
+            : "El email ingresado no es válido"
+        );
       } else if (_.isEmpty(this.name) || _.isEmpty(this.lastName)) {
+        pass = false;
+        this.showDialog("Debe completar todos los campos");
+      } else if (this.getProduct.isChallenge && _.isEmpty(this.whatsapp)) {
         pass = false;
         this.showDialog("Debe completar todos los campos");
       }
 
       return pass;
-    },
+    }
   },
   computed: {
     ...mapGetters("products", ["getProductFromShortName"]),
@@ -113,6 +130,10 @@ export default {
       const params = this.$route.params;
       return this.getProductFromShortName(params.type, params.shortName);
     },
-  },
+    gmailRe() {
+      const re = /\S+@gmail+\.\S+/;
+      return re;
+    }
+  }
 };
 </script>
