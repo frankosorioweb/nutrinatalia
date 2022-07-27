@@ -11,6 +11,94 @@ const challengeTextInfo =
 // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 const products = [
   //WORKSHOPS
+  /** FERMENTADOS **/
+  {
+    poster: `${postersSrc}Fermentados.jpg`,
+    name: 'Fermentados',
+    shortName: "fermentados",
+    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description: 'En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.',
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca del taller",
+        info: [
+          "En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.. todo esto en pocos pasos, ingredientes sencillos aptos para tu estilo de vida saludable.",
+          "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "Sobre la fermentación y sus beneficios.",
+          "A preparar tu propia kombucha, yogur, chucrut y pickles de forma casera.",
+          "Que la preparación de los alimentos fermentados es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
+          "A incorporar estos alimentos saludables en tu día a día.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas para el taller",
+        info: [
+          "Una dirección de correo electrónico para acceder al taller.",
+          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el taller?",
+        info: [
+          "A aquellas personas que están buscando potenciar su salud a través de una alimentación saludable.",
+          "A quienes buscan preparar de forma casera estos alimentos fermentados",
+        ]
+      }
+    ]
+  },
+  {
+    poster: `${postersSrc}Receta favorita pan.jpg`,
+    name: "Receta Regalo: Mi Receta Favorita De Pan",
+    shortName: "regalo-receta-favorita-pan",
+    duration:
+      "Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones",
+    description:
+      "Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.",
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].off100Short)),
+    customCTA: {
+      text: "OBTENER RECETA DE REGALO",
+      link:
+        "https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing",
+      target: "_blank"
+    },
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca de mi receta favorita de pan",
+        info: [
+          "Con esta receta de fácil y rápida elaboración aprenderás a hacer 3 diferentes panes bajos en carbohidratos: pan de sandwich, de hamburguesas y prepizza; todo esto sin harinas ni gluten, en pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia. Además te comparto tips para que puedas hacer tus propias modificaciones."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "Que los panes con los ingredientes correctos son saludables, y pueden estar en tu dieta!.",
+          "A usar una misma receta para distintas preparaciones con mínimas modificaciones.",
+          "Que la preparación de un pan es más sencilla de lo que te imaginas, apenas necesitas 3 minutos."
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes puede ser útil mi receta favorita de pan?",
+        info: [
+          "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.",
+          "Ya que utilizamos harinas alternativas, esta receta es sin gluten siendo apto para celiacos e intolerantes al gluten.",
+          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en una receta para lograr saciedad y controlar la ansiedad."
+        ]
+      }
+    ]
+  },
   {
     poster: `${postersSrc}Reto 15 dias keto ayuno.jpg`,
     name: `Reto 15 Días Keto + Ayuno versión ${challengeTextInfo.version}`,
@@ -72,49 +160,6 @@ const products = [
           `Las inscripciones CIERRAN el ${challengeTextInfo.inscriptionEnd.dayName} ${challengeTextInfo.inscriptionEnd.day} de ${challengeTextInfo.inscriptionEnd.month[0]}${challengeTextInfo.inscriptionEnd.month[1]} de ${challengeTextInfo.inscriptionEnd.year[0]}${challengeTextInfo.inscriptionEnd.year[1]} (o hasta llenar el cupo).`,
           `El reto INICIA el ${challengeTextInfo.startChallenge.dayName} ${challengeTextInfo.startChallenge.day} de ${challengeTextInfo.startChallenge.month[0]}${challengeTextInfo.startChallenge.month[1]} de ${challengeTextInfo.startChallenge.year[0]}${challengeTextInfo.startChallenge.year[1]}.`,
           `El reto FINALIZA el ${challengeTextInfo.endChallenge.dayName} ${challengeTextInfo.endChallenge.day} de ${challengeTextInfo.endChallenge.month[0]}${challengeTextInfo.endChallenge.month[1]} de ${challengeTextInfo.endChallenge.year[0]}${challengeTextInfo.endChallenge.year[1]}.`
-        ]
-      }
-    ]
-  },
-  {
-    poster: `${postersSrc}Receta favorita pan.jpg`,
-    name: "Receta Regalo: Mi Receta Favorita De Pan",
-    shortName: "regalo-receta-favorita-pan",
-    duration:
-      "Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones",
-    description:
-      "Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.",
-    price: JSON.parse(JSON.stringify(prices[WORKSHOP].off100Short)),
-    customCTA: {
-      text: "OBTENER RECETA DE REGALO",
-      link:
-        "https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing",
-      target: "_blank"
-    },
-    type: WORKSHOP,
-    features: [
-      {
-        title: "Acerca de mi receta favorita de pan",
-        info: [
-          "Con esta receta de fácil y rápida elaboración aprenderás a hacer 3 diferentes panes bajos en carbohidratos: pan de sandwich, de hamburguesas y prepizza; todo esto sin harinas ni gluten, en pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia. Además te comparto tips para que puedas hacer tus propias modificaciones."
-        ]
-      },
-      {
-        list: true,
-        title: "Lo que aprenderás",
-        info: [
-          "Que los panes con los ingredientes correctos son saludables, y pueden estar en tu dieta!.",
-          "A usar una misma receta para distintas preparaciones con mínimas modificaciones.",
-          "Que la preparación de un pan es más sencilla de lo que te imaginas, apenas necesitas 3 minutos."
-        ]
-      },
-      {
-        list: true,
-        title: "¿A quienes puede ser útil mi receta favorita de pan?",
-        info: [
-          "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.",
-          "Ya que utilizamos harinas alternativas, esta receta es sin gluten siendo apto para celiacos e intolerantes al gluten.",
-          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en una receta para lograr saciedad y controlar la ansiedad."
         ]
       }
     ]
