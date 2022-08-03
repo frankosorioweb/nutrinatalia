@@ -11,92 +11,81 @@ const challengeTextInfo =
 // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 const products = [
   //WORKSHOPS
-  /** FERMENTADOS **/
+  /** RETO GO **/
   {
-    poster: `${postersSrc}Fermentados.jpg`,
-    name: 'Fermentados',
-    shortName: "fermentados",
-    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
-    description: 'En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.',
-    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+    isChallenge: true,
+    poster: `${postersSrc}Reto Go.jpg`,
+    name: 'Reto Go! Fortaleciendo nuestra relación con la comida',
+    shortName: "reto-go",
+    duration: "Del 11 al 25 de Agosto de 2022.",
+    description: 'Afianza tu relación con la comida para llevar y sostener tu cambio de estilo de vida saludable en el tiempo.',
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].RetoGo)),
     type: WORKSHOP,
     features: [
       {
         title: "Acerca del taller",
         info: [
-          "En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.. todo esto en pocos pasos, ingredientes sencillos aptos para tu estilo de vida saludable.",
-          "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+          "Si ya has participado de alguna edición del Reto Keto + Ayuno y necesitas apoyo extra para mantener hábitos saludables y fortalecer tu relación con la comida, este reto es para ti.",
         ]
       },
       {
         list: true,
-        title: "Lo que aprenderás",
+        title: "Inscripciones hasta:",
         info: [
-          "Sobre la fermentación y sus beneficios.",
-          "A preparar tu propia kombucha, yogur, chucrut y pickles de forma casera.",
-          "Que la preparación de los alimentos fermentados es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
-          "A incorporar estos alimentos saludables en tu día a día.",
+          'Miércoles 10 de Agosto (o hasta llenar el cupo).'
         ]
       },
       {
         list: true,
-        title: "Lo que necesitas para el taller",
+        title: "Tendrás:",
         info: [
-          "Una dirección de correo electrónico para acceder al taller.",
-          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
+          'Acceso al Grupo WhatsApp con las 2 profesionales (Nutricionista y Psicóloga).',
+          '3 Clases en vivo con ejercicios prácticos.',
+          'Materiales de ayuda.',
+          'Reflexiones y conversatorios diarios en el grupo.',
+          'Nuevas Recetas.',
         ]
       },
       {
         list: true,
-        title: "¿A quienes va dirigido el taller?",
+        title: "Objetivo:",
         info: [
-          "A aquellas personas que están buscando potenciar su salud a través de una alimentación saludable.",
-          "A quienes buscan preparar de forma casera estos alimentos fermentados",
-        ]
-      }
-    ]
-  },
-  {
-    poster: `${postersSrc}Receta favorita pan.jpg`,
-    name: "Receta Regalo: Mi Receta Favorita De Pan",
-    shortName: "regalo-receta-favorita-pan",
-    duration:
-      "Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones",
-    description:
-      "Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.",
-    price: JSON.parse(JSON.stringify(prices[WORKSHOP].off100Short)),
-    customCTA: {
-      text: "OBTENER RECETA DE REGALO",
-      link:
-        "https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing",
-      target: "_blank"
-    },
-    type: WORKSHOP,
-    features: [
-      {
-        title: "Acerca de mi receta favorita de pan",
-        info: [
-          "Con esta receta de fácil y rápida elaboración aprenderás a hacer 3 diferentes panes bajos en carbohidratos: pan de sandwich, de hamburguesas y prepizza; todo esto sin harinas ni gluten, en pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia. Además te comparto tips para que puedas hacer tus propias modificaciones."
+          'Afianzar tu relación con la comida para llevar y sostener tu cambio de estilo de vida saludable en el tiempo.'
         ]
       },
       {
         list: true,
-        title: "Lo que aprenderás",
+        title: "EL RETO ES PARA:",
         info: [
-          "Que los panes con los ingredientes correctos son saludables, y pueden estar en tu dieta!.",
-          "A usar una misma receta para distintas preparaciones con mínimas modificaciones.",
-          "Que la preparación de un pan es más sencilla de lo que te imaginas, apenas necesitas 3 minutos."
+          'Personas que participaron de alguna edición del Reto Keto + Ayuno.',
+          'Necesitan un apoyo extra en su mantenimiento de hábitos saludables.',
         ]
       },
       {
         list: true,
-        title: "¿A quienes puede ser útil mi receta favorita de pan?",
+        title: "EL RETO NO ES PARA:",
         info: [
-          "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.",
-          "Ya que utilizamos harinas alternativas, esta receta es sin gluten siendo apto para celiacos e intolerantes al gluten.",
-          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en una receta para lograr saciedad y controlar la ansiedad."
+          'Personas que aún no tienen incorporado en su vida los principios del estilo de vida con comida de verdad.',
+          'Para quien no está entrenado con educación nutricional baja en carbohidratos (Sugerimos iniciar con el RETO 7.0 de SETIEMBRE).'
         ]
-      }
+      },
+      {
+        list: true,
+        title: "¿En qué plataforma se transmitirán las clases?, ¿Las transmisiones quedarán grabadas?:",
+        info: [
+          'Las clases se transmitirán por Google Meet, por ello es necesario que te inscribas con una cuenta de GOOGLE.',
+          'Si no podés participar de las clases en vivo, quedará grabado con toda la interacción, preguntas y dudas de los asistentes.',
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitás para participar:",
+        info: [
+          'Conexión estable a internet.',
+          'Una cuenta de GOOGLE.',
+          'Tener la app de WhatsApp.',
+        ]
+      },
     ]
   },
   {
@@ -164,6 +153,51 @@ const products = [
       }
     ]
   },
+  /** FERMENTADOS **/
+  {
+    poster: `${postersSrc}Fermentados.jpg`,
+    name: 'Fermentados',
+    shortName: "fermentados",
+    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description: 'En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.',
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca del taller",
+        info: [
+          "En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.. todo esto en pocos pasos, ingredientes sencillos aptos para tu estilo de vida saludable.",
+          "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "Sobre la fermentación y sus beneficios.",
+          "A preparar tu propia kombucha, yogur, chucrut y pickles de forma casera.",
+          "Que la preparación de los alimentos fermentados es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
+          "A incorporar estos alimentos saludables en tu día a día.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas para el taller",
+        info: [
+          "Una dirección de correo electrónico para acceder al taller.",
+          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el taller?",
+        info: [
+          "A aquellas personas que están buscando potenciar su salud a través de una alimentación saludable.",
+          "A quienes buscan preparar de forma casera estos alimentos fermentados",
+        ]
+      }
+    ]
+  },
   {
     poster: `${postersSrc}Panes sin culpa.jpg`,
     name: "Panes sin culpa",
@@ -205,6 +239,53 @@ const products = [
         title: "¿A quienes va dirigido el taller?",
         info: [
           "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc..",
+          "Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.",
+          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad."
+        ]
+      }
+    ]
+  },
+  {
+    poster: `${postersSrc}Dulces que nos hacen bien.jpg`,
+    name: "Dulces que nos hacen bien",
+    shortName: "dulces-saludables",
+    duration:
+      "1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description:
+      "Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.",
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca del taller",
+        info: [
+          "En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies, barritas de frutos secos, y lemon pie, todo esto sin azúcares, sin harinas ni gluten, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.",
+          "Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "Que los dulces con los ingredientes correctos son saludables!.",
+          "A disfrutar, sorprender a tu familia y amigos con postres deliciosos que nos hacen bien.",
+          "Que la preparación de postres saludables es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
+          "A despojarte de mitos que limitan ingredientes y alimentos saludables."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas para el taller",
+        info: [
+          "Una dirección de correo electrónico para acceder al taller.",
+          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el taller?",
+        info: [
+          "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.",
           "Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.",
           "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad."
         ]
@@ -259,48 +340,44 @@ const products = [
     ]
   },
   {
-    poster: `${postersSrc}Dulces que nos hacen bien.jpg`,
-    name: "Dulces que nos hacen bien",
-    shortName: "dulces-saludables",
+    poster: `${postersSrc}Receta favorita pan.jpg`,
+    name: "Receta Regalo: Mi Receta Favorita De Pan",
+    shortName: "regalo-receta-favorita-pan",
     duration:
-      "1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",
+      "Son solo 8 minutos de tu tiempo para aprender mi receta favorita, donde también comparto unos tips extras que aplico en mi cocina para mis variaciones",
     description:
-      "Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.",
-    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+      "Con esta receta simple, rápida y deliciosa vas a poder preparar diferentes tipos de panificados bajos en carbohidratos.",
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].off100Short)),
+    customCTA: {
+      text: "OBTENER RECETA DE REGALO",
+      link:
+        "https://drive.google.com/drive/folders/1lB2ouv_dyl7cHH8ubXFOSTh7GxEI9GsM?usp=sharing",
+      target: "_blank"
+    },
     type: WORKSHOP,
     features: [
       {
-        title: "Acerca del taller",
+        title: "Acerca de mi receta favorita de pan",
         info: [
-          "En este taller aprenderás a ejecutar las recetas de estos 5 dulces saludables: cheesecake, brownie, cookies, barritas de frutos secos, y lemon pie, todo esto sin azúcares, sin harinas ni gluten, pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia.",
-          "Ademas de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+          "Con esta receta de fácil y rápida elaboración aprenderás a hacer 3 diferentes panes bajos en carbohidratos: pan de sandwich, de hamburguesas y prepizza; todo esto sin harinas ni gluten, en pocos pasos, ingredientes sencillos, muy deliciosos y aptos para toda la familia. Además te comparto tips para que puedas hacer tus propias modificaciones."
         ]
       },
       {
         list: true,
         title: "Lo que aprenderás",
         info: [
-          "Que los dulces con los ingredientes correctos son saludables!.",
-          "A disfrutar, sorprender a tu familia y amigos con postres deliciosos que nos hacen bien.",
-          "Que la preparación de postres saludables es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
-          "A despojarte de mitos que limitan ingredientes y alimentos saludables."
+          "Que los panes con los ingredientes correctos son saludables, y pueden estar en tu dieta!.",
+          "A usar una misma receta para distintas preparaciones con mínimas modificaciones.",
+          "Que la preparación de un pan es más sencilla de lo que te imaginas, apenas necesitas 3 minutos."
         ]
       },
       {
         list: true,
-        title: "Lo que necesitas para el taller",
-        info: [
-          "Una dirección de correo electrónico para acceder al taller.",
-          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
-        ]
-      },
-      {
-        list: true,
-        title: "¿A quienes va dirigido el taller?",
+        title: "¿A quienes puede ser útil mi receta favorita de pan?",
         info: [
           "A aquellas personas que llevan conteo de carbohidratos y control de la glicemia como personas con diabetes, resistencia a la insulina, sobre peso, obesidad, hígado graso, síndrome de ovarios poliquisticos, etc.",
-          "Ya que utilizamos harinas alternativas, las preparaciones de este taller son sin gluten siendo aptos para celiacos e intolerantes al gluten.",
-          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas saludables en sus postres para lograr saciedad y controlar la ansiedad."
+          "Ya que utilizamos harinas alternativas, esta receta es sin gluten siendo apto para celiacos e intolerantes al gluten.",
+          "Y a todas las personas interesadas en llevar dietas saludables, aprender a incorporar grasas buenas en una receta para lograr saciedad y controlar la ansiedad."
         ]
       }
     ]

@@ -29,7 +29,7 @@ export default {
     ...mapGetters("productTypes", ["getProductsTypes"]),
     ...mapGetters("products", ["getDetailsTo"]),
     getGift() {
-      return products[1]
+      return products[6]
     }
   },
 };

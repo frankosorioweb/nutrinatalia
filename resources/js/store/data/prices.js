@@ -71,7 +71,7 @@ prices[EBOOK] = {
   }
 };
 
-// Para el Reto
+// Para el Reto 15 días keto + ayuno
 prices[WORKSHOP].Reto15DiasKetoAyuno = {
   default: false,
   discount: 0,
@@ -94,6 +94,19 @@ prices[WORKSHOP].Reto15DiasKetoAyuno = {
       }
     }
   }
+};
+
+// Para el Reto Go
+prices[WORKSHOP].RetoGo = {
+  default: false,
+  discount: 0,
+  dollar: {
+    value: `44 ${money.symbols.dollar}`
+  },
+  guarani: {
+    value: `300.000 ${money.symbols.guarani}`
+  },
+  coupons: {}
 };
 
 /*prices[EBOOK].recetario = {
