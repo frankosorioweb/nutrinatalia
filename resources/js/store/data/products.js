@@ -17,7 +17,7 @@ const products = [
     poster: `${postersSrc}Reto Go.jpg`,
     name: 'Reto Go! Fortaleciendo nuestra relación con la comida',
     shortName: "reto-go",
-    duration: "Del 11 al 25 de Agosto de 2022.",
+    duration: "Del 05 al 19 de Octubre de 2022.",
     description: 'Afianza tu relación con la comida para llevar y sostener tu cambio de estilo de vida saludable en el tiempo.',
     price: JSON.parse(JSON.stringify(prices[WORKSHOP].RetoGo)),
     type: WORKSHOP,
@@ -32,7 +32,7 @@ const products = [
         list: true,
         title: "Inscripciones hasta:",
         info: [
-          'Miércoles 10 de Agosto (o hasta llenar el cupo).'
+          'Martes 04 de Octubre (o hasta llenar el cupo).'
         ]
       },
       {
@@ -40,7 +40,7 @@ const products = [
         title: "Tendrás:",
         info: [
           'Acceso al Grupo WhatsApp con las 2 profesionales (Nutricionista y Psicóloga).',
-          '3 Clases en vivo con ejercicios prácticos.',
+          '3 Clases en vivo con ejercicios prácticos, los Miércoles, a las 19:30 Hs.',
           'Materiales de ayuda.',
           'Reflexiones y conversatorios diarios en el grupo.',
           'Nuevas Recetas.',
@@ -66,7 +66,7 @@ const products = [
         title: "EL RETO NO ES PARA:",
         info: [
           'Personas que aún no tienen incorporado en su vida los principios del estilo de vida con comida de verdad.',
-          'Para quien no está entrenado con educación nutricional baja en carbohidratos (Sugerimos iniciar con el RETO 7.0 de SETIEMBRE).'
+          //'Para quien no está entrenado con educación nutricional baja en carbohidratos (Sugerimos iniciar con el RETO 7.0 de SETIEMBRE).'
         ]
       },
       {
