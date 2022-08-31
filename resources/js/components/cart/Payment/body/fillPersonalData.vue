@@ -15,7 +15,7 @@
     <div class="form">
       <v-text-field
         v-model="email"
-        :label="getProduct.isChallenge ? 'GMAIL' : 'Correo electrónico'"
+        :label="getProduct.isChallenge || getProduct.onlyGoogleAccount ? 'GMAIL' : 'Correo electrónico'"
         type="email"
       ></v-text-field>
       <v-text-field v-model="name" label="Nombres" type="text"></v-text-field>

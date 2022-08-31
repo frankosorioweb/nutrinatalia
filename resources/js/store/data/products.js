@@ -11,6 +11,46 @@ const challengeTextInfo =
 // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 const products = [
   //WORKSHOPS
+  /** EL MERENDERO FELIZ **/
+  {
+    poster: `${postersSrc}Taller - El merendero feliz.jpg`,
+    onlyGoogleAccount: true,
+    name: 'Taller Online - El Merendero Feliz',
+    shortName: "el-merendero-feliz",
+    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description: 'Te enseño tips para mejorar la alimentación familiar, identificar ingredientes poco saludables, y mucho más.',
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca del taller",
+        info: [
+          "Este taller se desarrollará de manera online, mediante la plataforma de Google Meet, el día Miércoles 07 de Septiembre, a las 19:30 Hs, inscribite ahora para reservar tu lugar.",
+          "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+        ]
+      },
+      {
+        list: true,
+        title: "Donde aprenderás:",
+        info: [
+          "La relación entre la comida y el desarrollo físico y cognitivo de nuestros hijos.",
+          "A tomar conciencia del efecto del azúcar y aditivos frecuentes de la industria.",
+          "A leer etiquetas de los productos.",
+          "A identificar ingredientes poco saludables en los productos.",
+          "Tips para trabajar en casa para mejorar la alimentación familiar .",
+          "Ideas para un merendero feliz y saludable.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas para el taller",
+        info: [
+          "Una cuenta de Google, ya que el live se transmitirá por Google Meet.",
+          "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
+        ]
+      },
+    ]
+  },
   /** RETO GO **/
   {
     isChallenge: true,
@@ -341,6 +381,7 @@ const products = [
   },
   {
     poster: `${postersSrc}Receta favorita pan.jpg`,
+    giftHome: true,
     name: "Receta Regalo: Mi Receta Favorita De Pan",
     shortName: "regalo-receta-favorita-pan",
     duration:
