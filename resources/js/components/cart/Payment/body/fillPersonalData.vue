@@ -103,13 +103,13 @@ export default {
       const anyMailre = /\S+@\S+\.\S+/;
 
       let validEmail = anyMailre.test(this.email);
-      if (this.getProduct.isChallenge)
+      if (this.getProduct.isChallenge || this.getProduct.onlyGoogleAccount)
         validEmail = this.gmailRe.test(this.email);
 
       if (!validEmail) {
         pass = false;
         this.showDialog(
-          this.getProduct.isChallenge
+          this.getProduct.isChallenge || this.getProduct.onlyGoogleAccount
             ? "El correo debe ser de tipo GMAIL (Ejemplo: correo@gmail.com)"
             : "El email ingresado no es válido"
         );

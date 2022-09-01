@@ -53,7 +53,7 @@
           <span>{{ item.value }}</span>
         </li>
       </ul>
-      <template v-if="isBankDeposit">
+      <!--<template v-if="isBankDeposit">
         <div>
           <p
             class="
@@ -72,7 +72,7 @@
             <img src="/img/payments/Qr itau.jpg" alt="Qr pago" />
           </div>
         </div>
-      </template>
+      </template>-->
     </div>
     <v-btn @click="$store.commit('stepper/nextStep')" color="primary" block
       >Continuar</v-btn
