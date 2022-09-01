@@ -1,44 +1,84 @@
 .consultas-online-2 {
-    .content {
-        .section-title {
-            font-size: 1.25rem;
-        }
-        .foto-frontal-img {
-            max-width: 100%;
-        }
+  $description-color: #697477;
+  .content {
+    .section-title {
+      font-size: 1.25rem;
     }
-    .presentation-section {
-        background: url('/img/forest-min.jpg');
-        background-size: cover;
-        .content {
-            background: linear-gradient(101.31deg, #FFFFFF 0%, rgba(255, 255, 255, 0.43) 100%);
-        }
+    .foto-frontal-img {
+      max-width: 100%;
     }
+  }
 
-    /***** ***** BENEFICIO ***** *****/
-    .beneficio {
-        .beneficio-title {
-            font-size: 1rem;
-        }
-        .description {
-            font-size: .8125rem;
-            color: #697477;
-        }
-        /***** ***** SHADOWS ***** *****/
-        .logo-wrapper {
-            $heart-color: #ADD974;
-            $person-color: #303033;
-            $heart-color: #ADD974;
-            $heart-color: #ADD974;
-            $heart-color: #ADD974;
-            $heart-color: #ADD974;
-            $shadow-blur: 5px;
-            .heart {
-                filter: drop-shadow(0px 0px $shadow-blur $heart-color);
-            }
-            .person {
-                filter: drop-shadow(0px 0px $shadow-blur $person-color);
-            }
-        }
+  /***** ***** BENEFICIO ***** *****/
+  .icon-desc {
+    .icon-desc-title {
+      font-size: 1rem;
     }
+    .icon-desc-description {
+      font-size: 0.8125rem;
+      color: $description-color;
+    }
+    /***** ***** SHADOWS ***** *****/
+    .icon-wrapper {
+      $heart-color: #add974;
+      $person-color: #303033;
+      $cutlery-color: #ff3737;
+      $focus-color: #00a3ff;
+      $shadow-blur: 5px;
+      .heart {
+        filter: drop-shadow(0px 0px $shadow-blur $heart-color);
+      }
+      .person {
+        filter: drop-shadow(0px 0px $shadow-blur $person-color);
+      }
+      .cutlery {
+        filter: drop-shadow(0px 0px $shadow-blur $cutlery-color);
+      }
+      .focus {
+        filter: drop-shadow(0px 0px $shadow-blur $focus-color);
+      }
+      .notebook {
+        filter: drop-shadow(0px 0px $shadow-blur $primary-color);
+      }
+      .pin {
+        filter: drop-shadow(0px 0px $shadow-blur $secondary-color);
+      }
+    }
+  }
+
+  .presentation-section {
+    background: url("/img/forest-min.jpg");
+    background-size: cover;
+    .content {
+      background: linear-gradient(
+        101.31deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.43) 100%
+      );
+    }
+  }
+  .beneficios-section, .consulta-online-section {
+    background-color: transparentize($color: $primary-color, $amount: 0.95);
+  }
+
+  .leafs-img-wrapper {
+    .leafs-img {
+      max-width: 100%;
+    }
+  }
+
+  /***** ***** MODALIDADES ***** *****/
+  .modalidades-section {
+    background-color: transparentize($color: $secondary-color, $amount: 0.95);
+    border-top: 5px solid $secondary-color;
+    border-bottom: 5px solid $secondary-color;
+  }
+
+  /***** ***** CONSULTA ONLINE SECTION ***** *****/
+  .modalidad-section {
+    .descriptions-wrapper p {
+      color: $description-color;
+      font-size: 0.8125rem;
+    }
+  }
 }
