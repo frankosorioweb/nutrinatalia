@@ -18,7 +18,7 @@ const products = [
     name: 'Taller Online - El Merendero Feliz',
     shortName: "el-merendero-feliz",
     duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
-    description: 'Te enseño tips para mejorar la alimentación familiar, identificar ingredientes poco saludables, y mucho más.',
+    description: 'Taller para padres. Aprende a armar un merendero que impacte positivamente en crecimiento y desarrollo de tus niños.',
     price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
     type: WORKSHOP,
     features: [
