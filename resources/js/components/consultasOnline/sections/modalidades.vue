@@ -1,5 +1,5 @@
 <template>
-    <section class="secondary-section">
+    <section class="secondary-section bg-lines-blur">
         <div class="content px-6 py-10 px-lg-0 py-lg-0">
             <template v-if="!isDesktop()">
                 <h1 class="section-title lh-normal text-capitalize text-center primary-font mb-6">Elegí tu <span
@@ -13,7 +13,7 @@
                 <v-row dense>
                     <template v-for="(modalidad, index) in modalidades">
                         <v-col cols="12" sm="6">
-                            <div class="icon-desc" :class="index !== modalidades.length - 1 ? 'pb-5' : ''">
+                            <div class="icon-desc" :class="index !== modalidades.length - 1 ? ( isDesktop() ? 'pb-0' : 'pb-5' ) : ''">
                                 <v-row dense no-gutters>
                                     <v-col cols="12" lg="auto">
                                         <div class="icon-wrapper mb-4">
@@ -66,7 +66,7 @@ export default {
     },
     methods: {
         isDesktop() {
-            return this.$vuetify.breakpoint.lg;
+            return this.$vuetify.breakpoint.lgAndUp;
         }
     },
 }

@@ -27,7 +27,7 @@ export default {
     },
     methods: {
         isDesktop() {
-            return this.$vuetify.breakpoint.lg;
+            return this.$vuetify.breakpoint.lgAndUp;
         }
     },
 }

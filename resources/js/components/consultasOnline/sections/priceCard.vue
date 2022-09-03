@@ -1,5 +1,6 @@
 <template>
-    <div class="price-card pa-4" :class="{ 'primary': primary, 'secondary': !primary, ...customClasses }">
+    <div class="price-card px-6 py-4 elevation-5"
+        :class="{ 'primary': primary, 'secondary': !primary, ...customClasses }">
         <div class="price-wrapper">
             <p class="price-title text-center primary-font font-weight-bold mb-2 lh-normal"
                 :class="{ 'primary-color': primary, 'secondary-color': !primary }">{{

@@ -1,5 +1,5 @@
 <template>
-    <section class="beneficios-section">
+    <section class="beneficios-section bg-lines-blur">
         <div class="content px-6 py-10 px-lg-0 pb-lg-0 pt-lg-12">
             <h1 v-if="!isDesktop()" class="section-title lh-normal text-capitalize text-center primary-font mb-4">Lo que <span
                     class="primary-color">obtendrás</span> en
@@ -78,7 +78,7 @@ export default {
     },
     methods: {
         isDesktop() {
-            return this.$vuetify.breakpoint.lg;
+            return this.$vuetify.breakpoint.lgAndUp;
         }
     },
 }

@@ -75,11 +75,16 @@
     .beneficios-section, .secondary-section {
       border: none !important;
       background: unset !important;
+      .content {
+        background: unset !important;
+      }
     }
   }
   .beneficios-section,
   .consulta-online-section {
-    background-color: transparentize($color: $primary-color, $amount: 0.95);
+    .content {
+      background-color: transparentize($color: $primary-color, $amount: 0.95);
+    }
   }
   .secondary-section {
     @media #{map-get($display-breakpoints, 'lg-and-up')} {
@@ -95,7 +100,9 @@
 
   /***** ***** MODALIDADES ***** *****/
   .secondary-section {
-    background-color: transparentize($color: $secondary-color, $amount: 0.95);
+    .content {
+      background-color: transparentize($color: $secondary-color, $amount: 0.95);
+    }
     border-top: 5px solid $secondary-color;
     border-bottom: 5px solid $secondary-color;
   }
@@ -113,10 +120,14 @@
 
   /***** ***** PRICE CARD ***** *****/
   .price-card {
+    font-size: .875rem;
     border-radius: 10px;
     border-top: 5px solid;
+    p {
+      white-space: no-wrap;
+    }
     .price-title {
-      font-size: 1.125rem;
+      font-size: 1rem;
     }
     &.primary {
       border-top-color: $primary-color !important;
@@ -135,8 +146,7 @@
   }
 
   .actions-wrapper {
-    .download-guide {
-    }
+    font-size: .8125rem;
   }
 
   /***** ***** PRICE CARD ***** *****/
@@ -147,5 +157,20 @@
       width: 3px;
       height: 100%;
     }
+  }
+
+  .modalidad-section {
+    &.consulta-online-section .content {
+      background-color: transparentize($color: $primary-color, $amount: 0.95);
+    }
+    &.consulta-presencial-section .content {
+      background-color: transparentize($color: $secondary-color, $amount: 0.95);
+    }
+  }
+
+  .bg-lines-blur {
+    background: url('/img/bg-lines-blur.png');
+    background-position: center;
+    background-size: cover;
   }
 }

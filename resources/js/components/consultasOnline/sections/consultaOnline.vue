@@ -1,10 +1,11 @@
 <template>
-    <section class="consulta-online-section modalidad-section">
+    <section class="consulta-online-section modalidad-section bg-lines-blur">
         <div class="content px-6 py-10 px-lg-14 py-lg-14">
             <v-row dense no-gutters justify="space-between">
                 <v-col lg="6">
                     <div class="icon-desc">
-                        <v-row dense no-gutters justify="center" justify-lg="start" align="center" class="mb-sm-4">
+                        <v-row dense no-gutters justify="center" justify-lg="start" align="center"
+                            class="mb-sm-4 mb-lg-0">
                             <v-col cols="12" lg="auto" class="mb-lg-4">
                                 <v-row dense no-gutters justify="center" justify-lg="start">
                                     <v-col cols="12" sm="auto" align-self="center">
@@ -57,7 +58,7 @@
                                                 <template v-for="(priceDetail, index) in preciosConsultas.online">
                                                     <v-col cols="12" sm="6">
                                                         <price-card :primary="(index % 2 == 0)" :data="priceDetail"
-                                                            :customClasses="index !== preciosConsultas.online.lenth - 1 ? { 'mb-2': true, 'mb-lg-0': true } : {}">
+                                                            :customClasses="index !== preciosConsultas.online.lenth - 1 ? { 'mb-2': true, 'mb-lg-0': true, 'ml-sm-2': true } : {}">
                                                         </price-card>
                                                     </v-col>
                                                 </template>
@@ -68,16 +69,16 @@
                                 <div class="actions-wrapper mt-2">
                                     <v-row dense no-gutters>
                                         <v-col class="mb-4 pr-lg-3" cols="12" lg="6">
-                                            <a href="#"
+                                            <a href="/img/consultas-2-guia-min.jpg" download="Guía de Consulta Online.jpg"
                                                 class="d-flex justify-center align-center secondary white--text px-4 py-3 rounded-pill text-uppercase primary-font font-weight-medium elevation-5">
                                                 <span class="mr-2">Descargar Guías</span>
                                                 <img src="/img/consultas-2-icons/download-white.svg" alt="Button icon">
                                             </a>
                                         </v-col>
                                         <v-col cols="12" lg="6">
-                                            <a href="#"
+                                            <a target="_blank" :href="$store.getters.getAgendarConsultaWhatsAppLink(true)"
                                                 class="d-flex justify-center align-center primary white--text px-4 py-3 rounded-pill text-uppercase primary-font font-weight-medium elevation-5">
-                                                <span class="mr-2">Agendar Consulta</span>
+                                                <span class="mr-2">Agendar Consulta Online</span>
                                                 <img src="/img/consultas-2-icons/notebook-white.svg" alt="Button icon">
                                             </a>
                                         </v-col>
@@ -99,7 +100,6 @@
 
 <script>
 import priceCard from './priceCard.vue';
-
 export default {
     components: {
         priceCard
@@ -155,8 +155,8 @@ export default {
     },
     methods: {
         isDesktop() {
-            return this.$vuetify.breakpoint.lg;
-        }
+            return this.$vuetify.breakpoint.lgAndUp;
+        },
     },
 }
 </script>

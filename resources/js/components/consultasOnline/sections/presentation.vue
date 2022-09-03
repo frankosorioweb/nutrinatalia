@@ -41,7 +41,7 @@ export default {
         `
     },
     isDesktop() {
-      return this.$vuetify.breakpoint.lg;
+      return this.$vuetify.breakpoint.lgAndUp;
     }
   },
 }
