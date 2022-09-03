@@ -1,8 +1,16 @@
+@import "~vuetify/src/styles/settings/_variables";
+
 .consultas-online-2 {
   $description-color: #697477;
   .content {
     .section-title {
       font-size: 1.25rem;
+      @media #{map-get($display-breakpoints, 'sm-and-up')} {
+        font-size: 1.75rem;
+      }
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 2.75rem;
+      }
     }
     .foto-frontal-img {
       max-width: 100%;
@@ -16,6 +24,9 @@
     }
     .icon-desc-description {
       font-size: 0.8125rem;
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: .875rem;
+      }
       color: $description-color;
     }
     /***** ***** SHADOWS ***** *****/
@@ -49,16 +60,31 @@
   .presentation-section {
     background: url("/img/forest-min.jpg");
     background-size: cover;
-    .content {
+    .presentation-wrapper.content {
       background: linear-gradient(
         101.31deg,
         #ffffff 0%,
         rgba(255, 255, 255, 0.43) 100%
       );
     }
+    .section-title.presentation {
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 1rem;
+      }
+    }
+    .beneficios-section, .secondary-section {
+      border: none !important;
+      background: unset !important;
+    }
   }
-  .beneficios-section, .consulta-online-section {
+  .beneficios-section,
+  .consulta-online-section {
     background-color: transparentize($color: $primary-color, $amount: 0.95);
+  }
+  .secondary-section {
+    @media #{map-get($display-breakpoints, 'lg-and-up')} {
+      border: none !important;
+    }
   }
 
   .leafs-img-wrapper {
@@ -68,7 +94,7 @@
   }
 
   /***** ***** MODALIDADES ***** *****/
-  .modalidades-section {
+  .secondary-section {
     background-color: transparentize($color: $secondary-color, $amount: 0.95);
     border-top: 5px solid $secondary-color;
     border-bottom: 5px solid $secondary-color;
@@ -78,7 +104,48 @@
   .modalidad-section {
     .descriptions-wrapper p {
       color: $description-color;
-      font-size: 0.8125rem;
+      font-size: 0.875rem;
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /***** ***** PRICE CARD ***** *****/
+  .price-card {
+    border-radius: 10px;
+    border-top: 5px solid;
+    .price-title {
+      font-size: 1.125rem;
+    }
+    &.primary {
+      border-top-color: $primary-color !important;
+      background-color: transparentize(
+        $color: $primary-color,
+        $amount: 0.95
+      ) !important;
+    }
+    &.secondary {
+      border-top-color: $secondary-color !important;
+      background-color: transparentize(
+        $color: $secondary-color,
+        $amount: 0.95
+      ) !important;
+    }
+  }
+
+  .actions-wrapper {
+    .download-guide {
+    }
+  }
+
+  /***** ***** PRICE CARD ***** *****/
+  .line-wrapper {
+    height: 100%;
+    width: 48px;
+    .line {
+      width: 3px;
+      height: 100%;
     }
   }
 }
