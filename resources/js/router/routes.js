@@ -64,13 +64,13 @@ const routes = [
     {
         name: 'online-consultations',
         path: '/consultas',
-        component: OnlineConsultations
+        component: ConsultasOnline
     },
-    {
+    /*{
         name: 'online-consultations-2',
         path: '/consultas-2',
         component: ConsultasOnline
-    },
+    },*/
     {
         name: 'challenge-15-dias-keto-ayuno',
         path: '/reto/15-dias-keto-ayuno-v5',

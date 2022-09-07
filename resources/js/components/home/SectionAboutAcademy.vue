@@ -5,8 +5,8 @@
       <span class="primary-color">academia</span>?
     </h2>
     <v-container>
-      <v-row justify="center">
-        <v-col cols="12" sm="6" md="4">
+      <v-row>
+        <v-col cols="12" sm="6" lg="4">
           <product-card
             :buttonTo="{name: getProductsTypes.WORKSHOP}"
             :data="{
@@ -17,7 +17,7 @@
             }"
           ></product-card>
         </v-col>
-        <v-col cols="12" sm="6" md="4">
+        <v-col cols="12" sm="6" lg="4">
           <product-card
             :buttonTo="{name: getProductsTypes.EBOOK}"
             :data="{
@@ -25,6 +25,18 @@
               name: 'Ebooks',
               description:
                 'Son libros digitales que diseñé para que te ayuden en tu camino hacia un estilo de vida saludable. Tenemos: planes completos con información, guías, etc., recetarios y más!.',
+            }"
+          ></product-card>
+        </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <product-card
+            buttonTo="/consultas"
+            :data="{
+              poster: '/img/landing-reto/nati-profesional.jpg',
+              name: 'Consultas Personalizadas',
+              customCTA: 'MÁS INFORMACIÓN',
+              description:
+                'La oportunidad de ajustar tu proceso de forma personalizada y alcanzar tus metas de salud, de manera online o presencial.',
             }"
           ></product-card>
         </v-col>

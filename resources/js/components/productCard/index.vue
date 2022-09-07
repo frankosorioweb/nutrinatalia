@@ -30,7 +30,7 @@
       <template v-if="!this.hasPrice">
         <div class="px-4 pb-4">
           <v-btn :to="buttonTo" color="primary" block
-            >Ver todos los {{ this.data.name }}</v-btn
+            >{{ this.data.customCTA ? this.data.customCTA : `Ver todos los ${this.data.name}` }}</v-btn
           >
         </div>
       </template>
