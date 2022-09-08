@@ -2,9 +2,9 @@
     <v-main class="consultas-online-2">
         <presentation />
         <beneficios v-if="!isDesktop()"/>
-        <modalidades v-if="!isDesktop()"/>
+        <modalidades/>
         <consulta-online />
-        <consulta-presencial />
+        <!-- <consulta-presencial /> -->
     </v-main>
 </template>
 

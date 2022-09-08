@@ -10,7 +10,7 @@
                 class="secondary-color">personalizada</span> y alcanzar tus metas de <span class="secondary-color">
                 salud</span></h1>
             <beneficios v-if="isDesktop()" />
-            <modalidades v-if="isDesktop()" />
+            <!-- <modalidades v-if="isDesktop()" /> -->
           </v-col>
           <v-col cols="12" lg="auto">
             <div class="foto-frontal px-5 my-6 px-lg-0 my-lg-0 text-center">

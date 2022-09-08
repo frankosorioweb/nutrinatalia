@@ -25,7 +25,7 @@ const products = [
       {
         title: "Acerca del taller",
         info: [
-          "Este taller se desarrollará de manera online, mediante la plataforma de Google Meet, el día Miércoles 07 de Septiembre, a las 19:30 Hs, inscribite ahora para reservar tu lugar.",
+          "Este taller se desarrollará de manera online, mediante la plataforma de Google Meet, el día Sábado 10 de Septiembre, a las 11:00 Hs, inscribite ahora para reservar tu lugar.",
           "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
         ]
       },

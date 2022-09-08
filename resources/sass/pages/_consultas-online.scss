@@ -19,13 +19,17 @@
 
   /***** ***** BENEFICIO ***** *****/
   .icon-desc {
+    &.modalidad-card {
+      background-color: white;
+    }
+
     .icon-desc-title {
       font-size: 1rem;
     }
     .icon-desc-description {
       font-size: 0.8125rem;
       @media #{map-get($display-breakpoints, 'lg-and-up')} {
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
       color: $description-color;
     }
@@ -72,7 +76,8 @@
         font-size: 1rem;
       }
     }
-    .beneficios-section, .secondary-section {
+    .beneficios-section,
+    .secondary-section {
       border: none !important;
       background: unset !important;
       .content {
@@ -120,7 +125,7 @@
 
   /***** ***** PRICE CARD ***** *****/
   .price-card {
-    font-size: .875rem;
+    font-size: 0.875rem;
     border-radius: 10px;
     border-top: 5px solid;
     p {
@@ -146,7 +151,7 @@
   }
 
   .actions-wrapper {
-    font-size: .8125rem;
+    font-size: 0.8125rem;
   }
 
   /***** ***** PRICE CARD ***** *****/
@@ -169,7 +174,7 @@
   }
 
   .bg-lines-blur {
-    background: url('/img/bg-lines-blur.png');
+    background: url("/img/bg-lines-blur.png");
     background-position: center;
     background-size: cover;
   }
