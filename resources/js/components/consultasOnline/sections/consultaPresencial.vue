@@ -1,7 +1,7 @@
 <template>
     <section class="consulta-presencial-section modalidad-section bg-lines-blur">
         <div class="content px-6 py-10 px-lg-14 py-lg-14">
-            <v-row class="flex-lg-row-reverse" dense no-gutters justify="space-between">
+            <v-row dense no-gutters justify="space-between">
                 <v-col lg="6">
                     <div class="icon-desc">
                         <v-row dense no-gutters justify="center" justify-lg="start" align="center" class="mb-sm-4 mb-lg-0">
