@@ -21,6 +21,9 @@
   .icon-desc {
     &.modalidad-card {
       background-color: white;
+      @media #{map-get($display-breakpoints, 'sm-and-up')} {
+        max-width: 21rem !important;
+      }
     }
 
     .icon-desc-title {
@@ -164,13 +167,8 @@
     }
   }
 
-  .modalidad-section {
-    &.consulta-online-section .content {
-      background-color: transparentize($color: $primary-color, $amount: 0.95);
-    }
-    &.consulta-presencial-section .content {
-      background-color: transparentize($color: $secondary-color, $amount: 0.95);
-    }
+  .modalidad-section .content {
+    background-color: transparentize($color: $primary-color, $amount: 0.95);
   }
 
   .bg-lines-blur {

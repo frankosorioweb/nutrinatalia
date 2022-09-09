@@ -1,5 +1,5 @@
 <template>
-    <section class="consulta-presencial-section secondary-section modalidad-section bg-lines-blur">
+    <section class="consulta-presencial-section modalidad-section bg-lines-blur">
         <div class="content px-6 py-10 px-lg-14 py-lg-14">
             <v-row class="flex-lg-row-reverse" dense no-gutters justify="space-between">
                 <v-col lg="6">

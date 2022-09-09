@@ -6,39 +6,15 @@
                         class="secondary-color">modalidad</span> preferida</h1>
             </template>
             <template v-else>
-                <h2 class="section-title presentation font-weight-bold text-center lh-normal text-capitalize primary-font primary-color mb-6">Elegí tu <span
+                <h2 class="section-title presentation font-weight-bold text-center lh-normal text-capitalize primary-font mb-6">Elegí tu <span
                         class="secondary-color">modalidad</span> preferida</h2>
             </template>
             <div class="icon-desc-wrapper text-center">
                 <v-row justify="center" dense>
                     <template v-for="(modalidad, index) in modalidades">
-                        <v-col cols="12" sm="6" lg="4">
+                        <v-col cols="12" sm="6" class="px-2 mb-2 mb-sm-0">
                             <!-- <div class="icon-desc modalidad-card" :class="index !== modalidades.length - 1 ? ( isDesktop() ? 'pb-0' : 'pb-5' ) : ''"> -->
-                            <div class="icon-desc modalidad-card h-100 rounded-lg pa-4 mx-sm-1 elevation-5">
-                                <!-- <v-row dense no-gutters class="h-100">
-                                    <v-col cols="12">
-                                        <div class="icon-wrapper mb-4">
-                                            <img :class="modalidad.iconClass" :src="'/img/consultas-2-icons/' + modalidad.icon"
-                                                alt="icono-modalidad">
-                                        </div>
-                                    </v-col>
-                                    <v-col cols="12">
-                                        <div class="title-wrapper">
-                                            <template v-if="isDesktop()">
-                                                <h3 class="icon-desc-title text-center primary-font font-weight-bold mb-0">{{ modalidad.title }}</h3>
-                                            </template>
-                                            <template v-else>
-                                                <h2 class="icon-desc-title text-center primary-font font-weight-bold mb-0">{{ modalidad.title }}</h2>
-                                            </template>
-                                        </div>
-                                        <div class="icon-desc-description-wrapper">
-                                            <p class="icon-desc-description mb-0">{{ modalidad.description }}</p>
-                                        </div>
-                                    </v-col>
-                                    <v-col cols="12">
-                                        <v-btn class="mt-2" block :color="index=== 0 ? 'primary' : 'secondary'">Más información</v-btn>
-                                    </v-col>
-                                </v-row> -->
+                            <div class="icon-desc modalidad-card h-100 rounded-lg pa-4 mx-auto elevation-5" :class="index === 0 ? 'mr-sm-0' : 'ml-sm-0'">
                                 <div class="d-flex flex-column h-100">
                                     <div class="column">
                                         <div class="icon-wrapper mb-4">
@@ -60,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="column mt-auto">
-                                        <v-btn class="mt-2" block :color="index=== 0 ? 'primary' : 'secondary'">Más información</v-btn>
+                                        <v-btn @click="onBtnMoreInfoClick(index)" class="mt-2" block :color="index=== 0 ? 'primary' : 'secondary'">Más información</v-btn>
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +71,9 @@ export default {
     methods: {
         isDesktop() {
             return this.$vuetify.breakpoint.lgAndUp;
+        },
+        onBtnMoreInfoClick(index) {
+            this.$emit('showConsultaSection', index === 0 ? true : false);
         }
     },
 }
