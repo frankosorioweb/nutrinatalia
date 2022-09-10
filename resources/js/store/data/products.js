@@ -25,8 +25,8 @@ const products = [
       {
         title: "Acerca del taller",
         info: [
-          "Este taller se desarrollará de manera online, mediante la plataforma de Google Meet, el día Sábado 10 de Septiembre, a las 11:00 Hs, inscribite ahora para reservar tu lugar.",
-          "Además de acceder a los videos del taller, recibirás un material en pdf con las recetas y otras extra de regalo!."
+          "Taller online dirigido a padres de niños para aprender lo que no nos enseñan en ningún lugar: a preparar merenderos saludables de verdad.",
+          "Además de acceder al video del taller con preguntas y respuestas, recibirás un material en pdf con las recetas y otras extra de regalo!."
         ]
       },
       {
@@ -45,7 +45,7 @@ const products = [
         list: true,
         title: "Lo que necesitas para el taller",
         info: [
-          "Una cuenta de Google, ya que el live se transmitirá por Google Meet.",
+          "Una dirección de correo electrónico para acceder al taller.",
           "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
         ]
       },
