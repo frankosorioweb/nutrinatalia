@@ -1,31 +1,34 @@
 const state = {
   challengeKetoAyunoV4: {
     textDateInfo: {
-      version: '7.0',
+      version: '8.0',
       startChallenge: {
-        day: '11',
+        day: '13',
         dayName: 'DOMINGO',
-        month: ['SE', 'PT'],
+        month: ['NO', 'VIE'],
+        monthText: 'NOVIEMBRE',
         year: ['20', '22'],
       },
       endChallenge: {
-        day: '25',
+        day: '27',
         dayName: 'DOMINGO',
-        month: ['SE', 'PT'],
+        month: ['NO', 'VIE'],
+        monthText: 'NOVIEMBRE',
         year: ['20', '22'],
       },
       inscriptionEnd: {
-        day: '09',
-        dayName: 'VIERNES',
-        month: ['SE', 'PT'],
+        day: '12',
+        dayName: 'SÁBADO',
+        month: ['NO', 'VIE'],
+        monthText: 'NOVIEMBRE',
         year: ['20', '22'],
       }
     },
     // Fecha de expiración de la inscripción (se debe establecer el primer día en el que la gente ya no podrá inscribirse)
     inscriptionEndDate: {
       // Enero empieza en 0
-      day: 10,
-      month: 8,
+      day: 13,
+      month: 10,
       year: 2022
     },
     fullInscriptionCuotaState: false,

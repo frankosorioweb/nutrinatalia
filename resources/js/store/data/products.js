@@ -14,7 +14,8 @@ const products = [
   /** EL MERENDERO FELIZ **/
   {
     poster: `${postersSrc}Taller - El merendero feliz.jpg`,
-    onlyGoogleAccount: true,
+    // Removemos el onlyGoogleAccount ya que solamente venderemos la transmisión del meet grabada
+    //onlyGoogleAccount: true,
     name: 'Taller Online - El Merendero Feliz',
     shortName: "el-merendero-feliz",
     duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -128,6 +129,7 @@ const products = [
       },
     ]
   },
+  /** RETO 15 DÍAS KETO + AYUNO **/
   {
     poster: `${postersSrc}Reto 15 dias keto ayuno.jpg`,
     name: `Reto 15 Días Keto + Ayuno versión ${challengeTextInfo.version}`,
@@ -186,9 +188,9 @@ const products = [
         list: true,
         title: "Fecha de inicio, finalización y cierre de inscripciones:",
         info: [
-          `Las inscripciones CIERRAN el ${challengeTextInfo.inscriptionEnd.dayName} ${challengeTextInfo.inscriptionEnd.day} de ${challengeTextInfo.inscriptionEnd.month[0]}${challengeTextInfo.inscriptionEnd.month[1]} de ${challengeTextInfo.inscriptionEnd.year[0]}${challengeTextInfo.inscriptionEnd.year[1]} (o hasta llenar el cupo).`,
-          `El reto INICIA el ${challengeTextInfo.startChallenge.dayName} ${challengeTextInfo.startChallenge.day} de ${challengeTextInfo.startChallenge.month[0]}${challengeTextInfo.startChallenge.month[1]} de ${challengeTextInfo.startChallenge.year[0]}${challengeTextInfo.startChallenge.year[1]}.`,
-          `El reto FINALIZA el ${challengeTextInfo.endChallenge.dayName} ${challengeTextInfo.endChallenge.day} de ${challengeTextInfo.endChallenge.month[0]}${challengeTextInfo.endChallenge.month[1]} de ${challengeTextInfo.endChallenge.year[0]}${challengeTextInfo.endChallenge.year[1]}.`
+          `Las inscripciones CIERRAN el ${challengeTextInfo.inscriptionEnd.dayName} ${challengeTextInfo.inscriptionEnd.day} de ${challengeTextInfo.inscriptionEnd.monthText} de ${challengeTextInfo.inscriptionEnd.year[0]}${challengeTextInfo.inscriptionEnd.year[1]} (o hasta llenar el cupo).`,
+          `El reto INICIA el ${challengeTextInfo.startChallenge.dayName} ${challengeTextInfo.startChallenge.day} de ${challengeTextInfo.startChallenge.monthText} de ${challengeTextInfo.startChallenge.year[0]}${challengeTextInfo.startChallenge.year[1]}.`,
+          `El reto FINALIZA el ${challengeTextInfo.endChallenge.dayName} ${challengeTextInfo.endChallenge.day} de ${challengeTextInfo.endChallenge.monthText} de ${challengeTextInfo.endChallenge.year[0]}${challengeTextInfo.endChallenge.year[1]}.`
         ]
       }
     ]
