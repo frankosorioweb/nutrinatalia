@@ -98,6 +98,7 @@ const products = [
         list: true,
         title: "EL RETO ES PARA:",
         info: [
+          'Pacientes de la NutriNatalia con esquemas de alimentación cetogénica y ayunos.',
           'Personas que participaron de alguna edición del Reto Keto + Ayuno.',
           'Necesitan un apoyo extra en su mantenimiento de hábitos saludables.',
         ]
