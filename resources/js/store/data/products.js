@@ -14,8 +14,6 @@ const products = [
   /** EL MERENDERO FELIZ **/
   {
     poster: `${postersSrc}Taller - El merendero feliz.jpg`,
-    // Removemos el onlyGoogleAccount ya que solamente venderemos la transmisión del meet grabada
-    //onlyGoogleAccount: true,
     name: 'Taller Online - El Merendero Feliz',
     shortName: "el-merendero-feliz",
     duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -249,7 +247,7 @@ const products = [
       "1 hora 15 minutos que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
     description:
       "Aprendé a ejecutar la receta de 5 variedades de panes sin culpas, libre de harinas y azúcares, aptos para toda la familia.",
-    price: JSON.parse(JSON.stringify(prices[WORKSHOP].panesSinCulpa)),
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
     type: WORKSHOP,
     features: [
       {

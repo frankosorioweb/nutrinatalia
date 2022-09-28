@@ -73,9 +73,9 @@
                                 </v-row>
                                 <div class="actions-wrapper mt-2">
                                     <v-row dense no-gutters>
-                                        <v-col class="mb-4 pr-lg-3" cols="12" lg="6">
+                                        <v-col class="mb-4 pr-lg-3" cols="12" lg="auto">
                                             <a target="_blank" :href="$store.getters.getAgendarConsultaWhatsAppLink(false)"
-                                                class="d-flex justify-center align-center secondary white--text px-4 py-3 rounded-pill text-uppercase primary-font font-weight-medium elevation-5">
+                                                class="d-flex justify-center align-center secondary white--text px-6 py-3 rounded-pill text-uppercase primary-font font-weight-medium elevation-5">
                                                 <span class="mr-2">Agendar Consulta Presencial</span>
                                                 <img src="/img/consultas-2-icons/pin-white.svg" alt="Button icon">
                                             </a>
