@@ -42,7 +42,7 @@
                         </v-col>
                     </template>
                 </v-row>
-                <p class="font-weight-bold mt-6 red--text">* Las consultas son con pago previo</p>
+                <p class="font-weight-bold mt-6 red--text">* Los agendamientos son con pago previo</p>
             </div>
         </div>
     </section>
