@@ -13,7 +13,6 @@
                 <v-row justify="center" dense>
                     <template v-for="(modalidad, index) in modalidades">
                         <v-col cols="12" sm="6" class="px-2 mb-2 mb-sm-0">
-                            <!-- <div class="icon-desc modalidad-card" :class="index !== modalidades.length - 1 ? ( isDesktop() ? 'pb-0' : 'pb-5' ) : ''"> -->
                             <div class="icon-desc modalidad-card h-100 rounded-lg pa-4 mx-auto elevation-5" :class="index === 0 ? 'mr-sm-0' : 'ml-sm-0'">
                                 <div class="d-flex flex-column h-100">
                                     <div class="column">
@@ -43,6 +42,7 @@
                         </v-col>
                     </template>
                 </v-row>
+                <p class="font-weight-bold mt-6 red--text">* Las consultas son con pago previo</p>
             </div>
         </div>
     </section>

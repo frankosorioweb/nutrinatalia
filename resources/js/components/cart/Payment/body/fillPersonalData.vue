@@ -74,7 +74,10 @@ export default {
   methods: {
     onSendVoucher() {
       const validForm = this.validateForm();
-      if (validForm) this.redirectToWhatsApp();
+      if (validForm) {
+        dataLayer.push({'event': 'evento_submit_formulario_reto_15_keto'});
+        this.redirectToWhatsApp()
+      };
     },
     redirectToWhatsApp() {
       const whatsappSupport = this.$store.state.links.support.whatsapp;
