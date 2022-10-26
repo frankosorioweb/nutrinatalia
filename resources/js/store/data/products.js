@@ -51,7 +51,7 @@ const products = [
     ]
   },
   /** RETO GO **/
-  {
+  /*{
     isChallenge: true,
     poster: `${postersSrc}Reto Go.jpg`,
     name: 'Reto Go! Fortaleciendo nuestra relación con la comida',
@@ -127,7 +127,7 @@ const products = [
         ]
       },
     ]
-  },
+  },*/
   /** RETO 15 DÍAS KETO + AYUNO **/
   {
     poster: `${postersSrc}Reto 15 dias keto ayuno.jpg`,
