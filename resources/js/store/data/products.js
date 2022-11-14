@@ -14,10 +14,12 @@ const products = [
   /** EL MERENDERO FELIZ **/
   {
     poster: `${postersSrc}Taller - El merendero feliz.jpg`,
-    name: 'Taller Online - El Merendero Feliz',
+    name: "Taller Online - El Merendero Feliz",
     shortName: "el-merendero-feliz",
-    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
-    description: 'Taller para padres. Aprende a armar un merendero que impacte positivamente en crecimiento y desarrollo de tus niños.',
+    duration:
+      "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description:
+      "Taller para padres. Aprende a armar un merendero que impacte positivamente en crecimiento y desarrollo de tus niños.",
     price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
     type: WORKSHOP,
     features: [
@@ -37,7 +39,7 @@ const products = [
           "A leer etiquetas de los productos.",
           "A identificar ingredientes poco saludables en los productos.",
           "Tips para trabajar en casa para mejorar la alimentación familiar .",
-          "Ideas para un merendero feliz y saludable.",
+          "Ideas para un merendero feliz y saludable."
         ]
       },
       {
@@ -47,7 +49,7 @@ const products = [
           "Una dirección de correo electrónico para acceder al taller.",
           "Celular, tableta o computadora con conexión estable a Internet ya que los videos están en alta resolución."
         ]
-      },
+      }
     ]
   },
   /** RETO GO **/
@@ -129,7 +131,7 @@ const products = [
     ]
   },*/
   /** RETO 15 DÍAS KETO + AYUNO **/
-  {
+  /*{
     poster: `${postersSrc}Reto 15 dias keto ayuno.jpg`,
     name: `Reto 15 Días Keto + Ayuno versión ${challengeTextInfo.version}`,
     shortName: "reto-15-dias-keto-ayuno",
@@ -193,14 +195,16 @@ const products = [
         ]
       }
     ]
-  },
+  },*/
   /** FERMENTADOS **/
   {
     poster: `${postersSrc}Fermentados.jpg`,
-    name: 'Fermentados',
+    name: "Fermentados",
     shortName: "fermentados",
-    duration: "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
-    description: 'En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.',
+    duration:
+      "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
+    description:
+      "En este taller aprenderás a preparar estos 4 alimentos fermentados: kombucha, chucrut, pickles y yogur casero.",
     price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
     type: WORKSHOP,
     features: [
@@ -218,7 +222,7 @@ const products = [
           "Sobre la fermentación y sus beneficios.",
           "A preparar tu propia kombucha, yogur, chucrut y pickles de forma casera.",
           "Que la preparación de los alimentos fermentados es más sencilla de lo que te imaginas, apenas necesitas entre 5 a 20 minutos por receta.",
-          "A incorporar estos alimentos saludables en tu día a día.",
+          "A incorporar estos alimentos saludables en tu día a día."
         ]
       },
       {
@@ -234,7 +238,7 @@ const products = [
         title: "¿A quienes va dirigido el taller?",
         info: [
           "A aquellas personas que están buscando potenciar su salud a través de una alimentación saludable.",
-          "A quienes buscan preparar de forma casera estos alimentos fermentados",
+          "A quienes buscan preparar de forma casera estos alimentos fermentados"
         ]
       }
     ]
@@ -426,6 +430,61 @@ const products = [
   },
 
   //EBOOKS
+  /** ESPECIAL NAVIDAD **/
+  {
+    poster: `${postersSrc}ebook-especial-navidad-min.jpg`,
+    name: "Especial Navidad",
+    shortName: "especial-navidad",
+    pages: "+60",
+    description: "Sorprendé a tus seres queridos en Navidad con estas recetas deliciosas compatibles con tu estilo de vida cetogénico.",
+    price: JSON.parse(JSON.stringify(prices[EBOOK].EspecialNavidad)),
+    type: EBOOK,
+    features: [
+      {
+        list: false,
+        title: "Acerca del ebook",
+        info: [
+          "Este eBook Especial de Navidad te trae recetas deliciosas compatibles con tu estilo de vida cetogénico para que puedas seguir caminando hacia tus metas de salud, disfrutar, compartir y sorprender a tus seres queridos."
+        ]
+      },
+      {
+        list: true,
+        title: "Tenemos más de 60 páginas con:",
+        info: [
+          "Guía de inicio informativa.",
+          "Mas de 25 recetas entre guarniciones, platos principales, salsas, postres y bebidas cetogenicas.",
+          "Tips de organización y anticipación."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás:",
+        info: [
+          "Todos los alimentos a incluir y cuales evitar.",
+          "A preparar tus recetas favoritas en una versión saludable.",
+          "A que la cocina saludable es más sencilla de lo que te imaginas, y mas deliciosa!."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas:",
+        info: [
+          "Una dirección de correo electrónico para acceder al ebook.",
+          "Una aplicación compatible para leer documentos en pdf."
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el ebook?:",
+        info: [
+          "A las personas que están en un plan bajo en carbohidratos y buscan mantenerse allí durante las celebraciones de fin de año.",
+          "Que buscan recetas para perder peso, revertir potenciales enfermedades metabólicas como el hígado graso, obesidad, diabetes, resistencia a la insulina, y sus consecuencias.",
+          "A las personas interesadas en descubrir la cocina saludable, aprender a preparar una nueva versión de sus recetas favoritas de fin de año."
+        ]
+      }
+    ]
+  },
+  /** 30 DÍAS KETO + AYUNO **/
   {
     poster: `${postersSrc}30 dias keto ayuno.jpg`,
     name: "30 días Keto + Ayuno",
@@ -493,8 +552,9 @@ const products = [
         ]
       }
     ]
-  }
-  /* YA NO SE VENDERÁN LOS EBOOKS DE 50.000 GS {
+  },
+  
+  /* YA NO SE VENDERÁN LOS RECETARIOS DE 50.000 GS {
         poster: `${postersSrc}Recetario comidas tipicas paraguayas version lowcarb.jpg`,
         name: 'Recetario Comida Típica Paraguaya Versión Lowcarb',
         shortName: 'recetario-comida-tipica-py-lowcarb',
