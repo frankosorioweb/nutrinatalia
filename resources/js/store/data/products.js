@@ -435,8 +435,8 @@ const products = [
     poster: `${postersSrc}ebook-especial-navidad-min.jpg`,
     name: "Especial Navidad",
     shortName: "especial-navidad",
-    pages: "+60",
-    description: "Sorprendé a tus seres queridos en Navidad con estas recetas deliciosas compatibles con tu estilo de vida cetogénico.",
+    pages: "+70",
+    description: "Disfrutar de las celebraciones de fin de año y seguir con tu estilo de vida saludable sí es posible! Y en este ebook encontrarás las herramientas para lograrlo.",
     price: JSON.parse(JSON.stringify(prices[EBOOK].EspecialNavidad)),
     type: EBOOK,
     features: [
@@ -449,11 +449,22 @@ const products = [
       },
       {
         list: true,
-        title: "Tenemos más de 60 páginas con:",
+        title: "Tenemos más de 70 páginas con:",
         info: [
-          "Guía de inicio informativa.",
+          "Guía informativa.",
           "Mas de 25 recetas entre guarniciones, platos principales, salsas, postres y bebidas cetogenicas.",
-          "Tips de organización y anticipación."
+          "Tips de organización y anticipación.",
+        ]
+      },
+      {
+        list: true,
+        title: "Recetas:",
+        info: [
+          "1. Guarniciones: Pan Chip, Coliguazú, Mil hojas de Zuchini, Coleslaw Keto, Arroz de Coliflor, Puré de Brócoli, Ensalada Crocante.",
+          "2. Salsas: Salsa de Queso Azul, Salsa de Espinacas, Mayonesa, Pesto.",
+          "3. Platos Principales: Vitel Toné, Pavo con Panceta, Lengua a la Vinagreta, Lomito de cerdo a la Mostaza, Medallones de Lomito a la Pimienta.",
+          "4. Postres: Turrón de Cacao, Galletitas de Jengibre, Brownie, Helado, Cheescake, Brownie Cheesecake, Budín de Coco, Pan Dulce.",
+          "5. Bebidas: Información sobre bebidas, Tips, Guía de Trago Bajos en Carbohidratos, Caipiriña, Gin Tonic Frutos Rojos, Clerico Lowcarb.",
         ]
       },
       {

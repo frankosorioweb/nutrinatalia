@@ -138,10 +138,10 @@ prices[EBOOK].EspecialNavidad = {
   default: false,
   discount: 0,
   dollar: {
-    value: `7 ${money.symbols.dollar}`
+    value: `9 ${money.symbols.dollar}`
   },
   guarani: {
-    value: `50.000 ${money.symbols.guarani}`
+    value: `65.000 ${money.symbols.guarani}`
   },
   coupons: {}
 };
