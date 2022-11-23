@@ -8,12 +8,14 @@ let prices = {};
 prices[WORKSHOP] = {
   original: {
     default: true,
-    discount: 0,
+    discount: 50,
     dollar: {
-      value: `14.2 ${money.symbols.dollar}`
+      old: `14.2 ${money.symbols.dollar}`,
+      value: `7.1 ${money.symbols.dollar}`,
     },
     guarani: {
-      value: `100.000 ${money.symbols.guarani}`
+      old: `100.000 ${money.symbols.guarani}`,
+      value: `50.000 ${money.symbols.guarani}`
     },
     // Cupón general para todos los talleres (Se debe utilizar prices[WORKSHOP].original.coupons en los talleres que tengan este mismo precio)
     coupons: {
@@ -124,12 +126,14 @@ prices[WORKSHOP].RetoGo = {
 
 prices[EBOOK].ketoAyuno30Dias = {
   default: false,
-  discount: 0,
+  discount: 50,
   dollar: {
-    value: `31.2 ${money.symbols.dollar}`
+    old: `31.2 ${money.symbols.dollar}`,
+    value: `15.6 ${money.symbols.dollar}`,
   },
   guarani: {
-    value: `220.000 ${money.symbols.guarani}`
+    old: `220.000 ${money.symbols.guarani}`,
+    value: `110.000 ${money.symbols.guarani}`,
   },
   coupons: {}
 };
