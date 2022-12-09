@@ -1,4 +1,5 @@
-const onlineConsultationsPhone = '595971579290';
+// const onlineConsultationsPhone = '595971579290';
+const onlineConsultationsPhone = '595994653555';
 
 const support = {
     whatsapp: onlineConsultationsPhone,
