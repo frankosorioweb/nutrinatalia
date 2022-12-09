@@ -7,15 +7,15 @@ let prices = {};
 
 prices[WORKSHOP] = {
   original: {
-    default: true,
-    discount: 50,
+    default: false,
+    discount: 0,
     dollar: {
-      old: `14.2 ${money.symbols.dollar}`,
-      value: `7.1 ${money.symbols.dollar}`,
+      value: `14.2 ${money.symbols.dollar}`,
+      // old: `14.2 ${money.symbols.dollar}`,
     },
     guarani: {
-      old: `100.000 ${money.symbols.guarani}`,
-      value: `50.000 ${money.symbols.guarani}`
+      value: `100.000 ${money.symbols.guarani}`,
+      // old: `100.000 ${money.symbols.guarani}`,
     },
     // Cupón general para todos los talleres (Se debe utilizar prices[WORKSHOP].original.coupons en los talleres que tengan este mismo precio)
     coupons: {
@@ -30,6 +30,17 @@ prices[WORKSHOP] = {
           value: `80.000 ${money.symbols.guarani}`
         }
       }*/
+      "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+        discount: 15,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `12 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `85.000 ${money.symbols.guarani}`
+        }
+      }
     }
   }
 };
@@ -70,7 +81,7 @@ prices[EBOOK] = {
     },
     guarani: {
       value: `200.000 ${money.symbols.guarani}`
-    }
+    },
   }
 };
 
@@ -126,16 +137,30 @@ prices[WORKSHOP].RetoGo = {
 
 prices[EBOOK].ketoAyuno30Dias = {
   default: false,
-  discount: 50,
+  discount: 0,
   dollar: {
-    old: `31.2 ${money.symbols.dollar}`,
-    value: `15.6 ${money.symbols.dollar}`,
+    value: `31.2 ${money.symbols.dollar}`,
+    // old: `31.2 ${money.symbols.dollar}`,
+    // value: `15.6 ${money.symbols.dollar}`,
   },
   guarani: {
-    old: `220.000 ${money.symbols.guarani}`,
-    value: `110.000 ${money.symbols.guarani}`,
+    value: `220.000 ${money.symbols.guarani}`,
+    // old: `220.000 ${money.symbols.guarani}`,
+    // value: `110.000 ${money.symbols.guarani}`,
   },
-  coupons: {}
+  coupons: {
+    "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+      discount: 15,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `26.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `187.000 ${money.symbols.guarani}`
+      }
+    }
+  }
 };
 
 prices[EBOOK].EspecialNavidad = {
@@ -147,7 +172,19 @@ prices[EBOOK].EspecialNavidad = {
   guarani: {
     value: `65.000 ${money.symbols.guarani}`
   },
-  coupons: {}
+  coupons: {
+    "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+      discount: 15,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `7.65 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `55.250 ${money.symbols.guarani}`
+      }
+    }
+  }
 };
 
 export default prices;

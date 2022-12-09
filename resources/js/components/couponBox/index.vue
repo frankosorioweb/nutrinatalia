@@ -85,10 +85,12 @@ export default {
       if (!exists || !valid) {
         this.displayInvalidCoupon();
       } else {
+        const productCoupon = this.product.price.coupons[hash];
+        const { discount } = productCoupon;
         this.applyDiscount(hash);
         this.$store.commit(
           "coupon/openSnackBar",
-          "FELICITACIONES, HAS CONSEGUIDO UN 20% DE DESCUENTO"
+          `FELICITACIONES, HAS CONSEGUIDO UN ${discount}% DE DESCUENTO`
         );
       }
     },

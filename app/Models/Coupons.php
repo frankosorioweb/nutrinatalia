@@ -14,12 +14,19 @@ class Coupons extends Model
    * end: Es la fecha de expiración, a partir de esta fecha el cupón deja de funcionar
    */
   private $coupons = [
-    [
+    /*[
       "name"       => "SANJUANDICEQUESI",
       "hash"       => '$2a$12$ppS4ZePXaMNnnby/5o39sOhLfvi55w8A/8SaGuT6eO/oA79fYmkAu',
       "percentage" => 20,
       "begin"      => "16-06-2022",
       "end"        => "19-06-2022"
+    ],*/
+    [
+      "name"       => "TRIBUPACIENTES",
+      "hash"       => '$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu',
+      "percentage" => 15,
+      "begin"      => "08-12-2022",
+      "end"        => "01-02-2023"
     ],
   ];
 

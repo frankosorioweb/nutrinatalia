@@ -13,7 +13,7 @@ const products = [
   //WORKSHOPS
   /** EL MERENDERO FELIZ **/
   {
-    poster: `${postersSrc}Taller - El merendero feliz BF.jpg`,
+    poster: `${postersSrc}Taller - El merendero feliz.jpg`,
     name: "Taller Online - El Merendero Feliz",
     shortName: "el-merendero-feliz",
     duration:
@@ -198,7 +198,7 @@ const products = [
   },*/
   /** FERMENTADOS **/
   {
-    poster: `${postersSrc}Fermentados BF.jpg`,
+    poster: `${postersSrc}Fermentados.jpg`,
     name: "Fermentados",
     shortName: "fermentados",
     duration:
@@ -244,7 +244,7 @@ const products = [
     ]
   },
   {
-    poster: `${postersSrc}Panes sin culpa BF.jpg`,
+    poster: `${postersSrc}Panes sin culpa.jpg`,
     name: "Panes sin culpa",
     shortName: "panes-sin-culpa",
     duration:
@@ -291,7 +291,7 @@ const products = [
     ]
   },
   {
-    poster: `${postersSrc}Dulces que nos hacen bien BF.jpg`,
+    poster: `${postersSrc}Dulces que nos hacen bien.jpg`,
     name: "Dulces que nos hacen bien",
     shortName: "dulces-saludables",
     duration:
@@ -338,7 +338,7 @@ const products = [
     ]
   },
   {
-    poster: `${postersSrc}Comidas tipicas paraguayas version lowcarb BF.jpg`,
+    poster: `${postersSrc}Comidas tipicas paraguayas version lowcarb.jpg`,
     name: "Comida Típica Paraguaya Versión Lowcarb",
     shortName: "comidas-tipicas-py-lowcarb",
     duration:
@@ -497,7 +497,7 @@ const products = [
   },
   /** 30 DÍAS KETO + AYUNO **/
   {
-    poster: `${postersSrc}30 dias keto ayuno BF.jpg`,
+    poster: `${postersSrc}30 dias keto ayuno.jpg`,
     name: "30 días Keto + Ayuno",
     shortName: "30-dias-keto-ayunos",
     pages: "+98",
