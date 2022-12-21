@@ -45,7 +45,7 @@
                                                 planificación de estrategias.
                                             </p>
                                             <p>En tu primera consulta de <span
-                                                    class="secondary-color font-weight-bold">45 a 60 minutos</span>
+                                                    class="secondary-color font-weight-bold">45 minutos</span>
                                                 obtendrás evaluación, guía de inicio, lista de compras y menús con
                                                 recetas.</p>
                                             <p>En cada control de <span class="secondary-color font-weight-bold">30
@@ -113,8 +113,8 @@ export default {
                             {
                                 name: 'Primera Consulta',
                                 price: {
-                                    guarani: '330.000',
-                                    dolar: '48'
+                                    guarani: '350.000',
+                                    dolar: '49'
                                 }
                             },
                             {

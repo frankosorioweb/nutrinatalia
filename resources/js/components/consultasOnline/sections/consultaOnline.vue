@@ -44,7 +44,6 @@
                                                     indicaciones</span> para registrar tu peso, medidas, y despegamos!.
                                             </p>
                                             <p>En tu primera consulta de <span class="primary-color font-weight-bold">45
-                                                    a 60
                                                     minutos</span>
                                                 obtendrás evaluación, guía de inicio, lista de compras y menús con
                                                 recetas.</p>
