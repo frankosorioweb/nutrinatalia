@@ -23,6 +23,13 @@
           <v-list-item-title>Ebooks</v-list-item-title>
         </v-list-item>
 
+        <v-list-item :to="{name: this.types.EXTRA}" exact>
+          <v-list-item-icon>
+            <v-icon>mdi-download</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Descargables</v-list-item-title>
+        </v-list-item>
+
         <v-list-item  :to="{name: 'online-consultations'}">
           <v-list-item-icon>
             <v-icon>mdi-notebook-edit</v-icon>

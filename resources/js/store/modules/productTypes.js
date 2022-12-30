@@ -1,7 +1,8 @@
 const state = {
     types: {
         WORKSHOP: 'Taller',
-        EBOOK: 'Ebook'
+        EBOOK: 'Ebook',
+        EXTRA: 'Extra',
     }
 };
 

@@ -4,8 +4,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CouponsController;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\DownloadExtraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +53,11 @@ Route::get('/date', function () {
 });
 
 Route::get('/validateCoupon/{coupon}', [CouponsController::class, 'validator']);
+
+/** DOWNLOAD EXTRA **/
+Route::get('/downloadExtraLeads', [DownloadExtraController::class, 'downloadCsv']);
+Route::get('/downloadExtra', [DownloadExtraController::class, 'download']);
+Route::post('/downloadExtra', [DownloadExtraController::class, 'index']);
 
 /* ----- ----- PAGOPAR API ----- ----- */
 

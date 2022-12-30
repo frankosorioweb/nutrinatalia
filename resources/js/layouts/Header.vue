@@ -55,6 +55,11 @@ export default {
           to: { name: this.types.EBOOK }
         },
         {
+          name: "Descargables",
+          icon: "mdi-download",
+          to: { name: this.types.EXTRA }
+        },
+        {
           name: "Consultas",
           icon: "mdi-notebook-edit",
           to: { name: "online-consultations" }

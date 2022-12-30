@@ -29,9 +29,16 @@
       <!-- Footer -->
       <template v-if="!this.hasPrice">
         <div class="px-4 pb-4">
-          <v-btn :to="buttonTo" color="primary" block
-            >{{ this.data.customCTA ? this.data.customCTA : `Ver todos los ${this.data.name}` }}</v-btn
-          >
+          <template v-if="this.isExtra">
+            <v-btn @click="onDownloadExtraClick" color="primary" block
+              >{{ 'Descargar' }}</v-btn
+            >
+          </template>
+          <template v-else>
+            <v-btn :to="buttonTo" color="primary" block
+              >{{ this.data.customCTA ? this.data.customCTA : `Ver todos los ${this.data.name}` }}</v-btn
+            >
+          </template>
         </div>
       </template>
       <template v-else>
@@ -69,15 +76,47 @@ import labelType from "./labelType.vue";
 import discountSticker from "./discountSticker.vue";
 import { mapGetters } from "vuex";
 export default {
-  props: ["data", "removeCTA", "buttonTo", "cardTo"],
+  props: ["data", "removeCTA", "buttonTo", "cardTo", "dialog"],
   computed: {
-    ...mapGetters("productCard", ["getProductsTypes", "getProductTypeText"]),
+    ...mapGetters("productTypes", ["getProductsTypes", "getProductTypeText"]),
+    isExtra() {
+      return this.data.type === this.getProductsTypes.EXTRA;
+    },
     hasPrice() {
       return !_.isUndefined(this.data.price);
     },
     hasDiscount() {
       return this.hasPrice && this.data.price.discount !== 0;
     },
+  },
+  methods: {
+    onDownloadExtraClick() {
+      this.dialog.file = `${this.data.shortName}.pdf`;
+      this.loadCookieData();
+    },
+    loadCookieData() {
+      const cookieName = 'download-extra-lead';
+      const cookieData = this.getCookie(cookieName);
+
+      if( cookieData ) {
+        const { email, names, whatsapp } = JSON.parse( cookieData );
+        this.dialog.email = email;
+        this.dialog.names = names;
+        this.dialog.whatsapp = whatsapp;
+
+        this.$emit('direct-download');
+      } else {
+        this.dialog.state = true;
+      }
+    },
+    getCookie(name) {
+      let cookie = {};
+      document.cookie.split(';').forEach(function (el) {
+        let [k, v] = el.split('=');
+        cookie[k.trim()] = v;
+      })
+      return cookie[name];
+    }
   },
   components: {
     labelType,

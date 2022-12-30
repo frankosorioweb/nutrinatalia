@@ -24,4 +24,17 @@
       }
     }
   }
+
+  .btn-extra-toggle {
+    &::before {
+      background-color: unset !important;
+    }
+    &.active {
+      background-color: transparentize($color: #2196F3, $amount: 0.88) !important;
+      color: #2196F3 !important;
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+  }
 }

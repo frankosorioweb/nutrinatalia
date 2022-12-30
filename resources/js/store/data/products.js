@@ -3,7 +3,7 @@ import productTypes from "../modules/productTypes";
 import challengeKetoAyunoEvent from "../modules/events";
 
 const postersSrc = "/img/posters/";
-const { WORKSHOP, EBOOK } = productTypes.state.types;
+const { WORKSHOP, EBOOK, EXTRA } = productTypes.state.types;
 
 const challengeTextInfo =
   challengeKetoAyunoEvent.state.challengeKetoAyunoV4.textDateInfo;
@@ -563,6 +563,16 @@ const products = [
         ]
       }
     ]
+  },
+
+  /** EXTRAS **/
+  /** EL PDF debe tener el mismo nombre que el shortName, ejemplo calendario-enero-2023.pdf**/
+  {
+    poster: `${postersSrc}mis-habitos-2023.jpg`,
+    name: "Mis Hábitos 2023",
+    shortName: "mis-habitos-2023",
+    description: "Herramienta súper útil para llevar un seguimiento de tus hábitos y ayudarte a cumplirlos. Descárgalo gratis cada mes.",
+    type: EXTRA,
   },
   
   /* YA NO SE VENDERÁN LOS RECETARIOS DE 50.000 GS {

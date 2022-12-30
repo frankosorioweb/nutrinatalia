@@ -10,7 +10,8 @@ const ChallengeKetoAyuno = () => import('../pages/ChallengeKetoAyuno.vue');
 import productTypes from '../store/modules/productTypes';
 const {
     WORKSHOP,
-    EBOOK
+    EBOOK,
+    EXTRA
 } = productTypes.state.types;
 
 const routes = [
@@ -33,6 +34,14 @@ const routes = [
         component: Products,
         props: {
             type: EBOOK
+        }
+    },
+    {
+        name: EXTRA,
+        path: '/descargables',
+        component: Products,
+        props: {
+            type: EXTRA
         }
     },
     {

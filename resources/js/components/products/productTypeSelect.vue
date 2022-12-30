@@ -2,7 +2,7 @@
   <v-container class="pt-6 px-1">
     <v-row no-gutters>
       <v-col cols="12">
-        <v-btn-toggle v-model="btnToggle" id="btn-toggle-product-type" mandatory tile group>
+        <v-btn-toggle v-model="btnToggle" id="btn-toggle-product-type" mandatory tile group class="flex-wrap justify-center">
           <v-btn
             :to="{name: this.types.WORKSHOP}"
             active-class="active"
@@ -20,6 +20,16 @@
           >
             <v-icon class="mr-1">mdi-bookshelf</v-icon>
             Ebooks
+          </v-btn>
+          <br>
+          <v-btn
+            :to="{name: this.types.EXTRA}"
+            active-class="active"
+            class="btn-extra-toggle primary-font font-weight-bold rounded"
+            :value="this.types.EXTRA"
+          >
+            <v-icon class="mr-1">mdi-download</v-icon>
+            Descargables
           </v-btn>
         </v-btn-toggle>
       </v-col>
