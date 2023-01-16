@@ -88,8 +88,22 @@ export default {
     },
     appendCoupon() {
       if (this.hasApplicableCoupon()) {
-        const coupons = Object.values(this.getProduct.price.coupons)[0];
-        return coupons.applied ? `•CUPÓN: ${coupons.value}\n` : "";
+        let anyApplied = false;
+        let coupon = null;
+
+        let couponsList = Object.values(this.getProduct.price.coupons);
+
+        couponsList.forEach(element => {
+          if( element.applied ) {
+            anyApplied = true;
+            coupon = element.value;
+
+            // En vez del break
+            return false;
+          }
+        });
+
+        return anyApplied ? `•CUPÓN: ${coupon}\n` : "";
       } else {
         return "";
       }

@@ -40,6 +40,17 @@ prices[WORKSHOP] = {
         guarani: {
           value: `85.000 ${money.symbols.guarani}`
         }
+      },
+      "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+        discount: 20,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `11.35 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `80.000 ${money.symbols.guarani}`
+        }
       }
     }
   }
@@ -159,6 +170,17 @@ prices[EBOOK].ketoAyuno30Dias = {
       guarani: {
         value: `187.000 ${money.symbols.guarani}`
       }
+    },
+    "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `24.9 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `176.000 ${money.symbols.guarani}`
+      }
     }
   }
 };
@@ -182,6 +204,17 @@ prices[EBOOK].EspecialNavidad = {
       },
       guarani: {
         value: `55.250 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `7.2 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `52.000 ${money.symbols.guarani}`
       }
     }
   }

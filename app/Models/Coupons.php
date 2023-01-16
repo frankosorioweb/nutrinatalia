@@ -28,6 +28,13 @@ class Coupons extends Model
       "begin"      => "08-12-2022",
       "end"        => "01-02-2023"
     ],
+    [
+      "name"       => "TRIBUDESAFIO",
+      "hash"       => '$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu',
+      "percentage" => 20,
+      "begin"      => "15-01-2023",
+      "end"        => "01-01-2024"
+    ],
   ];
 
   public function getAll()

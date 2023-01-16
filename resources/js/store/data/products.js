@@ -568,10 +568,17 @@ const products = [
   /** EXTRAS **/
   /** EL PDF debe tener el mismo nombre que el shortName, ejemplo calendario-enero-2023.pdf**/
   {
-    poster: `${postersSrc}mis-habitos-2023.jpg`,
+    poster: `${postersSrc}tips-viajes.jpeg`,
+    name: "Tips para viajes",
+    shortName: "tips-viajes",
+    description: "Comparto contigo esta Guía con tips para mantener tu estilo de vida durante los viajes. Descárga aquí gratis.",
+    type: EXTRA,
+  },
+  {
+    poster: `${postersSrc}mis-habitos-2023.jpeg`,
     name: "Mis Hábitos 2023",
     shortName: "mis-habitos-2023",
-    description: "Herramienta súper útil para llevar un seguimiento de tus hábitos y ayudarte a cumplirlos. Descárgalo gratis cada mes.",
+    description: "Herramienta súper útil para llevar un seguimiento de tus hábitos y ayudarte a cumplirlos. Descárgalo gratis para todo el año.",
     type: EXTRA,
   },
   

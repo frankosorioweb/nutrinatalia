@@ -47,13 +47,29 @@ export default {
   },
   computed: {
     hasAppliedCoupon() {
+      let anyApplied = this.searchAppliedCoupon();
       return (
         this.hasApplicableCoupon() &&
-        Object.values(this.product.price.coupons)[0].applied
+        anyApplied
       );
     },
   },
   methods: {
+    searchAppliedCoupon() {
+      let applied = false;
+      let couponsList = Object.values(this.product.price.coupons);
+
+      couponsList.forEach(element => {
+        if( element.applied ) {
+          applied = true;
+          
+          // En vez del break;
+          return false;
+        }
+      });
+
+      return applied;
+    },
     validateCoupon() {
       this.coupon = _.toUpper(this.coupon).trim();
       if (this.coupon) {
@@ -120,7 +136,18 @@ export default {
       productCoupon.value = this.coupon;
     },
     getAppliedCoupon() {
-      const coupon = Object.values(this.product.price.coupons)[0].value;
+      let couponsList = Object.values(this.product.price.coupons);
+      
+      let coupon = null;
+      couponsList.forEach(element => {
+        if( element.applied ) {
+          coupon = element.value;
+
+          // En vez del break
+          return element.value;
+        }
+      });
+
       return coupon;
     },
   },

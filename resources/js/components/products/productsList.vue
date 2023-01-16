@@ -19,27 +19,28 @@
         <v-card-text>
           Rellená todos los campos para poder descargar el material
 
-          <v-form ref="downloadForm">
-            <v-text-field v-model="dialog.email" label="Correo electrónico *"
+          <v-form ref="downloadForm" @submit.prevent="verifyDownload">
+            <v-text-field @blur="dialog.email = $event.target.value.trim()" v-model="dialog.email" label="Correo electrónico *"
               :rules="[dialog.rules.required, dialog.rules.email]"></v-text-field>
 
-            <v-text-field v-model="dialog.names" label="Nombres *" :rules="[dialog.rules.required]"></v-text-field>
+            <v-text-field @blur="dialog.names = $event.target.value.trim()" v-model="dialog.names" label="Nombres *" :rules="[dialog.rules.required]"></v-text-field>
 
-            <v-text-field v-model="dialog.whatsapp" label="WhatsApp *" :rules="[dialog.rules.required]"></v-text-field>
+            <v-text-field @blur="dialog.whatsapp = $event.target.value.trim()" v-model="dialog.whatsapp" label="WhatsApp *" :rules="[dialog.rules.required]"></v-text-field>
+        
+            <v-card-actions>
+              <v-spacer></v-spacer>
+
+              <v-btn type="submit" color="primary">
+                Descargar
+              </v-btn>
+
+              <v-btn color="primary" @click="dialog.state = false">
+                Cancelar
+              </v-btn>
+            </v-card-actions>
           </v-form>
         </v-card-text>
 
-        <v-card-actions class="pb-4">
-          <v-spacer></v-spacer>
-
-          <v-btn type="submit" color="primary" @click="verifyDownload">
-            Descargar
-          </v-btn>
-
-          <v-btn color="primary" @click="dialog.state = false">
-            Cancelar
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-container>
@@ -82,6 +83,9 @@ export default {
       return this.getProductsTypes.EXTRA === product.type;
     },
     verifyDownload() {
+      this.dialog.email = this.dialog.email.trim();
+      this.dialog.names = this.dialog.names.trim();
+      this.dialog.whatsapp = this.dialog.whatsapp.trim();
       if (this.$refs.downloadForm.validate()) {
         this.verifySaveDataInCookie();
         axios.post('/api/downloadExtra', {
@@ -96,6 +100,10 @@ export default {
           console.log(err);
         });
       }
+    },
+    trimEmail($e) {
+      this.dialog.email = this.dialog.email.trim();
+      this.$refs.downloadForm.validate();
     },
     downloadExtra() {
       window.open(`/api/downloadExtra?file=${this.dialog.file}`, '_blank');
