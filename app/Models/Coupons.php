@@ -26,7 +26,7 @@ class Coupons extends Model
       "hash"       => '$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu',
       "percentage" => 15,
       "begin"      => "08-12-2022",
-      "end"        => "01-02-2023"
+      "end"        => "01-01-2024"
     ],
     [
       "name"       => "TRIBUDESAFIO",
