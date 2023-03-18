@@ -1,3 +1,5 @@
+import Login from '../pages/Login.vue';
+import MyCart from '../pages/MyCart.vue';
 import Home from '../pages/Home.vue';
 import Products from '../pages/Products.vue';
 import Details from '../pages/Details.vue';
@@ -15,6 +17,16 @@ const {
 } = productTypes.state.types;
 
 const routes = [
+    {
+        name: 'carrito',
+        path: '/carrito',
+        component: MyCart,
+    },
+    {
+        name: 'login',
+        path: '/inicar-sesion',
+        component: Login,
+    },
     {
         name: 'home',
         path: '/',

@@ -45,6 +45,16 @@ export default {
     menuList() {
       return [
         {
+          name: null,
+          icon: 'mdi-cart',
+          to: { name: 'carrito' }
+        },
+        {
+          name: "Iniciar Sesión",
+          icon: 'mdi-account',
+          to: { name: 'login' }
+        },
+        {
           name: "Talleres",
           icon: "mdi-school",
           to: { name: this.types.WORKSHOP }
