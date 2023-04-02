@@ -1,0 +1,179 @@
+@import "~vuetify/src/styles/settings/_variables";
+
+.consultas-online-2 {
+  $description-color: #697477;
+  .content {
+    .section-title {
+      font-size: 1.25rem;
+      @media #{map-get($display-breakpoints, 'sm-and-up')} {
+        font-size: 1.75rem;
+      }
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 2.75rem;
+      }
+    }
+    .foto-frontal-img {
+      max-width: 100%;
+    }
+  }
+
+  /***** ***** BENEFICIO ***** *****/
+  .icon-desc {
+    &.modalidad-card {
+      background-color: white;
+      @media #{map-get($display-breakpoints, 'sm-and-up')} {
+        max-width: 21rem !important;
+      }
+    }
+
+    .icon-desc-title {
+      font-size: 1rem;
+    }
+    .icon-desc-description {
+      font-size: 0.8125rem;
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 0.875rem;
+      }
+      color: $description-color;
+    }
+    /***** ***** SHADOWS ***** *****/
+    .icon-wrapper {
+      $heart-color: #add974;
+      $person-color: #303033;
+      $cutlery-color: #ff3737;
+      $focus-color: #00a3ff;
+      $shadow-blur: 5px;
+      .heart {
+        filter: drop-shadow(0px 0px $shadow-blur $heart-color);
+      }
+      .person {
+        filter: drop-shadow(0px 0px $shadow-blur $person-color);
+      }
+      .cutlery {
+        filter: drop-shadow(0px 0px $shadow-blur $cutlery-color);
+      }
+      .focus {
+        filter: drop-shadow(0px 0px $shadow-blur $focus-color);
+      }
+      .notebook {
+        filter: drop-shadow(0px 0px $shadow-blur $primary-color);
+      }
+      .pin {
+        filter: drop-shadow(0px 0px $shadow-blur $secondary-color);
+      }
+    }
+  }
+
+  .presentation-section {
+    background: url("/img/forest-min.jpg");
+    background-size: cover;
+    .presentation-wrapper.content {
+      background: linear-gradient(
+        101.31deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.43) 100%
+      );
+    }
+    .section-title.presentation {
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 1rem;
+      }
+    }
+    .beneficios-section,
+    .secondary-section {
+      border: none !important;
+      background: unset !important;
+      .content {
+        background: unset !important;
+      }
+    }
+  }
+  .beneficios-section,
+  .consulta-online-section {
+    .content {
+      background-color: transparentize($color: $primary-color, $amount: 0.95);
+    }
+  }
+  .secondary-section {
+    @media #{map-get($display-breakpoints, 'lg-and-up')} {
+      border: none !important;
+    }
+  }
+
+  .leafs-img-wrapper {
+    .leafs-img {
+      max-width: 100%;
+    }
+  }
+
+  /***** ***** MODALIDADES ***** *****/
+  .secondary-section {
+    .content {
+      background-color: transparentize($color: $secondary-color, $amount: 0.95);
+    }
+    border-top: 5px solid $secondary-color;
+    border-bottom: 5px solid $secondary-color;
+  }
+
+  /***** ***** CONSULTA ONLINE SECTION ***** *****/
+  .modalidad-section {
+    .descriptions-wrapper p {
+      color: $description-color;
+      font-size: 0.875rem;
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /***** ***** PRICE CARD ***** *****/
+  .price-card {
+    font-size: 0.875rem;
+    border-radius: 10px;
+    border-top: 5px solid;
+    p {
+      white-space: no-wrap;
+    }
+    .price-title {
+      font-size: 1rem;
+    }
+    &.primary {
+      border-top-color: $primary-color !important;
+      background-color: transparentize(
+        $color: $primary-color,
+        $amount: 0.95
+      ) !important;
+    }
+    &.secondary {
+      border-top-color: $secondary-color !important;
+      background-color: transparentize(
+        $color: $secondary-color,
+        $amount: 0.95
+      ) !important;
+    }
+  }
+
+  .actions-wrapper {
+    font-size: 0.8125rem;
+  }
+
+  /***** ***** PRICE CARD ***** *****/
+  .line-wrapper {
+    height: 100%;
+    width: 48px;
+    .line {
+      width: 3px;
+      height: 100%;
+    }
+  }
+
+  .modalidad-section .content {
+    background-color: transparentize($color: $primary-color, $amount: 0.95);
+  }
+
+  .bg-lines-blur {
+    background: url("/img/bg-lines-blur.png");
+    background-position: center;
+    background-size: cover;
+  }
+}

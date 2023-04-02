@@ -1,0 +1,10 @@
+.challenge-footer {
+  border-top-width: 5px !important;
+  border-top-style: solid !important;
+  border-top-color: $primary-color !important;
+  background-color: $primary-color !important;
+
+  .content {
+    position: relative;
+  }
+}

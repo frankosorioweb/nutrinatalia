@@ -1,0 +1,27 @@
+.social-media-button-container {
+    position: relative;
+    --sm-color: #{$facebook-color};
+    &.instagram {
+        --sm-color: #{$instagram-color};
+    }
+    background-color: var(--sm-color);
+    .icon-circle.grey.lighten-5 {
+        position: absolute;
+        $size: 5rem;
+        top: calc(50% - $size/2); left: calc(50% - 8rem);
+        width: $size; height: $size;
+
+        border: 3px solid var(--sm-color) !important;
+        .icon {
+            color: var(--sm-color);
+            font-size: 3rem;
+        }
+    }
+    .follow-text {
+        font-size: .875rem;
+    }
+    .social-media-text {
+        font-size: 1.5rem;
+        margin-left: 7rem;
+    }
+}

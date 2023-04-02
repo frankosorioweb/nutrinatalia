@@ -1,0 +1,25 @@
+.details-page {
+    .main-title {
+        font-size: 1.5rem !important;
+    }
+
+    .card-features {
+        // &.white {
+        //     border: none !important;
+        // }
+
+        &.white {
+            border: unset;
+            border-top: 5px solid $primary-color !important;
+        }
+        font-size: 13px !important;
+
+        .feature-title {
+            font-size: 1rem;
+        }
+    }
+
+    .list {
+        list-style-type: none;
+    }
+}

@@ -1,0 +1,19 @@
+.banner-challenge {
+  position: relative;
+  z-index: 6 !important;
+
+  .event-name {
+    text-transform: uppercase;
+  }
+
+  .content {
+    position: relative;
+  }
+
+  .btn-close-banner {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%);
+  }
+}

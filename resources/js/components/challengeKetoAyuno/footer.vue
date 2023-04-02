@@ -1,0 +1,44 @@
+<template>
+  <v-footer class="challenge-footer white--text justify-center" fixed app>
+    <img class="hero" src="/img/landing-reto/banner.jpg" alt="Hero" />
+    <div class="hero-gradient gradient-bg-secondary"></div>
+    <div class="content py-3">
+      <small-calendar
+        primaryText="Las inscripciones cierran en:"
+        secondaryText="(o hasta llenar el cupo)"
+        :countDown="getChallengeKetoAyunoV4Event.inscriptionEndDate"
+      />
+      <div class="cta text-center pt-3">
+        <v-btn
+          :to="getBuyTo()"
+          color="error"
+          >¡DESEO INSCRIBIRME!</v-btn
+        >
+      </div>
+    </div>
+  </v-footer>
+</template>
+
+<script>
+import smallCalendar from "./smallCalendar.vue";
+import { mapGetters } from 'vuex';
+export default {
+  components: {
+    smallCalendar,
+  },
+  computed: {
+    ...mapGetters('events', ['getChallengeKetoAyunoV4Event'])
+  },
+  methods: {
+    getBuyTo() {
+      return {
+        name: "buy",
+        params: {
+          type: 'Taller',
+          shortName: 'reto-15-dias-keto-ayuno',
+        }
+      }
+    }
+  }
+};
+</script>

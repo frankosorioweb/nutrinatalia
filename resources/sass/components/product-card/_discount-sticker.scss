@@ -1,0 +1,17 @@
+.discount-sticker-wrapper {
+    position: absolute;
+    $mt: -25px;
+    top: $mt;
+    right: -20px;
+    z-index: 4;
+
+    .discount {
+        position: absolute;
+        display: block;
+        width: 100%;
+        right: 0;
+        top: 26%;
+        font-size: 1.125rem;
+    }
+    pointer-events: none;
+}

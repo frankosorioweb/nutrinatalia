@@ -1,0 +1,111 @@
+html {
+  overflow-y: auto !important;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gradient-bg {
+  background: $primary-color;
+  background: linear-gradient(180deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.gradient-bg-secondary {
+  // background: linear-gradient(90.51deg, $secondary-color 30.52%, transparentize($secondary-color, 0.5) 100%);
+  background-image: linear-gradient(99.4deg, transparentize($secondary-color, 0.1) 0%, transparentize(#000000, .8) 69.64%);
+  background-color: rgba($color: #000000, $alpha: .6);
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+.primary-bg {
+  background-color: $primary-color !important;
+}
+
+.secondary-bg {
+  background-color: $secondary-color !important;
+}
+
+.fb-color {
+  color: $facebook-color !important;
+}
+
+.ig-color {
+  color: $instagram-color !important;
+}
+
+.dark-gray-bg {
+  background-color: $dark-gray !important;
+}
+
+.lh-1 {
+  line-height: 1 !important;
+}
+
+.lh-normal {
+  line-height: normal !important;
+}
+
+.lh-normal {
+  line-height: normal !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.mb-footer {
+  margin-bottom: 9.6875rem;
+}
+
+.word-break {
+  word-break: break-word !important;
+}
+
+.skeleton-loader-sheet {
+  height: 100%;
+
+  .skeleton-loader {
+    height: 100%;
+  }
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.list-style-type-none {
+  list-style-type: none;
+}
+
+.hero {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

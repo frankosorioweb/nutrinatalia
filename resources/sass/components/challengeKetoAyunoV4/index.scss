@@ -1,0 +1,45 @@
+@import '~vuetify/src/styles/settings/_variables';
+@import "./sectionPresentation.scss";
+@import "./smallCalendar.scss";
+@import "./sectionInscription.scss";
+@import "./footer.scss";
+
+.challenge-page {
+  &.pb-auto-and-responsive {
+    padding-bottom: 11.75rem !important;
+    @media #{map-get($display-breakpoints, 'sm-and-up')} {
+      padding-bottom: 9rem !important;
+    }
+  }
+
+  .content {
+    height: 100%;
+
+    .main-title {
+      font-size: 2.25rem;
+    }
+
+    .img {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      min-height: 13rem;
+
+      @media #{map-get($display-breakpoints, 'sm-and-up')} {
+        min-height: 23rem;
+      }
+
+      @media #{map-get($display-breakpoints, 'lg-and-up')} {
+        min-height: 0;
+        &.small-content {
+          min-height: 22.25rem;
+        }
+      }
+
+    }
+
+    .list-info {
+      font-weight: 400;
+    }
+  }
+}
