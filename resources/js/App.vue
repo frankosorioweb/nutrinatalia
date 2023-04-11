@@ -1,6 +1,16 @@
 <template>
   <v-app app>
     <banner-challenge v-if="!$store.getters.isChallengeRoute(this) && getInscriptionState" />
+
+    <!-- Banner de descuento aniversario -->
+    <v-banner ref="banner" class="banner-aniversario-1 secondary-bg" app elevation="3">
+      <div class="content text-center">
+        <p class="mb-0 white--text">Utilizá el cupón <span class="font-weight-bold black--text">ANIVERSARIO1</span> para obtener <span class="primary-color font-weight-bold">20% de descuento</span></p>
+        <p class="mb-0 white--text text-subtitle-2">Válido por el mes de Abril en los Talleres y Ebooks</p>
+      </div>
+    </v-banner>
+    <!-- Fin Banner de descuento aniversario -->
+
     <app-header />
     <app-navigation-drawer />
     <router-view />
