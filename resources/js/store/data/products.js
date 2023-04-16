@@ -295,7 +295,7 @@ const products = [
     name: "Dulces que nos hacen bien",
     shortName: "dulces-saludables",
     duration:
-      "1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",
+      "32 minutos que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",
     description:
       "Prepara, disfruta y sorprende a tu familia y amigos con postres saludables y deliciosos que nos hacen bien, y además, de fácil elaboración.",
     price: JSON.parse(JSON.stringify(prices[WORKSHOP].original)),
