@@ -1,7 +1,7 @@
 <template>
-  <section class="section-faq gradient-bg text-center py-6 px-3">
-    <h2 class="primary-font font-weight-bold mb-3 mx-2 grey--text text--lighten-5">
-      Preguntas <span class="grey--text text--darken-4">frecuentes</span>
+  <section class="section-faq text-center py-6 px-3">
+    <h2 class="primary-font font-weight-bold mb-3 mx-2 text--lighten-5">
+      Preguntas <span class="primary-color text--darken-4">frecuentes</span>
     </h2>
     <v-container>
       <v-row class="flex-nowrap overflow-x-auto">

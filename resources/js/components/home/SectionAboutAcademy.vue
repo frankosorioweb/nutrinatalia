@@ -40,6 +40,18 @@
             }"
           ></product-card>
         </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <product-card
+            buttonTo="/descargables"
+            :data="{
+              poster: '/img/posters/descargables-min.jpg',
+              name: 'Descargables',
+              customCTA: 'Ver todos los descargables',
+              description:
+                'Descargá materiales gratuitos para fortalecer tu camino en el estilo de vida saludable.',
+            }"
+          ></product-card>
+        </v-col>
       </v-row>
     </v-container>
   </section>

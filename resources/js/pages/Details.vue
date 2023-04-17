@@ -90,9 +90,9 @@
                             font-weight-bold
                             text-decoration-line-through
                           "
-                          >{{ product.price.dollar.old }}</span
+                          >{{ product.price.guarani.old }}</span
                         >
-                        {{ product.price.dollar.value }}
+                        {{ product.price.guarani.value }}
                       </v-btn>
                     </template>
                   </v-col>

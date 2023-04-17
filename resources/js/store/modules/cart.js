@@ -1,5 +1,5 @@
 const state = {
-    moneyType: 'USD',
+    moneyType: 'GS',
     moneyTypes: ['USD', 'GS']
 };
 

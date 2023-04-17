@@ -52,9 +52,9 @@
               <span
                 v-if="this.data.price.discount"
                 class="red--text text-decoration-line-through"
-                >{{ this.data.price.dollar.old }}</span
+                >{{ this.data.price.guarani.old }}</span
               >
-              {{ this.data.price.dollar.value }}
+              {{ this.data.price.guarani.value }}
             </p>
           </div>
           <v-btn
