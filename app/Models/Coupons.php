@@ -36,11 +36,11 @@ class Coupons extends Model
       "end"        => "01-01-2024"
     ],
     [
-      "name"       => "ANIVERSARIO1",
-      "hash"       => '$2a$12$xnWearDe5f354zGt7xCIv.gNLIBMMjVuXyvIMuGA/.XCRJ.7s61Tq',
+      "name"       => "KETO30",
+      "hash"       => '$2a$12$5LRscAXayic77noMS0cHLufKt8lDBz8XOPlEWOODmt0r.x2tLmSGu',
       "percentage" => 20,
-      "begin"      => "01-04-2023",
-      "end"        => "01-05-2023"
+      "begin"      => "20-05-2023",
+      "end"        => "05-06-2023"
     ],
   ];
 

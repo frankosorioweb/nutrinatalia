@@ -193,7 +193,7 @@ prices[EBOOK].ketoAyuno30Dias = {
         value: `176.000 ${money.symbols.guarani}`
       }
     },
-    "$2a$12$xnWearDe5f354zGt7xCIv.gNLIBMMjVuXyvIMuGA/.XCRJ.7s61Tq": {
+    "$2a$12$5LRscAXayic77noMS0cHLufKt8lDBz8XOPlEWOODmt0r.x2tLmSGu": {
       discount: 20,
       applied: false,
       value: "",
