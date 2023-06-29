@@ -14,7 +14,7 @@ const products = [
   /** EL MERENDERO FELIZ **/
   {
     poster: `${postersSrc}Taller - El merendero feliz.jpg`,
-    name: "Taller Online - El Merendero Feliz",
+    name: "Taller (vía streaming) - El Merendero Feliz",
     shortName: "el-merendero-feliz",
     duration:
       "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -199,7 +199,7 @@ const products = [
   /** FERMENTADOS **/
   {
     poster: `${postersSrc}Fermentados.jpg`,
-    name: "Fermentados",
+    name: "Taller (vía streaming) - Fermentados",
     shortName: "fermentados",
     duration:
       "1 hora que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -245,7 +245,7 @@ const products = [
   },
   {
     poster: `${postersSrc}Panes sin culpa.jpg`,
-    name: "Panes sin culpa",
+    name: "Taller (vía streaming) - Panes sin culpa",
     shortName: "panes-sin-culpa",
     duration:
       "1 hora 15 minutos que puedes verlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -292,7 +292,7 @@ const products = [
   },
   {
     poster: `${postersSrc}Dulces que nos hacen bien.jpg`,
-    name: "Dulces que nos hacen bien",
+    name: "Taller (vía streaming) - Dulces que nos hacen bien",
     shortName: "dulces-saludables",
     duration:
       "32 minutos que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",
@@ -339,7 +339,7 @@ const products = [
   },
   {
     poster: `${postersSrc}Comidas tipicas paraguayas version lowcarb.jpg`,
-    name: "Comida Típica Paraguaya Versión Lowcarb",
+    name: "Taller (vía streaming) - Comida Típica Paraguaya Versión Lowcarb",
     shortName: "comidas-tipicas-py-lowcarb",
     duration:
       "1 hora que puedes hacerlas de continuado o por partes, según tu disponibilidad de tiempo.",

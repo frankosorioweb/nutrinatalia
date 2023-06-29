@@ -11,7 +11,8 @@
             :buttonTo="{name: getProductsTypes.WORKSHOP}"
             :data="{
               poster: '/img/posters/Workshops.jpg',
-              name: 'Talleres',
+              name: 'Talleres (vía streaming)',
+              customCTA: 'Ver todos los talleres',
               description:
                 'Son videos de aproximadamente 1 hora con el paso a paso de recetas saludables, deliciosas y fáciles de ejecutar.',
             }"
