@@ -68,7 +68,7 @@
                                 <div class="actions-wrapper mt-2">
                                     <v-row dense no-gutters>
                                         <v-col class="mb-4 pr-lg-3" cols="12" lg="6">
-                                            <a href="/img/consultas-2-guia-min.jpg" download="Guía de Consulta Online.jpg"
+                                            <a href="/docs/Medidas y Peso - min.pdf" download="Medidas y Peso.pdf"
                                                 class="d-flex justify-center align-center secondary white--text px-4 py-3 rounded-pill text-uppercase primary-font font-weight-medium elevation-5">
                                                 <span class="mr-2">Descargar Guías</span>
                                                 <img src="/img/consultas-2-icons/download-white.svg" alt="Button icon">
