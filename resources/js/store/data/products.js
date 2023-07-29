@@ -564,6 +564,69 @@ const products = [
       }
     ]
   },
+  {
+    /*x*/poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-min.jpg`,
+    /*x*/name: "Dulces que nos Hacen bien",
+    /*x*/shortName: "e-book-dulces-saludables",
+    pages: "+X",
+    /*x*/description: "Comparto contigo + 50 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
+    price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
+    /*x*/type: EBOOK,
+    features: [
+      /*x*/{
+        list: false,
+        title: "Acerca del ebook",
+        info: [
+          "En este ebook comparto contigo las recetas de esos Dulces que amamos pero en una versión saludable: sin azúcar, sin gluten ideal para tu dieta keto o lowcarb, para que puedas seguir en tu camino de alcanzar salud disfrutando de preparaciones deliciosas.",
+          "Cada una de estas recetas las adapté con mucho amor para vos, pensando en la facilidad para ejecutarlas, y para que después de deleitarte con ellas experimentes sabor y saciedad, por los ingredientes saludables, que te ayudan al control de la ansiedad."
+        ]
+      },
+      /*x*/{
+        list: true,
+        title: "Lo que incluye",
+        info: [
+          "+ 50 recetas dulces que nos hacen bien.",
+          "En formato digital para que tengas siempre a mano.",
+          "Con imágenes de como quedan.",
+          "Muchas incluyen tips para presentar, y sugerencias para variar para sacar más recetas.",
+          "Lista de ingredientes a tener a mano para ejecutarlas.",
+        ]
+      },
+      /*x*/{
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "A que cuidarse con la alimentación es sinónimo de sabor, disfrute y saciedad .",
+          "A que la cocina saludable es más simple de lo que te imaginas, y más deliciosa!.",
+          "A sorprender a tus seres queridos y a vos mism@ con estas delicias saludables .",
+          "A que no necesitas sacrificar tus dulces favoritos mientras estás cambiando tu estilo de vida.",
+        ]
+      },
+      /*x*/{
+        list: true,
+        title: "Lo que necesitas",
+        info: ["Una dirección de correo electrónico para acceder al ebook."]
+      },
+      /*x*/{
+        list: true,
+        title: "¿A quienes va dirigido el ebook?",
+        info: [
+          "A personas que están en un proceso de perder peso, revertir enfermedades metabólicas modernas causadas por el exceso de azúcar y harina procesada, como la resistencia a la insulina, diabetes, hígado graso y sus consecuencias.",
+          "A personas que necesitan un control glucemico, ya que son sin azúcares y sin harinas .",
+          "A Personas con intolerancia al gluten, o celiacos ya que todas las recetas son libres de gluten .",
+          "A personas con síntomas de ansiedad constante, necesitas de dulces y azúcar, molestias gastrointestinales, migrañas .",
+          "A todas las personas interesadas en potenciar su salud eligiendo ingredientes saludables, saciantes y deliciosas .",
+        ]
+      },
+      /*x*/{
+        list: false,
+        title: "",
+        info: [
+          "Las Recetas de este ebook son aptas para toda la familia, ya que los ingredientes son naturales y sin conservantes.",
+        ]
+      },
+    ]
+  },
 
   /** EXTRAS **/
   /** EL PDF debe tener el mismo nombre que el shortName, ejemplo calendario-enero-2023.pdf**/

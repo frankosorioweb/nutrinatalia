@@ -198,13 +198,32 @@ prices[EBOOK].ketoAyuno30Dias = {
       applied: false,
       value: "",
       dollar: {
-        value: `24.9 ${money.symbols.dollar}`
+        value: `24.9 ${money.symbols.dollar}`,
       },
       guarani: {
         value: `176.000 ${money.symbols.guarani}`
       }
     }
   }
+};
+
+/*
+  e-Book DULCES QUE NOS HACEN BIEN
+  Su precio original es de 150.000 Gs
+  Tendrá un precio de lanzamiento hasta el 05 de Agosto por valor de 120.000 Gs
+*/
+prices[EBOOK].dulcesSalusables = {
+  default: false,
+  discount: 20,
+  dollar: {
+    value: `17.5 ${money.symbols.dollar}`,
+    old: `21.5 ${money.symbols.dollar}`,
+  },
+  guarani: {
+    value: `120.000 ${money.symbols.guarani}`,
+    old: `150.000 ${money.symbols.guarani}`,
+  },
+  coupons: {}
 };
 
 prices[EBOOK].EspecialNavidad = {
