@@ -1,6 +1,6 @@
 <template>
   <v-app app>
-    <banner-challenge v-if="!$store.getters.isChallengeRoute(this) && getInscriptionState" />
+    <!-- <banner-challenge v-if="!$store.getters.isChallengeRoute(this) && getInscriptionState" /> -->
 
     <!-- Banner de descuento aniversario -->
     <!-- <v-banner ref="banner" class="banner-aniversario-1 secondary-bg" app elevation="3">
@@ -10,6 +10,8 @@
       </div>
     </v-banner> -->
     <!-- Fin Banner de descuento aniversario -->
+
+    <bannerEbookDulces></bannerEbookDulces>
 
     <app-header />
     <app-navigation-drawer />
@@ -24,7 +26,8 @@ import appHeader from "./layouts/Header.vue";
 import appNavigationDrawer from "./layouts/NavigationDrawer.vue";
 import appFooter from "./layouts/Footer.vue";
 import supportButton from './layouts/SupportButton.vue';
-import bannerChallenge from './layouts/BannerChallengeKetoAyuno.vue'
+// import bannerChallenge from './layouts/BannerChallengeKetoAyuno.vue';
+import bannerEbookDulces from './layouts/BannerEbookDulces.vue';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -33,7 +36,8 @@ export default {
     appNavigationDrawer,
     appFooter,
     supportButton,
-    bannerChallenge
+    // bannerChallenge,
+    bannerEbookDulces,
   },
   computed: {
     ...mapGetters('events', ['getInscriptionState'])

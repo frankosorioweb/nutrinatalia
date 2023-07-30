@@ -569,7 +569,7 @@ const products = [
     /*x*/name: "Dulces que nos Hacen bien",
     /*x*/shortName: "e-book-dulces-saludables",
     pages: "+X",
-    /*x*/description: "Comparto contigo + 50 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
+    /*x*/description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
     price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
     /*x*/type: EBOOK,
     features: [
@@ -585,7 +585,7 @@ const products = [
         list: true,
         title: "Lo que incluye",
         info: [
-          "+ 50 recetas dulces que nos hacen bien.",
+          "+60 recetas dulces que nos hacen bien: tartas, tortas, helados, flanes, budines, barritas, snacks y más delicias.",
           "En formato digital para que tengas siempre a mano.",
           "Con imágenes de como quedan.",
           "Muchas incluyen tips para presentar, y sugerencias para variar para sacar más recetas.",
