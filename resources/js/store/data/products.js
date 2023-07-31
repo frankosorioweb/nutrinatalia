@@ -568,7 +568,7 @@ const products = [
     /*x*/poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-min.jpg`,
     /*x*/name: "Dulces que nos Hacen bien",
     /*x*/shortName: "e-book-dulces-saludables",
-    pages: "+X",
+    pages: "+146",
     /*x*/description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
     price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
     /*x*/type: EBOOK,
