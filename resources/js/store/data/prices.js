@@ -214,14 +214,16 @@ prices[EBOOK].ketoAyuno30Dias = {
 */
 prices[EBOOK].dulcesSalusables = {
   default: false,
-  discount: 20,
+  discount: 0,
   dollar: {
-    value: `17.5 ${money.symbols.dollar}`,
-    old: `21.5 ${money.symbols.dollar}`,
+    /*value: `17.5 ${money.symbols.dollar}`,
+    old: `21.5 ${money.symbols.dollar}`,*/
+    value: `21.5 ${money.symbols.dollar}`
   },
   guarani: {
-    value: `120.000 ${money.symbols.guarani}`,
-    old: `150.000 ${money.symbols.guarani}`,
+    /*value: `120.000 ${money.symbols.guarani}`,
+    old: `150.000 ${money.symbols.guarani}`,*/
+    value: `150.000 ${money.symbols.guarani}`
   },
   coupons: {}
 };

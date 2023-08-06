@@ -22,7 +22,7 @@
           <product-card
             :buttonTo="{name: getProductsTypes.EBOOK}"
             :data="{
-              poster: '/img/posters/Ebooks.jpg',
+              poster: '/img/posters/Ebooks-min.png',
               name: 'Ebooks',
               description:
                 'Son libros digitales que diseñé para que te ayuden en tu camino hacia un estilo de vida saludable. Tenemos: planes completos con información, guías, etc., recetarios y más!.',

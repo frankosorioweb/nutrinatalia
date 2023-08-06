@@ -11,7 +11,7 @@
     </v-banner> -->
     <!-- Fin Banner de descuento aniversario -->
 
-    <bannerEbookDulces></bannerEbookDulces>
+    <!-- <bannerEbookDulces></bannerEbookDulces> -->
 
     <app-header />
     <app-navigation-drawer />
