@@ -197,7 +197,7 @@ const products = [
     ]
   },*/
   /** FERMENTADOS **/
-  {
+  /*{
     poster: `${postersSrc}Fermentados.jpg`,
     name: "Taller (vía streaming) - Fermentados",
     shortName: "fermentados",
@@ -242,8 +242,8 @@ const products = [
         ]
       }
     ]
-  },
-  {
+  },*/
+  /*{
     poster: `${postersSrc}Panes sin culpa.jpg`,
     name: "Taller (vía streaming) - Panes sin culpa",
     shortName: "panes-sin-culpa",
@@ -289,8 +289,8 @@ const products = [
         ]
       }
     ]
-  },
-  {
+  },*/
+  /*{
     poster: `${postersSrc}Dulces que nos hacen bien.jpg`,
     name: "Taller (vía streaming) - Dulces que nos hacen bien",
     shortName: "dulces-saludables",
@@ -336,7 +336,7 @@ const products = [
         ]
       }
     ]
-  },
+  },*/
   {
     poster: `${postersSrc}Comidas tipicas paraguayas version lowcarb.jpg`,
     name: "Taller (vía streaming) - Comida Típica Paraguaya Versión Lowcarb",

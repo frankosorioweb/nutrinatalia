@@ -5,7 +5,150 @@
         <div class="banner">
           <v-row no-gutters>
             <v-col class="pa-md-5 pr-md-0" cols="12" md="6" align-self="center">
+              <!-- Begin: Renderiza la portada del infoproducto -->
+              
+              <!-- Renderizamos Carrusel eBook Dulces Saludables -->
+              <template v-if="$route.path == '/ebooks/e-book-dulces-saludables'">
+                <div>
+                  <div id="image-slider" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <!-- Poster -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            :src="product.poster"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+
+                        </li>
+                        <!-- Salsas, rellenos y coberturas-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Salsas, rellenos y coberturas-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Cookies-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Cookies-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Barritas y snacks-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Barritas y snacks-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Muffins y budines-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Muffins y budines-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Tartas y tortas-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Tartas y tortas-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Helados-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Helados-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Leche y yogur-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Leche y yogur-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                        <!-- Mas delicias-min -->
+                        <li class="splide__slide">
+                          <v-img
+                            :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
+                            :aspect-ratio="16 / 9"
+                            src="/img/posters/carrusel-ebook-dulces/Mas delicias-min.png"
+                          >
+                            <template v-slot:placeholder>
+                              <v-sheet class="skeleton-loader-sheet">
+                                <v-skeleton-loader class="skeleton-loader" type="image" />
+                              </v-sheet>
+                            </template>
+                          </v-img>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <!-- Renderizamos imagen simple -->
               <v-img
+                v-else
                 :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
                 :aspect-ratio="16 / 9"
                 :src="product.poster"
@@ -16,6 +159,7 @@
                   </v-sheet>
                 </template>
               </v-img>
+              <!-- End: Renderiza la portada del infoproducto -->
             </v-col>
 
             <v-col cols="12" md="6">
@@ -224,5 +368,22 @@ export default {
       next("/");
     }
   },
+  mounted() {
+    new Splide('#image-slider', {
+      type: 'loop',
+      autoplay: true,
+      interval: 3000
+    }).mount();
+  }
 };
 </script>
+
+<style lang="css" type="text/css">
+  .splide .splide__pagination .splide__pagination__page.is-active {
+    background-color: #764191; /* Cambia el color de fondo del punto activo */
+  }
+
+  .splide .splide__pagination .splide__pagination__page {
+    background-color: gray; /* Cambia el color de fondo de los puntos inactivos */
+  }
+</style>
