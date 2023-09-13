@@ -218,14 +218,37 @@ prices[EBOOK].dulcesSalusables = {
   dollar: {
     /*value: `17.5 ${money.symbols.dollar}`,
     old: `21.5 ${money.symbols.dollar}`,*/
-    value: `21.5 ${money.symbols.dollar}`
+    value: `21 ${money.symbols.dollar}`
   },
   guarani: {
     /*value: `120.000 ${money.symbols.guarani}`,
     old: `150.000 ${money.symbols.guarani}`,*/
     value: `150.000 ${money.symbols.guarani}`
   },
-  coupons: {}
+  coupons: {
+    "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+      discount: 15,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `17.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `127.500 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `16.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `120.000 ${money.symbols.guarani}`
+      }
+    }
+  }
 };
 
 prices[EBOOK].EspecialNavidad = {
