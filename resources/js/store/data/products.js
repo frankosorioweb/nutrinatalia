@@ -565,15 +565,15 @@ const products = [
     ]
   },
   {
-    /*x*/poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-min.jpg`,
-    /*x*/name: "Dulces que nos Hacen bien",
-    /*x*/shortName: "e-book-dulces-saludables",
+    poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-16_9-min.jpg`,
+    name: "Dulces que nos Hacen bien",
+    shortName: "e-book-dulces-saludables",
     pages: "+146",
-    /*x*/description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
+    description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
     price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
-    /*x*/type: EBOOK,
+    type: EBOOK,
     features: [
-      /*x*/{
+      {
         list: false,
         title: "Acerca del ebook",
         info: [
@@ -581,7 +581,7 @@ const products = [
           "Cada una de estas recetas las adapté con mucho amor para vos, pensando en la facilidad para ejecutarlas, y para que después de deleitarte con ellas experimentes sabor y saciedad, por los ingredientes saludables, que te ayudan al control de la ansiedad."
         ]
       },
-      /*x*/{
+      {
         list: true,
         title: "Lo que incluye",
         info: [
@@ -592,7 +592,7 @@ const products = [
           "Lista de ingredientes a tener a mano para ejecutarlas.",
         ]
       },
-      /*x*/{
+      {
         list: true,
         title: "Lo que aprenderás",
         info: [
@@ -602,12 +602,12 @@ const products = [
           "A que no necesitas sacrificar tus dulces favoritos mientras estás cambiando tu estilo de vida.",
         ]
       },
-      /*x*/{
+      {
         list: true,
         title: "Lo que necesitas",
         info: ["Una dirección de correo electrónico para acceder al ebook."]
       },
-      /*x*/{
+      {
         list: true,
         title: "¿A quienes va dirigido el ebook?",
         info: [
@@ -618,7 +618,7 @@ const products = [
           "A todas las personas interesadas en potenciar su salud eligiendo ingredientes saludables, saciantes y deliciosas .",
         ]
       },
-      /*x*/{
+      {
         list: false,
         title: "",
         info: [
