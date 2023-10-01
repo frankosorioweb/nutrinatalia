@@ -286,4 +286,39 @@ prices[EBOOK].EspecialNavidad = {
   }
 };
 
+prices[EBOOK].fermentados = {
+  default: false,
+  discount: 0,
+  dollar: {
+    value: `10 ${money.symbols.dollar}`
+  },
+  guarani: {
+    value: `70.000 ${money.symbols.guarani}`
+  },
+  coupons: {
+    "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+      discount: 15,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `8.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `59.500 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `8 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `56.000 ${money.symbols.guarani}`
+      }
+    }
+  }
+};
+
 export default prices;

@@ -495,6 +495,125 @@ const products = [
       }
     ]
   },*/
+  /** EBOOK FERMENTADOS **/
+  {
+    poster: `${postersSrc}e-book fermentados-min.jpg`,
+    name: "Ebook de Fermentados",
+    shortName: "e-book-fermentados",
+    pages: "+X",
+    description:
+      "Comparto contigo mis recetas favoritas de alimentos fermentados, con todos los detalles para que tengas éxito.",
+    price: JSON.parse(JSON.stringify(prices[EBOOK].fermentados)),
+    type: EBOOK,
+    features: [
+      {
+        list: false,
+        title: "Acerca del ebook",
+        info: [
+          "En este ebook comparto contigo mis recetas favoritas de alimentos fermentados: kombucha, chucrut, yogur, pickles, queso crema, para que aprendas conmigo a prepararlos correctamente, consumirlos y asi seguir en tu camino de potenciar tu salud.",
+          "Es cierto que puedes comprar estos alimentos fermentados en el mercado, pero no hay como hacerlos en casa ya que resulta más económico, más saludable y lleva pasos simples. Por eso preparé con mucho amor para vos estas recetas, pensando en todos los detalles para que tengas la información necesaria con el paso a paso, procesos, tips y cuidados, así lograr una fermentación exitosa.  Y de esta forma puedas incorporar estos alimentos fermentados a tu dieta y disfrutar de sus grandes beneficios para tu salud."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que incluye",
+        info: [
+          "Recetas para preparar kombucha, chucrut, yogur, pickles, queso crema.",
+          "Con imágenes.",
+          "Información sobre los beneficios, detalles sobre los ingredientes, utencilios, y tips para lograr una fermentación exitosa.",
+          "Ideas para saborizar la kombucha, yogur, incluso para preparar variaciones como yogur griego y yogur de leche vegetal.",
+          "Recetas extras.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "A fermentar exitosamente con simples pasos y cuidados.",
+          "A que la cocina saludable es más simple de lo que te imaginas.",
+          "Los beneficios para la salud de los alimentos fermentados.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas",
+        info: ["Una dirección de correo electrónico para acceder al ebook."]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el ebook?",
+        info: [
+          "A personas que buscan potenciar su salud digestiva e inmunológica.",
+          "A personas con síntomas de inflamación, disbiosis intestinal, enfermedades metabólicas modernas, alergias alimentarias, migrañas, etc..",
+          "A personas que les gustaría emprender comercializando estos alimentos fermentados de manera saludable.",
+        ]
+      },
+    ]
+  },
+  /** E-BOOK DULCES QUE NOS HACEN BIEN **/
+  {
+    poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-16_9-min.jpg`,
+    name: "Dulces que nos Hacen bien",
+    shortName: "e-book-dulces-saludables",
+    pages: "+146",
+    description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
+    price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
+    type: EBOOK,
+    features: [
+      {
+        list: false,
+        title: "Acerca del ebook",
+        info: [
+          "En este ebook comparto contigo las recetas de esos Dulces que amamos pero en una versión saludable: sin azúcar, sin gluten ideal para tu dieta keto o lowcarb, para que puedas seguir en tu camino de alcanzar salud disfrutando de preparaciones deliciosas.",
+          "Cada una de estas recetas las adapté con mucho amor para vos, pensando en la facilidad para ejecutarlas, y para que después de deleitarte con ellas experimentes sabor y saciedad, por los ingredientes saludables, que te ayudan al control de la ansiedad."
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que incluye",
+        info: [
+          "+60 recetas dulces que nos hacen bien: tartas, tortas, helados, flanes, budines, barritas, snacks y más delicias.",
+          "En formato digital para que tengas siempre a mano.",
+          "Con imágenes de como quedan.",
+          "Muchas incluyen tips para presentar, y sugerencias para variar para sacar más recetas.",
+          "Lista de ingredientes a tener a mano para ejecutarlas.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás",
+        info: [
+          "A que cuidarse con la alimentación es sinónimo de sabor, disfrute y saciedad .",
+          "A que la cocina saludable es más simple de lo que te imaginas, y más deliciosa!.",
+          "A sorprender a tus seres queridos y a vos mism@ con estas delicias saludables .",
+          "A que no necesitas sacrificar tus dulces favoritos mientras estás cambiando tu estilo de vida.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas",
+        info: ["Una dirección de correo electrónico para acceder al ebook."]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el ebook?",
+        info: [
+          "A personas que están en un proceso de perder peso, revertir enfermedades metabólicas modernas causadas por el exceso de azúcar y harina procesada, como la resistencia a la insulina, diabetes, hígado graso y sus consecuencias.",
+          "A personas que necesitan un control glucemico, ya que son sin azúcares y sin harinas .",
+          "A Personas con intolerancia al gluten, o celiacos ya que todas las recetas son libres de gluten .",
+          "A personas con síntomas de ansiedad constante, necesitas de dulces y azúcar, molestias gastrointestinales, migrañas .",
+          "A todas las personas interesadas en potenciar su salud eligiendo ingredientes saludables, saciantes y deliciosas .",
+        ]
+      },
+      {
+        list: false,
+        title: "",
+        info: [
+          "Las Recetas de este ebook son aptas para toda la familia, ya que los ingredientes son naturales y sin conservantes.",
+        ]
+      },
+    ]
+  },
   /** 30 DÍAS KETO + AYUNO **/
   {
     poster: `${postersSrc}30 dias keto ayuno.jpg`,
@@ -562,69 +681,6 @@ const products = [
           "Tomando mediciones especificas, simplemente porque bajo estas situaciones necesitas un asesoramiento mas personalizado para adaptar a tu vida estos cambios, así que te recomiendo bajo estas circunstancias tomar un turno presencial u online para iniciarte en este estilo de vida con acompañamiento profesional. Será lo mejor para vos"
         ]
       }
-    ]
-  },
-  {
-    poster: `${postersSrc}e-Book - Dulces que nos Hacen bien-16_9-min.jpg`,
-    name: "Dulces que nos Hacen bien",
-    shortName: "e-book-dulces-saludables",
-    pages: "+146",
-    description: "Comparto contigo +60 recetas de mis dulces favoritos en versión sin azúcar, sin gluten, y con pasos simples.",
-    price: JSON.parse(JSON.stringify(prices[EBOOK].dulcesSalusables)),
-    type: EBOOK,
-    features: [
-      {
-        list: false,
-        title: "Acerca del ebook",
-        info: [
-          "En este ebook comparto contigo las recetas de esos Dulces que amamos pero en una versión saludable: sin azúcar, sin gluten ideal para tu dieta keto o lowcarb, para que puedas seguir en tu camino de alcanzar salud disfrutando de preparaciones deliciosas.",
-          "Cada una de estas recetas las adapté con mucho amor para vos, pensando en la facilidad para ejecutarlas, y para que después de deleitarte con ellas experimentes sabor y saciedad, por los ingredientes saludables, que te ayudan al control de la ansiedad."
-        ]
-      },
-      {
-        list: true,
-        title: "Lo que incluye",
-        info: [
-          "+60 recetas dulces que nos hacen bien: tartas, tortas, helados, flanes, budines, barritas, snacks y más delicias.",
-          "En formato digital para que tengas siempre a mano.",
-          "Con imágenes de como quedan.",
-          "Muchas incluyen tips para presentar, y sugerencias para variar para sacar más recetas.",
-          "Lista de ingredientes a tener a mano para ejecutarlas.",
-        ]
-      },
-      {
-        list: true,
-        title: "Lo que aprenderás",
-        info: [
-          "A que cuidarse con la alimentación es sinónimo de sabor, disfrute y saciedad .",
-          "A que la cocina saludable es más simple de lo que te imaginas, y más deliciosa!.",
-          "A sorprender a tus seres queridos y a vos mism@ con estas delicias saludables .",
-          "A que no necesitas sacrificar tus dulces favoritos mientras estás cambiando tu estilo de vida.",
-        ]
-      },
-      {
-        list: true,
-        title: "Lo que necesitas",
-        info: ["Una dirección de correo electrónico para acceder al ebook."]
-      },
-      {
-        list: true,
-        title: "¿A quienes va dirigido el ebook?",
-        info: [
-          "A personas que están en un proceso de perder peso, revertir enfermedades metabólicas modernas causadas por el exceso de azúcar y harina procesada, como la resistencia a la insulina, diabetes, hígado graso y sus consecuencias.",
-          "A personas que necesitan un control glucemico, ya que son sin azúcares y sin harinas .",
-          "A Personas con intolerancia al gluten, o celiacos ya que todas las recetas son libres de gluten .",
-          "A personas con síntomas de ansiedad constante, necesitas de dulces y azúcar, molestias gastrointestinales, migrañas .",
-          "A todas las personas interesadas en potenciar su salud eligiendo ingredientes saludables, saciantes y deliciosas .",
-        ]
-      },
-      {
-        list: false,
-        title: "",
-        info: [
-          "Las Recetas de este ebook son aptas para toda la familia, ya que los ingredientes son naturales y sin conservantes.",
-        ]
-      },
     ]
   },
 
