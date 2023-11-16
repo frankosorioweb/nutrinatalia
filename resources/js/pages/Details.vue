@@ -319,6 +319,15 @@ export default {
           '/img/posters/carrusel-ebook-dulces/Helados-min.png',
           '/img/posters/carrusel-ebook-dulces/Leche y yogur-min.png',
           '/img/posters/carrusel-ebook-dulces/Mas delicias-min.png',
+        ] :
+        this.infoProduct == 'e-book-navidad-lowcarb' ? [
+        '/img/posters/carrusel-ebook-navidad-lowcarb/main-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/entradas-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/platos-principales-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/postres-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/bebidas-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/guarniciones-min.jpg',
+        '/img/posters/carrusel-ebook-navidad-lowcarb/extra-info-min.jpg',
         ] : [
           '/img/posters/e-book-fermentados/portada-min.jpg',
           '/img/posters/e-book-fermentados/1-info-min.jpg',
@@ -332,7 +341,7 @@ export default {
       }
     },
     productsArr() {
-      return ['e-book-dulces-saludables', 'e-book-fermentados'];
+      return ['e-book-dulces-saludables', 'e-book-fermentados', 'e-book-navidad-lowcarb'];
     },
     infoProduct() {
       return this.$route.params.shortName;

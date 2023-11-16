@@ -286,6 +286,55 @@ prices[EBOOK].EspecialNavidad = {
   }
 };
 
+prices[EBOOK].navidadLowCarb2023 = {
+  default: false,
+  discount: 20,
+  dollar: {
+    old: `14.3 ${money.symbols.dollar}`,
+    value: `11.5 ${money.symbols.dollar}`
+  },
+  guarani: {
+    old: `100.000 ${money.symbols.guarani}`,
+    value: `80.000 ${money.symbols.guarani}`
+  },
+  coupons: {
+    // Activar desoúes de este Sábado 18, ahora solo OFFNAV2022
+    /*"$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+      discount: 15,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `12.2 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `85.000 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$rxziDLEVqVlaHk3Kl9Ddau5d08CymXs8wK.Kd00.wB5yPIGwkkzmu": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `11.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `80.000 ${money.symbols.guarani}`
+      }
+    }*/
+    "$2a$12$SgMD6z8TvAOhE8m3OQG6Yux5wvDEekB9cXDFp/6Mfzxhr3lNEMyGa": {
+      discount: 62.5,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `4.3 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `30.000 ${money.symbols.guarani}`
+      }
+    }
+  }
+};
+
 prices[EBOOK].fermentados = {
   default: false,
   discount: 0,

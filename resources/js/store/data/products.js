@@ -495,12 +495,79 @@ const products = [
       }
     ]
   },*/
+  /** EBOOK NAVIDAD LOWCARB **/
+  {
+    poster: `${postersSrc}carrusel-ebook-navidad-lowcarb/portada-min.jpg`,
+    name: "e-Book Navidad Lowcarb",
+    shortName: "e-book-navidad-lowcarb",
+    pages: "+X",
+    //Disfrutar de las celebraciones de fin de año y seguir con tu estilo de vida saludable sí es posible! Y en este ebook encontrarás las herramientas para lograrlo.
+    description: "Disfrutar de las celebraciones de fin de año y seguir con tu estilo de vida saludable sí es posible!, con este ebook puedes lograrlo.",
+    price: JSON.parse(JSON.stringify(prices[EBOOK].navidadLowCarb2023)),
+    type: EBOOK,
+    features: [
+      {
+        list: false,
+        title: "Acerca del ebook",
+        info: [
+          "Este eBook Navidad Lowcarb te trae recetas deliciosas compatibles con tu estilo de vida bajo en carbohidratos para que puedas seguir caminando hacia tus metas de salud, disfrutar, compartir y sorprender a tus seres queridos.",
+        ]
+      },
+      {
+        list: true,
+        title: "Tenemos más de 50 páginas con:",
+        info: [
+          "1. Guía informativa sobre la alimentación baja en carbohidratos.",
+          "2. Mas de 30 recetas entre entradas, guarniciones, platos principales, salsas, postres y bebidas lowcarb.",
+          "3. Tips y recomendaciones.",
+        ]
+      },
+      {
+        list: true,
+        title: "Recetas:",
+        info: [
+          "1. Entradas: Guirnalda Caprese, Trenza de Mozzarella, Brie con frutos secos, Pionono de jamón y queso.",
+          "2. Guarniciones: Pan Chip, Coliguazú, Mil hojas de Zuchini, Coleslaw Keto, Arroz de Coliflor, Puré de Brócoli, Ensalada Crocante.",
+          "3. Salsas: Salsa de Queso Azul, Salsa de Espinacas, Mayonesa, Pesto.",
+          "4. Platos Principales: Vitel Toné, Pavo con Panceta, Lengua a la Vinagreta, Lomito de cerdo a la Mostaza, Medallones de Lomito a la Pimienta..",
+          "5. Postres: Turrón de Cacao, Galletitas de Jengibre, Pionono de Chocolate, Brownie, Helado, Cheescake, Brownie Cheesecake, Budín de Coco, Pan Dulce Expres, Pan Dulce..",
+          "6. Bebidas: Información sobre bebidas, Tips, Guía de Trago Bajos en Carbohidratos, Caipiriña, Gin Tonic Frutos Rojos, Clerico Lowcarb..",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que aprenderás:",
+        info: [
+          "1. Todos los alimentos a incluir y cuales evitar.",
+          "2. A preparar tus recetas favoritas en una versión saludable.",
+          "3. A que la cocina saludable es más sencilla de lo que te imaginas, y mas deliciosa!.",
+        ]
+      },
+      {
+        list: true,
+        title: "Lo que necesitas:",
+        info: [
+          "1. Una dirección de correo electrónico para acceder al ebook.",
+          "2. Una aplicación compatible para leer documentos en pdf.",
+        ]
+      },
+      {
+        list: true,
+        title: "¿A quienes va dirigido el ebook?:",
+        info: [
+          "1. A las personas que están en un plan bajo en carbohidratos y buscan mantenerse allí durante las celebraciones de fin de año.",
+          "2. Que buscan recetas para perder peso, revertir potenciales enfermedades metabólicas como el hígado graso, obesidad, diabetes, resistencia a la insulina, y sus consecuencias.",
+          "3. A las personas interesadas en descubrir la cocina saludable, aprender a preparar una nueva versión de sus recetas favoritas de fin de año.",
+        ]
+      },
+    ]
+  },
   /** EBOOK FERMENTADOS **/
   {
     poster: `${postersSrc}e-book fermentados-min.jpg`,
     name: "Ebook de Fermentados",
     shortName: "e-book-fermentados",
-    pages: "+X",
+    pages: "+50",
     description:
       "Comparto contigo mis recetas favoritas de alimentos fermentados, con todos los detalles para que tengas éxito.",
     price: JSON.parse(JSON.stringify(prices[EBOOK].fermentados)),

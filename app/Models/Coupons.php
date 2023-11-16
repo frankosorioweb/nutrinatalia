@@ -42,6 +42,13 @@ class Coupons extends Model
       "begin"      => "20-05-2023",
       "end"        => "05-06-2023"
     ],
+    [
+      "name"       => "NAVIDAD2022",
+      "hash"       => '$2a$12$SgMD6z8TvAOhE8m3OQG6Yux5wvDEekB9cXDFp/6Mfzxhr3lNEMyGa',
+      "percentage" => 70,
+      "begin"      => "15-11-2023",
+      "end"        => "19-11-2023"
+    ],
   ];
 
   public function getAll()

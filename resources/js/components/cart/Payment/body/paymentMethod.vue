@@ -51,19 +51,19 @@ export default {
         GS: [
           {
             name: "Depósito bancario",
-            logo: "/img/payments/Banco atlas.png",
+            logo: "/img/payments/Itau.png",
             transferData: [
               {
                 field: "Número de cuenta",
-                value: "1020045",
+                value: "100075636",
               },
               {
                 field: "Banco",
-                value: "Atlas",
+                value: "Itaú",
               },
               {
                 field: "Nombres y Apellidos",
-                value: "Natalia Maria Chaparro Fox",
+                value: "Natalia Chaparro Fox",
               },
               {
                 field: "Cédula de identidad",
