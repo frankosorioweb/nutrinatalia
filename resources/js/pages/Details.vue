@@ -328,7 +328,20 @@ export default {
         '/img/posters/carrusel-ebook-navidad-lowcarb/bebidas-min.jpg',
         '/img/posters/carrusel-ebook-navidad-lowcarb/guarniciones-min.jpg',
         '/img/posters/carrusel-ebook-navidad-lowcarb/extra-info-min.jpg',
-        ] : [
+        ] : 
+        this.infoProduct == 'renovafest' ? [
+          '/img/posters/carrusel-renovafest-2023/portada-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/1-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/2-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/3-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/4-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/5-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/6-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/7-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/8-min.jpg',
+          '/img/posters/carrusel-renovafest-2023/9-min.jpg',
+        ] :
+        [
           '/img/posters/e-book-fermentados/portada-min.jpg',
           '/img/posters/e-book-fermentados/1-info-min.jpg',
           '/img/posters/e-book-fermentados/2-info-min.jpg',
@@ -341,7 +354,7 @@ export default {
       }
     },
     productsArr() {
-      return ['e-book-dulces-saludables', 'e-book-fermentados', 'e-book-navidad-lowcarb'];
+      return ['e-book-dulces-saludables', 'e-book-fermentados', 'e-book-navidad-lowcarb', 'renovafest'];
     },
     infoProduct() {
       return this.$route.params.shortName;

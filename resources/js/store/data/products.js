@@ -11,7 +11,38 @@ const challengeTextInfo =
 // Aquí definimos los precios de los WORKSHOPS e EBOOKS
 const products = [
   //WORKSHOPS
-  /** EL MERENDERO FELIZ **/
+  /** RENOVAFEST 2023 **/
+  {
+    poster: `${postersSrc}renovafest-2023-min.jpg`,
+    name: "Taller (vía streaming) - Renovafest",
+    shortName: "renovafest",
+    duration:
+      "+80 minutos.",
+    description:
+      "Taller para transformar tu camino hacia un estilo de vida saludable, potenciando tu crecimiento y consolidando una versión más fuerte de ti mismo.",
+    price: JSON.parse(JSON.stringify(prices[WORKSHOP].renovafest)),
+    type: WORKSHOP,
+    features: [
+      {
+        title: "Acerca del taller",
+        info: [
+          "Renovafest es una oportunidad para sumergirte en una experiencia única con +80 minutos que redefinirán tu perspectiva sobre el cambio de estilo de vida. Escuchando las voces de Marian Romero, experta en PsicoNutrición, y Leandro Rodríguez, facilitador de desarrollo personal, que guiarán tu transformación. Con la presentación y cierre de Nutri Natalia, culminando este viaje hacia un yo más saludable y fortalecido.",
+        ]
+      },
+      {
+        list: true,
+        title: "Aprenderás sobre:",
+        info: [
+          "El arte de invertir en vos mismo primero, cultivar relaciones de alta calidad, la importancia de tener metas.",
+          "Sobre la salud tridimensional y cómo atenderla. El dinero, un nuevo enfoque.",
+          "A mejorar nuestra comunicación, los criterios para ser un mejor líder, y la importancia de los principios de la perseverancia, la disciplina, la integridad, entre otros aspectos, que pueden influir positivamente en tu camino hacia el éxito.",
+          "El significado real de Alimentación consciente y como la comida afecta nuestro cerebro y por consecuencia nuestro comportamiento alimentar.",
+          "La importancia del autocuidado emocional y definir cuales son mis motivaciones reales para un cambio en el estilo de vida.",
+          "A elegir la salud por encima de fechas como fin de año, llegar al verano o entrar en el vestido.",
+        ]
+      },
+    ]
+  },
   {
     poster: `${postersSrc}Taller - El merendero feliz.jpg`,
     name: "Taller (vía streaming) - El Merendero Feliz",

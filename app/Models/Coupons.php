@@ -49,6 +49,13 @@ class Coupons extends Model
       "begin"      => "15-11-2023",
       "end"        => "19-11-2023"
     ],
+    [
+      "name"       => "RENOVAFEST",
+      "hash"       => '$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2',
+      "percentage" => 70,
+      "begin"      => "18-11-2023",
+      "end"        => "01-01-2024"
+    ],
   ];
 
   public function getAll()

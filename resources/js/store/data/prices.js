@@ -35,7 +35,7 @@ prices[WORKSHOP] = {
         applied: false,
         value: "",
         dollar: {
-          value: `12 ${money.symbols.dollar}`
+          value: `12.14 ${money.symbols.dollar}`
         },
         guarani: {
           value: `85.000 ${money.symbols.guarani}`
@@ -46,7 +46,7 @@ prices[WORKSHOP] = {
         applied: false,
         value: "",
         dollar: {
-          value: `11.35 ${money.symbols.dollar}`
+          value: `11.43 ${money.symbols.dollar}`
         },
         guarani: {
           value: `80.000 ${money.symbols.guarani}`
@@ -57,12 +57,36 @@ prices[WORKSHOP] = {
         applied: false,
         value: "",
         dollar: {
-          value: `11.35 ${money.symbols.dollar}`
+          value: `11.43 ${money.symbols.dollar}`
         },
         guarani: {
           value: `80.000 ${money.symbols.guarani}`
         }
       },
+      "$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2": {
+        discount: 20,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `11.43 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `80.000 ${money.symbols.guarani}`
+        }
+      },
+    }
+  },
+  renovafest: {
+    default: false,
+    discount: 0,
+    dollar: {
+      value: `14.3 ${money.symbols.dollar}`,
+    },
+    guarani: {
+      value: `100.000 ${money.symbols.guarani}`,
+    },
+    // Cupón general para todos los talleres (Se debe utilizar prices[WORKSHOP].original.coupons en los talleres que tengan este mismo precio)
+    coupons: {
     }
   }
 };
@@ -161,7 +185,7 @@ prices[EBOOK].ketoAyuno30Dias = {
   default: false,
   discount: 0,
   dollar: {
-    value: `31.2 ${money.symbols.dollar}`,
+    value: `31.43 ${money.symbols.dollar}`,
     // old: `31.2 ${money.symbols.dollar}`,
     // value: `15.6 ${money.symbols.dollar}`,
   },
@@ -176,7 +200,7 @@ prices[EBOOK].ketoAyuno30Dias = {
       applied: false,
       value: "",
       dollar: {
-        value: `26.5 ${money.symbols.dollar}`
+        value: `26.71 ${money.symbols.dollar}`
       },
       guarani: {
         value: `187.000 ${money.symbols.guarani}`
@@ -187,7 +211,7 @@ prices[EBOOK].ketoAyuno30Dias = {
       applied: false,
       value: "",
       dollar: {
-        value: `24.9 ${money.symbols.dollar}`
+        value: `25.14 ${money.symbols.dollar}`
       },
       guarani: {
         value: `176.000 ${money.symbols.guarani}`
@@ -198,7 +222,18 @@ prices[EBOOK].ketoAyuno30Dias = {
       applied: false,
       value: "",
       dollar: {
-        value: `24.9 ${money.symbols.dollar}`,
+        value: `25.14 ${money.symbols.dollar}`,
+      },
+      guarani: {
+        value: `176.000 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `25.14 ${money.symbols.dollar}`,
       },
       guarani: {
         value: `176.000 ${money.symbols.guarani}`
@@ -218,7 +253,7 @@ prices[EBOOK].dulcesSalusables = {
   dollar: {
     /*value: `17.5 ${money.symbols.dollar}`,
     old: `21.5 ${money.symbols.dollar}`,*/
-    value: `21 ${money.symbols.dollar}`
+    value: `21.43 ${money.symbols.dollar}`
   },
   guarani: {
     /*value: `120.000 ${money.symbols.guarani}`,
@@ -231,7 +266,7 @@ prices[EBOOK].dulcesSalusables = {
       applied: false,
       value: "",
       dollar: {
-        value: `17.5 ${money.symbols.dollar}`
+        value: `18.21 ${money.symbols.dollar}`
       },
       guarani: {
         value: `127.500 ${money.symbols.guarani}`
@@ -242,12 +277,23 @@ prices[EBOOK].dulcesSalusables = {
       applied: false,
       value: "",
       dollar: {
-        value: `16.5 ${money.symbols.dollar}`
+        value: `17.14 ${money.symbols.dollar}`
       },
       guarani: {
         value: `120.000 ${money.symbols.guarani}`
       }
-    }
+    },
+    "$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `17.14 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `120.000 ${money.symbols.guarani}`
+      }
+    },
   }
 };
 
@@ -288,23 +334,25 @@ prices[EBOOK].EspecialNavidad = {
 
 prices[EBOOK].navidadLowCarb2023 = {
   default: false,
-  discount: 20,
+  discount: 0,
   dollar: {
-    old: `14.3 ${money.symbols.dollar}`,
-    value: `11.5 ${money.symbols.dollar}`
+    /*old: `14.3 ${money.symbols.dollar}`,
+    value: `11.43 ${money.symbols.dollar}`*/
+    value: `14.3 ${money.symbols.dollar}`
   },
   guarani: {
-    old: `100.000 ${money.symbols.guarani}`,
-    value: `80.000 ${money.symbols.guarani}`
+    /*old: `100.000 ${money.symbols.guarani}`,
+    value: `80.000 ${money.symbols.guarani}`*/
+    value: `100.000 ${money.symbols.guarani}`
   },
   coupons: {
     // Activar desoúes de este Sábado 18, ahora solo OFFNAV2022
-    /*"$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
+    "$2a$12$V.uc1eMSyoI3vGcaJCZtGeydF9BPkmPfQ/312cprpEbBCr2yNs1Tu": {
       discount: 15,
       applied: false,
       value: "",
       dollar: {
-        value: `12.2 ${money.symbols.dollar}`
+        value: `12.14 ${money.symbols.dollar}`
       },
       guarani: {
         value: `85.000 ${money.symbols.guarani}`
@@ -315,12 +363,12 @@ prices[EBOOK].navidadLowCarb2023 = {
       applied: false,
       value: "",
       dollar: {
-        value: `11.5 ${money.symbols.dollar}`
+        value: `11.43 ${money.symbols.dollar}`
       },
       guarani: {
         value: `80.000 ${money.symbols.guarani}`
       }
-    }*/
+    },
     "$2a$12$SgMD6z8TvAOhE8m3OQG6Yux5wvDEekB9cXDFp/6Mfzxhr3lNEMyGa": {
       discount: 62.5,
       applied: false,
@@ -331,7 +379,18 @@ prices[EBOOK].navidadLowCarb2023 = {
       guarani: {
         value: `30.000 ${money.symbols.guarani}`
       }
-    }
+    },
+    "$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `11.43 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `80.000 ${money.symbols.guarani}`
+      }
+    },
   }
 };
 
@@ -366,7 +425,18 @@ prices[EBOOK].fermentados = {
       guarani: {
         value: `56.000 ${money.symbols.guarani}`
       }
-    }
+    },
+    "$2a$12$yAZ71KFayyqDhXXIASgCuuSvYp29HCv2on/brICMRAkUH86t8JLE2": {
+      discount: 20,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `8 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `56.000 ${money.symbols.guarani}`
+      }
+    },
   }
 };
 

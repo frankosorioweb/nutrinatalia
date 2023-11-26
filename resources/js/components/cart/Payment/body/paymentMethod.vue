@@ -51,15 +51,15 @@ export default {
         GS: [
           {
             name: "Depósito bancario",
-            logo: "/img/payments/Itau.png",
+            logo: "/img/payments/Banco atlas.png",
             transferData: [
               {
                 field: "Número de cuenta",
-                value: "100075636",
+                value: "1465818",
               },
               {
                 field: "Banco",
-                value: "Itaú",
+                value: "Atlas",
               },
               {
                 field: "Nombres y Apellidos",
