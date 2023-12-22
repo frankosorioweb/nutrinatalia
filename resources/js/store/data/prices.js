@@ -74,6 +74,17 @@ prices[WORKSHOP] = {
           value: `80.000 ${money.symbols.guarani}`
         }
       },
+      "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+        discount: 25,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `10.71 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `75.000 ${money.symbols.guarani}`
+        }
+      },
     }
   },
   renovafest: {
@@ -87,6 +98,17 @@ prices[WORKSHOP] = {
     },
     // Cupón general para todos los talleres (Se debe utilizar prices[WORKSHOP].original.coupons en los talleres que tengan este mismo precio)
     coupons: {
+      "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+        discount: 25,
+        applied: false,
+        value: "",
+        dollar: {
+          value: `10.71 ${money.symbols.dollar}`
+        },
+        guarani: {
+          value: `75.000 ${money.symbols.guarani}`
+        }
+      },
     }
   }
 };
@@ -238,7 +260,18 @@ prices[EBOOK].ketoAyuno30Dias = {
       guarani: {
         value: `176.000 ${money.symbols.guarani}`
       }
-    }
+    },
+    "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+      discount: 25,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `23.57 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `165.000 ${money.symbols.guarani}`
+      }
+    },
   }
 };
 
@@ -292,6 +325,17 @@ prices[EBOOK].dulcesSalusables = {
       },
       guarani: {
         value: `120.000 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+      discount: 25,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `16.1 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `112.500 ${money.symbols.guarani}`
       }
     },
   }
@@ -391,6 +435,17 @@ prices[EBOOK].navidadLowCarb2023 = {
         value: `80.000 ${money.symbols.guarani}`
       }
     },
+    "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+      discount: 25,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `10.71 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `75.000 ${money.symbols.guarani}`
+      }
+    },
   }
 };
 
@@ -435,6 +490,17 @@ prices[EBOOK].fermentados = {
       },
       guarani: {
         value: `56.000 ${money.symbols.guarani}`
+      }
+    },
+    "$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a": {
+      discount: 25,
+      applied: false,
+      value: "",
+      dollar: {
+        value: `7.5 ${money.symbols.dollar}`
+      },
+      guarani: {
+        value: `52.500 ${money.symbols.guarani}`
       }
     },
   }

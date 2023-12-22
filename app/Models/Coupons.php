@@ -56,6 +56,13 @@ class Coupons extends Model
       "begin"      => "18-11-2023",
       "end"        => "01-01-2024"
     ],
+    [
+      "name"       => "TRIBUNUTRINATALIA",
+      "hash"       => '$2a$12$00lqEUdfrXB/uB.nx6OW0evlX.zj8ZVIc6apS/yTfYiyfY6Mu7e9a',
+      "percentage" => 25,
+      "begin"      => "01-12-2023",
+      "end"        => "01-01-2024"
+    ],
   ];
 
   public function getAll()
